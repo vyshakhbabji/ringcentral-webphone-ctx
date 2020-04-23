@@ -1,19 +1,19 @@
 (
     function(root, factory) {
     if (typeof define === 'function' && define.amd) {
-        define(['sip.js','/script/CitrixWebRTC.js'], function(SIP, VDI) {
+        define(['sip.js','./script/citrix-webrtc.js'], function(SIP, VDI) {
             return factory(SIP, VDI);
         });
     } else if (typeof module === 'object') {
-        module.exports = factory(require('sip.js'),require('./script/CitrixWebRTC.js'));
+        module.exports = factory(require('sip.js'),require('./script/citrix-webrtc.js'));
         module.exports.default = module.exports; //ES6
     } else {
         root.RingCentral = root.RingCentral || {};
-        root.RingCentral.WebPhone = factory(root.SIP, 'CitrixPeerConnection');
+        root.RingCentral.WebPhone = factory(root.SIP, root.CitrixWebRTC);
     }
-}(this, function(SIP, CitrixPeerConnection) {
+}(this, function(SIP, CitrixWebRTC) {
 
-    var pc =  new CitrixPeerConnection();
+    var pc =  new CitrixWebRTC.CitrixPeerConnection();
 
     var messages = {
         park: {reqid: 1, command: 'callpark'},
