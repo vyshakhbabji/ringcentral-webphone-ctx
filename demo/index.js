@@ -18,9 +18,100 @@ $(function() {
     var $callTemplate = $('#template-call');
     var $incomingTemplate = $('#template-incoming');
     var $acceptedTemplate = $('#template-accepted');
+    var $globalDevices = $('#globalDevices');
+    window.acceptedTemplate = $acceptedTemplate;
+    var $globalDevices = $('#globalDevices');
 
     var remoteVideoElement =  document.getElementById('remoteVideo');
     var localVideoElement  = document.getElementById('localVideo');
+    var videoElement = document.querySelector('video');
+
+    const audioInputSelect = document.querySelector('select#audioSource');
+    const audioOutputSelect = document.querySelector('select#audioOutput');
+    const selectors = [audioInputSelect, audioOutputSelect];
+    audioOutputSelect.disabled = !('sinkId' in HTMLMediaElement.prototype);
+
+    function gotDevices(deviceInfos) {
+        // Handles being called several times to update labels. Preserve values.
+        const values = selectors.map(select => select.value);
+        selectors.forEach(select => {
+            while (select.firstChild) {
+                select.removeChild(select.firstChild);
+            }
+        });
+        for (let i = 0; i !== deviceInfos.length; ++i) {
+            const deviceInfo = deviceInfos[i];
+            const option = document.createElement('option');
+            option.value = deviceInfo.deviceId;
+            if (deviceInfo.kind === 'audioinput') {
+                option.text = deviceInfo.label || `microphone ${audioInputSelect.length + 1}`;
+                audioInputSelect.appendChild(option);
+            } else if (deviceInfo.kind === 'audiooutput') {
+                option.text = deviceInfo.label || `speaker ${audioOutputSelect.length + 1}`;
+                audioOutputSelect.appendChild(option);
+            } else {
+                console.log('Some other kind of source/device: ', deviceInfo);
+            }
+        }
+        selectors.forEach((select, selectorIndex) => {
+            if (Array.prototype.slice.call(select.childNodes).some(n => n.value === values[selectorIndex])) {
+                select.value = values[selectorIndex];
+            }
+        });
+    }
+
+    // Attach audio output device to video element using device/sink ID.
+    function attachSinkId(element, sinkId) {
+        if (typeof element.sinkId !== 'undefined') {
+            element
+                .setSinkId(sinkId)
+                .then(() => {
+                    console.log(`Success, audio output device attached: ${sinkId}`);
+                })
+                .catch(error => {
+                    let errorMessage = error;
+                    if (error.name === 'SecurityError') {
+                        errorMessage = `You need to use HTTPS for selecting audio output device: ${error}`;
+                    }
+                    console.error(errorMessage);
+                    // Jump back to first output device in the list as it's the default.
+                    audioOutputSelect.selectedIndex = 0;
+                });
+        } else {
+            console.warn('Browser does not support output device selection.');
+        }
+    }
+
+    function changeAudioDestination() {
+        const audioDestination = audioOutputSelect.value;
+        attachSinkId(videoElement, audioDestination);
+    }
+
+    function gotStream(session, stream) {
+        session.replaceLocalTrack(stream);
+        return navigator.mediaDevices.enumerateDevices();
+    }
+
+    function handleError(error) {
+        console.log('navigator.MediaDevices.getUserMedia error: ', error.message, error.name);
+    }
+
+    function start(session) {
+        if (window.stream) {
+            window.stream.getTracks().forEach(track => {
+                track.stop();
+            });
+        }
+        const audioSource = audioInputSelect.value;
+        const constraints = {
+            audio: {deviceId: audioSource ? {exact: audioSource} : undefined}
+        };
+        navigator.mediaDevices
+            .getUserMedia(constraints)
+            .then(stream => gotStream(session, stream))
+            .then(gotDevices)
+            .catch(handleError);
+    }
 
     /**
      * @param {jQuery|HTMLElement} $tpl
@@ -140,13 +231,18 @@ $(function() {
             media: {
                 remote: remoteVideoElement,
                 local: localVideoElement
-            }
+            },
+            audioInput : audioInputSelect,
+            audioOutput : audioOutputSelect
         });
 
         webPhone.userAgent.audioHelper.loadAudio({
             incoming: '../audio/incoming.ogg',
             outgoing: '../audio/outgoing.ogg'
         });
+
+        webPhone.userAgent.audioInput = audioInputSelect;
+        webPhone.userAgent.audioOutput = audioOutputSelect;
 
         webPhone.userAgent.audioHelper.setVolume(.3);
         webPhone.userAgent.on('invite', onInvite);
@@ -230,6 +326,13 @@ $(function() {
         var $transfer = $modal.find('input[name=transfer]').eq(0);
         var $flip = $modal.find('input[name=flip]').eq(0);
 
+        var $callDevices = $modal.find('#callDevices').eq(0);
+        var $devicesSelects = $globalDevices.children();
+        for (var i = 0; i < $devicesSelects.length; i++) {
+            var newChild = $devicesSelects[i];
+            $callDevices.append(newChild);
+        }
+
         var interval = setInterval(function() {
 
             var time = session.startTime ? (Math.round((Date.now() - session.startTime) / 1000) + 's') : 'Ringing';
@@ -243,6 +346,11 @@ $(function() {
 
         function close() {
             clearInterval(interval);
+            var $devicesSelects = $callDevices.children();
+            for (var i = 0; i < $devicesSelects.length; i++) {
+                var newChild = $devicesSelects[i];
+                $globalDevices.append(newChild);
+            }
             $modal.modal('hide');
         }
 
@@ -326,8 +434,17 @@ $(function() {
             session.terminate();
         });
 
-        session.on('accepted', function() { console.log('Event: Accepted'); });
-        session.on('progress', function() { console.log('Event: Progress'); });
+        session.on('accepted', function() {
+            console.log('Event: Accepted');
+            audioInputSelect.onchange = function() {
+                start(session);
+            };
+            audioOutputSelect.onchange = changeAudioDestination;
+            start(session);
+        });
+        session.on('progress', function() {
+            console.log('Event: Progress');
+        });
         session.on('rejected', function() {
             console.log('Event: Rejected');
             close();
@@ -379,6 +496,10 @@ $(function() {
     }
 
     function makeCallForm() {
+        navigator.mediaDevices
+            .enumerateDevices()
+            .then(gotDevices)
+            .catch(handleError);
 
         var $form = cloneTemplate($callTemplate);
 

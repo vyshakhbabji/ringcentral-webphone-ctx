@@ -7,6 +7,9 @@
     "start": "./node_modules/.bin/http-server"
   },
   "dependencies": {
+    "and": "0.0.3",
+    "build": "^0.1.4",
+    "npm": "^6.14.4",
     "requirejs": "^2.3.6",
     "sip.js": "^0.10.0"
   },
