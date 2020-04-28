@@ -193,6 +193,8 @@ $(function() {
         localStorage.setItem('webPhonePassword', password || '');
         localStorage.setItem('webPhoneLogLevel', logLevel || 0);
 
+        console.error(RingCentral.WebPhone);
+
         return platform.get('/restapi/v1.0/account/~/extension/~')
             .then(function(res) {
 
