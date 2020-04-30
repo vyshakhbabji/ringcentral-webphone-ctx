@@ -1158,7 +1158,7 @@ var PeerConnectionEvent = function () {
     b.prototype.addStream = function (a) {
         var b = this;
         logger_1.logger.log(this.user_friendly_id() + ".addStream() called: " + JSON.stringify(a));
-       // a.dumpTrackInfo();
+       a.dumpTrackInfo();
         this.localStreams.push(a);
         this.waitUntilConnected("PeerConnection.addStream").then(function () {
             return b.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCPeerConnection_t.addStream, {oid: a.object_id()}, {})

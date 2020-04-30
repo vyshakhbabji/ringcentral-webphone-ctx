@@ -1,18 +1,19 @@
 const { app, BrowserWindow } = require('electron')
-
+console.log('Chrome:', process.versions.chrome);
 function createWindow () {
   // Create the browser window.
   const win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: false
     }
   });
 
   // and load the index.html of the app.
 
   win.loadURL('http://localhost:8080/demo/index.html')
+
 
   // Open the DevTools.
   win.webContents.openDevTools()

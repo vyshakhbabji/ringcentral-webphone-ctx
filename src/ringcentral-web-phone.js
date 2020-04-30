@@ -132,8 +132,8 @@
                 this.peerConnection.close();
             }
 
-            this.peerConnection = new CitrixWebRTC.CitrixPeerConnection(options.rtcConfiguration);
-            // this.peerConnection = new RTCPeerConnection(options.rtcConfiguration);
+            // this.peerConnection = new CitrixWebRTC.CitrixPeerConnection(options.rtcConfiguration);
+            this.peerConnection = new RTCPeerConnection(options.rtcConfiguration);
 
             this.peerConnection.onaddstream = VDIhandleAddStreamEvent;
 
@@ -349,36 +349,44 @@
                     video: {}
                 };
 
-                // if (constraints.audio || constraints.video) {
-                //     this.WebRTC.getUserMedia(constraints)
-                //         .then(function (streams) {
-                //             this.session.emit('trackAdded');
-                //             this.session.emit('userMedia', streams);
-                //             resolve(streams);
-                //         }.bind(this)).catch(function (e) {
-                //         this.session.emit('userMediaFailed', e);
-                //         reject(e);
-                //     }.bind(this));
-                // } else {
-                //     // Local streams were explicitly excluded.
-                //     resolve([]);
-                // }
+                if (constraints.audio || constraints.video) {
+                    this.WebRTC.getUserMedia(constraints)
+                        .then(function (streams) {
+                            this.session.emit('trackAdded');
+                            this.session.emit('userMedia', streams);
+                            resolve(streams);
+                        }.bind(this)).catch(function (e) {
+                        this.session.emit('userMediaFailed', e);
+                        reject(e);
+                    }.bind(this));
+                } else {
+                    // Local streams were explicitly excluded.
+                    resolve([]);
+                }
 
-                navigator.webkitGetUserMedia(constraint, stream => {
-                    this.session.emit('trackAdded');
-                    this.session.emit('userMedia', stream);
-                    resolve(stream);
-                }, e => {
-                    this.session.emit('userMediaFailed', e);
-                    reject(e);
-                });
+                // navigator.webkitGetUserMedia(constraint, stream => {
+                //     this.session.emit('trackAdded');
+                //     this.session.emit('userMedia', stream);
+                //     resolve(stream);
+                // }, e => {
+                //     this.session.emit('userMediaFailed', e);
+                //     reject(e);
+                // });
 
             }.bind(this));
         };
 
         function sdpGen(s){
+
+            //
             var p = new RTCPeerConnection({"rtcpMuxPolicy":"negotiate","iceServers":[{"urls":"stun:stun.l.google.com:19302"}]});
+
             p.addStream(s);
+            p.createOffer({},(desc)=>{
+                p.setLocalDescription(desc);
+            } , onFailure)
+
+
             return p.createOffer(sdpConstraints);
         }
 
@@ -401,8 +409,8 @@
             //
             // console.error(check);
 
-            return sdpGen(s)
-            // return pc.createOffer(sdpConstraints)
+            // return sdpGen(s)
+            return pc.createOffer()
                 .catch(function methodError(e) {
                     self.emit('peerConnection-' + methodName + 'Failed', e);
                     console.error('peerConnection-' + methodName + 'Failed', e);
