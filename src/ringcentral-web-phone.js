@@ -59,13 +59,29 @@
             return dst;
         }
 
+
+        //citrix related stuff
+
         var sdpConstraints = {
-                OfferToReceiveAudio: 1,
-                OfferToReceiveVideo: 0
+            mandatory: {
+                OfferToReceiveAudio: true,
+                OfferToReceiveVideo: true
+            }
         };
 
-        var localStream = undefined;
 
+        var localStream = undefined;
+        var audioIn = undefined;
+        var audioOut = undefined;
+        var videoIn = undefined;
+
+        var localVideo = undefined;
+        var remoteVideo = undefined;
+
+        var vdiCitrix =  CitrixWebRTC;
+
+        vdiCitrix.mapVideoElement(localVideo);
+        vdiCitrix.mapVideoElement(remoteVideo);
 
         /*--------------------------------------------------------------------------------------------------------------------*/
 
@@ -132,8 +148,8 @@
                 this.peerConnection.close();
             }
 
-            // this.peerConnection = new CitrixWebRTC.CitrixPeerConnection(options.rtcConfiguration);
-            this.peerConnection = new RTCPeerConnection(options.rtcConfiguration);
+            this.peerConnection = new vdiCitrix.CitrixPeerConnection(options.rtcConfiguration);
+            // this.peerConnection = new RTCPeerConnection(options.rtcConfiguration);
 
             this.peerConnection.onaddstream = VDIhandleAddStreamEvent;
 
@@ -154,64 +170,68 @@
                 };
             }
 
-            this.peerConnection.onicecandidate = function (e) {
-                self.session.emit('iceCandidate', e);
-                if (e.candidate) {
-                    self.logger.log('ICE candidate received: ' + (e.candidate.candidate === null ? null : e.candidate.candidate.trim()));
-                }
-            };
+            this.peerConnection.onaddstream = VDIhandleAddStreamEvent;
+            this.peerConnection.onicecandidate = addIceEventVDI;
+            this.peerConnection.onicegatheringstatechange = () => {};
 
-            this.peerConnection.onicegatheringstatechange = function () {
-                self.logger.log('RTCIceGatheringState changed: ' + this.iceGatheringState);
-                switch (this.iceGatheringState) {
-                    case 'gathering':
-                        self.session.emit('iceGathering', this);
-                        if (!self.iceGatheringTimer && options.iceCheckingTimeout) {
-                            self.iceGatheringTimeout = false;
-                            self.iceGatheringTimer = SIP.Timers.setTimeout(function () {
-                                self.logger.log('RTCIceChecking Timeout Triggered after ' + options.iceCheckingTimeout + ' milliseconds');
-                                self.iceGatheringTimeout = true;
-                                self.triggerIceGatheringComplete();
-                            }, options.iceCheckingTimeout);
-                        }
-                        break;
-                    case 'complete':
-                        self.triggerIceGatheringComplete();
-                        break;
-                }
-            };
-
-            this.peerConnection.oniceconnectionstatechange = function () {  //need e for commented out case
-                var stateEvent;
-
-                switch (this.iceConnectionState) {
-                    case 'new':
-                        stateEvent = 'iceConnection';
-                        break;
-                    case 'checking':
-                        stateEvent = 'iceConnectionChecking';
-                        break;
-                    case 'connected':
-                        stateEvent = 'iceConnectionConnected';
-                        break;
-                    case 'completed':
-                        stateEvent = 'iceConnectionCompleted';
-                        break;
-                    case 'failed':
-                        stateEvent = 'iceConnectionFailed';
-                        break;
-                    case 'disconnected':
-                        stateEvent = 'iceConnectionDisconnected';
-                        break;
-                    case 'closed':
-                        stateEvent = 'iceConnectionClosed';
-                        break;
-                    default:
-                        self.logger.warn('Unknown iceConnection state:', this.iceConnectionState);
-                        return;
-                }
-                self.session.emit(stateEvent, this);
-            };
+            // this.peerConnection.onicecandidate = function (e) {
+            //     self.session.emit('iceCandidate', e);
+            //     if (e.candidate) {
+            //         self.logger.log('ICE candidate received: ' + (e.candidate.candidate === null ? null : e.candidate.candidate.trim()));
+            //     }
+            // };
+            //
+            // this.peerConnection.onicegatheringstatechange = function () {
+            //     self.logger.log('RTCIceGatheringState changed: ' + this.iceGatheringState);
+            //     switch (this.iceGatheringState) {
+            //         case 'gathering':
+            //             self.session.emit('iceGathering', this);
+            //             if (!self.iceGatheringTimer && options.iceCheckingTimeout) {
+            //                 self.iceGatheringTimeout = false;
+            //                 self.iceGatheringTimer = SIP.Timers.setTimeout(function () {
+            //                     self.logger.log('RTCIceChecking Timeout Triggered after ' + options.iceCheckingTimeout + ' milliseconds');
+            //                     self.iceGatheringTimeout = true;
+            //                     self.triggerIceGatheringComplete();
+            //                 }, options.iceCheckingTimeout);
+            //             }
+            //             break;
+            //         case 'complete':
+            //             self.triggerIceGatheringComplete();
+            //             break;
+            //     }
+            // };
+            //
+            // this.peerConnection.oniceconnectionstatechange = function () {  //need e for commented out case
+            //     var stateEvent;
+            //
+            //     switch (this.iceConnectionState) {
+            //         case 'new':
+            //             stateEvent = 'iceConnection';
+            //             break;
+            //         case 'checking':
+            //             stateEvent = 'iceConnectionChecking';
+            //             break;
+            //         case 'connected':
+            //             stateEvent = 'iceConnectionConnected';
+            //             break;
+            //         case 'completed':
+            //             stateEvent = 'iceConnectionCompleted';
+            //             break;
+            //         case 'failed':
+            //             stateEvent = 'iceConnectionFailed';
+            //             break;
+            //         case 'disconnected':
+            //             stateEvent = 'iceConnectionDisconnected';
+            //             break;
+            //         case 'closed':
+            //             stateEvent = 'iceConnectionClosed';
+            //             break;
+            //         default:
+            //             self.logger.warn('Unknown iceConnection state:', this.iceConnectionState);
+            //             return;
+            //     }
+            //     self.session.emit(stateEvent, this);
+            // };
         };
 
         CitrixSessionDescriptionHandler.prototype.getDescription = function (options, modifiers) {
@@ -254,7 +274,7 @@
             }
             modifiers = modifiers.concat(this.modifiers);
 
-            console.error('rtcofferoptions')
+            console.error('rtcofferoptions');
             console.error(options.RTCOfferOptions);
 
             // Check to see if the peerConnection already has a local description
@@ -329,7 +349,7 @@
             console.error(error);
         }
 
-        CitrixSessionDescriptionHandler.prototype.acquire = function (constraints) {
+        CitrixSessionDescriptionHandler.prototype.acquire = function (constraint) {
             // Default audio & video to true
             constraints = this.checkAndDefaultConstraints(constraints);
 
@@ -341,53 +361,58 @@
                 this.session.emit('userMediaRequest');
 
                 var audioSource = audioIn.value;
+                var videoSource = videoIn.value;
                 console.error('audioSource is');
                 console.error(audioSource);
+                console.error('videoSource is');
+                console.error(videoSource);
 
-                const constraint = {
+
+                const constraints = {
                     audio: {deviceId: audioSource ? {exact: audioSource} : undefined},
-                    video: {}
+                    video: {mandatory:{sourceId: videoSource ,minWidth:1080,maxWidth:1080,minHeight:720,maxHeight:720,maxFrameRate:30}}
                 };
 
-                if (constraints.audio || constraints.video) {
-                    this.WebRTC.getUserMedia(constraints)
-                        .then(function (streams) {
-                            this.session.emit('trackAdded');
-                            this.session.emit('userMedia', streams);
-                            resolve(streams);
-                        }.bind(this)).catch(function (e) {
-                        this.session.emit('userMediaFailed', e);
-                        reject(e);
-                    }.bind(this));
-                } else {
-                    // Local streams were explicitly excluded.
-                    resolve([]);
-                }
+                // if (constraint.audio || constraint.video) {
+                //     this.WebRTC.getUserMedia(constraint)
+                //         .then(function (streams) {
+                //             this.session.emit('trackAdded');
+                //             this.session.emit('userMedia', streams);
+                //             resolve(streams);
+                //         }.bind(this)).catch(function (e) {
+                //         this.session.emit('userMediaFailed', e);
+                //         reject(e);
+                //     }.bind(this));
+                // } else {
+                //     // Local streams were explicitly excluded.
+                //     resolve([]);
+                // }
 
-                // navigator.webkitGetUserMedia(constraint, stream => {
-                //     this.session.emit('trackAdded');
-                //     this.session.emit('userMedia', stream);
-                //     resolve(stream);
-                // }, e => {
-                //     this.session.emit('userMediaFailed', e);
-                //     reject(e);
-                // });
+                console.error('trying to acquire media');
+                vdiCitrix.getUserMedia(constraints, stream => {
+                    this.session.emit('trackAdded');
+                    this.session.emit('userMedia', stream);
+                    localVideo.srcObject = stream;
+                    console.error('stream from citrix getusermedia')
+                    console.error(stream)
+                    resolve(stream);
+                }, e => {
+                    this.session.emit('userMediaFailed', e);
+                    console.error('getusermedia failed');
+                    reject(e);
+                });
 
             }.bind(this));
         };
 
-        function sdpGen(s){
-
-            //
-            var p = new RTCPeerConnection({"rtcpMuxPolicy":"negotiate","iceServers":[{"urls":"stun:stun.l.google.com:19302"}]});
-
-            p.addStream(s);
-            p.createOffer({},(desc)=>{
-                p.setLocalDescription(desc);
-            } , onFailure)
-
-
-            return p.createOffer(sdpConstraints);
+        function sdpGen(self, s){
+            var sdp = undefined;
+            self.peerConnection.createAnswer( desc=>{
+                console.error(desc);
+                sdp = desc;
+                self.peerConnection.setLocalDescription(desc);
+            } , VDIhandleError,sdpConstraints);
+            return Promise.resolve(sdp)
         }
 
 
@@ -409,14 +434,15 @@
             //
             // console.error(check);
 
-            // return sdpGen(s)
-            return pc.createOffer()
+            return sdpGen(this, s)
+                // return pc.createAnswer()
                 .catch(function methodError(e) {
                     self.emit('peerConnection-' + methodName + 'Failed', e);
                     console.error('peerConnection-' + methodName + 'Failed', e);
                     throw e;
                 })
                 .then(function(sdp) {
+                    // sdp = SIP.Utils.reducePromises(modifiers, self.createRTCSessionDescriptionInit(sdp));
                     console.error('sdp generated');
                     console.error(sdp.sdp);
                     var retVal = SIP.Utils.reducePromises(modifiers, sdp);
@@ -818,9 +844,6 @@
 
         /*--------------------------------------------------------------------------------------------------------------------*/
 
-        var audioIn = undefined;
-        var audioOut = undefined;
-
         /**
          * @param {object} regData
          * @param {object} [options]
@@ -873,6 +896,10 @@
 
             audioIn = options.audioInput;
             audioOut = options.audioOutput;
+            videoIn = options.videoInput;
+
+            localVideo = options.media.local;
+            remoteVideo = options.media.remote;
 
             var browserUa = navigator.userAgent.toLowerCase();
             var isSafari = false;
@@ -1098,7 +1125,7 @@
                 }
             });
 
-            session.on('trackAdded', addTrack);
+            // session.on('trackAdded', addTrack);
 
             session.on('accepted', stopPlaying);
             session.on('rejected', stopPlaying);

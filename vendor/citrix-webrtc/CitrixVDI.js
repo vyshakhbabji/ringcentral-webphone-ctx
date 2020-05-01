@@ -15,7 +15,8 @@
 
 /*Initialization of Variables*/
 var ui = require('./script/ui.js')
-var vdiCitrix = require('./script/CitrixWebRTC.js') 
+var
+	vdiCitrix = require('./script/CitrixWebRTC.js')
 console.log(vdiCitrix);
 var VDIPeerConnection = ui.peers.myPeerConnection;
 var localStream = ui.peers.localStream;
@@ -109,7 +110,7 @@ vdiCitrix.enumerateDevices().then(VDIgotDevices).catch(VDIhandleError);
 
 
 /******************************************************************************************************************************************/
-/*
+/* TODO: PENDING
 	Function 	: 	VDIgotStream()
 	Desciption	:	This function will define the local stream which is being used to send across
 	Return Value:	Enumareates devices to reload the devices connected to the client machine

@@ -28,7 +28,8 @@ $(function() {
 
     const audioInputSelect = document.querySelector('select#audioSource');
     const audioOutputSelect = document.querySelector('select#audioOutput');
-    const selectors = [audioInputSelect, audioOutputSelect];
+    const videoInputSelect = document.querySelector('select#videoSource');
+    const selectors = [audioInputSelect, audioOutputSelect, videoInputSelect];
     audioOutputSelect.disabled = !('sinkId' in HTMLMediaElement.prototype);
 
     function gotDevices(deviceInfos) {
@@ -49,7 +50,11 @@ $(function() {
             } else if (deviceInfo.kind === 'audiooutput') {
                 option.text = deviceInfo.label || `speaker ${audioOutputSelect.length + 1}`;
                 audioOutputSelect.appendChild(option);
-            } else {
+            } else if(deviceInfo.kind == 'videoinput') {
+                option.text = deviceInfo.label || `cam ${videoInputSelect.length + 1}`;
+                videoInputSelect.appendChild(option);
+            }
+            else {
                 console.log('Some other kind of source/device: ', deviceInfo);
             }
         }
@@ -235,7 +240,8 @@ $(function() {
                 local: localVideoElement
             },
             audioInput : audioInputSelect,
-            audioOutput : audioOutputSelect
+            audioOutput : audioOutputSelect,
+            videoInput : videoInputSelect
         });
 
         webPhone.userAgent.audioHelper.loadAudio({
