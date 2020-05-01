@@ -94,7 +94,7 @@ $(function() {
 
     function gotStream(session, stream) {
         session.replaceLocalTrack(stream);
-        return navigator.mediaDevices.enumerateDevices();
+        return CitrixWebRTC.enumerateDevices();
     }
 
     function handleError(error) {
