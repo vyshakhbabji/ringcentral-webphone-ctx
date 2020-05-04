@@ -142,6 +142,7 @@ $(function () {
             localVideoElement.src = URL.createObjectURL(mediaStream);
         }
         return CitrixWebRTC.enumerateDevices().then(gotDevices).catch(handleError);
+
     }
 
     /******************************************************************************************************************************************/
