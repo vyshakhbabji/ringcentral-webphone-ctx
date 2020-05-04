@@ -65,23 +65,25 @@
         var sdpConstraints = {
             mandatory: {
                 OfferToReceiveAudio: true,
-                OfferToReceiveVideo: true
+                OfferToReceiveVideo: false
             }
         };
 
-
         var localStream = undefined;
-        var audioIn = undefined;
-        var audioOut = undefined;
-        var videoIn = undefined;
+        var remoteStream = undefined;
 
-        var localVideo = undefined;
-        var remoteVideo = undefined;
+        /*Initialization of audio/video elements used to enumerate devices*/
+        var VDIaudioInput = undefined;
+        var VDIaudioOutput = undefined;
+        var VDIvideo = undefined;
 
-        var vdiCitrix =  CitrixWebRTC;
+        /*Initialization of video elements used in this application*/
+        var VDILocal = undefined;
+        var VDIRemote = undefined;
 
-        vdiCitrix.mapVideoElement(localVideo);
-        vdiCitrix.mapVideoElement(remoteVideo);
+        var vdiCitrix = CitrixWebRTC;
+
+
 
         /*--------------------------------------------------------------------------------------------------------------------*/
 
@@ -140,10 +142,12 @@
             options.rtcConfiguration = options.rtcConfiguration || {};
             options.rtcConfiguration = this.addDefaultIceServers(options.rtcConfiguration);
 
-            this.logger.log('initPeerConnection');
+            console.error('options.rtcConfiguration');
+            console.error(options.rtcConfiguration);
+            console.error('initPeerConnection');
 
             if (this.peerConnection) {
-                this.logger.log('Already have a peer connection for this session. Tearing down.');
+                console.error('Already have a peer connection for this session. Tearing down.');
                 this.resetIceGatheringComplete();
                 this.peerConnection.close();
             }
@@ -170,68 +174,78 @@
                 };
             }
 
-            this.peerConnection.onaddstream = VDIhandleAddStreamEvent;
-            this.peerConnection.onicecandidate = addIceEventVDI;
-            this.peerConnection.onicegatheringstatechange = () => {};
 
-            // this.peerConnection.onicecandidate = function (e) {
-            //     self.session.emit('iceCandidate', e);
-            //     if (e.candidate) {
-            //         self.logger.log('ICE candidate received: ' + (e.candidate.candidate === null ? null : e.candidate.candidate.trim()));
-            //     }
-            // };
+            this.peerConnection.onaddstream = (event) => {
+                console.error('onaddstream() callback');
+                vdiCitrix.mapVideoElement(VDIRemote);
+                VDIRemote.srcObject = event.stream;
+            };
+
+            this.peerConnection.onicecandidate = addIceEventVDI;
+            this.peerConnection.onicegatheringstatechange = () => {
+            };
+
+            this.peerConnection.onicecandidate = function (e) {
+                console.error('onIceCandidate() callback' + e);
+                self.session.emit('iceCandidate', e);
+                if (e.candidate) {
+                    self.logger.log('ICE candidate received: ' + (e.candidate.candidate === null ? null : e.candidate.candidate.trim()));
+                }
+            };
             //
-            // this.peerConnection.onicegatheringstatechange = function () {
-            //     self.logger.log('RTCIceGatheringState changed: ' + this.iceGatheringState);
-            //     switch (this.iceGatheringState) {
-            //         case 'gathering':
-            //             self.session.emit('iceGathering', this);
-            //             if (!self.iceGatheringTimer && options.iceCheckingTimeout) {
-            //                 self.iceGatheringTimeout = false;
-            //                 self.iceGatheringTimer = SIP.Timers.setTimeout(function () {
-            //                     self.logger.log('RTCIceChecking Timeout Triggered after ' + options.iceCheckingTimeout + ' milliseconds');
-            //                     self.iceGatheringTimeout = true;
-            //                     self.triggerIceGatheringComplete();
-            //                 }, options.iceCheckingTimeout);
-            //             }
-            //             break;
-            //         case 'complete':
-            //             self.triggerIceGatheringComplete();
-            //             break;
-            //     }
-            // };
-            //
-            // this.peerConnection.oniceconnectionstatechange = function () {  //need e for commented out case
-            //     var stateEvent;
-            //
-            //     switch (this.iceConnectionState) {
-            //         case 'new':
-            //             stateEvent = 'iceConnection';
-            //             break;
-            //         case 'checking':
-            //             stateEvent = 'iceConnectionChecking';
-            //             break;
-            //         case 'connected':
-            //             stateEvent = 'iceConnectionConnected';
-            //             break;
-            //         case 'completed':
-            //             stateEvent = 'iceConnectionCompleted';
-            //             break;
-            //         case 'failed':
-            //             stateEvent = 'iceConnectionFailed';
-            //             break;
-            //         case 'disconnected':
-            //             stateEvent = 'iceConnectionDisconnected';
-            //             break;
-            //         case 'closed':
-            //             stateEvent = 'iceConnectionClosed';
-            //             break;
-            //         default:
-            //             self.logger.warn('Unknown iceConnection state:', this.iceConnectionState);
-            //             return;
-            //     }
-            //     self.session.emit(stateEvent, this);
-            // };
+            this.peerConnection.onicegatheringstatechange = function () {
+                console.error('RTCIceGatheringState changed: ' + this.iceGatheringState);
+                switch (this.iceGatheringState) {
+                    case 'gathering':
+                        self.session.emit('iceGathering', this);
+                        if (!self.iceGatheringTimer && options.iceCheckingTimeout) {
+                            self.iceGatheringTimeout = false;
+                            self.iceGatheringTimer = SIP.Timers.setTimeout(function () {
+                                self.logger.log('RTCIceChecking Timeout Triggered after ' + options.iceCheckingTimeout + ' milliseconds');
+                                self.iceGatheringTimeout = true;
+                                self.triggerIceGatheringComplete();
+                            }, options.iceCheckingTimeout);
+                        }
+                        break;
+                    case 'complete':
+                        self.triggerIceGatheringComplete();
+                        break;
+                }
+            };
+
+            this.peerConnection.oniceconnectionstatechange = function () {  //need e for commented out case
+                console.error('oniceconnectionstatechange: ');
+
+                var stateEvent;
+
+                switch (this.iceConnectionState) {
+                    case 'new':
+                        stateEvent = 'iceConnection';
+                        break;
+                    case 'checking':
+                        stateEvent = 'iceConnectionChecking';
+                        break;
+                    case 'connected':
+                        stateEvent = 'iceConnectionConnected';
+                        break;
+                    case 'completed':
+                        stateEvent = 'iceConnectionCompleted';
+                        break;
+                    case 'failed':
+                        stateEvent = 'iceConnectionFailed';
+                        break;
+                    case 'disconnected':
+                        stateEvent = 'iceConnectionDisconnected';
+                        break;
+                    case 'closed':
+                        stateEvent = 'iceConnectionClosed';
+                        break;
+                    default:
+                        self.logger.warn('Unknown iceConnection state:', this.iceConnectionState);
+                        return;
+                }
+                self.session.emit(stateEvent, this);
+            };
         };
 
         CitrixSessionDescriptionHandler.prototype.getDescription = function (options, modifiers) {
@@ -277,6 +291,8 @@
             console.error('rtcofferoptions');
             console.error(options.RTCOfferOptions);
 
+
+            //TODO:get thsi fixed and then next steps
             // Check to see if the peerConnection already has a local description
             if (!shouldAcquireMedia && this.peerConnection.localDescription && this.peerConnection.localDescription.sdp && this.peerConnection.localDescription.sdp !== '') {
                 console.error('peer connection contains sdp already?');
@@ -297,7 +313,7 @@
             console.error('sdp not available, so aquiring the media stream now and then getting sdp with constraints ');
             console.error(self.constraints);
 
-            var s=undefined;
+            var s = undefined;
 
             return this.acquire(self.constraints)
                 .then(function acquireSucceeded(streams) {
@@ -317,7 +333,7 @@
                             self.peerConnection.addStream(stream);
                             console.error('added stream');
                             console.error(self.peerConnection);
-                            s=stream;
+                            s = stream;
                         }, this);
                     } catch (e) {
                         self.logger.error('error adding stream');
@@ -329,16 +345,17 @@
                 .then(function streamAdditionSucceeded() {
                     console.error('stream add succeeded')
                     console.error(s);
-                    return self.createOfferOrAnswer(options.RTCOfferOptions, modifiers,s);
+                    return self.createOfferOrAnswer(options.RTCOfferOptions, modifiers)
                 })
                 .then(function (sdp) {
-                    console.error('sdp is')
+                    console.error('sdp created on getDescription')
                     console.error(sdp)
                     return {
                         body: sdp,
                         contentType: self.CONTENT_TYPE
                     };
-                }).catch(function (e) {
+                })
+                .catch(function (e) {
                     this.session.disableRenegotiation = true;
                     throw e;
                 });
@@ -349,7 +366,7 @@
             console.error(error);
         }
 
-        CitrixSessionDescriptionHandler.prototype.acquire = function (constraint) {
+        CitrixSessionDescriptionHandler.prototype.acquire = function (constraints) {
             // Default audio & video to true
             constraints = this.checkAndDefaultConstraints(constraints);
 
@@ -359,177 +376,121 @@
                  * to define callbacks to `userMediaRequest`
                  */
                 this.session.emit('userMediaRequest');
-
-                var audioSource = audioIn.value;
-                var videoSource = videoIn.value;
+                var audioSource = VDIaudioInput.value;
+                var videoSource = VDIvideo.value;
                 console.error('audioSource is');
                 console.error(audioSource);
                 console.error('videoSource is');
                 console.error(videoSource);
 
-
-                const constraints = {
+                const constraint = {
                     audio: {deviceId: audioSource ? {exact: audioSource} : undefined},
-                    video: {mandatory:{sourceId: videoSource ,minWidth:1080,maxWidth:1080,minHeight:720,maxHeight:720,maxFrameRate:30}}
+                    video: {
+                        mandatory: {
+                            sourceId: videoSource,
+                            minWidth: 1,
+                            maxWidth: 1,
+                            minHeight: 1,
+                            maxHeight: 1,
+                            maxFrameRate: 30
+                        }
+                    }
                 };
 
-                // if (constraint.audio || constraint.video) {
-                //     this.WebRTC.getUserMedia(constraint)
-                //         .then(function (streams) {
-                //             this.session.emit('trackAdded');
-                //             this.session.emit('userMedia', streams);
-                //             resolve(streams);
-                //         }.bind(this)).catch(function (e) {
-                //         this.session.emit('userMediaFailed', e);
-                //         reject(e);
-                //     }.bind(this));
-                // } else {
-                //     // Local streams were explicitly excluded.
-                //     resolve([]);
-                // }
-
                 console.error('trying to acquire media');
-                vdiCitrix.getUserMedia(constraints, stream => {
+                console.error(constraint);
+
+                vdiCitrix.getUserMedia(constraint, stream => {
                     this.session.emit('trackAdded');
                     this.session.emit('userMedia', stream);
-                    localVideo.srcObject = stream;
                     console.error('stream from citrix getusermedia')
-                    console.error(stream)
+                    console.error(stream);
                     resolve(stream);
                 }, e => {
                     this.session.emit('userMediaFailed', e);
                     console.error('getusermedia failed');
                     reject(e);
                 });
-
             }.bind(this));
         };
 
-        function sdpGen(self, s){
-            var sdp = undefined;
-            self.peerConnection.createAnswer( desc=>{
-                console.error(desc);
-                sdp = desc;
-                self.peerConnection.setLocalDescription(desc);
-            } , VDIhandleError,sdpConstraints);
-            return Promise.resolve(sdp)
+
+        function createOffer(self){
+            return new Promise(function (resolve, reject) {
+                self.peerConnection.createOffer((descr) => {
+                    console.error('SDP Created for CreateOffer');
+                    console.error(descr);
+                    resolve(descr);
+                }, VDIhandleError, sdpConstraints);
+            });
         }
 
+        function createAnswer(self){
+            return new Promise(function (resolve, reject) {
+                self.peerConnection.createAnswer((descr) => {
+                    console.error('SDP Created for CreateAnswer');
+                    console.error(descr);
+                    resolve(descr);
+                }, VDIhandleError, sdpConstraints);
+            });
+        }
 
-        CitrixSessionDescriptionHandler.prototype.createOfferOrAnswer = function (RTCOfferOptions, modifiers,s) {
+        CitrixSessionDescriptionHandler.prototype.createOfferOrAnswer = function (RTCOfferOptions, modifiers) {
             var self = this;
             var methodName;
             var pc = this.peerConnection;
 
-            console.error('entering createOFferAnswer');
+            // RTCOfferOptions = RTCOfferOptions || {};
+            // methodName = self.hasOffer('remote') ? 'createAnswer' : 'createOffer';
 
-            RTCOfferOptions = RTCOfferOptions || {};
-
-            methodName = self.hasOffer('remote') ? 'createAnswer' : 'createOffer';
-
-            console.error(methodName);
-            console.error(RTCOfferOptions);
-
-            // var check = pc[methodName](RTCOfferOptions)
-            //
-            // console.error(check);
-
-            return sdpGen(this, s)
-                // return pc.createAnswer()
-                .catch(function methodError(e) {
-                    self.emit('peerConnection-' + methodName + 'Failed', e);
-                    console.error('peerConnection-' + methodName + 'Failed', e);
-                    throw e;
-                })
-                .then(function(sdp) {
-                    // sdp = SIP.Utils.reducePromises(modifiers, self.createRTCSessionDescriptionInit(sdp));
-                    console.error('sdp generated');
-                    console.error(sdp.sdp);
-                    var retVal = SIP.Utils.reducePromises(modifiers, sdp);
-                    console.error('return val');
-                    console.error(retVal);
-                    console.error('before setting sdp')
-                    console.error(pc.localDescription);
-                    return retVal;
-                })
-                .then(function(sdp) {
+            var desc = null;
+            return createOffer(self)
+                .then(function (sdp) {
+                    desc = sdp;
+                    console.error(desc);
+                    return SIP.Utils.reducePromises(modifiers, self.createRTCSessionDescriptionInit(sdp));
+                }).
+                then(function (sdp) {
                     self.resetIceGatheringComplete();
-                    console.error(pc);
-                    return pc.setLocalDescription(sdp);
-                })
-                .then(function() {
-                    console.error('pc.setLocalDescription(sdp)');
-                    console.error(pc);
-                    self.waitForIceGatheringComplete();
-                    var sdp = self.createRTCSessionDescriptionInit(self.peerConnection.localDescription);
+                    console.error('desc');
+                    console.error(desc);
+                    console.error('sdp is ')
                     console.error(sdp);
+                    pc.setLocalDescription(desc);
+                    // return Promise.resolve(sdp);
                     return SIP.Utils.reducePromises(modifiers, sdp);
-                    // return sdp;
                 })
-                .catch(function localDescError(e) {
-                    self.session.emit('peerConnection-SetLocalDescriptionFailed', e);
-                    throw e;
+                .then(function onSetLocalDescriptionSuccess(sdp) {
+                    return new Promise(function (resolve, reject) {
+                        console.error('onSetLocalDescriptionSuccesson')
+                        console.error(sdp);
+                        // return self.waitForIceGatheringComplete();
+                        self.session.emit('getDescription', sdp.sdp);
+                        self.setDirection(sdp.sdp);
+                        resolve(sdp.sdp);
+                    });
                 })
-                .then(function(localDescription) {
-                    self.session.emit('getDescription', localDescription);
-                    self.setDirection(localDescription.sdp);
-                    console.error('finalpc')
-                    console.error(pc);
-                    return localDescription.sdp;
-                })
-                .catch(function createOfferOrAnswerError (e) {
+                // .then(function readySuccess() {
+                //     console.error('readySuccess')
+                //     var localDescription = self.createRTCSessionDescriptionInit(self.peerConnection.localDescription);
+                //     console.error('localdescription');
+                //     console.error(localDescription);
+                //     return SIP.Utils.reducePromises(modifiers, localDescription);
+                // })
+                // .then(function (localDescription) {
+                //     self.session.emit('getDescription', localDescription);
+                //     self.setDirection(localDescription.sdp);
+                //     return localDescription.sdp;
+                // })
+                .catch(function createOfferOrAnswerError(e) {
                     self.logger.error(e);
                     // TODO: Not sure if this is correct
                     throw new SIP.Exceptions.GetDescriptionError(e);
                 });
+        }
 
 
 
-
-
-            // return sdpGen(s)
-            //     .catch(function methodError(e) {
-            //         self.session.emit('peerConnection-' + methodName + 'Failed', e);
-            //         console.error('peerConnection-' + methodName + 'Failed', e);
-            //         throw e;
-            //     })
-            //     .then(function (sdp) {
-            //         console.error('sdp generated');
-            //         console.error(sdp);
-            //         var retVal = SIP.Utils.reducePromises(modifiers, self.createRTCSessionDescriptionInit(sdp));
-            //         console.error('return val');
-            //         console.error(retVal);
-            //         return retVal;
-            //     })
-            //     .then(function (sdp) {
-            //         self.resetIceGatheringComplete();
-            //         var ret = pc.setLocalDescription(sdp);
-            //         console.error('ret after icegatheringcomplete');
-            //         console.error(ret);
-            //         return sdp.sdp;
-            //     })
-            //     .catch(function localDescError(e) {
-            //         self.session.emit('peerConnection-SetLocalDescriptionFailed', e);
-            //         throw e;
-            //     });
-            //     // .then(function onSetLocalDescriptionSuccess() {
-            //     //     return self.waitForIceGatheringComplete();
-            //     // })
-            //     // .then(function readySuccess() {
-            //     //     var localDescription = self.createRTCSessionDescriptionInit(self.peerConnection.localDescription);
-            //     //     return SIP.Utils.reducePromises(modifiers, localDescription);
-            //     // })
-            //     // .then(function (localDescription) {
-            //     //     self.session.emit('getDescription', localDescription);
-            //     //     self.setDirection(localDescription.sdp);
-            //     //     return localDescription.sdp;
-            //     // })
-            //     // .catch(function createOfferOrAnswerError(e) {
-            //     //     self.logger.error(e);
-            //     //     // TODO: Not sure if this is correct
-            //     //     throw new SIP.Exceptions.GetDescriptionError(e);
-            //     // });
-        };
 
         CitrixSessionDescriptionHandler.prototype.hasDescription = function (contentType) {
             return contentType === this.CONTENT_TYPE;
@@ -540,20 +501,12 @@
             this.logger.log('closing PeerConnection');
             // have to check signalingState since this.close() gets called multiple times
             if (this.peerConnection && this.peerConnection.signalingState !== 'closed') {
-                // if (this.peerConnection.getSenders) {
-                //     this.peerConnection.getSenders().forEach(function (sender) {
-                //         if (sender.track) {
-                //             sender.track.stop();
-                //         }
-                //     });
-                // } else {
                 this.logger.warn('Using getLocalStreams which is deprecated');
                 this.peerConnection.getLocalStreams().forEach(function (stream) {
                     stream.getTracks().forEach(function (track) {
                         track.stop();
                     });
                 });
-                // }
                 if (this.peerConnection.getReceivers) {
                     this.peerConnection.getReceivers().forEach(function (receiver) {
                         if (receiver.track) {
@@ -685,9 +638,10 @@
 
 
         function VDIhandleAddStreamEvent(event) {
-            console.log("In VDIhandleAddStreamEvent");
-            console.log(event.stream);
-            audioIn.srcObject = event.stream;
+            console.error("In VDIhandleAddStreamEvent");
+            console.error(event.stream);
+            vdiCitrix.mapVideoElement(VDIRemote)
+            VDIRemote.srcObject = event.stream;
         }
 
         function addIceEventVDI(event) {
@@ -879,8 +833,6 @@
 
             var modifiers = options.modifiers || [];
             modifiers.push(SIP.WebRTC.Modifiers.stripTcpCandidates);
-            modifiers.push(SIP.WebRTC.Modifiers.cleanJitsiSdpImageattr);
-            modifiers.push(SIP.WebRTC.Modifiers.stripG722);
 
 
             var sessionDescriptionHandlerFactoryOptions = options.sessionDescriptionHandlerFactory || {
@@ -888,18 +840,24 @@
                     iceCheckingTimeout: this.sipInfo.iceCheckingTimeout || this.sipInfo.iceGatheringTimeout || 500,
                     rtcConfiguration: {
                         rtcpMuxPolicy: 'negotiate'
-                    }
+                    },
+                    enableDtlsSrtp: true
                 },
                 constraints: defaultMediaConstraints,
                 modifiers: modifiers
             };
 
-            audioIn = options.audioInput;
-            audioOut = options.audioOutput;
-            videoIn = options.videoInput;
+            VDIaudioInput = options.audioInput;
+            VDIaudioOutput = options.audioOutput;
+            VDIvideo = options.videoInput;
 
-            localVideo = options.media.local;
-            remoteVideo = options.media.remote;
+            console.error(VDIaudioInput);
+            console.error(VDIaudioOutput);
+            console.error(VDIvideo);
+
+            //TODO: CHECK THIS VAL
+            VDILocal = options.media.remote;
+            VDIRemote = options.media.local;
 
             var browserUa = navigator.userAgent.toLowerCase();
             var isSafari = false;
@@ -914,7 +872,6 @@
             if (isFirefox) {
                 sessionDescriptionHandlerFactoryOptions.alwaysAcquireMediaFirst = true;
             }
-
 
             var sessionDescriptionHandlerFactory = function (session, options) {
                 return new CitrixSessionDescriptionHandler(session, sessionDescriptionHandlerFactoryOptions);
@@ -942,7 +899,7 @@
                 connectionRecoveryMaxInterval: options.connectionRecoveryMaxInterval || 60,
                 connectionRecoveryMinInterval: options.connectionRecoveryMinInterval || 2,
                 sessionDescriptionHandlerFactoryOptions: sessionDescriptionHandlerFactoryOptions,
-                sessionDescriptionHandlerFactory: sessionDescriptionHandlerFactory
+                sessionDescriptionHandlerFactory : sessionDescriptionHandlerFactory
             };
             this.userAgent = new SIP.UA(configuration);
 
@@ -956,7 +913,8 @@
             if (options.media !== undefined && options.media.remote && options.media.local) {
                 this.userAgent.media.remote = options.media.remote;
                 this.userAgent.media.local = options.media.local;
-            } else
+            }
+            else
                 throw new Error('HTML Media Element not Defined');
 
             this.userAgent.sipInfo = this.sipInfo;
@@ -1125,7 +1083,7 @@
                 }
             });
 
-            // session.on('trackAdded', addTrack);
+            session.on('trackAdded', addTrack);
 
             session.on('accepted', stopPlaying);
             session.on('rejected', stopPlaying);
@@ -1456,8 +1414,8 @@
                 options.extraHeaders.push('P-rc-country-id: ' + options.homeCountryId);
             }
 
-            options.media = options.media || {};
-            options.media.constraints = options.media.constraints || defaultMediaConstraints;
+            // options.media = options.media || {};
+            // options.media.constraints = options.media.constraints || defaultMediaConstraints;
 
             options.RTCConstraints = options.RTCConstraints || {optional: [{DtlsSrtpKeyAgreement: 'true'}]};
 
@@ -1505,11 +1463,11 @@
             options = options || {};
             options.extraHeaders = (options.extraHeaders || []).concat(session.ua.defaultHeaders);
             options.media = options.media || {};
-            options.media.constraints = options.media.constraints || defaultMediaConstraints;
+            // options.media.constraints = options.media.constraints || defaultMediaConstraints;
 
             options.RTCConstraints = options.RTCConstraints || {optional: [{DtlsSrtpKeyAgreement: 'true'}]};
 
-            return new Promise(function (resolve, reject) {
+            return new Promise(function(resolve, reject) {
 
                 function onAnswered() {
                     resolve(session);
@@ -1608,10 +1566,8 @@
             var session = this;
 
             return (session.local_hold ? Promise.resolve(null) : session.hold())
-                .then(function () {
-                    return delay(300);
-                })
-                .then(function () {
+                .then(function() { return delay(300); })
+                .then(function() {
 
                     var referTo = '<' + target.dialog.remote_target.toString() +
                         '?Replaces=' + target.dialog.id.call_id +
@@ -1643,10 +1599,8 @@
             var session = this;
 
             return (session.local_hold ? Promise.resolve(null) : session.hold())
-                .then(function () {
-                    return delay(300);
-                })
-                .then(function () {
+                .then(function() { return delay(300); })
+                .then(function() {
                     return session.blindTransfer(target, options);
                 });
 
@@ -1798,13 +1752,15 @@
 
         function addTrack() {
 
+            console.error('entering add track');
             var session = this;
             var pc = session.sessionDescriptionHandler.peerConnection;
 
             // Gets remote tracks
-            var remoteAudio = session.media.remote;
+            var remoteAudio = VDIRemote;
             var remoteStream = new MediaStream();
 
+            console.error('Adding Recievers/ remote track');
             if (pc.getReceivers) {
                 pc.getReceivers().forEach(function (receiver) {
                     var rtrack = receiver.track;
@@ -1820,24 +1776,17 @@
                 session.logger.log('local play was rejected');
             });
 
+            console.error('Adding Senders/local track')
             // Gets local tracks
-            var localAudio = session.media.local;
+            var localAudio = VDILocal;
             var localStream = new MediaStream();
 
-            // if (pc.getSenders) {
-            //     pc.getSenders().forEach(function (sender) {
-            //         var strack = sender.track;
-            //         if (strack && strack.kind === 'audio') {
-            //             localStream.addTrack(strack);
-            //         }
-            //     });
-            // } else {
             localStream = pc.getLocalStreams()[0];
-            // }
             localAudio.srcObject = localStream;
-            localAudio.play().catch(function () {
+            localAudio.play().catch(function() {
                 session.logger.log('local play was rejected');
             });
+
         }
 
         return WebPhone;

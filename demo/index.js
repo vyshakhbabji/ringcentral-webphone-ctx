@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
 
     /** @type {RingCentral.SDK} */
     var sdk = null;
@@ -18,19 +18,51 @@ $(function() {
     var $callTemplate = $('#template-call');
     var $incomingTemplate = $('#template-incoming');
     var $acceptedTemplate = $('#template-accepted');
-    var $globalDevices = $('#globalDevices');
     window.acceptedTemplate = $acceptedTemplate;
     var $globalDevices = $('#globalDevices');
 
-    var remoteVideoElement =  document.getElementById('remoteVideo');
-    var localVideoElement  = document.getElementById('localVideo');
+    var remoteVideoElement = document.getElementById('remoteVideo');//ui.video.localVideo -VDILocal
+    var localVideoElement = document.getElementById('localVideo');//ui.video.remoteVideo - VDIRemote
     var videoElement = document.querySelector('video');
 
-    const audioInputSelect = document.querySelector('select#audioSource');
-    const audioOutputSelect = document.querySelector('select#audioOutput');
-    const videoInputSelect = document.querySelector('select#videoSource');
+    /******************************************************************************************************************************************/
+    //TODO : GET THIS WORKING
+
+    window.getWindowHandleAsHex = function(){
+        const remote = require('electron').remote;
+        let win = remote.getCurrentWindow();
+        return new Promise((resolve,reject) => {
+            var uint8String = "";
+            var uint8 = win.getNativeWindowHandle();
+            uint8.forEach(function(element) {
+                if(element < 16){
+                    uint8String = uint8String.concat("0")
+                }
+                uint8String = uint8String.concat(element.toString(16));
+            });
+            console.log(uint8String);
+            resolve(uint8String);
+        })
+    };
+
+
+    /******************************************************************************************************************************************/
+
+    //TODO:SET THIS VALUES - IMPORTANT
+
+    // CitrixWebRTC.mapVideoElement(remoteVideoElement);
+    // CitrixWebRTC.mapVideoElement(localVideoElement);
+
+    var localStream = null;
+    var remoteStream = null;
+
+    const audioInputSelect = document.querySelector('select#audioSource'); // selector - vdiAudioInput
+    const audioOutputSelect = document.querySelector('select#audioOutput'); // selector - vdiAudioOutput
+    const videoInputSelect = document.querySelector('select#videoSource'); // selector - vdiVideoInput
     const selectors = [audioInputSelect, audioOutputSelect, videoInputSelect];
     audioOutputSelect.disabled = !('sinkId' in HTMLMediaElement.prototype);
+
+    /******************************************************************************************************************************************/
 
     function gotDevices(deviceInfos) {
         // Handles being called several times to update labels. Preserve values.
@@ -42,6 +74,7 @@ $(function() {
         });
         for (let i = 0; i !== deviceInfos.length; ++i) {
             const deviceInfo = deviceInfos[i];
+            console.error(deviceInfos[i]);
             const option = document.createElement('option');
             option.value = deviceInfo.deviceId;
             if (deviceInfo.kind === 'audioinput') {
@@ -50,11 +83,10 @@ $(function() {
             } else if (deviceInfo.kind === 'audiooutput') {
                 option.text = deviceInfo.label || `speaker ${audioOutputSelect.length + 1}`;
                 audioOutputSelect.appendChild(option);
-            } else if(deviceInfo.kind == 'videoinput') {
+            } else if (deviceInfo.kind == 'videoinput') {
                 option.text = deviceInfo.label || `cam ${videoInputSelect.length + 1}`;
                 videoInputSelect.appendChild(option);
-            }
-            else {
+            } else {
                 console.log('Some other kind of source/device: ', deviceInfo);
             }
         }
@@ -64,6 +96,9 @@ $(function() {
             }
         });
     }
+
+    /******************************************************************************************************************************************/
+
 
     // Attach audio output device to video element using device/sink ID.
     function attachSinkId(element, sinkId) {
@@ -87,19 +122,35 @@ $(function() {
         }
     }
 
+    /******************************************************************************************************************************************/
+
+
     function changeAudioDestination() {
         const audioDestination = audioOutputSelect.value;
         attachSinkId(videoElement, audioDestination);
     }
 
-    function gotStream(session, stream) {
-        session.replaceLocalTrack(stream);
-        return navigator.mediaDevices.enumerateDevices();
+    /******************************************************************************************************************************************/
+
+    function gotStream(mediaStream) {
+        console.error(mediaStream);
+        localStream = mediaStream.clone();
+        if ('srcObject' in localVideoElement) {
+            localVideoElement.srcObject = mediaStream;
+        } else {
+            // Avoid using this in new browsers, as it is going away.
+            localVideoElement.src = URL.createObjectURL(mediaStream);
+        }
+        return CitrixWebRTC.enumerateDevices().then(gotDevices).catch(handleError);
     }
 
+    /******************************************************************************************************************************************/
+
     function handleError(error) {
-        console.log('navigator.MediaDevices.getUserMedia error: ', error.message, error.name);
+        console.log('getUserMedia error: ', error);
     }
+
+    /******************************************************************************************************************************************/
 
     function start(session) {
         if (window.stream) {
@@ -108,15 +159,73 @@ $(function() {
             });
         }
         const audioSource = audioInputSelect.value;
+        //TODO: CHECK THIS
+        const videoSource = videoInputSelect.value;
         const constraints = {
-            audio: {deviceId: audioSource ? {exact: audioSource} : undefined}
+            audio: {deviceId: audioSource ? {exact: audioSource} : undefined},
+            video: {
+                mandatory: {
+                    sourceId: videoSource,
+                    minWidth: 1,
+                    maxWidth: 1,
+                    minHeight: 1,
+                    maxHeight: 1,
+                    maxFrameRate: 30
+                }
+            }
         };
-        navigator.mediaDevices
-            .getUserMedia(constraints)
-            .then(stream => gotStream(session, stream))
-            .then(gotDevices)
-            .catch(handleError);
+        //TODO :SET THIS
+        CitrixWebRTC.getUserMedia(constraints, gotStream, handleError);
+        // if (session.peerConnection !== null) {
+        //     VDI_handleVideoOfferMsg(session);
+        // }
+
     }
+
+    /******************************************************************************************************************************************/
+
+    var sdpConstraints = {
+        mandatory: {
+            OfferToReceiveAudio: true,
+            OfferToReceiveVideo: true
+        }
+    };
+
+    /******************************************************************************************************************************************/
+
+    function VDI_handleVideoOfferMsg(session) {
+        // if (session.peerConnection== null) {
+        //     alert("No Call recieved Yet, please wait");
+        //     return;
+        // }
+        console.error('inside VDIHANDLEVideoOferMsg')
+        const audioSource = audioInputSelect.value;
+        const videoSource = videoInputSelect.value;
+        const constraints = {
+            audio: {deviceId: audioSource ? {exact: audioSource} : undefined},
+            video: {
+                mandatory: {
+                    sourceId: videoSource,
+                    minWidth: 1,
+                    maxWidth: 1,
+                    minHeight: 1,
+                    maxHeight: 1,
+                    maxFrameRate: 30
+                }
+            }
+        };
+        CitrixWebRTC.getUserMedia(constraints, (s) => {
+            console.error("In VDI_handleVideoOfferMsg, after getting usermedia");
+            console.error(s);
+            gotStream(s);
+            session.peerConnection.addStream(s);
+            session.peerConnection.createAnswer((descr) => {
+                session.peerConnection.setLocalDescription(descr);
+            }, handleError, sdpConstraints);
+        }, handleError);
+    }
+
+    /******************************************************************************************************************************************/
 
     /**
      * @param {jQuery|HTMLElement} $tpl
@@ -127,7 +236,6 @@ $(function() {
     }
 
     function login(server, appKey, appSecret, login, ext, password, ll) {
-
         sdk = new RingCentral.SDK({
             appKey: appKey,
             appSecret: appSecret,
@@ -141,6 +249,7 @@ $(function() {
             login = (login.match(/^[\+1]/)) ? login : '1' + login;
             login = login.replace(/\W/g, '')
         }
+
 
         platform
             .login({
@@ -177,7 +286,7 @@ $(function() {
             .loginWindow({url: loginUrl})                       // this method also allows to supply more options to control window position
             .then(platform.login.bind(platform))
             .then(function () {
-                return postLogin(server, appKey, appSecret, '','','',ll);
+                return postLogin(server, appKey, appSecret, '', '', '', ll);
             })
             .catch(function (e) {
                 console.error(e.stack || e);
@@ -198,10 +307,8 @@ $(function() {
         localStorage.setItem('webPhonePassword', password || '');
         localStorage.setItem('webPhoneLogLevel', logLevel || 0);
 
-        console.error(RingCentral.WebPhone);
-
         return platform.get('/restapi/v1.0/account/~/extension/~')
-            .then(function(res) {
+            .then(function (res) {
 
                 extension = res.json();
 
@@ -214,10 +321,12 @@ $(function() {
                 });
 
             })
-            .then(function(res) { return res.json(); })
+            .then(function (res) {
+                return res.json();
+            })
             .then(register)
             .then(makeCallForm)
-            .catch(function(e) {
+            .catch(function (e) {
                 console.error('Error in main promise chain');
                 console.error(e.stack || e);
             });
@@ -226,7 +335,6 @@ $(function() {
     function register(data) {
 
         sipInfo = data.sipInfo[0] || data.sipInfo;
-
         webPhone = new RingCentral.WebPhone(data, {
             appKey: localStorage.getItem('webPhoneAppKey'),
             audioHelper: {
@@ -239,9 +347,9 @@ $(function() {
                 remote: remoteVideoElement,
                 local: localVideoElement
             },
-            audioInput : audioInputSelect,
-            audioOutput : audioOutputSelect,
-            videoInput : videoInputSelect
+            audioInput: audioInputSelect,
+            audioOutput: audioOutputSelect,
+            videoInput: videoInputSelect
         });
 
         webPhone.userAgent.audioHelper.loadAudio({
@@ -249,73 +357,89 @@ $(function() {
             outgoing: '../audio/outgoing.ogg'
         });
 
-        webPhone.userAgent.audioInput = audioInputSelect;
-        webPhone.userAgent.audioOutput = audioOutputSelect;
-
         webPhone.userAgent.audioHelper.setVolume(.3);
         webPhone.userAgent.on('invite', onInvite);
-        webPhone.userAgent.on('connecting', function() { console.log('UA connecting'); });
-        webPhone.userAgent.on('connected', function() { console.log('UA Connected'); });
-        webPhone.userAgent.on('disconnected', function() { console.log('UA Disconnected'); });
-        webPhone.userAgent.on('registered', function() { console.log('UA Registered'); });
-        webPhone.userAgent.on('unregistered', function() { console.log('UA Unregistered'); });
-        webPhone.userAgent.on('registrationFailed', function() { console.log('UA RegistrationFailed', arguments); });
-        webPhone.userAgent.on('message', function() { console.log('UA Message', arguments); });
+        webPhone.userAgent.on('connecting', function () {
+            console.log('UA connecting');
+        });
+        webPhone.userAgent.on('connected', function () {
+            console.log('UA Connected');
+        });
+        webPhone.userAgent.on('disconnected', function () {
+            console.log('UA Disconnected');
+        });
+        webPhone.userAgent.on('registered', function () {
+            console.log('UA Registered');
+        });
+        webPhone.userAgent.on('unregistered', function () {
+            console.log('UA Unregistered');
+        });
+        webPhone.userAgent.on('registrationFailed', function () {
+            console.log('UA RegistrationFailed', arguments);
+        });
+        webPhone.userAgent.on('message', function () {
+            console.log('UA Message', arguments);
+        });
 
         return webPhone;
 
     }
 
     function onInvite(session) {
-
         console.log('EVENT: Invite', session.request);
         console.log('To', session.request.to.displayName, session.request.to.friendlyName);
         console.log('From', session.request.from.displayName, session.request.from.friendlyName);
 
         var $modal = cloneTemplate($incomingTemplate).modal({backdrop: 'static'});
 
-        $modal.find('.answer').on('click', function() {
+        $modal.find('.answer').on('click', function () {
             $modal.find('.before-answer').css('display', 'none');
             $modal.find('.answered').css('display', '');
             session.accept()
-                .then(function() {
+                .then(function () {
                     $modal.modal('hide');
                     onAccepted(session);
                 })
-                .catch(function(e) { console.error('Accept failed', e.stack || e); });
+                .catch(function (e) {
+                    console.error('Accept failed', e.stack || e);
+                });
         });
 
-        $modal.find('.decline').on('click', function() {
+        $modal.find('.decline').on('click', function () {
             session.reject();
         });
 
-        $modal.find('.toVoicemail').on('click', function() {
+        $modal.find('.toVoicemail').on('click', function () {
             session.toVoicemail();
         });
 
-        $modal.find('.forward-form').on('submit', function(e) {
+        $modal.find('.forward-form').on('submit', function (e) {
             e.preventDefault();
             e.stopPropagation();
             session.forward($modal.find('input[name=forward]').val().trim())
-                .then(function() {
+                .then(function () {
                     console.log('Forwarded');
                     $modal.modal('hide');
                 })
-                .catch(function(e) { console.error('Forward failed', e.stack || e); });
+                .catch(function (e) {
+                    console.error('Forward failed', e.stack || e);
+                });
         });
 
-        $modal.find('.reply-form').on('submit', function(e) {
+        $modal.find('.reply-form').on('submit', function (e) {
             e.preventDefault();
             e.stopPropagation();
-            session.replyWithMessage({ replyType: 0, replyText: $modal.find('input[name=reply]').val() })
-                .then(function() {
+            session.replyWithMessage({replyType: 0, replyText: $modal.find('input[name=reply]').val()})
+                .then(function () {
                     console.log('Replied');
                     $modal.modal('hide');
                 })
-                .catch(function(e) { console.error('Reply failed', e.stack || e); });
+                .catch(function (e) {
+                    console.error('Reply failed', e.stack || e);
+                });
         });
 
-        session.on('rejected', function() {
+        session.on('rejected', function () {
             $modal.modal('hide');
         });
 
@@ -341,7 +465,7 @@ $(function() {
             $callDevices.append(newChild);
         }
 
-        var interval = setInterval(function() {
+        var interval = setInterval(function () {
 
             var time = session.startTime ? (Math.round((Date.now() - session.startTime) / 1000) + 's') : 'Ringing';
 
@@ -362,127 +486,167 @@ $(function() {
             $modal.modal('hide');
         }
 
-        $modal.find('.increase-volume').on('click', function() {
+        $modal.find('.increase-volume').on('click', function () {
             session.ua.audioHelper.setVolume(
                 (session.ua.audioHelper.volume != null ? session.ua.audioHelper.volume : .5) + .1
             );
         });
 
-        $modal.find('.decrease-volume').on('click', function() {
+        $modal.find('.decrease-volume').on('click', function () {
             session.ua.audioHelper.setVolume(
                 (session.ua.audioHelper.volume != null ? session.ua.audioHelper.volume : .5) - .1
             );
         });
 
-        $modal.find('.mute').on('click', function() {
+        $modal.find('.mute').on('click', function () {
             session.mute();
         });
 
-        $modal.find('.unmute').on('click', function() {
+        $modal.find('.unmute').on('click', function () {
             session.unmute();
         });
 
-        $modal.find('.hold').on('click', function() {
-            session.hold().then(function() { console.log('Holding'); }).catch(function(e) { console.error('Holding failed', e.stack || e); });
+        $modal.find('.hold').on('click', function () {
+            session.hold().then(function () {
+                console.log('Holding');
+            }).catch(function (e) {
+                console.error('Holding failed', e.stack || e);
+            });
         });
 
-        $modal.find('.unhold').on('click', function() {
-            session.unhold().then(function() { console.log('UnHolding'); }).catch(function(e) { console.error('UnHolding failed', e.stack || e); });
+        $modal.find('.unhold').on('click', function () {
+            session.unhold().then(function () {
+                console.log('UnHolding');
+            }).catch(function (e) {
+                console.error('UnHolding failed', e.stack || e);
+            });
         });
-        $modal.find('.startRecord').on('click', function() {
-            session.startRecord().then(function() { console.log('Recording Started'); }).catch(function(e) { console.error('Recording Start failed', e.stack || e); });
+        $modal.find('.startRecord').on('click', function () {
+            session.startRecord().then(function () {
+                console.log('Recording Started');
+            }).catch(function (e) {
+                console.error('Recording Start failed', e.stack || e);
+            });
         });
 
-        $modal.find('.stopRecord').on('click', function() {
-            session.stopRecord().then(function() { console.log('Recording Stopped'); }).catch(function(e) { console.error('Recording Stop failed', e.stack || e); });
+        $modal.find('.stopRecord').on('click', function () {
+            session.stopRecord().then(function () {
+                console.log('Recording Stopped');
+            }).catch(function (e) {
+                console.error('Recording Stop failed', e.stack || e);
+            });
         });
 
-        $modal.find('.park').on('click', function() {
-            session.park().then(function() { console.log('Parked'); }).catch(function(e) { console.error('Park failed', e.stack || e); });
+        $modal.find('.park').on('click', function () {
+            session.park().then(function () {
+                console.log('Parked');
+            }).catch(function (e) {
+                console.error('Park failed', e.stack || e);
+            });
         });
 
-        $modal.find('.transfer-form').on('submit', function(e) {
+        $modal.find('.transfer-form').on('submit', function (e) {
             e.preventDefault();
             e.stopPropagation();
-            session.transfer($transfer.val().trim()).then(function() { console.log('Transferred'); }).catch(function(e) { console.error('Transfer failed', e.stack || e); });
+            session.transfer($transfer.val().trim()).then(function () {
+                console.log('Transferred');
+            }).catch(function (e) {
+                console.error('Transfer failed', e.stack || e);
+            });
         });
 
-        $modal.find('.transfer-form button.warm').on('click', function(e) {
+        $modal.find('.transfer-form button.warm').on('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
-            session.hold().then(function() {
+            session.hold().then(function () {
 
                 var newSession = session.ua.invite($transfer.val().trim());
 
-                newSession.once('accepted', function() {
+                newSession.once('accepted', function () {
                     session.warmTransfer(newSession)
-                        .then(function() { console.log('Transferred'); })
-                        .catch(function(e) { console.error('Transfer failed', e.stack || e); });
+                        .then(function () {
+                            console.log('Transferred');
+                        })
+                        .catch(function (e) {
+                            console.error('Transfer failed', e.stack || e);
+                        });
                 });
 
             });
 
         });
 
-        $modal.find('.flip-form').on('submit', function(e) {
+        $modal.find('.flip-form').on('submit', function (e) {
             e.preventDefault();
             e.stopPropagation();
-            session.flip($flip.val().trim()).then(function() { console.log('Flipped'); }).catch(function(e) { console.error('Flip failed', e.stack || e); });
+            session.flip($flip.val().trim()).then(function () {
+                console.log('Flipped');
+            }).catch(function (e) {
+                console.error('Flip failed', e.stack || e);
+            });
             $flip.val('');
         });
 
-        $modal.find('.dtmf-form').on('submit', function(e) {
+        $modal.find('.dtmf-form').on('submit', function (e) {
             e.preventDefault();
             e.stopPropagation();
             session.dtmf($dtmf.val().trim());
             $dtmf.val('');
         });
 
-        $modal.find('.hangup').on('click', function() {
+        $modal.find('.hangup').on('click', function () {
             session.terminate();
         });
 
-        session.on('accepted', function() {
+        session.on('accepted', function () {
             console.log('Event: Accepted');
-            audioInputSelect.onchange = function() {
+            audioInputSelect.onchange = function () {
                 start(session);
             };
             audioOutputSelect.onchange = changeAudioDestination;
             start(session);
         });
-        session.on('progress', function() {
+        session.on('progress', function () {
             console.log('Event: Progress');
         });
-        session.on('rejected', function() {
+        session.on('rejected', function () {
             console.log('Event: Rejected');
             close();
         });
-        session.on('failed', function() {
+        session.on('failed', function () {
             console.log('Event: Failed');
             close();
         });
-        session.on('terminated', function() {
+        session.on('terminated', function () {
             console.log('Event: Terminated');
             close();
         });
-        session.on('cancel', function() {
+        session.on('cancel', function () {
             console.log('Event: Cancel');
             close();
         });
-        session.on('refer', function() {
+        session.on('refer', function () {
             console.log('Event: Refer');
             close();
         });
-        session.on('replaced', function(newSession) {
+        session.on('replaced', function (newSession) {
             console.log('Event: Replaced: old session', session, 'has been replaced with', newSession);
             close();
             onAccepted(newSession);
         });
-        session.on('dtmf', function() { console.log('Event: DTMF'); });
-        session.on('muted', function() { console.log('Event: Muted'); });
-        session.on('unmuted', function() { console.log('Event: Unmuted'); });
-        session.on('connecting', function() { console.log('Event: Connecting'); });
-        session.on('bye', function() {
+        session.on('dtmf', function () {
+            console.log('Event: DTMF');
+        });
+        session.on('muted', function () {
+            console.log('Event: Muted');
+        });
+        session.on('unmuted', function () {
+            console.log('Event: Unmuted');
+        });
+        session.on('connecting', function () {
+            console.log('Event: Connecting');
+        });
+        session.on('bye', function () {
             console.log('Event: Bye');
             close();
         });
@@ -491,8 +655,8 @@ $(function() {
     function makeCall(number, homeCountryId) {
 
         homeCountryId = homeCountryId
-                      || (extension && extension.regionalSettings && extension.regionalSettings.homeCountry && extension.regionalSettings.homeCountry.id)
-                      || null;
+            || (extension && extension.regionalSettings && extension.regionalSettings.homeCountry && extension.regionalSettings.homeCountry.id)
+            || null;
 
         var session = webPhone.userAgent.invite(number, {
             fromNumber: username,
@@ -504,10 +668,8 @@ $(function() {
     }
 
     function makeCallForm() {
-        navigator.mediaDevices
-            .enumerateDevices()
-            .then(gotDevices)
-            .catch(handleError);
+        // navigator.mediaDevices.enumerateDevices().then(gotDevices).then(handleError);
+        CitrixWebRTC.enumerateDevices().then(gotDevices).then(handleError);
 
         var $form = cloneTemplate($callTemplate);
 
@@ -516,7 +678,7 @@ $(function() {
 
         $number.val(localStorage.getItem('webPhoneLastNumber') || '');
 
-        $form.on('submit', function(e) {
+        $form.on('submit', function (e) {
 
             e.preventDefault();
             e.stopPropagation();
@@ -544,7 +706,6 @@ $(function() {
         var $password = $form.find('input[name=password]').eq(0);
         var $logLevel = $authForm.find('select[name=logLevel]').eq(0);
 
-
         $server.val(localStorage.getItem('webPhoneServer') || RingCentral.SDK.server.sandbox);
         $appKey.val(localStorage.getItem('webPhoneAppKey') || '');
         $appSecret.val(localStorage.getItem('webPhoneAppSecret') || '');
@@ -553,9 +714,7 @@ $(function() {
         $password.val(localStorage.getItem('webPhonePassword') || '');
         $logLevel.val(localStorage.getItem('webPhoneLogLevel') || logLevel);
 
-
-        $form.on('submit', function(e) {
-
+        $form.on('submit', function (e) {
             console.log("Normal Flow");
 
             e.preventDefault();
@@ -565,7 +724,7 @@ $(function() {
 
         });
         //
-        $authForm.on('submit', function(e) {
+        $authForm.on('submit', function (e) {
 
             console.log("Authorized Flow");
 
