@@ -1,17 +1,19 @@
-const { app, BrowserWindow } = require('electron')
-var path = require('path')
-var fs = require('fs')
+const path = require('path');
+const { app, BrowserWindow } = require('electron');
+const { VirtualMachineDetector } = require('mars-desktop');
 console.log('Chrome:', process.versions.chrome);
 
 let win
 function createWindow () {
+  const vmd = (new VirtualMachineDetector).init();
+
   // Create the browser window.
   win = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
       nodeIntegration: false,
-      preload: path.join(app.getAppPath(),'preload.js')
+      preload: path.join(__dirname, 'preload.js')
     }
   });
 
