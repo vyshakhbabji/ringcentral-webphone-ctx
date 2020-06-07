@@ -359,11 +359,8 @@
         function VDIhandleAddStreamEvent(event) {
             console.error("Inside VDIhandleAddStreamEvent", event);
             //VDILocal points to RemoteVideoElement ==> donot change
-
             console.warn('Event on remote stream', event.stream)
-            
             console.warn('VDIaudioOutput', VDIaudioOutput)
-            
             vdiCitrix.mapAudioElement(VDIaudioOutput)
             VDIaudioOutput.srcObject = event.stream;
             console.error("Setting finished remote stream to VDILocal aka RemoteVide0Element", VDIaudioOutput);
@@ -522,7 +519,6 @@
                 vdiCitrix.getUserMedia(constraint, (stream) => {
                     var s = stream.clone();
                     console.error('GETUSERMEDIA STREAM', stream)
-                    this.session.emit('trackAdded');
                     this.session.emit('userMedia', stream);
                     this.session.emit('addStream')
                     resolve(s);
@@ -1290,8 +1286,8 @@
             session.unmute = unmute;
             session.onLocalHold = onLocalHold;
 
-            session.media = session.ua.media;
-            // session.addTrack = addTrack;
+        session.media = session.ua.media;
+        session.addTrack = addTrack;
 
             session.on('replaced', patchSession);
 
@@ -1974,6 +1970,53 @@
 
         /*--------------------------------------------------------------------------------------------------------------------*/
 
-        return WebPhone;
+
+    function addTrack(){
+
+        var session = this;
+        var pc = session.sessionDescriptionHandler.peerConnection;
+
+        // Gets remote tracks
+        var remoteAudio = session.media.remote;
+        var remoteStream = new MediaStream();
+
+        if(pc.getReceivers){
+            pc.getReceivers().forEach(function(receiver) {
+                var rtrack = receiver.track;
+                if(rtrack){
+                    remoteStream.addTrack(rtrack);
+                }});
+        }
+        else{
+            remoteStream = pc.getRemoteStreams()[0];
+        }
+        remoteAudio.srcObject = remoteStream;
+        remoteAudio.play().catch(function() {
+            session.logger.log('local play was rejected');
+        });
+
+        // Gets local tracks
+        var localAudio = session.media.local;
+        var localStream = new MediaStream();
+
+        if(pc.getSenders){
+            pc.getSenders().forEach(function(sender) {
+                var strack = sender.track;
+                if (strack && strack.kind === 'audio') {
+                    localStream.addTrack(strack);
+                }
+            });
+        }
+        else{
+            localStream = pc.getLocalStreams()[0];
+        }
+        localAudio.srcObject = localStream;
+        localAudio.play().catch(function() {
+            session.logger.log('local play was rejected');
+        });
+
+    }
+
+    return WebPhone;
 
     }));
