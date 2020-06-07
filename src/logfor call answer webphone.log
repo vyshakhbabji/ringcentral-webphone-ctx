@@ -1,0 +1,1949 @@
+citrix-webrtc.js:102 [HdxWebRTC.js] Attempting to start redirection: b[0]
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].set_DeviceChangeCallback() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject.waitUntilConnected(): deferring action "MediaDevices.ondevicechange". (iid: 5 oid: 0)
+citrix-webrtc.js:102 [HdxWebRTC.js] Attempting to start redirection: b[0]
+citrix-webrtc.js:102 [HdxWebRTC.js] Redirection status: Connecting...
+C:\Users\ringcentral\Desktop\webphone-0.5.0-master-working\webphone-0.5.0-master\electron\node_modules\electron\dist\resources\electron.asar\renderer\security-warnings.js:110 Electron Security Warning (Insecure Resources) This renderer process loads resources using insecure
+  protocols.This exposes users of this app to unnecessary security risks.
+  Consider loading the following resources over HTTPS or FTPS. 
+ - http://localhost:8080/node_modules/clientside-require/dist/bundle.js
+- http://localhost:8080/src/script/citrix-webrtc.js
+- http://localhost:8080/src/ringcentral-web-phone.js
+- http://localhost:8080/demo/index.js
+  
+ 
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+ This warning will not show up
+once the app is packaged.
+warnAboutInsecureResources @ C:\Users\ringcentral\Desktop\webphone-0.5.0-master-working\webphone-0.5.0-master\electron\node_modules\electron\dist\resources\electron.asar\renderer\security-warnings.js:110
+logSecurityWarnings @ C:\Users\ringcentral\Desktop\webphone-0.5.0-master-working\webphone-0.5.0-master\electron\node_modules\electron\dist\resources\electron.asar\renderer\security-warnings.js:258
+loadHandler @ C:\Users\ringcentral\Desktop\webphone-0.5.0-master-working\webphone-0.5.0-master\electron\node_modules\electron\dist\resources\electron.asar\renderer\security-warnings.js:284
+load (async)
+module.exports @ C:\Users\ringcentral\Desktop\webphone-0.5.0-master-working\webphone-0.5.0-master\electron\node_modules\electron\dist\resources\electron.asar\renderer\security-warnings.js:287
+(anonymous) @ C:\Users\ringcentral\Desktop\webphone-0.5.0-master-working\webphone-0.5.0-master\electron\node_modules\electron\dist\resources\electron.asar\renderer\init.js:186
+Module._compile @ internal/modules/cjs/loader.js:839
+Module._extensions..js @ internal/modules/cjs/loader.js:851
+Module.load @ internal/modules/cjs/loader.js:701
+tryModuleLoad @ internal/modules/cjs/loader.js:633
+Module._load @ internal/modules/cjs/loader.js:625
+Module.runMain @ internal/modules/cjs/loader.js:904
+(anonymous) @ internal/main/run_main_module.js:24
+C:\Users\ringcentral\Desktop\webphone-0.5.0-master-working\webphone-0.5.0-master\electron\node_modules\electron\dist\resources\electron.asar\renderer\security-warnings.js:170 Electron Security Warning (Insecure Content-Security-Policy) This renderer process has either no Content Security
+    Policy set or a policy with "unsafe-eval" enabled. This exposes users of
+    this app to unnecessary security risks.
+ 
+For more information and help, consult
+https://electronjs.org/docs/tutorial/security.
+ This warning will not show up
+once the app is packaged.
+(anonymous) @ C:\Users\ringcentral\Desktop\webphone-0.5.0-master-working\webphone-0.5.0-master\electron\node_modules\electron\dist\resources\electron.asar\renderer\security-warnings.js:170
+Promise.then (async)
+warnAboutInsecureCSP @ C:\Users\ringcentral\Desktop\webphone-0.5.0-master-working\webphone-0.5.0-master\electron\node_modules\electron\dist\resources\electron.asar\renderer\security-warnings.js:163
+logSecurityWarnings @ C:\Users\ringcentral\Desktop\webphone-0.5.0-master-working\webphone-0.5.0-master\electron\node_modules\electron\dist\resources\electron.asar\renderer\security-warnings.js:262
+loadHandler @ C:\Users\ringcentral\Desktop\webphone-0.5.0-master-working\webphone-0.5.0-master\electron\node_modules\electron\dist\resources\electron.asar\renderer\security-warnings.js:284
+load (async)
+module.exports @ C:\Users\ringcentral\Desktop\webphone-0.5.0-master-working\webphone-0.5.0-master\electron\node_modules\electron\dist\resources\electron.asar\renderer\security-warnings.js:287
+(anonymous) @ C:\Users\ringcentral\Desktop\webphone-0.5.0-master-working\webphone-0.5.0-master\electron\node_modules\electron\dist\resources\electron.asar\renderer\init.js:186
+Module._compile @ internal/modules/cjs/loader.js:839
+Module._extensions..js @ internal/modules/cjs/loader.js:851
+Module.load @ internal/modules/cjs/loader.js:701
+tryModuleLoad @ internal/modules/cjs/loader.js:633
+Module._load @ internal/modules/cjs/loader.js:625
+Module.runMain @ internal/modules/cjs/loader.js:904
+(anonymous) @ internal/main/run_main_module.js:24
+index.js:41 72050f0000000000
+citrix-webrtc.js:102 [HdxWebRTC.js] Waiting for start redirection to finish
+citrix-webrtc.js:102 [HdxWebRTC.js] VDI New Video Element Created, Creating Mapping to VDA
+citrix-webrtc.js:102 [HdxWebRTC.js] Waiting for start redirection to finish
+citrix-webrtc.js:102 [HdxWebRTC.js] c[0].set_onloadedmetadata() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] c[0].set_onconnectionstatechange() called.
+index.js:41 72050f0000000000
+citrix-webrtc.js:102 [HdxWebRTC.js] Waiting for start redirection to finish
+citrix-webrtc.js:102 [HdxWebRTC.js] VDI New Video Element Created, Creating Mapping to VDA
+citrix-webrtc.js:102 [HdxWebRTC.js] Waiting for start redirection to finish
+citrix-webrtc.js:102 [HdxWebRTC.js] c[0].set_onloadedmetadata() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] c[0].set_onconnectionstatechange() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] Redirection status: Binding...
+citrix-webrtc.js:102 [HdxWebRTC.js] handleRemoteSessionInfo called.
+citrix-webrtc.js:102 [HdxWebRTC.js] [RemoteSession].remoteSessionInfo() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject.waitUntilConnected(): deferring action "EngineControl.syncBarrier". (iid: 0 oid: 0)
+citrix-webrtc.js:102 [HdxWebRTC.js] HDXMS: Unknown protocol: { "v": "telemetry", "hdr": {"command": 0, "id": 0}, "caps": []}'
+citrix-webrtc.js:102 [HdxWebRTC.js] deferred_action.post(): resolving "EngineControl.syncBarrier"
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0]received webrpc version and supported feature list.
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject.checkState(): count= "20". (iid: 5 oid: 0)
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0]release-1906 or later client: received detailed client version list.
+citrix-webrtc.js:102 [HdxWebRTC.js] [RemoteSession]enginecontrol info received!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].release() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] remoteSessionInfo success! info:{"type_script":{"type":5,"version":"1.2.0.2"},"webrpc":{"type":0,"version":"1.2.0.0"},"webrtc_codecs":{"type":1,"version":"1.68.0.0"},"receiver":{"type":2,"version":"19.5.0.37"},"vda":{"type":3,"version":"0.0.0.0"},"endpoint":{"type":4,"version":"0.0.0.0"}}
+citrix-webrtc.js:102 [HdxWebRTC.js] Redirection status: Redirected
+citrix-webrtc.js:102 [HdxWebRTC.js] VDI Event: vdiClientConnected
+citrix-webrtc.js:102 [HdxWebRTC.js] VDI: sendSessionInfo
+citrix-webrtc.js:102 [HdxWebRTC.js] [RemoteSession].getSessionInfo() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] deferred_action.post(): resolving "b[0]"
+citrix-webrtc.js:102 [HdxWebRTC.js] getSessionInfo success! info:{"type_script":{"type":5,"version":"1.2.0.2"},"webrpc":{"type":0,"version":"1.2.0.0"},"webrtc_codecs":{"type":1,"version":"1.68.0.0"},"receiver":{"type":2,"version":"19.5.0.37"},"vda":{"type":3,"version":"0.0.0.0"},"endpoint":{"type":4,"version":"0.0.0.0"},"event":"vdiClientConnected"}
+citrix-webrtc.js:102 [HdxWebRTC.js] onVMEvent(): exceptionvar vdishim = require("./peerconnection"), rmshim = require("./remotemedia"), videoelem = require("./videoelement"),
+    audioelem = require("./audioelement"), frametracker = require("./frametracker"),
+    logger = require("./logger").logger, remotesession = require("./remotesession"),
+    garbagecollector = require("./garbagecollector").gc, remoteDevices = new rmshim.RemoteDevices;
+module.exports.CitrixPeerConnection = vdishim.PeerConnection;
+module.exports.getUserMedia = function (a, c, b) {
+    return (new rmshim.NavigatorUserMedia).webkitGetUserMedia(a, c, b)
+};
+module.exports.enumerateDevices = function () {
+    return remoteDevices.enumerateDevices()
+};
+module.exports.mapVideoElement = function (a) {
+    var c = new frametracker.FrameTracker;
+    logger.log("VDI New Video Element Created, Creating Mapping to VDA");
+    void 0 !== a.VDAVideoElement ? logger.log("Video element is already configured!") : (Object.defineProperty(a, "VDAVideoElement", {
+        writable: !0,
+        value: null
+    }), a.VDAVideoElement = new videoelem.VideoElement, a.VDAVideoElement.onloadedmetadata = function () {
+        var b = new Event("loadedmetadata");
+        a.dispatchEvent(b)
+    }, a.VDAVideoElement.ontimeupdate = function () {
+        var b = new Event("timeupdate");
+        a.dispatchEvent(b)
+    }, a.VDAVideoElement.onconnectionstatechange = function () {
+        "connected" == a.VDAVideoElement.connectionState ? c.track(a, function (b) {
+            a.VDAVideoElement.setFrame(b)
+        }) : c.untrack(a)
+    }, Object.defineProperty(a, "sinkId", {
+        get: function () {
+            return a.VDAVideoElement.sinkId
+        }, set: function (b) {
+            logger.log("VDI Shim set video element SinkId value = " + b);
+            a.VDAVideoElement.sinkId = b
+        }
+    }), Object.defineProperty(a, "srcObject", {
+        get: function () {
+            return a.VDAVideoElement.srcObject
+        }, set: function (b) {
+            logger.log("VDI Shim set video element srcObject");
+            a.VDAVideoElement.srcObject = b
+        }
+    }), Object.defineProperty(a, "videoWidth", {
+        get: function () {
+            return a.VDAVideoElement.videoWidth
+        }
+    }), Object.defineProperty(a, "videoHeight", {
+        get: function () {
+            return a.VDAVideoElement.videoHeight
+        }
+    }))
+};
+module.exports.addClipRect = function (a) {
+    logger.log("VDI Adding Occlusion " + JSON.stringify(a));
+    null === videoElementFrameTracker && (videoElementFrameTracker = new frametracker.FrameTracker);
+    videoElementFrameTracker.addOcclusion(a)
+};
+module.exports.removeClipRect = function (a) {
+    logger.log("VDI Removing Occlusion " + JSON.stringify(a));
+    null === videoElementFrameTracker && (videoElementFrameTracker = new frametracker.FrameTracker);
+    videoElementFrameTracker.removeOcclusion(a)
+};
+onVMEvent = void 0;
+module.exports.setVMEventCallback = function (a) {
+    onVMEvent = a;
+    logger.log("VDI Event Callback Set")
+};
+window.onVdiClientDisconnected = function () {
+    logger.log("VDI Event: vdiClientDisconnected");
+    cleanup();
+    remotefailure_notified = !1;
+    try {
+        onVMEvent({event: "vdiClientDisconnected", request: "endCalls"})
+    } catch (a) {
+        logger.log("onVMEvent(): exception: " + a.message)
+    }
+};
+var remoteSession = new remotesession.RemoteSession;
+window.onVdiClientDisconnectedTimer = function () {
+    logger.log("VDI Event: onVdiClientDisconnectedTimer");
+    null === remoteSession && (remoteSession = new remotesession.RemoteSession)
+};
+window.onVdiClientConnected = function () {
+    logger.log("VDI Event: vdiClientConnected");
+    sendSessionInfo();
+    null === remoteDevices && (remoteDevices = new rmshim.RemoteDevices, originalEnumerateDevices = remoteDevices.enumerateDevices, originalGetDisplayMedia = remoteDevices.getDisplayMedia, navigator.mediaDevices.dispatchEvent(new CustomEvent("devicechange")))
+};
+var remotefailure_notified = !1;
+window.onVdiUnableToRemote = function () {
+    logger.log("VDI Event: vdiUnableToRemote");
+    cleanup();
+    if (!1 === remotefailure_notified) {
+        logger.log("VDI Event: vdiUnableToRemote reported");
+        remotefailure_notified = !0;
+        try {
+            onVMEvent({event: "vdiUnableToRemote"})
+        } catch (a) {
+            logger.log("onVMEvent(): exception: " + a.message)
+        }
+    }
+};
+
+function sendSessionInfo() {
+    logger.log("VDI: sendSessionInfo");
+    remoteSession && remoteSession.getSessionInfo().then(function (a) {
+        a.event = "vdiClientConnected";
+        logger.log("getSessionInfo success! info:" + JSON.stringify(a));
+        try {
+            onVMEvent(a)
+        } catch (c) {
+            logger.log("onVMEvent(): exception: " + c.message)
+        }
+    })["catch"](function () {
+        logger.log("getSessionInfo failure! session is not fully connected yet...")
+    })
+}
+
+function cleanup() {
+    logger.log("VDI : cleanup");
+    videoElementFrameTracker = remoteDevices = remoteUserMedia = null;
+    audioNotifications = [];
+    remoteSession && remoteSession.release();
+    remoteSession = null;
+    garbagecollector.reset();
+    logger.log("VDI : cleanup done")
+};
+: onVMEvent is not a function
+citrix-webrtc.js:102 [HdxWebRTC.js] deferred_action.post(): resolving "MediaDevices.ondevicechange"
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject: Cant find callback handler registration for mid: 3
+citrix-webrtc.js:102 [HdxWebRTC.js] waitUntilRedirected() timeout. count=15
+citrix-webrtc.js:102 [HdxWebRTC.js] Waiting for start redirection: success
+citrix-webrtc.js:102 [HdxWebRTC.js] FrameTracker: set window handle: 72050f0000000000
+citrix-webrtc.js:102 [HdxWebRTC.js] HDXMS: SendOverlayData: >>> {"v":"overlay","command":"window","windowHandle":"72050f0000000000"}'
+citrix-webrtc.js:102 [HdxWebRTC.js] waitUntilRedirected() timeout. count=15
+citrix-webrtc.js:102 [HdxWebRTC.js] Waiting for start redirection: success
+citrix-webrtc.js:102 [HdxWebRTC.js] waitUntilRedirected() timeout. count=15
+citrix-webrtc.js:102 [HdxWebRTC.js] Waiting for start redirection: success
+citrix-webrtc.js:102 [HdxWebRTC.js] FrameTracker: set window handle: 72050f0000000000
+citrix-webrtc.js:102 [HdxWebRTC.js] HDXMS: SendOverlayData: >>> {"v":"overlay","command":"window","windowHandle":"72050f0000000000"}'
+citrix-webrtc.js:102 [HdxWebRTC.js] waitUntilRedirected() timeout. count=15
+citrix-webrtc.js:102 [HdxWebRTC.js] Waiting for start redirection: success
+index.js:721 Normal Flow
+index.js:317 Extension info {uri: "https://platform.ringcentral.com/restapi/v1.0/account/809646016/extension/979428016", id: 979428016, extensionNumber: "104", contact: {…}, name: "Message Dispatcher", …}
+ringcentral-web-phone.js:998 <select id=​"audioSource">​</select>​
+WebPhone @ ringcentral-web-phone.js:998
+register @ index.js:340
+Promise.then (async)
+postLogin @ index.js:329
+(anonymous) @ index.js:263
+Promise.then (async)
+login @ index.js:262
+(anonymous) @ index.js:726
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:999 <select id=​"audioOutput">​</select>​
+WebPhone @ ringcentral-web-phone.js:999
+register @ index.js:340
+Promise.then (async)
+postLogin @ index.js:329
+(anonymous) @ index.js:263
+Promise.then (async)
+login @ index.js:262
+(anonymous) @ index.js:726
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:1000 <select id=​"videoSource">​</select>​
+WebPhone @ ringcentral-web-phone.js:1000
+register @ index.js:340
+Promise.then (async)
+postLogin @ index.js:329
+(anonymous) @ index.js:263
+Promise.then (async)
+login @ index.js:262
+(anonymous) @ index.js:726
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | configuration parameters after validation:
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · viaHost: "7pg3a6rtgiok.invalid"
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · uri: sip:17203861294*104@sip.ringcentral.com
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · wsServers: [{"ws_uri":"wss://sip121-191.ringcentral.com:8083","sip_uri":"<sip:sip121-191.ringcentral.com:8083;transport=ws;lr>","weight":0,"status":0,"scheme":"WSS"}]
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · custom: {}
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · displayName: ""
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · password: NOT SHOWN
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · registerExpires: 600
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · register: true
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · registrarServer: sip:sip.ringcentral.com
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · wsServerMaxReconnection: 3
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · wsServerReconnectionTimeout: 4
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · connectionRecoveryMinInterval: 2
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · connectionRecoveryMaxInterval: 60
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · keepAliveInterval: 0
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · extraSupported: []
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · usePreloadedRoute: false
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · userAgentString: "WebPhoneDemo/1.0.0 RCWEBPHONE/0.4.6"
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · noAnswerTimeout: 60000
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · traceSip: true
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · hackViaTcp: false
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · hackIpInContact: false
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · hackWssInTransport: false
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · hackAllowUnregisteredOptionTags: false
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · sessionDescriptionHandlerFactoryOptions: {"peerConnectionOptions":{"iceCheckingTimeout":5000,"rtcConfiguration":{"rtcpMuxPolicy":"negotiate"},"enableDtlsSrtp":true},"constraints":{"audio":true,"video":false},"modifiers":[]}
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · contactName: "sogs0qp7"
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · contactTransport: "ws"
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · forceRport: false
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · autostart: true
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · autostop: true
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · rel100: "none"
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · dtmfType: "info"
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · replaces: "none"
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · sessionDescriptionHandlerFactory: function (session, options) {
+                return new CitrixSessionDescriptionHandler(session, sessionDescriptionHandlerFactoryOptions);
+            }
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · authenticationFactory: undefined
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · allowLegacyNotifications: false
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · allowOutOfDialogRefers: false
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · authorizationUser: "210749930016"
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · instanceId: "d43b3db8-d483-4dbc-82cb-ac1e14491cf4"
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · sipjsId: "qf9c6"
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | · hostportParams: "sip.ringcentral.com"
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.ua | user requested startup...
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.transport | connecting to WebSocket wss://sip121-191.ringcentral.com:8083
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.transport | unable to send message, WebSocket is not open
+LoggerFactory.print @ sip-0.10.0.js:807
+LoggerFactory.(anonymous function) @ sip-0.10.0.js:824
+Logger.(anonymous function) @ sip-0.10.0.js:818
+send @ sip-0.10.0.js:11804
+NonInviteClientTransaction.send @ sip-0.10.0.js:2808
+send @ sip-0.10.0.js:3882
+ClientContext.send @ sip-0.10.0.js:4400
+register @ sip-0.10.0.js:4154
+UA.register @ sip-0.10.0.js:7341
+register @ ringcentral-web-phone.js:1487
+WebPhone @ ringcentral-web-phone.js:1096
+register @ index.js:340
+Promise.then (async)
+postLogin @ index.js:329
+(anonymous) @ index.js:263
+Promise.then (async)
+login @ index.js:262
+(anonymous) @ index.js:726
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+sip-0.10.0.js:807 Thu May 07 2020 15:02:19 GMT-0700 (Pacific Daylight Time) | sip.transaction.nict | z9hG4bK4693190 | transport error occurred, deleting non-INVITE client transaction z9hG4bK4693190
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].enumerateDevices() called
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[1].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[2].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[3].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[4].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[5].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].enumerateDevices: returning enumerated devices with ids [0,1,2,3,4,5]
+index.js:81 b {hdxms: a, iid: 6, oid: 0, state: 1, deferredActions: Array(0), …}
+gotDevices @ index.js:81
+Promise.then (async)
+makeCallForm @ index.js:675
+Promise.then (async)
+postLogin @ index.js:330
+(anonymous) @ index.js:263
+Promise.then (async)
+login @ index.js:262
+(anonymous) @ index.js:726
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+index.js:81 b {hdxms: a, iid: 6, oid: 1, state: 1, deferredActions: Array(0), …}
+gotDevices @ index.js:81
+Promise.then (async)
+makeCallForm @ index.js:675
+Promise.then (async)
+postLogin @ index.js:330
+(anonymous) @ index.js:263
+Promise.then (async)
+login @ index.js:262
+(anonymous) @ index.js:726
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+index.js:81 b {hdxms: a, iid: 6, oid: 2, state: 1, deferredActions: Array(0), …}
+gotDevices @ index.js:81
+Promise.then (async)
+makeCallForm @ index.js:675
+Promise.then (async)
+postLogin @ index.js:330
+(anonymous) @ index.js:263
+Promise.then (async)
+login @ index.js:262
+(anonymous) @ index.js:726
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+index.js:81 b {hdxms: a, iid: 6, oid: 3, state: 1, deferredActions: Array(0), …}
+gotDevices @ index.js:81
+Promise.then (async)
+makeCallForm @ index.js:675
+Promise.then (async)
+postLogin @ index.js:330
+(anonymous) @ index.js:263
+Promise.then (async)
+login @ index.js:262
+(anonymous) @ index.js:726
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+index.js:81 b {hdxms: a, iid: 6, oid: 4, state: 1, deferredActions: Array(0), …}
+gotDevices @ index.js:81
+Promise.then (async)
+makeCallForm @ index.js:675
+Promise.then (async)
+postLogin @ index.js:330
+(anonymous) @ index.js:263
+Promise.then (async)
+login @ index.js:262
+(anonymous) @ index.js:726
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+index.js:81 b {hdxms: a, iid: 6, oid: 5, state: 1, deferredActions: Array(0), …}
+gotDevices @ index.js:81
+Promise.then (async)
+makeCallForm @ index.js:675
+Promise.then (async)
+postLogin @ index.js:330
+(anonymous) @ index.js:263
+Promise.then (async)
+login @ index.js:262
+(anonymous) @ index.js:726
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+index.js:154 getUserMedia error:  undefined
+sip-0.10.0.js:807 Thu May 07 2020 15:02:20 GMT-0700 (Pacific Daylight Time) | sip.transport | WebSocket wss://sip121-191.ringcentral.com:8083 connected
+sip-0.10.0.js:807 Thu May 07 2020 15:02:20 GMT-0700 (Pacific Daylight Time) | sip.ua | connection state set to 0
+index.js:368 UA Connected
+sip-0.10.0.js:807 Thu May 07 2020 15:02:20 GMT-0700 (Pacific Daylight Time) | sip.transport | sending WebSocket message:
+
+REGISTER sip:sip.ringcentral.com SIP/2.0
+Via: SIP/2.0/WSS 7pg3a6rtgiok.invalid;branch=z9hG4bK5273646
+Max-Forwards: 70
+To: <sip:17203861294*104@sip.ringcentral.com>
+From: <sip:17203861294*104@sip.ringcentral.com>;tag=rh49h5atns
+Call-ID: l87vsq8jqpb54a8dptn6si
+CSeq: 2618 REGISTER
+P-rc-endpoint-id: 634627c1-2e27-4a84-b143-ea42892094cc
+Client-id:HzXLrhSlTFyqVjXlgWeoMQ
+Contact: <sip:sogs0qp7@7pg3a6rtgiok.invalid;transport=ws>;reg-id=1;+sip.instance="<urn:uuid:d43b3db8-d483-4dbc-82cb-ac1e14491cf4>";expires=600
+Allow: ACK,CANCEL,INVITE,MESSAGE,BYE,OPTIONS,INFO,NOTIFY,REFER
+Supported: path, gruu, outbound
+User-Agent: WebPhoneDemo/1.0.0 RCWEBPHONE/0.4.6
+Content-Length: 0
+
+
+
+sip-0.10.0.js:807 Thu May 07 2020 15:02:20 GMT-0700 (Pacific Daylight Time) | sip.transport | received WebSocket text message:
+
+SIP/2.0 100 Trying
+Via: SIP/2.0/WSS 7pg3a6rtgiok.invalid;branch=z9hG4bK5273646;received=104.43.215.70
+To: <sip:17203861294*104@sip.ringcentral.com>
+From: <sip:17203861294*104@sip.ringcentral.com>;tag=rh49h5atns
+Call-ID: l87vsq8jqpb54a8dptn6si
+CSeq: 2618 REGISTER
+Content-Length: 0
+
+
+
+sip-0.10.0.js:807 Thu May 07 2020 15:02:20 GMT-0700 (Pacific Daylight Time) | sip.transport | received WebSocket text message:
+
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/WSS 7pg3a6rtgiok.invalid;branch=z9hG4bK5273646;received=104.43.215.70
+To: <sip:17203861294*104@sip.ringcentral.com>;tag=e8355122b9829038163286be13f77b9a-e149
+From: <sip:17203861294*104@sip.ringcentral.com>;tag=rh49h5atns
+Call-ID: l87vsq8jqpb54a8dptn6si
+CSeq: 2618 REGISTER
+WWW-Authenticate: Digest realm="sip.ringcentral.com", nonce="XrSGmF60hWzZ516LZApIBAhf9m4Cu8XQ"
+Content-Length: 0
+
+
+
+sip-0.10.0.js:807 Thu May 07 2020 15:02:20 GMT-0700 (Pacific Daylight Time) | sip.transport | sending WebSocket message:
+
+REGISTER sip:sip.ringcentral.com SIP/2.0
+Via: SIP/2.0/WSS 7pg3a6rtgiok.invalid;branch=z9hG4bK8922479
+Max-Forwards: 70
+To: <sip:17203861294*104@sip.ringcentral.com>
+From: <sip:17203861294*104@sip.ringcentral.com>;tag=rh49h5atns
+Call-ID: l87vsq8jqpb54a8dptn6si
+CSeq: 2619 REGISTER
+Authorization: Digest algorithm=MD5, username="210749930016", realm="sip.ringcentral.com", nonce="XrSGmF60hWzZ516LZApIBAhf9m4Cu8XQ", uri="sip:sip.ringcentral.com", response="15070c22311a88b7949dee266c0669f4"
+P-rc-endpoint-id: 634627c1-2e27-4a84-b143-ea42892094cc
+Client-id:HzXLrhSlTFyqVjXlgWeoMQ
+Contact: <sip:sogs0qp7@7pg3a6rtgiok.invalid;transport=ws>;reg-id=1;+sip.instance="<urn:uuid:d43b3db8-d483-4dbc-82cb-ac1e14491cf4>";expires=600
+Allow: ACK,CANCEL,INVITE,MESSAGE,BYE,OPTIONS,INFO,NOTIFY,REFER
+Supported: path, gruu, outbound
+User-Agent: WebPhoneDemo/1.0.0 RCWEBPHONE/0.4.6
+Content-Length: 0
+
+
+
+sip-0.10.0.js:807 Thu May 07 2020 15:02:20 GMT-0700 (Pacific Daylight Time) | sip.transport | received WebSocket text message:
+
+SIP/2.0 100 Trying
+Via: SIP/2.0/WSS 7pg3a6rtgiok.invalid;branch=z9hG4bK8922479;received=104.43.215.70
+To: <sip:17203861294*104@sip.ringcentral.com>
+From: <sip:17203861294*104@sip.ringcentral.com>;tag=rh49h5atns
+Call-ID: l87vsq8jqpb54a8dptn6si
+CSeq: 2619 REGISTER
+Content-Length: 0
+
+
+
+sip-0.10.0.js:807 Thu May 07 2020 15:02:20 GMT-0700 (Pacific Daylight Time) | sip.transport | received WebSocket text message:
+
+SIP/2.0 200 OK
+Via: SIP/2.0/WSS 7pg3a6rtgiok.invalid;branch=z9hG4bK8922479;received=104.43.215.70
+To: <sip:17203861294*104@sip.ringcentral.com>;tag=e8355122b9829038163286be13f77b9a-1180
+From: <sip:17203861294*104@sip.ringcentral.com>;tag=rh49h5atns
+Call-ID: l87vsq8jqpb54a8dptn6si
+CSeq: 2619 REGISTER
+Contact: <sip:sogs0qp7@7pg3a6rtgiok.invalid;transport=ws>;expires=58
+Content-Length: 0
+
+
+
+index.js:374 UA Registered
+sip-0.10.0.js:807 Thu May 07 2020 15:02:35 GMT-0700 (Pacific Daylight Time) | sip.transport | received WebSocket text message:
+
+INVITE sip:sogs0qp7@7pg3a6rtgiok.invalid;transport=ws SIP/2.0
+Via: SIP/2.0/WSS 104.245.57.250:8083;branch=z9hG4bK+SC17503eRd
+To: "VYSHAKH BABJI" <sip:17203861294*104@104.43.215.70>
+From: "VYSHAKH BABJI" <sip:+16197619503@104.245.57.250>;tag=10.13.22.28-5070-4ef2ecd0d6de450
+Call-Id: 8e91973c87f84c10944674270f10b044
+CSeq: 426451860 INVITE
+Max-Forwards: 67
+Contact: <sip:+16197619503@104.245.57.250:8083;transport=wss>
+Content-Type: application/sdp
+Call-Info: <1684713706_50240857@10.14.116.50>;purpose=info
+P-rc: <Msg><Hdr SID="35590937288848" Req="16862978872044308833" Cmd="6" From="#1056016@sip.ringcentral.com:5060" To="17203861294*104"/><Bdy SrvLvl="-149699523" SrvLvlExt="390" Phn="+16197619503" Nm="VYSHAKH BABJI" ToPhn="+17203861294" ToNm="Message Dispatcher" RecUrl=""/></Msg>
+p-rc-api-call-info: callAttributes=reject,send-vm
+p-rc-api-ids: party-id=p-27b6e40d2d0749e18c4fae4ffdbf3c5b-3;session-id=s-27b6e40d2d0749e18c4fae4ffdbf3c5b
+User-Agent: RC_SIPWRP_22.28
+Content-Length: 873
+
+v=0
+o=- 4710351051032106262 7928465355508854469 IN IP4 104.245.57.251
+s=SmcSip
+c=IN IP4 104.245.57.251
+t=0 0
+m=audio 29722 RTP/SAVPF 109 111 18 0 8 9 96 101
+a=rtpmap:109 OPUS/16000
+a=fmtp:109 useinbandfec=1
+a=rtcp-fb:109 ccm tmmbr
+a=rtpmap:111 OPUS/48000/2
+a=fmtp:111 useinbandfec=1
+a=rtcp-fb:111 ccm tmmbr
+a=rtpmap:18 g729/8000
+a=fmtp:18 annexb=no
+a=rtpmap:0 pcmu/8000
+a=rtpmap:8 pcma/8000
+a=rtpmap:9 g722/8000
+a=rtpmap:96 ilbc/8000
+a=fmtp:96 mode=20
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-15
+a=sendrecv
+a=rtcp:29723
+a=rtcp-mux
+a=setup:actpass
+a=fingerprint:sha-1 E8:B9:86:27:55:8F:70:8D:3A:8F:89:09:2A:9D:11:40:6D:89:0D:2E
+a=ice-ufrag:RfGb5OCA
+a=ice-pwd:cW0iAdMMKWD3sajbgzUHKdghqW
+a=candidate:dwWstu54zaYv1arX 1 UDP 2130706431 104.245.57.251 29722 typ host
+a=candidate:dwWstu54zaYv1arX 2 UDP 2130706430 104.245.57.251 29723 typ host
+
+
+sip-0.10.0.js:807 Thu May 07 2020 15:02:35 GMT-0700 (Pacific Daylight Time) | sip.sipmessage | header "Content-Disposition" not present
+sip-0.10.0.js:807 Thu May 07 2020 15:02:35 GMT-0700 (Pacific Daylight Time) | sip.transport | sending WebSocket message:
+
+SIP/2.0 100 Trying
+Via: SIP/2.0/WSS 104.245.57.250:8083;branch=z9hG4bK+SC17503eRd
+To: "VYSHAKH BABJI" <sip:17203861294*104@104.43.215.70>
+From: "VYSHAKH BABJI" <sip:+16197619503@104.245.57.250>;tag=10.13.22.28-5070-4ef2ecd0d6de450
+Call-ID: 8e91973c87f84c10944674270f10b044
+CSeq: 426451860 INVITE
+Supported: outbound
+User-Agent: WebPhoneDemo/1.0.0 RCWEBPHONE/0.4.6
+Content-Length: 0
+
+
+
+sip-0.10.0.js:807 Thu May 07 2020 15:02:35 GMT-0700 (Pacific Daylight Time) | sip.dialog | 8e91973c87f84c10944674270f10b044cmbs5bu02j10.13.22.28-5070-4ef2ecd0d6de450 | new UAS dialog created with status EARLY
+sip-0.10.0.js:807 Thu May 07 2020 15:02:35 GMT-0700 (Pacific Daylight Time) | sip.transport | sending WebSocket message:
+
+SIP/2.0 180 Ringing
+Via: SIP/2.0/WSS 104.245.57.250:8083;branch=z9hG4bK+SC17503eRd
+To: "VYSHAKH BABJI" <sip:17203861294*104@104.43.215.70>;tag=cmbs5bu02j
+From: "VYSHAKH BABJI" <sip:+16197619503@104.245.57.250>;tag=10.13.22.28-5070-4ef2ecd0d6de450
+Call-ID: 8e91973c87f84c10944674270f10b044
+CSeq: 426451860 INVITE
+Contact: <sip:sogs0qp7@7pg3a6rtgiok.invalid;transport=ws>
+Supported: outbound
+User-Agent: WebPhoneDemo/1.0.0 RCWEBPHONE/0.4.6
+Content-Length: 0
+
+
+
+index.js:41 72050f0000000000
+citrix-webrtc.js:102 [HdxWebRTC.js] Redirection already started.
+citrix-webrtc.js:102 [HdxWebRTC.js] VDI New Video Element Created, Creating Mapping to VDA
+citrix-webrtc.js:102 [HdxWebRTC.js] Video element is already configured!
+index.js:41 72050f0000000000
+citrix-webrtc.js:102 [HdxWebRTC.js] Redirection already started.
+citrix-webrtc.js:102 [HdxWebRTC.js] VDI New Video Element Created, Creating Mapping to VDA
+citrix-webrtc.js:102 [HdxWebRTC.js] Video element is already configured!
+sip-0.10.0.js:807 Thu May 07 2020 15:02:35 GMT-0700 (Pacific Daylight Time) | sip.transport | sending WebSocket message:
+
+MESSAGE sip:%231056016@sip.ringcentral.com:5060 SIP/2.0
+Via: SIP/2.0/WSS 7pg3a6rtgiok.invalid;branch=z9hG4bK7815155
+Max-Forwards: 70
+To: <sip:%231056016@sip.ringcentral.com:5060>
+From: <sip:17203861294*104@sip.ringcentral.com>;tag=al2hfk576m
+Call-ID: qf9c6rddebk2iuua6i98
+CSeq: 3637 MESSAGE
+P-rc-ws: <sip:sogs0qp7@7pg3a6rtgiok.invalid;transport=ws>
+Supported: outbound
+User-Agent: WebPhoneDemo/1.0.0 RCWEBPHONE/0.4.6
+Content-Type: x-rc/agent
+Content-Length: 163
+
+<Msg><Hdr SID="35590937288848" Req="16862978872044308833" From="17203861294*104" To="#1056016@sip.ringcentral.com:5060" Cmd="17"/> <Bdy Cln="210749930016" /></Msg>
+
+index.js:391 EVENT: Invite IncomingRequest {logger: Logger, ua: UA, headers: {…}, ruri: URI, transport: Transport, …}
+index.js:392 To VYSHAKH BABJI VYSHAKH BABJI
+index.js:393 From VYSHAKH BABJI VYSHAKH BABJI
+citrix-webrtc.js:102 [HdxWebRTC.js] FrameTracker: set window handle: 72050f0000000000
+citrix-webrtc.js:102 [HdxWebRTC.js] HDXMS: SendOverlayData: >>> {"v":"overlay","command":"window","windowHandle":"72050f0000000000"}'
+citrix-webrtc.js:102 [HdxWebRTC.js] FrameTracker: set window handle: 72050f0000000000
+citrix-webrtc.js:102 [HdxWebRTC.js] HDXMS: SendOverlayData: >>> {"v":"overlay","command":"window","windowHandle":"72050f0000000000"}'
+sip-0.10.0.js:807 Thu May 07 2020 15:02:35 GMT-0700 (Pacific Daylight Time) | sip.transport | received WebSocket text message:
+
+SIP/2.0 100 Trying
+Via: SIP/2.0/WSS 7pg3a6rtgiok.invalid;branch=z9hG4bK7815155;received=104.43.215.70
+To: <sip:%231056016@sip.ringcentral.com:5060>
+From: <sip:17203861294*104@sip.ringcentral.com>;tag=al2hfk576m
+Call-ID: qf9c6rddebk2iuua6i98
+CSeq: 3637 MESSAGE
+Content-Length: 0
+
+
+
+sip-0.10.0.js:807 Thu May 07 2020 15:02:36 GMT-0700 (Pacific Daylight Time) | sip.transport | received WebSocket text message:
+
+SIP/2.0 200 OK
+Via: SIP/2.0/WSS 7pg3a6rtgiok.invalid;branch=z9hG4bK7815155;received=104.43.215.70
+To: <sip:%231056016@sip.ringcentral.com:5060>;tag=z9hG4bKb152.21d209e13646744024b2f48493af6969.0
+From: <sip:17203861294*104@sip.ringcentral.com>;tag=al2hfk576m
+Call-ID: qf9c6rddebk2iuua6i98
+CSeq: 3637 MESSAGE
+Content-Length: 0
+
+
+
+sip-0.10.0.js:807 Thu May 07 2020 15:02:36 GMT-0700 (Pacific Daylight Time) | sip.inviteservercontext | 8e91973c87f84c10944674270f10b04410.13.22.28-5070-4ef2ecd0d6de450 | sendReceiveConfirm success
+sip-0.10.0.js:807 Thu May 07 2020 15:02:38 GMT-0700 (Pacific Daylight Time) | sip.dialog | 8e91973c87f84c10944674270f10b044cmbs5bu02j10.13.22.28-5070-4ef2ecd0d6de450 | dialog 8e91973c87f84c10944674270f10b044cmbs5bu02j10.13.22.28-5070-4ef2ecd0d6de450  changed to CONFIRMED state
+ringcentral-web-phone.js:200 options.rtcConfiguration
+CitrixSessionDescriptionHandler.initPeerConnection @ ringcentral-web-phone.js:200
+CitrixSessionDescriptionHandler @ ringcentral-web-phone.js:127
+sessionDescriptionHandlerFactory @ ringcentral-web-phone.js:1023
+setupSessionDescriptionHandler @ sip-0.10.0.js:5780
+accept @ sip-0.10.0.js:5635
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:201 {rtcpMuxPolicy: "negotiate", iceServers: Array(1)}
+CitrixSessionDescriptionHandler.initPeerConnection @ ringcentral-web-phone.js:201
+CitrixSessionDescriptionHandler @ ringcentral-web-phone.js:127
+sessionDescriptionHandlerFactory @ ringcentral-web-phone.js:1023
+setupSessionDescriptionHandler @ sip-0.10.0.js:5780
+accept @ sip-0.10.0.js:5635
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:203 options on initPeerConnection
+CitrixSessionDescriptionHandler.initPeerConnection @ ringcentral-web-phone.js:203
+CitrixSessionDescriptionHandler @ ringcentral-web-phone.js:127
+sessionDescriptionHandlerFactory @ ringcentral-web-phone.js:1023
+setupSessionDescriptionHandler @ sip-0.10.0.js:5780
+accept @ sip-0.10.0.js:5635
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:204 {"iceCheckingTimeout":5000,"rtcConfiguration":{"rtcpMuxPolicy":"negotiate","iceServers":[{"urls":"stun:stun.l.google.com:19302"}]},"enableDtlsSrtp":true}
+CitrixSessionDescriptionHandler.initPeerConnection @ ringcentral-web-phone.js:204
+CitrixSessionDescriptionHandler @ ringcentral-web-phone.js:127
+sessionDescriptionHandlerFactory @ ringcentral-web-phone.js:1023
+setupSessionDescriptionHandler @ sip-0.10.0.js:5780
+accept @ sip-0.10.0.js:5635
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:207 initPeerConnection
+CitrixSessionDescriptionHandler.initPeerConnection @ ringcentral-web-phone.js:207
+CitrixSessionDescriptionHandler @ ringcentral-web-phone.js:127
+sessionDescriptionHandlerFactory @ ringcentral-web-phone.js:1023
+setupSessionDescriptionHandler @ sip-0.10.0.js:5780
+accept @ sip-0.10.0.js:5635
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:102 [HdxWebRTC.js] Redirection already started.
+citrix-webrtc.js:102 [HdxWebRTC.js] peerconnection.constructor
+citrix-webrtc.js:102 [HdxWebRTC.js] {"rtcpMuxPolicy":"negotiate","iceServers":[{"urls":"stun:stun.l.google.com:19302"}]}
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].set_onaddstream() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject.waitUntilConnected(): deferring action "PeerConnection.onaddstream". (iid: 1 oid: 0)
+sip-0.10.0.js:807 Thu May 07 2020 15:02:38 GMT-0700 (Pacific Daylight Time) | sip.invitecontext.citrixSessionDescriptionHandler | 8e91973c87f84c10944674270f10b04410.13.22.28-5070-4ef2ecd0d6de450 | New peer connection created
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].set_onicecandidate() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject.waitUntilConnected(): deferring action "PeerConnection.onicecandidate". (iid: 1 oid: 0)
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].set_onicegatheringstatechange() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject.waitUntilConnected(): deferring action "PeerConnection.onicegatheringstatechange". (iid: 1 oid: 0)
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].set_onsignalingstatechange() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject.waitUntilConnected(): deferring action "PeerConnection.onsignalingstatechanged". (iid: 1 oid: 0)
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].set_onnegotiationneeded() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject.waitUntilConnected(): deferring action "PeerConnection.onnegotiationneeded". (iid: 1 oid: 0)
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].set_oniceconnectionstatechange() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject.waitUntilConnected(): deferring action "PeerConnection.oniceconnectionstatechange". (iid: 1 oid: 0)
+ringcentral-web-phone.js:662 ENTERING SETDESCRIPTION, The sdp is this: 
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:662
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:663 v=0
+o=- 4710351051032106262 7928465355508854469 IN IP4 104.245.57.251
+s=SmcSip
+c=IN IP4 104.245.57.251
+t=0 0
+m=audio 29722 RTP/SAVPF 109 111 18 0 8 9 96 101
+a=rtpmap:109 OPUS/16000
+a=fmtp:109 useinbandfec=1
+a=rtcp-fb:109 ccm tmmbr
+a=rtpmap:111 OPUS/48000/2
+a=fmtp:111 useinbandfec=1
+a=rtcp-fb:111 ccm tmmbr
+a=rtpmap:18 g729/8000
+a=fmtp:18 annexb=no
+a=rtpmap:0 pcmu/8000
+a=rtpmap:8 pcma/8000
+a=rtpmap:9 g722/8000
+a=rtpmap:96 ilbc/8000
+a=fmtp:96 mode=20
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-15
+a=sendrecv
+a=rtcp:29723
+a=rtcp-mux
+a=setup:actpass
+a=fingerprint:sha-1 E8:B9:86:27:55:8F:70:8D:3A:8F:89:09:2A:9D:11:40:6D:89:0D:2E
+a=ice-ufrag:RfGb5OCA
+a=ice-pwd:cW0iAdMMKWD3sajbgzUHKdghqW
+a=candidate:dwWstu54zaYv1arX 1 UDP 2130706431 104.245.57.251 29722 typ host
+a=candidate:dwWstu54zaYv1arX 2 UDP 2130706430 104.245.57.251 29723 typ host
+
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:663
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:789 hasoffer signnaling state
+CitrixSessionDescriptionHandler.hasOffer @ ringcentral-web-phone.js:789
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:692
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:790 have-local-offer
+CitrixSessionDescriptionHandler.hasOffer @ ringcentral-web-phone.js:790
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:692
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].get_signalingState() called, value = stable
+ringcentral-web-phone.js:696 before setRemote
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:696
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:697 {type: "offer", sdp: "v=0
+↵o=- 4710351051032106262 7928465355508854469 I… 2 UDP 2130706430 104.245.57.251 29723 typ host
+↵"}
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:697
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:705 SDP before setting remote description {type: "offer", sdp: "v=0
+↵o=- 4710351051032106262 7928465355508854469 I… 2 UDP 2130706430 104.245.57.251 29723 typ host
+↵"}
+(anonymous) @ ringcentral-web-phone.js:705
+Promise.then (async)
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:703
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:706 PeerConnection before setting remote description : b {hdxms: a, iid: 1, oid: 4, state: 0, deferredActions: Array(6), …}
+(anonymous) @ ringcentral-web-phone.js:706
+Promise.then (async)
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:703
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:3075 from inside of setRemoteDescription!!!!!
+b.setRemoteDescription @ citrix-webrtc.js:3075
+(anonymous) @ ringcentral-web-phone.js:710
+Promise.then (async)
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:703
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:3076 {type: "offer", sdp: "v=0
+↵o=- 4710351051032106262 7928465355508854469 I… 2 UDP 2130706430 104.245.57.251 29723 typ host
+↵"}
+b.setRemoteDescription @ citrix-webrtc.js:3076
+(anonymous) @ ringcentral-web-phone.js:710
+Promise.then (async)
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:703
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:102 [HdxWebRTC.js] b[4].setRemoteDescription() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject.waitUntilConnected(): deferring action "PeerConnection.setRemoteDescription". (iid: 1 oid: 4)
+ringcentral-web-phone.js:386 Entering getDescription
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:386
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:444 Acquiring LocalMedia with constraints  below:  {audio: {…}, video: {…}}
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:444
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:512 trying to acquire media  with constraint {audio: {…}, video: {…}}
+(anonymous) @ ringcentral-web-phone.js:512
+CitrixSessionDescriptionHandler.acquire @ ringcentral-web-phone.js:506
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:447
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:102 [HdxWebRTC.js] Redirection already started.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].getUserMedia() called: {"audio":{"deviceId":{"exact":"{0.0.1.00000000}.{702d6c51-1e6e-4ff3-866e-ace683378b8f}"}},"video":{"mandatory":{"sourceId":"\\\\?\\usb#vid_13d3&pid_56b2&mi_00#6&56614a4&0&0000#{65e8773d-8f56-11d0-a3b9-00a0c9223196}\\global","minWidth":30,"maxWidth":30,"minHeight":30,"maxHeight":30,"maxFrameRate":30}}}
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject.waitUntilConnected(): deferring action "NavigatorUserMedia.getUserMedia". (iid: 10 oid: 0)
+citrix-webrtc.js:102 [HdxWebRTC.js] deferred_action.post(): resolving "PeerConnection.onaddstream"
+citrix-webrtc.js:102 [HdxWebRTC.js] deferred_action.post(): resolving "PeerConnection.onicecandidate"
+citrix-webrtc.js:102 [HdxWebRTC.js] deferred_action.post(): resolving "PeerConnection.onicegatheringstatechange"
+citrix-webrtc.js:102 [HdxWebRTC.js] deferred_action.post(): resolving "PeerConnection.onsignalingstatechanged"
+citrix-webrtc.js:102 [HdxWebRTC.js] deferred_action.post(): resolving "PeerConnection.onnegotiationneeded"
+citrix-webrtc.js:102 [HdxWebRTC.js] deferred_action.post(): resolving "PeerConnection.oniceconnectionstatechange"
+citrix-webrtc.js:102 [HdxWebRTC.js] deferred_action.post(): resolving "PeerConnection.setRemoteDescription"
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject: Cant find callback handler registration for mid: 19
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject: Cant find callback handler registration for mid: 20
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject: Cant find callback handler registration for mid: 22
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject: Cant find callback handler registration for mid: 23
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject: Cant find callback handler registration for mid: 24
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject: Cant find callback handler registration for mid: 21
+citrix-webrtc.js:102 [HdxWebRTC.js] Redirection already started.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject.waitUntilConnected(): deferring action "SessionDescription.syncBarrier". (iid: 2 oid: 0)
+citrix-webrtc.js:102 [HdxWebRTC.js] deferred_action.post(): resolving "NavigatorUserMedia.getUserMedia"
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject: Cant find callback handler registration for mid: 1
+citrix-webrtc.js:102 [HdxWebRTC.js] deferred_action.post(): resolving "SessionDescription.syncBarrier"
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].getUserMedia: received success callback!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].syncBarrier() called. [id=undefined]
+citrix-webrtc.js:3084 from inside of setRemoteDescription!!!!!, sdp looks like this
+(anonymous) @ citrix-webrtc.js:3084
+Promise.then (async)
+b.setRemoteDescription @ citrix-webrtc.js:3083
+(anonymous) @ ringcentral-web-phone.js:710
+Promise.then (async)
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:703
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:3085 b {hdxms: a, iid: 2, oid: 0, state: 1, deferredActions: Array(0), …}
+(anonymous) @ citrix-webrtc.js:3085
+Promise.then (async)
+b.setRemoteDescription @ citrix-webrtc.js:3083
+(anonymous) @ ringcentral-web-phone.js:710
+Promise.then (async)
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:703
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject: Cant find callback handler registration for mid: 10
+citrix-webrtc.js:3087 from inside of setRemoteDescription!!!!!, c looks like this
+(anonymous) @ citrix-webrtc.js:3087
+Promise.then (async)
+b.setRemoteDescription @ citrix-webrtc.js:3083
+(anonymous) @ ringcentral-web-phone.js:710
+Promise.then (async)
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:703
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:3088 a {success: {…}, fail: {…}, id: 8, oneShot: true}
+(anonymous) @ citrix-webrtc.js:3088
+Promise.then (async)
+b.setRemoteDescription @ citrix-webrtc.js:3083
+(anonymous) @ ringcentral-web-phone.js:710
+Promise.then (async)
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:703
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:3089 0
+(anonymous) @ citrix-webrtc.js:3089
+Promise.then (async)
+b.setRemoteDescription @ citrix-webrtc.js:3083
+(anonymous) @ ringcentral-web-phone.js:710
+Promise.then (async)
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:703
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[1].syncBarrier() called.
+citrix-webrtc.js:3096 somethign wrong happened undefined
+(anonymous) @ citrix-webrtc.js:3096
+Promise.catch (async)
+(anonymous) @ citrix-webrtc.js:3095
+Promise.then (async)
+b.setRemoteDescription @ citrix-webrtc.js:3083
+(anonymous) @ ringcentral-web-phone.js:710
+Promise.then (async)
+CitrixSessionDescriptionHandler.setDescription @ ringcentral-web-phone.js:703
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].getUserMedia: MediaStream ready to deliver,"RemoteStream:{\"id\":\"AV-0c559c3aea30\",\"active\":false,\"oid\":0}"
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].getTracks() called. [id=AV-0c559c3aea30]
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].clone() called. [id=AV-0c559c3aea30]
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].addRef() called. [id=A-5d3bf92e9b30] refcount=2
+citrix-webrtc.js:102 [HdxWebRTC.js] b[1].addRef() called. [id=V-0be1ccef7d22] refcount=2
+sip-0.10.0.js:807 Thu May 07 2020 15:02:38 GMT-0700 (Pacific Daylight Time) | sip.invitecontext.citrixSessionDescriptionHandler | 8e91973c87f84c10944674270f10b04410.13.22.28-5070-4ef2ecd0d6de450 | Acquired succeeded Local Media Streams
+ringcentral-web-phone.js:459 Adding Remote Stream to PeerConnection b {hdxms: a, iid: 9, oid: 0, state: 1, deferredActions: Array(0), …}
+(anonymous) @ ringcentral-web-phone.js:459
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:456
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+index.js:41 72050f0000000000
+citrix-webrtc.js:102 [HdxWebRTC.js] Redirection already started.
+citrix-webrtc.js:102 [HdxWebRTC.js] VDI New Video Element Created, Creating Mapping to VDA
+citrix-webrtc.js:102 [HdxWebRTC.js] Video element is already configured!
+citrix-webrtc.js:102 [HdxWebRTC.js] VDI Shim set video element srcObject
+citrix-webrtc.js:102 [HdxWebRTC.js] c[0].srcObject: set srcObject...
+citrix-webrtc.js:3282 c[0].connectTo: connect media stream with id = 0, clone_id = 1
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].addStream() called: "RemoteStream:{\"id\":\"AV-0c559c3aea30.1\",\"oid\":0}"
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].dumpTrackInfo() called. [id=AV-0c559c3aea30.1]
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0] [id=A-5d3bf92e9b30] refcount=2
+citrix-webrtc.js:102 [HdxWebRTC.js] b[1] [id=V-0be1ccef7d22] refcount=2
+ringcentral-web-phone.js:466 Added remote stream, vdiLocal AKA remoteVideoElement - VDILocal.srcObject :  b {hdxms: a, iid: 9, oid: 0, state: 1, deferredActions: Array(0), …}
+(anonymous) @ ringcentral-web-phone.js:466
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:456
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:467 PeerConnection after addStream b {hdxms: a, iid: 1, oid: 0, state: 1, deferredActions: Array(0), …}
+(anonymous) @ ringcentral-web-phone.js:467
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:456
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject: Cant find callback handler registration for mid: 8
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].asyncClone() called. [id=AV-0c559c3aea30.1]
+citrix-webrtc.js:102 [HdxWebRTC.js] FrameTracker: set window handle: 72050f0000000000
+citrix-webrtc.js:102 [HdxWebRTC.js] HDXMS: SendOverlayData: >>> {"v":"overlay","command":"window","windowHandle":"72050f0000000000"}'
+ringcentral-web-phone.js:789 hasoffer signnaling state
+CitrixSessionDescriptionHandler.hasOffer @ ringcentral-web-phone.js:789
+CitrixSessionDescriptionHandler.createOfferOrAnswer @ ringcentral-web-phone.js:563
+streamAdditionSucceeded @ ringcentral-web-phone.js:476
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:475
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:790 have-remote-offer
+CitrixSessionDescriptionHandler.hasOffer @ ringcentral-web-phone.js:790
+CitrixSessionDescriptionHandler.createOfferOrAnswer @ ringcentral-web-phone.js:563
+streamAdditionSucceeded @ ringcentral-web-phone.js:476
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:475
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].get_signalingState() called, value = stable
+ringcentral-web-phone.js:564 This method will be called from createOfferAnswer:  createOffer
+CitrixSessionDescriptionHandler.createOfferOrAnswer @ ringcentral-web-phone.js:564
+streamAdditionSucceeded @ ringcentral-web-phone.js:476
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:475
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:595 HANDLED BY CREATE OFFER
+CitrixSessionDescriptionHandler.createOfferOrAnswer @ ringcentral-web-phone.js:595
+streamAdditionSucceeded @ ringcentral-web-phone.js:476
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:475
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].createOffer() called.,{"mandatory":{"OfferToReceiveAudio":true,"OfferToReceiveVideo":true}}
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject: Cant find callback handler registration for mid: 7
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onnegotiationneeded(): callback received!!!
+ringcentral-web-phone.js:260 onnegotiationneeded
+peerConnection.onnegotiationneeded @ ringcentral-web-phone.js:260
+(anonymous) @ citrix-webrtc.js:2988
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].addStream() success.
+citrix-webrtc.js:1425 {hdr: {…}, objref: {…}, params: Array(1), status: 0, v: "webrtc"}
+citrix-webrtc.js:102 [HdxWebRTC.js] b[1].syncBarrier() called. [id=undefined]
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].createOffer(): success callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[1].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[2].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[3].syncBarrier() called.
+ringcentral-web-phone.js:532 SDP Created for CreateOffer  b {hdxms: a, iid: 2, oid: 1, state: 1, deferredActions: Array(0), …}
+(anonymous) @ ringcentral-web-phone.js:532
+(anonymous) @ citrix-webrtc.js:3009
+Promise.then (async)
+b.createOffer @ citrix-webrtc.js:3007
+(anonymous) @ ringcentral-web-phone.js:531
+createOffer @ ringcentral-web-phone.js:530
+CitrixSessionDescriptionHandler.createOfferOrAnswer @ ringcentral-web-phone.js:596
+streamAdditionSucceeded @ ringcentral-web-phone.js:476
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:475
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].setLocalDescription() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].get_signalingState() called, value = stable
+ringcentral-web-phone.js:535 PeerConnection Signal state for createOffer set to (have-local-offer): stable
+(anonymous) @ ringcentral-web-phone.js:535
+(anonymous) @ citrix-webrtc.js:3009
+Promise.then (async)
+b.createOffer @ citrix-webrtc.js:3007
+(anonymous) @ ringcentral-web-phone.js:531
+createOffer @ ringcentral-web-phone.js:530
+CitrixSessionDescriptionHandler.createOfferOrAnswer @ ringcentral-web-phone.js:596
+streamAdditionSucceeded @ ringcentral-web-phone.js:476
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:475
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:102 [HdxWebRTC.js] Redirection already started.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject.waitUntilConnected(): deferring action "SessionDescription.syncBarrier". (iid: 2 oid: 0)
+ringcentral-web-phone.js:598 Desription from createOffer : b {hdxms: a, iid: 2, oid: 1, state: 1, deferredActions: Array(0), …}
+(anonymous) @ ringcentral-web-phone.js:598
+Promise.then (async)
+CitrixSessionDescriptionHandler.createOfferOrAnswer @ ringcentral-web-phone.js:597
+streamAdditionSucceeded @ ringcentral-web-phone.js:476
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:475
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:602 SDP after createRTCSessionDescriptionInit  {type: "offer", sdp: "v=0
+↵o=- 5227671375589283100 2 IN IP4 127.0.0.1
+↵s…9c3aea30
+↵a=ssrc:488722366 label:V-0be1ccef7d22
+↵"}
+(anonymous) @ ringcentral-web-phone.js:602
+Promise.then (async)
+CitrixSessionDescriptionHandler.createOfferOrAnswer @ ringcentral-web-phone.js:601
+streamAdditionSucceeded @ ringcentral-web-phone.js:476
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:475
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:804 icegathering resetIceGatheringComplete
+CitrixSessionDescriptionHandler.resetIceGatheringComplete @ ringcentral-web-phone.js:804
+(anonymous) @ ringcentral-web-phone.js:603
+Promise.then (async)
+CitrixSessionDescriptionHandler.createOfferOrAnswer @ ringcentral-web-phone.js:601
+streamAdditionSucceeded @ ringcentral-web-phone.js:476
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:475
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:861 waiting for icegathering comeplete
+CitrixSessionDescriptionHandler.waitForIceGatheringComplete @ ringcentral-web-phone.js:861
+(anonymous) @ ringcentral-web-phone.js:606
+Promise.then (async)
+CitrixSessionDescriptionHandler.createOfferOrAnswer @ ringcentral-web-phone.js:606
+streamAdditionSucceeded @ ringcentral-web-phone.js:476
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:475
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].get_iceGatheringState() called, value = new
+ringcentral-web-phone.js:798 IS IceGatheringComplete?  new
+CitrixSessionDescriptionHandler.isIceGatheringComplete @ ringcentral-web-phone.js:798
+CitrixSessionDescriptionHandler.waitForIceGatheringComplete @ ringcentral-web-phone.js:862
+(anonymous) @ ringcentral-web-phone.js:606
+Promise.then (async)
+CitrixSessionDescriptionHandler.createOfferOrAnswer @ ringcentral-web-phone.js:606
+streamAdditionSucceeded @ ringcentral-web-phone.js:476
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:475
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].get_iceGatheringState() called, value = new
+ringcentral-web-phone.js:866 ice gathering defered
+CitrixSessionDescriptionHandler.waitForIceGatheringComplete @ ringcentral-web-phone.js:866
+(anonymous) @ ringcentral-web-phone.js:606
+Promise.then (async)
+CitrixSessionDescriptionHandler.createOfferOrAnswer @ ringcentral-web-phone.js:606
+streamAdditionSucceeded @ ringcentral-web-phone.js:476
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:475
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject: Cant find callback handler registration for mid: 2
+citrix-webrtc.js:102 [HdxWebRTC.js] deferred_action.post(): resolving "SessionDescription.syncBarrier"
+citrix-webrtc.js:102 [HdxWebRTC.js] c[0].connectTo: remote media stream is connected!
+citrix-webrtc.js:102 [HdxWebRTC.js] Track element frame,[object HTMLVideoElement],{"x":0,"y":433,"width":1,"height":1,"top":433,"right":1,"bottom":434,"left":0}
+citrix-webrtc.js:3312 <video id=​"remoteVideo" height=​"1" width=​"1" playsinline autoplay>​</video>​
+citrix-webrtc.js:102 [HdxWebRTC.js] [HdxWebRTC.js] Initializing occlusion for new videoElement
+citrix-webrtc.js:102 [HdxWebRTC.js] Start FrameTracker observer...
+citrix-webrtc.js:102 [HdxWebRTC.js] c[0].setFrame: set video frame to,0,433,1,1
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject: Cant find callback handler registration for mid: 9
+citrix-webrtc.js:102 [HdxWebRTC.js] c[0].setFrame: success!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onsignalingstatechange(): callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].get_signalingState() called, value = have-local-offer
+ringcentral-web-phone.js:255 onsignalingstatechange have-local-offer
+peerConnection.onsignalingstatechange @ ringcentral-web-phone.js:255
+(anonymous) @ citrix-webrtc.js:2956
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].setLocalDescription(): success callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicegatheringstatechange(): callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicegatheringstatechange: new state is gathering
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicegatheringstatechange: posting event now!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].get_iceGatheringState() called, value = gathering
+ringcentral-web-phone.js:235 RTCIceGatheringState changed: gathering
+peerConnection.onicegatheringstatechange @ ringcentral-web-phone.js:235
+a.postUpdate @ citrix-webrtc.js:2707
+a.pushState @ citrix-webrtc.js:2685
+(anonymous) @ citrix-webrtc.js:2926
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].get_iceGatheringState() called, value = gathering
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[1].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[2].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[3].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[4].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[5].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[1].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[2].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[3].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[4].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[5].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[6].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[7].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[8].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[9].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[10].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[11].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicegatheringstatechange(): callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicegatheringstatechange: new state is complete
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: candidates remaining=[0,1,2,3,4,5,6,7,8,9,10,11], state=complete
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].updateLocalDescription() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[1].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].updateLocalDescription() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[2].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].updateLocalDescription() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[3].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].updateLocalDescription() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[4].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].updateLocalDescription() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[5].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].updateLocalDescription() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[6].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[7].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[8].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[9].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[10].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[11].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[3].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[4].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[5].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[6].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[7].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[8].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[6].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].updateLocalDescription() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[7].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].updateLocalDescription() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[8].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].updateLocalDescription() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[9].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].updateLocalDescription() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[10].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].updateLocalDescription() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[11].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: icecandidate available!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].updateLocalDescription() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] c[0].onvideoframechanged,40,22
+index.js:55 remotevideo element ready  Event {isTrusted: false, type: "loadedmetadata", target: video#remoteVideo, currentTarget: video#remoteVideo, eventPhase: 2, …}
+(anonymous) @ index.js:55
+a.VDAVideoElement.a.VDAVideoElement.onloadedmetadata @ citrix-webrtc.js:1709
+(anonymous) @ citrix-webrtc.js:3281
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: posting ice candidate now!
+ringcentral-web-phone.js:224 onIceCandidate() callback b {hdxms: a, iid: 4, oid: 0, state: 1, deferredActions: Array(0), …}
+peerConnection.onicecandidate @ ringcentral-web-phone.js:224
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+ringcentral-web-phone.js:227 ICE candidate received: candidate:4265193949 1 udp 2122262783 2601:646:c100:47:e8d5:fe0a:3b47:c2bb 51254 typ host generation 0 ufrag c/RO network-id 2 network-cost 10
+peerConnection.onicecandidate @ ringcentral-web-phone.js:227
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: candidates remaining=[1,2,3,4,5,6,7,8,9,10,11], state=complete
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: posting ice candidate now!
+ringcentral-web-phone.js:224 onIceCandidate() callback b {hdxms: a, iid: 4, oid: 1, state: 1, deferredActions: Array(0), …}
+peerConnection.onicecandidate @ ringcentral-web-phone.js:224
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+ringcentral-web-phone.js:227 ICE candidate received: candidate:1890986774 1 udp 2122197247 2601:646:c100:47:ec6d:8fd5:a731:a64a 51255 typ host generation 0 ufrag c/RO network-id 3 network-cost 10
+peerConnection.onicecandidate @ ringcentral-web-phone.js:227
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: candidates remaining=[2,3,4,5,6,7,8,9,10,11], state=complete
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: posting ice candidate now!
+ringcentral-web-phone.js:224 onIceCandidate() callback b {hdxms: a, iid: 4, oid: 2, state: 1, deferredActions: Array(0), …}
+peerConnection.onicecandidate @ ringcentral-web-phone.js:224
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+ringcentral-web-phone.js:227 ICE candidate received: candidate:1743413268 1 udp 2122129151 10.0.0.53 51256 typ host generation 0 ufrag c/RO network-id 1 network-cost 10
+peerConnection.onicecandidate @ ringcentral-web-phone.js:227
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: candidates remaining=[3,4,5,6,7,8,9,10,11], state=complete
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: posting ice candidate now!
+ringcentral-web-phone.js:224 onIceCandidate() callback b {hdxms: a, iid: 4, oid: 3, state: 1, deferredActions: Array(0), …}
+peerConnection.onicecandidate @ ringcentral-web-phone.js:224
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+ringcentral-web-phone.js:227 ICE candidate received: candidate:4265193949 2 udp 2122262782 2601:646:c100:47:e8d5:fe0a:3b47:c2bb 51257 typ host generation 0 ufrag c/RO network-id 2 network-cost 10
+peerConnection.onicecandidate @ ringcentral-web-phone.js:227
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: candidates remaining=[4,5,6,7,8,9,10,11], state=complete
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: posting ice candidate now!
+ringcentral-web-phone.js:224 onIceCandidate() callback b {hdxms: a, iid: 4, oid: 4, state: 1, deferredActions: Array(0), …}
+peerConnection.onicecandidate @ ringcentral-web-phone.js:224
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+ringcentral-web-phone.js:227 ICE candidate received: candidate:1890986774 2 udp 2122197246 2601:646:c100:47:ec6d:8fd5:a731:a64a 51258 typ host generation 0 ufrag c/RO network-id 3 network-cost 10
+peerConnection.onicecandidate @ ringcentral-web-phone.js:227
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: candidates remaining=[5,6,7,8,9,10,11], state=complete
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: posting ice candidate now!
+ringcentral-web-phone.js:224 onIceCandidate() callback b {hdxms: a, iid: 4, oid: 5, state: 1, deferredActions: Array(0), …}
+peerConnection.onicecandidate @ ringcentral-web-phone.js:224
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+ringcentral-web-phone.js:227 ICE candidate received: candidate:1743413268 2 udp 2122129150 10.0.0.53 51259 typ host generation 0 ufrag c/RO network-id 1 network-cost 10
+peerConnection.onicecandidate @ ringcentral-web-phone.js:227
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: candidates remaining=[6,7,8,9,10,11], state=complete
+citrix-webrtc.js:102 [HdxWebRTC.js] b[9].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[10].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[11].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[12].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[13].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[14].syncBarrier() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: posting ice candidate now!
+ringcentral-web-phone.js:224 onIceCandidate() callback b {hdxms: a, iid: 4, oid: 6, state: 1, deferredActions: Array(0), …}
+peerConnection.onicecandidate @ ringcentral-web-phone.js:224
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+ringcentral-web-phone.js:227 ICE candidate received: candidate:2964999469 1 tcp 1518283007 2601:646:c100:47:e8d5:fe0a:3b47:c2bb 56752 typ host tcptype passive generation 0 ufrag c/RO network-id 2 network-cost 10
+peerConnection.onicecandidate @ ringcentral-web-phone.js:227
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: candidates remaining=[7,8,9,10,11], state=complete
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: posting ice candidate now!
+ringcentral-web-phone.js:224 onIceCandidate() callback b {hdxms: a, iid: 4, oid: 7, state: 1, deferredActions: Array(0), …}
+peerConnection.onicecandidate @ ringcentral-web-phone.js:224
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+ringcentral-web-phone.js:227 ICE candidate received: candidate:1043716070 1 tcp 1518217471 2601:646:c100:47:ec6d:8fd5:a731:a64a 56753 typ host tcptype passive generation 0 ufrag c/RO network-id 3 network-cost 10
+peerConnection.onicecandidate @ ringcentral-web-phone.js:227
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: candidates remaining=[8,9,10,11], state=complete
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: posting ice candidate now!
+ringcentral-web-phone.js:224 onIceCandidate() callback b {hdxms: a, iid: 4, oid: 8, state: 1, deferredActions: Array(0), …}
+peerConnection.onicecandidate @ ringcentral-web-phone.js:224
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+ringcentral-web-phone.js:227 ICE candidate received: candidate:694787300 1 tcp 1518149375 10.0.0.53 56754 typ host tcptype passive generation 0 ufrag c/RO network-id 1 network-cost 10
+peerConnection.onicecandidate @ ringcentral-web-phone.js:227
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: candidates remaining=[9,10,11], state=complete
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: posting ice candidate now!
+ringcentral-web-phone.js:224 onIceCandidate() callback b {hdxms: a, iid: 4, oid: 9, state: 1, deferredActions: Array(0), …}
+peerConnection.onicecandidate @ ringcentral-web-phone.js:224
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+ringcentral-web-phone.js:227 ICE candidate received: candidate:2964999469 2 tcp 1518283006 2601:646:c100:47:e8d5:fe0a:3b47:c2bb 56755 typ host tcptype passive generation 0 ufrag c/RO network-id 2 network-cost 10
+peerConnection.onicecandidate @ ringcentral-web-phone.js:227
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: candidates remaining=[10,11], state=complete
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: posting ice candidate now!
+ringcentral-web-phone.js:224 onIceCandidate() callback b {hdxms: a, iid: 4, oid: 10, state: 1, deferredActions: Array(0), …}
+peerConnection.onicecandidate @ ringcentral-web-phone.js:224
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+ringcentral-web-phone.js:227 ICE candidate received: candidate:1043716070 2 tcp 1518217470 2601:646:c100:47:ec6d:8fd5:a731:a64a 56756 typ host tcptype passive generation 0 ufrag c/RO network-id 3 network-cost 10
+peerConnection.onicecandidate @ ringcentral-web-phone.js:227
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: candidates remaining=[11], state=complete
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicecandidate: posting ice candidate now!
+ringcentral-web-phone.js:224 onIceCandidate() callback b {hdxms: a, iid: 4, oid: 11, state: 1, deferredActions: Array(0), …}
+peerConnection.onicecandidate @ ringcentral-web-phone.js:224
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+ringcentral-web-phone.js:227 ICE candidate received: candidate:694787300 2 tcp 1518149374 10.0.0.53 56757 typ host tcptype passive generation 0 ufrag c/RO network-id 1 network-cost 10
+peerConnection.onicecandidate @ ringcentral-web-phone.js:227
+a.postIceCandidate @ citrix-webrtc.js:2699
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+ringcentral-web-phone.js:224 onIceCandidate() callback {candidate: null, target: a}
+peerConnection.onicecandidate @ ringcentral-web-phone.js:224
+a.processRemaining @ citrix-webrtc.js:2710
+a.postIceCandidate @ citrix-webrtc.js:2701
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+ringcentral-web-phone.js:229 ICE Gathering complete
+peerConnection.onicecandidate @ ringcentral-web-phone.js:229
+a.processRemaining @ citrix-webrtc.js:2710
+a.postIceCandidate @ citrix-webrtc.js:2701
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].get_iceGatheringState() called, value = complete
+ringcentral-web-phone.js:798 IS IceGatheringComplete?  complete
+CitrixSessionDescriptionHandler.isIceGatheringComplete @ ringcentral-web-phone.js:798
+CitrixSessionDescriptionHandler.triggerIceGatheringComplete @ ringcentral-web-phone.js:843
+peerConnection.onicecandidate @ ringcentral-web-phone.js:230
+a.processRemaining @ citrix-webrtc.js:2710
+a.postIceCandidate @ citrix-webrtc.js:2701
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].get_iceGatheringState() called, value = complete
+ringcentral-web-phone.js:845 triggerd ice gatheringcomplete
+CitrixSessionDescriptionHandler.triggerIceGatheringComplete @ ringcentral-web-phone.js:845
+peerConnection.onicecandidate @ ringcentral-web-phone.js:230
+a.processRemaining @ citrix-webrtc.js:2710
+a.postIceCandidate @ citrix-webrtc.js:2701
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onicegatheringstatechange: posting event now!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].get_iceGatheringState() called, value = complete
+ringcentral-web-phone.js:235 RTCIceGatheringState changed: complete
+peerConnection.onicegatheringstatechange @ ringcentral-web-phone.js:235
+a.postUpdate @ citrix-webrtc.js:2707
+a.processRemaining @ citrix-webrtc.js:2713
+a.postIceCandidate @ citrix-webrtc.js:2701
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].get_iceGatheringState() called, value = complete
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].get_iceGatheringState() called, value = complete
+ringcentral-web-phone.js:798 IS IceGatheringComplete?  complete
+CitrixSessionDescriptionHandler.isIceGatheringComplete @ ringcentral-web-phone.js:798
+CitrixSessionDescriptionHandler.triggerIceGatheringComplete @ ringcentral-web-phone.js:843
+peerConnection.onicegatheringstatechange @ ringcentral-web-phone.js:249
+a.postUpdate @ citrix-webrtc.js:2707
+a.processRemaining @ citrix-webrtc.js:2713
+a.postIceCandidate @ citrix-webrtc.js:2701
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].get_iceGatheringState() called, value = complete
+ringcentral-web-phone.js:845 triggerd ice gatheringcomplete
+CitrixSessionDescriptionHandler.triggerIceGatheringComplete @ ringcentral-web-phone.js:845
+peerConnection.onicegatheringstatechange @ ringcentral-web-phone.js:249
+a.postUpdate @ citrix-webrtc.js:2707
+a.processRemaining @ citrix-webrtc.js:2713
+a.postIceCandidate @ citrix-webrtc.js:2701
+(anonymous) @ citrix-webrtc.js:2694
+Promise.then (async)
+a.addIceCandidate @ citrix-webrtc.js:2693
+(anonymous) @ citrix-webrtc.js:2872
+a.resolve @ citrix-webrtc.js:396
+a.onWSMessage @ citrix-webrtc.js:426
+b.websocket.onmessage @ citrix-webrtc.js:420
+ringcentral-web-phone.js:609 onSetLocalDescriptionSuccess
+(anonymous) @ ringcentral-web-phone.js:609
+onSetLocalDescriptionSuccess @ ringcentral-web-phone.js:608
+Promise.then (async)
+CitrixSessionDescriptionHandler.createOfferOrAnswer @ ringcentral-web-phone.js:607
+streamAdditionSucceeded @ ringcentral-web-phone.js:476
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:475
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:611 Local SDP from peerconnection for createOffer  b {hdxms: a, iid: 2, oid: 14, state: 1, deferredActions: Array(0), …}
+(anonymous) @ ringcentral-web-phone.js:611
+onSetLocalDescriptionSuccess @ ringcentral-web-phone.js:608
+Promise.then (async)
+CitrixSessionDescriptionHandler.createOfferOrAnswer @ ringcentral-web-phone.js:607
+streamAdditionSucceeded @ ringcentral-web-phone.js:476
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:475
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:837 Direction of Session changed to sendrecv
+CitrixSessionDescriptionHandler.setDirection @ ringcentral-web-phone.js:837
+(anonymous) @ ringcentral-web-phone.js:614
+onSetLocalDescriptionSuccess @ ringcentral-web-phone.js:608
+Promise.then (async)
+CitrixSessionDescriptionHandler.createOfferOrAnswer @ ringcentral-web-phone.js:607
+streamAdditionSucceeded @ ringcentral-web-phone.js:476
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:475
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+ringcentral-web-phone.js:486 SDP created for Outgoing Invite :  v=0
+o=- 5227671375589283100 2 IN IP4 127.0.0.1
+s=-
+t=0 0
+a=group:BUNDLE audio
+a=msid-semantic: WMS AV-0c559c3aea30
+m=audio 51255 RTP/SAVPF 111 103 104 102 0 8 106 105 13 110 112 113 126
+c=IN IP4 10.0.0.53
+a=rtcp:51259 IN IP4 10.0.0.53
+a=candidate:4265193949 1 udp 2122262783 2601:646:c100:47:e8d5:fe0a:3b47:c2bb 51254 typ host generation 0 network-id 2 network-cost 10
+a=candidate:1890986774 1 udp 2122197247 2601:646:c100:47:ec6d:8fd5:a731:a64a 51255 typ host generation 0 network-id 3 network-cost 10
+a=candidate:1743413268 1 udp 2122129151 10.0.0.53 51256 typ host generation 0 network-id 1 network-cost 10
+a=candidate:4265193949 2 udp 2122262782 2601:646:c100:47:e8d5:fe0a:3b47:c2bb 51257 typ host generation 0 network-id 2 network-cost 10
+a=candidate:1890986774 2 udp 2122197246 2601:646:c100:47:ec6d:8fd5:a731:a64a 51258 typ host generation 0 network-id 3 network-cost 10
+a=candidate:1743413268 2 udp 2122129150 10.0.0.53 51259 typ host generation 0 network-id 1 network-cost 10
+a=ice-ufrag:c/RO
+a=ice-pwd:ZAZXHL6Mdvhl7iGbrz1GOsdC
+a=ice-options:trickle
+a=mid:audio
+a=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
+a=sendrecv
+a=rtcp-mux
+a=crypto:0 AES_CM_128_HMAC_SHA1_80 inline:g5Xqyfs2+T6dReJaqDPPEWuchXKgWG6xrLBwl3Vp
+a=rtpmap:111 opus/48000/2
+a=rtcp-fb:111 transport-cc
+a=fmtp:111 minptime=10;useinbandfec=1
+a=rtpmap:103 ISAC/16000
+a=rtpmap:104 ISAC/32000
+a=rtpmap:102 ILBC/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:106 CN/32000
+a=rtpmap:105 CN/16000
+a=rtpmap:13 CN/8000
+a=rtpmap:110 telephone-event/48000
+a=rtpmap:112 telephone-event/32000
+a=rtpmap:113 telephone-event/16000
+a=rtpmap:126 telephone-event/8000
+a=ssrc:148764003 cname:f2AiMLPH1+daNuqi
+a=ssrc:148764003 msid:AV-0c559c3aea30 A-5d3bf92e9b30
+a=ssrc:148764003 mslabel:AV-0c559c3aea30
+a=ssrc:148764003 label:A-5d3bf92e9b30
+
+(anonymous) @ ringcentral-web-phone.js:486
+Promise.then (async)
+CitrixSessionDescriptionHandler.getDescription @ ringcentral-web-phone.js:485
+(anonymous) @ sip-0.10.0.js:5642
+Promise.then (async)
+accept @ sip-0.10.0.js:5641
+(anonymous) @ ringcentral-web-phone.js:1649
+accept @ ringcentral-web-phone.js:1634
+(anonymous) @ index.js:400
+dispatch @ jquery.js:5201
+elemData.handle @ jquery.js:5009
+sip-0.10.0.js:807 Thu May 07 2020 15:02:40 GMT-0700 (Pacific Daylight Time) | sip.transport | sending WebSocket message:
+
+SIP/2.0 200 OK
+Via: SIP/2.0/WSS 104.245.57.250:8083;branch=z9hG4bK+SC17503eRd
+To: "VYSHAKH BABJI" <sip:17203861294*104@104.43.215.70>;tag=cmbs5bu02j
+From: "VYSHAKH BABJI" <sip:+16197619503@104.245.57.250>;tag=10.13.22.28-5070-4ef2ecd0d6de450
+Call-ID: 8e91973c87f84c10944674270f10b044
+CSeq: 426451860 INVITE
+P-rc-endpoint-id: 634627c1-2e27-4a84-b143-ea42892094cc
+Client-id:HzXLrhSlTFyqVjXlgWeoMQ
+Contact: <sip:sogs0qp7@7pg3a6rtgiok.invalid;transport=ws>
+Allow: ACK,CANCEL,INVITE,MESSAGE,BYE,OPTIONS,INFO,NOTIFY,REFER
+Supported: outbound
+User-Agent: WebPhoneDemo/1.0.0 RCWEBPHONE/0.4.6
+Content-Type: application/sdp
+Content-Length: 1852
+
+v=0
+o=- 5227671375589283100 2 IN IP4 127.0.0.1
+s=-
+t=0 0
+a=group:BUNDLE audio
+a=msid-semantic: WMS AV-0c559c3aea30
+m=audio 51255 RTP/SAVPF 111 103 104 102 0 8 106 105 13 110 112 113 126
+c=IN IP4 10.0.0.53
+a=rtcp:51259 IN IP4 10.0.0.53
+a=candidate:4265193949 1 udp 2122262783 2601:646:c100:47:e8d5:fe0a:3b47:c2bb 51254 typ host generation 0 network-id 2 network-cost 10
+a=candidate:1890986774 1 udp 2122197247 2601:646:c100:47:ec6d:8fd5:a731:a64a 51255 typ host generation 0 network-id 3 network-cost 10
+a=candidate:1743413268 1 udp 2122129151 10.0.0.53 51256 typ host generation 0 network-id 1 network-cost 10
+a=candidate:4265193949 2 udp 2122262782 2601:646:c100:47:e8d5:fe0a:3b47:c2bb 51257 typ host generation 0 network-id 2 network-cost 10
+a=candidate:1890986774 2 udp 2122197246 2601:646:c100:47:ec6d:8fd5:a731:a64a 51258 typ host generation 0 network-id 3 network-cost 10
+a=candidate:1743413268 2 udp 2122129150 10.0.0.53 51259 typ host generation 0 network-id 1 network-cost 10
+a=ice-ufrag:c/RO
+a=ice-pwd:ZAZXHL6Mdvhl7iGbrz1GOsdC
+a=ice-options:trickle
+a=mid:audio
+a=extmap:1 urn:ietf:params:rtp-hdrext:ssrc-audio-level
+a=sendrecv
+a=rtcp-mux
+a=crypto:0 AES_CM_128_HMAC_SHA1_80 inline:g5Xqyfs2+T6dReJaqDPPEWuchXKgWG6xrLBwl3Vp
+a=rtpmap:111 opus/48000/2
+a=rtcp-fb:111 transport-cc
+a=fmtp:111 minptime=10;useinbandfec=1
+a=rtpmap:103 ISAC/16000
+a=rtpmap:104 ISAC/32000
+a=rtpmap:102 ILBC/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:106 CN/32000
+a=rtpmap:105 CN/16000
+a=rtpmap:13 CN/8000
+a=rtpmap:110 telephone-event/48000
+a=rtpmap:112 telephone-event/32000
+a=rtpmap:113 telephone-event/16000
+a=rtpmap:126 telephone-event/8000
+a=ssrc:148764003 cname:f2AiMLPH1+daNuqi
+a=ssrc:148764003 msid:AV-0c559c3aea30 A-5d3bf92e9b30
+a=ssrc:148764003 mslabel:AV-0c559c3aea30
+a=ssrc:148764003 label:A-5d3bf92e9b30
+
+
+index.js:452 EVENT: Accepted IncomingRequest {logger: Logger, ua: UA, headers: {…}, ruri: URI, transport: Transport, …}
+index.js:453 To VYSHAKH BABJI VYSHAKH BABJI
+index.js:454 From VYSHAKH BABJI VYSHAKH BABJI
+sip-0.10.0.js:807 Thu May 07 2020 15:02:40 GMT-0700 (Pacific Daylight Time) | sip.transport | received WebSocket text message:
+
+ACK sip:sogs0qp7@7pg3a6rtgiok.invalid;transport=ws SIP/2.0
+Via: SIP/2.0/WSS 104.245.57.250:8083;branch=z9hG4bK*nbkGzwvD97
+To: "VYSHAKH BABJI" <sip:17203861294*104@104.43.215.70>;tag=cmbs5bu02j
+From: "VYSHAKH BABJI" <sip:+16197619503@104.245.57.250>;tag=10.13.22.28-5070-4ef2ecd0d6de450
+Call-Id: 8e91973c87f84c10944674270f10b044
+CSeq: 426451860 ACK
+Max-Forwards: 69
+Contact: <sip:+16197619503@104.245.57.250:8083;transport=wss>
+User-Agent: RC_SIPWRP_22.28
+Content-Length: 0
+
+
+
+sip-0.10.0.js:807 Thu May 07 2020 15:02:40 GMT-0700 (Pacific Daylight Time) | sip.transport | received WebSocket text message:
+
+MESSAGE sip:sogs0qp7@7pg3a6rtgiok.invalid;transport=ws SIP/2.0
+Via: SIP/2.0/WSS 104.245.57.250:8083;branch=z9hG4bK`Z5bLSGRLA
+To: <sip:17203861294*104@sip.ringcentral.com>
+From: <sip:%231056016@sip.ringcentral.com>;tag=dd795e26fab04b94b0ff1945906a97e0
+Call-ID: c4929922b93d469eb221f3433454bfc0
+CSeq: 426452047 MESSAGE
+Max-Forwards: 67
+Content-Type: x-rc/agent
+Content-Length: 184
+
+<Msg><Hdr SID="35590937288848" Req="" Cmd="7" From="#1056016@sip.ringcentral.com:5060" To="17203861294*104@sip.ringcentral.com:5060"/><Bdy Cln="210749930016" Sts="0" CtrlCln=""/></Msg>
+
+sip-0.10.0.js:807 Thu May 07 2020 15:02:40 GMT-0700 (Pacific Daylight Time) | sip.transport | sending WebSocket message:
+
+SIP/2.0 200 OK
+Via: SIP/2.0/WSS 104.245.57.250:8083;branch=z9hG4bK`Z5bLSGRLA
+To: <sip:17203861294*104@sip.ringcentral.com>;tag=1lj662co93
+From: <sip:%231056016@sip.ringcentral.com>;tag=dd795e26fab04b94b0ff1945906a97e0
+Call-ID: c4929922b93d469eb221f3433454bfc0
+CSeq: 426452047 MESSAGE
+Supported: outbound
+User-Agent: WebPhoneDemo/1.0.0 RCWEBPHONE/0.4.6
+Content-Length: 0
+
+
+
+index.js:383 UA Message Arguments [ServerContext, callee: ƒ, Symbol(Symbol.iterator): ƒ]
+citrix-webrtc.js:102 [HdxWebRTC.js] c[0].setFrame: set video frame to,0,492,1,1
+citrix-webrtc.js:102 [HdxWebRTC.js] c[0].setFrame: success!

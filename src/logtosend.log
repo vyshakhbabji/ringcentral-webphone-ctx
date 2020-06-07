@@ -1,0 +1,73 @@
+indows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\dev\citrix\Citrix WebRtc Files\Citrix Demo WebRTC Application> cd '.\Citrix Demo WebRTC Application\'
+PS C:\dev\citrix\Citrix WebRtc Files\Citrix Demo WebRTC Application\Citrix Demo WebRTC Application> cd .\app\
+cd : Cannot find path 'C:\dev\citrix\Citrix WebRtc Files\Citrix Demo WebRTC Application\Citrix Demo WebRTC Application\app\' because 
+it does not exist.
++ cd .\app\
++ ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\dev\citrix\C...pplication\app\:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+ 
+PS C:\dev\citrix\Citrix WebRtc Files\Citrix Demo WebRTC Application\Citrix Demo WebRTC Application> cd .\resources\
+PS C:\dev\citrix\Citrix WebRtc Files\Citrix Demo WebRTC Application\Citrix Demo WebRTC Application\resources> cd .\app\
+PS C:\dev\citrix\Citrix WebRtc Files\Citrix Demo WebRTC Application\Citrix Demo WebRTC Application\resources\app> .\node_modules\.bin\electron .\electron.js
+
+ [14504:0507/144313.163:ERROR:internal_decoder_factory.cc(56)] Trying to create decoder for unsupported format
+[14504:0507/144313.165:ERROR:internal_decoder_factory.cc(56)] Trying to create decoder for unsupported format
+[14504:0507/144402.650:ERROR:rtp_receiver.cc(121)] AudioRtpReceiver::OnSetVolume: No audio channel exists.
+[14504:0507/144402.651:ERROR:peer_connection.cc(1937)] PeerConnection cannot create an answer in a state other than have-remote-offer or have-local-pranswer.
+[14504:0507/144405.348:ERROR:rtp_receiver.cc(121)] AudioRtpReceiver::OnSetVolume: No audio channel exists.
+[14504:0507/144405.350:ERROR:peer_connection.cc(1937)] PeerConnection cannot create an answer in a state other than have-remote-offer or have-local-pranswer.
+[14504:0507/144416.987:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:49845 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})
+[14504:0507/144416.987:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:49845 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})
+[14504:0507/144416.987:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:49845 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})  
+[14504:0507/144530.364:ERROR:rtp_receiver.cc(121)] AudioRtpReceiver::OnSetVolume: No audio channel exists.
+[14504:0507/144547.236:ERROR:rtp_receiver.cc(121)] AudioRtpReceiver::OnSetVolume: No audio channel exists.
+[14504:0507/144610.162:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:61030 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})
+[14504:0507/144610.162:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:61030 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})
+[14504:0507/144610.162:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:61030 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})  
+[14504:0507/144610.163:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:61031 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})  
+[14504:0507/144610.163:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:61031 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})  
+[14504:0507/144610.183:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:61031 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})
+[14504:0507/144627.028:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:62790 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})
+[14504:0507/144627.028:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:62790 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})
+[14504:0507/144627.029:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:62790 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})  
+[14504:0507/144627.029:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:62791 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})  
+[14504:0507/144627.030:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:62791 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})  
+[14504:0507/144627.048:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:62791 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})
+[14504:0507/144733.076:ERROR:internal_decoder_factory.cc(56)] Trying to create decoder for unsupported format
+[14504:0507/144733.078:ERROR:internal_decoder_factory.cc(56)] Trying to create decoder for unsupported format
+[4860:0507/144927.626:ERROR:internal_decoder_factory.cc(56)] Trying to create decoder for unsupported format
+[4860:0507/144927.628:ERROR:internal_decoder_factory.cc(56)] Trying to create decoder for unsupported format
+[4860:0507/145012.639:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:52022 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})
+[4860:0507/145012.639:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:52022 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})
+[4860:0507/145012.639:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:52022 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})   
+[9676:0507/145226.728:ERROR:internal_decoder_factory.cc(56)] Trying to create decoder for unsupported format
+[9676:0507/145226.740:ERROR:internal_decoder_factory.cc(56)] Trying to create decoder for unsupported format
+[9676:0507/145317.425:ERROR:rtp_receiver.cc(121)] AudioRtpReceiver::OnSetVolume: No audio channel exists.
+[9676:0507/145317.427:ERROR:peer_connection.cc(1937)] PeerConnection cannot create an answer in a state other than have-remote-offer or have-local-pranswer.
+[9676:0507/145351.630:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:63570 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})
+[9676:0507/145351.630:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:63570 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})
+[9676:0507/145351.631:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:63570 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})   
+[9676:0507/145524.948:ERROR:rtp_receiver.cc(121)] AudioRtpReceiver::OnSetVolume: No audio channel exists.
+[9676:0507/145524.950:ERROR:peer_connection.cc(1937)] PeerConnection cannot create an answer in a state other than have-remote-offer or have-local-pranswer.
+[9676:0507/145551.147:ERROR:rtp_receiver.cc(121)] AudioRtpReceiver::OnSetVolume: No audio channel exists.
+[9676:0507/145629.259:ERROR:rtp_receiver.cc(121)] AudioRtpReceiver::OnSetVolume: No audio channel exists.
+[9676:0507/145630.924:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:57005 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})
+[9676:0507/145630.924:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:57005 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})
+[9676:0507/145630.924:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:57005 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})   
+[9676:0507/145630.925:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:57006 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})   
+[9676:0507/145630.925:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:57006 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})   
+[9676:0507/145630.941:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:57006 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})   
+[13172:0507/145717.270:ERROR:rtp_receiver.cc(121)] AudioRtpReceiver::OnSetVolume: No audio channel exists.
+[13172:0507/145757.055:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:60098 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})  
+[13172:0507/145757.055:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:60098 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})  
+[13172:0507/145757.055:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:60098 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})  
+[13172:0507/145757.056:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:60099 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})  
+[13172:0507/145757.056:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:60099 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})  
+[13172:0507/145757.057:ERROR:stun_port.cc(92)] Binding request timed out from 10.5.1.x:60099 ({DA40F2EE-9B32-4915-A9FC-1C0B5AFA7DAB})  
+PS C:\dev\citrix\Citrix WebRtc Files\Citrix Demo WebRTC Application\Citrix Demo WebRTC Application\resources\app> 

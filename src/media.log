@@ -1,0 +1,30 @@
+[HdxWebRTC.js] b[0].getUserMedia: MediaStream ready to deliver,"RemoteStream:{\"id\":\"A-c29b242a40ac\",\"active\":false,\"oid\":0}"
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].getTracks() called. [id=A-c29b242a40ac]
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].clone() called. [id=A-c29b242a40ac]
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].addRef() called. [id=A-a70a2f37f0e4] refcount=2
+sip-0.10.0.js:807 Sat May 16 2020 22:22:10 GMT-0700 (Pacific Daylight Time) | sip.invitecontext.citrixSessionDescriptionHandler | erke72inc16m1ji79jl1imuc4psicb | Acquired succeeded Local Media Streams
+index.js:41 9c04060000000000
+citrix-webrtc.js:102 [HdxWebRTC.js] Redirection already started.
+citrix-webrtc.js:102 [HdxWebRTC.js] VDI New Video Element Created, Creating Mapping to VDA
+citrix-webrtc.js:102 [HdxWebRTC.js] Redirection already started.
+citrix-webrtc.js:102 [HdxWebRTC.js] c[0].set_onloadedmetadata() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] c[0].set_onconnectionstatechange() called.
+citrix-webrtc.js:102 [HdxWebRTC.js] VDI Shim set video element srcObject
+citrix-webrtc.js:102 [HdxWebRTC.js] c[0].srcObject: set srcObject...
+citrix-webrtc.js:3282 c[0].connectTo: connect media stream with id = 0, clone_id = 1
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject.waitUntilConnected(): deferring action "VideoElement.connectTo". (iid: 11 oid: 0)
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].addStream() called: "RemoteStream:{\"id\":\"A-c29b242a40ac.1\",\"oid\":0}"
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].dumpTrackInfo() called. [id=A-c29b242a40ac.1]
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0] [id=A-a70a2f37f0e4] refcount=2
+citrix-webrtc.js:102 [HdxWebRTC.js] FrameTracker: set window handle: 9c04060000000000
+citrix-webrtc.js:102 [HdxWebRTC.js] HDXMS: SendOverlayData: >>> {"v":"overlay","command":"window","windowHandle":"9c04060000000000"}'
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].get_signalingState() called, value = stable
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].createOffer() called.,{"mandatory":{"OfferToReceiveAudio":true,"OfferToReceiveVideo":true}}
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject: Cant find callback handler registration for mid: 7
+citrix-webrtc.js:102 [HdxWebRTC.js] deferred_action.post(): resolving "VideoElement.connectTo"
+citrix-webrtc.js:102 [HdxWebRTC.js] ProxyObject: Cant find callback handler registration for mid: 8
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].asyncClone() called. [id=A-c29b242a40ac.1]
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].onnegotiationneeded(): callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].addStream() success.
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].createOffer(): success callback received!!!
+citrix-webrtc.js:102 [HdxWebRTC.js] b[0].syncBarrier() called.

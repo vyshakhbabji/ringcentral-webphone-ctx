@@ -1,0 +1,70 @@
+ CitrixSessionDescriptionHandler.prototype.createOfferOrAnswer = function (RTCOfferOptions, modifiers, s) {
+            var self = this;
+            var methodName;
+            var pc = this.peerConnection;
+
+            console.error('entering createOFferAnswer');
+
+            this.peerConnection.createOffer((localSdp) => {
+                console.error('createOffer() success');
+                console.error(localSdp.sdp);
+                peerConnection.setLocalDescription(localSdp.sdp);
+            }, (err) => {
+                console.log('createOffer() failure with error: ', err);
+            }, sdpConstraints);
+
+            // return sdpGen(this, s)
+            //     // return pc.createAnswer()
+            //     .catch(function methodError(e) {
+            //         self.emit('peerConnection-' + methodName + 'Failed', e);
+            //         console.error('peerConnection-' + methodName + 'Failed', e);
+            //         throw e;
+            //     })
+            //     .then(function(sdp) {
+            //         // sdp = SIP.Utils.reducePromises(modifiers, self.createRTCSessionDescriptionInit(sdp));
+            //         console.error('sdp generated');
+            //         console.error(sdp.sdp);
+            //         var retVal = SIP.Utils.reducePromises(modifiers, sdp);
+            //         console.error('return val');
+            //         console.error(retVal);
+            //         console.error('before setting sdp')
+            //         console.error(pc.localDescription);
+            //         return retVal;
+            //     })
+            //     .then(function(sdp) {
+            //         self.resetIceGatheringComplete();
+            //         console.error(pc);
+            //         return pc.setLocalDescription(sdp);
+            //     })
+            //     .then(function() {
+            //         console.error('pc.setLocalDescription(sdp)');
+            //         console.error(pc);
+            //         self.waitForIceGatheringComplete();
+            //         var sdp = self.createRTCSessionDescriptionInit(self.peerConnection.localDescription);
+            //         console.error(sdp);
+            //         return SIP.Utils.reducePromises(modifiers, sdp);
+            //         // return sdp;
+            //     })
+            //     .catch(function localDescError(e) {
+            //         self.session.emit('peerConnection-SetLocalDescriptionFailed', e);
+            //         throw e;
+            //     })
+            //     .then(function(localDescription) {
+            //         self.session.emit('getDescription', localDescription);
+            //         self.setDirection(localDescription.sdp);
+            //         console.error('finalpc')
+            //         console.error(pc);
+            //         return localDescription.sdp;
+            //     })
+            //     .catch(function createOfferOrAnswerError (e) {
+            //         self.logger.error(e);
+            //         // TODO: Not sure if this is correct
+            //         throw new SIP.Exceptions.GetDescriptionError(e);
+            //     });
+
+        };
+
+        CitrixSessionDescriptionHandler.prototype.hasDescription = function (contentType) {
+            return contentType === this.CONTENT_TYPE;
+        };
+

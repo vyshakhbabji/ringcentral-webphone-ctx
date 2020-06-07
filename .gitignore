@@ -1,0 +1,7 @@
+.idea
+.env
+*npm-debug*
+node_modules
+bower_components
+vendor/node_modules
+electron/node_modules
