@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './citrix-webrtc/CitrixWebRTC.js',
+  entry: './citrix-webrtc/CitrixWebRTC.min.js',
   output: {
     filename: 'citrix-webrtc.js',
     path: path.resolve(__dirname, '../src/script'),
