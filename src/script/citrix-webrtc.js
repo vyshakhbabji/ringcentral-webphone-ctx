@@ -91,341 +91,346 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-/* WEBPACK VAR INJECTION */(function(global) {var $jscomp={scope:{},getGlobal:function(a){return"undefined"!=typeof window&&window===a?a:"undefined"!=typeof global?global:a}};$jscomp.global=$jscomp.getGlobal(this);$jscomp.initSymbol=function(){$jscomp.global.Symbol||($jscomp.global.Symbol=$jscomp.Symbol);$jscomp.initSymbol=function(){}};$jscomp.symbolCounter_=0;$jscomp.Symbol=function(a){return"jscomp_symbol_"+a+$jscomp.symbolCounter_++};
-$jscomp.initSymbolIterator=function(){$jscomp.initSymbol();$jscomp.global.Symbol.iterator||($jscomp.global.Symbol.iterator=$jscomp.global.Symbol("iterator"));$jscomp.initSymbolIterator=function(){}};$jscomp.makeIterator=function(a){$jscomp.initSymbolIterator();if(a[$jscomp.global.Symbol.iterator])return a[$jscomp.global.Symbol.iterator]();var b=0;return{next:function(){return b==a.length?{done:!0}:{done:!1,value:a[b++]}}}};
-$jscomp.arrayFromIterator=function(a){for(var b,c=[];!(b=a.next()).done;)c.push(b.value);return c};$jscomp.arrayFromIterable=function(a){return a instanceof Array?a:$jscomp.arrayFromIterator($jscomp.makeIterator(a))};
-$jscomp.inherits=function(a,b){function c(){}c.prototype=b.prototype;a.prototype=new c;a.prototype.constructor=a;for(var e in b)if($jscomp.global.Object.defineProperties){var k=$jscomp.global.Object.getOwnPropertyDescriptor(b,e);k&&$jscomp.global.Object.defineProperty(a,e,k)}else a[e]=b[e]};$jscomp.array=$jscomp.array||{};$jscomp.array.done_=function(){return{done:!0,value:void 0}};
-$jscomp.array.arrayIterator_=function(a,b){a instanceof String&&(a=String(a));var c=0;$jscomp.initSymbol();$jscomp.initSymbolIterator();var e={},k=(e.next=function(){if(c<a.length){var e=c++;return{value:b(e,a[e]),done:!1}}k.next=$jscomp.array.done_;return $jscomp.array.done_()},e[Symbol.iterator]=function(){return k},e);return k};
-$jscomp.array.findInternal_=function(a,b,c){a instanceof String&&(a=String(a));for(var e=a.length,k=0;k<e;k++){var m=a[k];if(b.call(c,m,k,a))return{i:k,v:m}}return{i:-1,v:void 0}};
-$jscomp.array.from=function(a,b,c){b=void 0===b?function(a){return a}:b;var e=[];$jscomp.initSymbol();$jscomp.initSymbolIterator();if(a[Symbol.iterator]){$jscomp.initSymbol();$jscomp.initSymbolIterator();a=a[Symbol.iterator]();for(var k;!(k=a.next()).done;)e.push(b.call(c,k.value))}else{k=a.length;for(var m=0;m<k;m++)e.push(b.call(c,a[m]))}return e};$jscomp.array.of=function(a){for(var b=[],c=0;c<arguments.length;++c)b[c-0]=arguments[c];return $jscomp.array.from(b)};
-$jscomp.array.entries=function(){return $jscomp.array.arrayIterator_(this,function(a,b){return[a,b]})};$jscomp.array.entries$install=function(){Array.prototype.entries||(Array.prototype.entries=$jscomp.array.entries)};$jscomp.array.keys=function(){return $jscomp.array.arrayIterator_(this,function(a){return a})};$jscomp.array.keys$install=function(){Array.prototype.keys||(Array.prototype.keys=$jscomp.array.keys)};$jscomp.array.values=function(){return $jscomp.array.arrayIterator_(this,function(a,b){return b})};
-$jscomp.array.values$install=function(){Array.prototype.values||(Array.prototype.values=$jscomp.array.values)};$jscomp.array.copyWithin=function(a,b,c){var e=this.length;a=Number(a);b=Number(b);c=Number(null!=c?c:e);if(a<b)for(c=Math.min(c,e);b<c;)b in this?this[a++]=this[b++]:(delete this[a++],b++);else for(c=Math.min(c,e+b-a),a+=c-b;c>b;)--c in this?this[--a]=this[c]:delete this[a];return this};$jscomp.array.copyWithin$install=function(){Array.prototype.copyWithin||(Array.prototype.copyWithin=$jscomp.array.copyWithin)};
-$jscomp.array.fill=function(a,b,c){null!=c&&a.length||(c=this.length||0);c=Number(c);for(b=Number((void 0===b?0:b)||0);b<c;b++)this[b]=a;return this};$jscomp.array.fill$install=function(){Array.prototype.fill||(Array.prototype.fill=$jscomp.array.fill)};$jscomp.array.find=function(a,b){return $jscomp.array.findInternal_(this,a,b).v};$jscomp.array.find$install=function(){Array.prototype.find||(Array.prototype.find=$jscomp.array.find)};
-$jscomp.array.findIndex=function(a,b){return $jscomp.array.findInternal_(this,a,b).i};$jscomp.array.findIndex$install=function(){Array.prototype.findIndex||(Array.prototype.findIndex=$jscomp.array.findIndex)};$jscomp.Map=function(a){a=void 0===a?[]:a;this.data_={};this.head_=$jscomp.Map.createHead_();this.size=0;if(a){a=$jscomp.makeIterator(a);for(var b=a.next();!b.done;b=a.next())b=b.value,this.set(b[0],b[1])}};
-$jscomp.Map.checkBrowserConformance_=function(){var a=$jscomp.global.Map;if(!a||!a.prototype.entries||!Object.seal)return!1;try{var b=Object.seal({x:4}),c=new a($jscomp.makeIterator([[b,"s"]]));if("s"!=c.get(b)||1!=c.size||c.get({x:4})||c.set({x:4},"t")!=c||2!=c.size)return!1;var e=c.entries(),k=e.next();if(k.done||k.value[0]!=b||"s"!=k.value[1])return!1;k=e.next();return k.done||4!=k.value[0].x||"t"!=k.value[1]||!e.next().done?!1:!0}catch(m){return!1}};
-$jscomp.Map.createHead_=function(){var a={};return a.previous=a.next=a.head=a};$jscomp.Map.getId_=function(a){if(!(a instanceof Object))return String(a);$jscomp.Map.key_ in a||a instanceof Object&&Object.isExtensible&&Object.isExtensible(a)&&$jscomp.Map.defineProperty_(a,$jscomp.Map.key_,++$jscomp.Map.index_);return $jscomp.Map.key_ in a?a[$jscomp.Map.key_]:" "+a};
-$jscomp.Map.prototype.set=function(a,b){var c=this.maybeGetEntry_(a),e=c.id,k=c.list,c=c.entry;k||(k=this.data_[e]=[]);c?c.value=b:(c={next:this.head_,previous:this.head_.previous,head:this.head_,key:a,value:b},k.push(c),this.head_.previous.next=c,this.head_.previous=c,this.size++);return this};
-$jscomp.Map.prototype["delete"]=function(a){var b=this.maybeGetEntry_(a);a=b.id;var c=b.list,e=b.index;return(b=b.entry)&&c?(c.splice(e,1),c.length||delete this.data_[a],b.previous.next=b.next,b.next.previous=b.previous,b.head=null,this.size--,!0):!1};$jscomp.Map.prototype.clear=function(){this.data_={};this.head_=this.head_.previous=$jscomp.Map.createHead_();this.size=0};$jscomp.Map.prototype.has=function(a){return!!this.maybeGetEntry_(a).entry};
-$jscomp.Map.prototype.get=function(a){return(a=this.maybeGetEntry_(a).entry)&&a.value};$jscomp.Map.prototype.maybeGetEntry_=function(a){var b=$jscomp.Map.getId_(a),c=this.data_[b];if(c)for(var e=0;e<c.length;e++){var k=c[e];if(a!==a&&k.key!==k.key||a===k.key)return{id:b,list:c,index:e,entry:k}}return{id:b,list:c,index:-1,entry:void 0}};$jscomp.Map.prototype.entries=function(){return this.iter_(function(a){return[a.key,a.value]})};$jscomp.Map.prototype.keys=function(){return this.iter_(function(a){return a.key})};
-$jscomp.Map.prototype.values=function(){return this.iter_(function(a){return a.value})};$jscomp.Map.prototype.forEach=function(a,b){for(var c=$jscomp.makeIterator(this.entries()),e=c.next();!e.done;e=c.next())e=e.value,a.call(b,e[1],e[0],this)};
-$jscomp.Map.prototype.iter_=function(a){var b=this,c=this.head_;$jscomp.initSymbol();$jscomp.initSymbolIterator();var e={};return e.next=function(){if(c){for(;c.head!=b.head_;)c=c.previous;for(;c.next!=c.head;)return c=c.next,{done:!1,value:a(c)};c=null}return{done:!0,value:void 0}},e[Symbol.iterator]=function(){return this},e};$jscomp.Map.index_=0;$jscomp.Map.defineProperty_=Object.defineProperty?function(a,b,c){Object.defineProperty(a,b,{value:String(c)})}:function(a,b,c){a[b]=String(c)};
-$jscomp.Map.Entry_=function(){};$jscomp.Map.ASSUME_NO_NATIVE=!1;$jscomp.Map$install=function(){$jscomp.initSymbol();$jscomp.initSymbolIterator();!$jscomp.Map.ASSUME_NO_NATIVE&&$jscomp.Map.checkBrowserConformance_()?$jscomp.Map=$jscomp.global.Map:($jscomp.initSymbol(),$jscomp.initSymbolIterator(),$jscomp.Map.prototype[Symbol.iterator]=$jscomp.Map.prototype.entries,$jscomp.initSymbol(),$jscomp.Map.key_=Symbol("map-id-key"));$jscomp.Map$install=function(){}};$jscomp.math=$jscomp.math||{};
-$jscomp.math.clz32=function(a){a=Number(a)>>>0;if(0===a)return 32;var b=0;0===(a&4294901760)&&(a<<=16,b+=16);0===(a&4278190080)&&(a<<=8,b+=8);0===(a&4026531840)&&(a<<=4,b+=4);0===(a&3221225472)&&(a<<=2,b+=2);0===(a&2147483648)&&b++;return b};$jscomp.math.imul=function(a,b){a=Number(a);b=Number(b);var c=a&65535,e=b&65535;return c*e+((a>>>16&65535)*e+c*(b>>>16&65535)<<16>>>0)|0};$jscomp.math.sign=function(a){a=Number(a);return 0===a||isNaN(a)?a:0<a?1:-1};
-$jscomp.math.log10=function(a){return Math.log(a)/Math.LN10};$jscomp.math.log2=function(a){return Math.log(a)/Math.LN2};$jscomp.math.log1p=function(a){a=Number(a);if(.25>a&&-.25<a){for(var b=a,c=1,e=a,k=0,m=1;k!=e;)b*=a,m*=-1,e=(k=e)+m*b/++c;return e}return Math.log(1+a)};$jscomp.math.expm1=function(a){a=Number(a);if(.25>a&&-.25<a){for(var b=a,c=1,e=a,k=0;k!=e;)b*=a/++c,e=(k=e)+b;return e}return Math.exp(a)-1};$jscomp.math.cosh=function(a){a=Number(a);return(Math.exp(a)+Math.exp(-a))/2};
-$jscomp.math.sinh=function(a){a=Number(a);return 0===a?a:(Math.exp(a)-Math.exp(-a))/2};$jscomp.math.tanh=function(a){a=Number(a);if(0===a)return a;var b=Math.exp(2*-Math.abs(a)),b=(1-b)/(1+b);return 0>a?-b:b};$jscomp.math.acosh=function(a){a=Number(a);return Math.log(a+Math.sqrt(a*a-1))};$jscomp.math.asinh=function(a){a=Number(a);if(0===a)return a;var b=Math.log(Math.abs(a)+Math.sqrt(a*a+1));return 0>a?-b:b};
-$jscomp.math.atanh=function(a){a=Number(a);return($jscomp.math.log1p(a)-$jscomp.math.log1p(-a))/2};
-$jscomp.math.hypot=function(a,b,c){for(var e=[],k=2;k<arguments.length;++k)e[k-2]=arguments[k];a=Number(a);b=Number(b);for(var m=Math.max(Math.abs(a),Math.abs(b)),q=$jscomp.makeIterator(e),k=q.next();!k.done;k=q.next())m=Math.max(m,Math.abs(k.value));if(1E100<m||1E-100>m){a/=m;b/=m;q=a*a+b*b;e=$jscomp.makeIterator(e);for(k=e.next();!k.done;k=e.next())k=k.value,k=Number(k)/m,q+=k*k;return Math.sqrt(q)*m}m=a*a+b*b;e=$jscomp.makeIterator(e);for(k=e.next();!k.done;k=e.next())k=k.value,k=Number(k),m+=
-k*k;return Math.sqrt(m)};$jscomp.math.trunc=function(a){a=Number(a);if(isNaN(a)||Infinity===a||-Infinity===a||0===a)return a;var b=Math.floor(Math.abs(a));return 0>a?-b:b};$jscomp.math.cbrt=function(a){if(0===a)return a;a=Number(a);var b=Math.pow(Math.abs(a),1/3);return 0>a?-b:b};$jscomp.number=$jscomp.number||{};$jscomp.number.isFinite=function(a){return"number"!==typeof a?!1:!isNaN(a)&&Infinity!==a&&-Infinity!==a};
-$jscomp.number.isInteger=function(a){return $jscomp.number.isFinite(a)?a===Math.floor(a):!1};$jscomp.number.isNaN=function(a){return"number"===typeof a&&isNaN(a)};$jscomp.number.isSafeInteger=function(a){return $jscomp.number.isInteger(a)&&Math.abs(a)<=$jscomp.number.MAX_SAFE_INTEGER};$jscomp.number.EPSILON=Math.pow(2,-52);$jscomp.number.MAX_SAFE_INTEGER=9007199254740991;$jscomp.number.MIN_SAFE_INTEGER=-9007199254740991;$jscomp.object=$jscomp.object||{};
-$jscomp.object.assign=function(a,b){for(var c=[],e=1;e<arguments.length;++e)c[e-1]=arguments[e];c=$jscomp.makeIterator(c);for(e=c.next();!e.done;e=c.next())if(e=e.value)for(var k in e)Object.prototype.hasOwnProperty.call(e,k)&&(a[k]=e[k]);return a};$jscomp.object.is=function(a,b){return a===b?0!==a||1/a===1/b:a!==a&&b!==b};$jscomp.Set=function(a){a=void 0===a?[]:a;this.map_=new $jscomp.Map;if(a){a=$jscomp.makeIterator(a);for(var b=a.next();!b.done;b=a.next())this.add(b.value)}this.size=this.map_.size};
-$jscomp.Set.checkBrowserConformance_=function(){var a=$jscomp.global.Set;if(!a||!a.prototype.entries||!Object.seal)return!1;var b=Object.seal({x:4}),a=new a($jscomp.makeIterator([b]));if(a.has(b)||1!=a.size||a.add(b)!=a||1!=a.size||a.add({x:4})!=a||2!=a.size)return!1;var a=a.entries(),c=a.next();if(c.done||c.value[0]!=b||c.value[1]!=b)return!1;c=a.next();return c.done||c.value[0]==b||4!=c.value[0].x||c.value[1]!=c.value[0]?!1:a.next().done};
-$jscomp.Set.prototype.add=function(a){this.map_.set(a,a);this.size=this.map_.size;return this};$jscomp.Set.prototype["delete"]=function(a){a=this.map_["delete"](a);this.size=this.map_.size;return a};$jscomp.Set.prototype.clear=function(){this.map_.clear();this.size=0};$jscomp.Set.prototype.has=function(a){return this.map_.has(a)};$jscomp.Set.prototype.entries=function(){return this.map_.entries()};$jscomp.Set.prototype.values=function(){return this.map_.values()};
-$jscomp.Set.prototype.forEach=function(a,b){var c=this;this.map_.forEach(function(e){return a.call(b,e,e,c)})};$jscomp.Set.ASSUME_NO_NATIVE=!1;$jscomp.Set$install=function(){!$jscomp.Set.ASSUME_NO_NATIVE&&$jscomp.Set.checkBrowserConformance_()?$jscomp.Set=$jscomp.global.Set:($jscomp.Map$install(),$jscomp.initSymbol(),$jscomp.initSymbolIterator(),$jscomp.Set.prototype[Symbol.iterator]=$jscomp.Set.prototype.values);$jscomp.Set$install=function(){}};$jscomp.string=$jscomp.string||{};
-$jscomp.string.noRegExp_=function(a,b){if(a instanceof RegExp)throw new TypeError("First argument to String.prototype."+b+" must not be a regular expression");};
-$jscomp.string.fromCodePoint=function(a){for(var b=[],c=0;c<arguments.length;++c)b[c-0]=arguments[c];for(var c="",b=$jscomp.makeIterator(b),e=b.next();!e.done;e=b.next()){e=e.value;e=+e;if(0>e||1114111<e||e!==Math.floor(e))throw new RangeError("invalid_code_point "+e);65535>=e?c+=String.fromCharCode(e):(e-=65536,c+=String.fromCharCode(e>>>10&1023|55296),c+=String.fromCharCode(e&1023|56320))}return c};
-$jscomp.string.repeat=function(a){var b=this.toString();if(0>a||1342177279<a)throw new RangeError("Invalid count value");a|=0;for(var c="";a;)if(a&1&&(c+=b),a>>>=1)b+=b;return c};$jscomp.string.repeat$install=function(){String.prototype.repeat||(String.prototype.repeat=$jscomp.string.repeat)};
-$jscomp.string.codePointAt=function(a){var b=this.toString(),c=b.length;a=Number(a)||0;if(0<=a&&a<c){a|=0;var e=b.charCodeAt(a);if(55296>e||56319<e||a+1===c)return e;a=b.charCodeAt(a+1);return 56320>a||57343<a?e:1024*(e-55296)+a+9216}};$jscomp.string.codePointAt$install=function(){String.prototype.codePointAt||(String.prototype.codePointAt=$jscomp.string.codePointAt)};
-$jscomp.string.includes=function(a,b){b=void 0===b?0:b;$jscomp.string.noRegExp_(a,"includes");return-1!==this.toString().indexOf(a,b)};$jscomp.string.includes$install=function(){String.prototype.includes||(String.prototype.includes=$jscomp.string.includes)};
-$jscomp.string.startsWith=function(a,b){b=void 0===b?0:b;$jscomp.string.noRegExp_(a,"startsWith");var c=this.toString();a+="";for(var e=c.length,k=a.length,m=Math.max(0,Math.min(b|0,c.length)),q=0;q<k&&m<e;)if(c[m++]!=a[q++])return!1;return q>=k};$jscomp.string.startsWith$install=function(){String.prototype.startsWith||(String.prototype.startsWith=$jscomp.string.startsWith)};
-$jscomp.string.endsWith=function(a,b){$jscomp.string.noRegExp_(a,"endsWith");var c=this.toString();a+="";void 0===b&&(b=c.length);for(var e=Math.max(0,Math.min(b|0,c.length)),k=a.length;0<k&&0<e;)if(c[--e]!=a[--k])return!1;return 0>=k};$jscomp.string.endsWith$install=function(){String.prototype.endsWith||(String.prototype.endsWith=$jscomp.string.endsWith)};
-!function(a,b){ true?module.exports=b():undefined}(window,function(){return function(a){function b(e){if(c[e])return c[e].exports;var k=c[e]={i:e,l:!1,exports:{}};return a[e].call(k.exports,k,k.exports,b),k.l=!0,k.exports}var c={};return b.m=a,b.c=c,b.d=function(a,c,m){b.o(a,c)||Object.defineProperty(a,c,{enumerable:!0,get:m})},b.r=function(a){$jscomp.initSymbol();
-$jscomp.initSymbol();$jscomp.initSymbol();"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(a,Symbol.toStringTag,{value:"Module"});Object.defineProperty(a,"__esModule",{value:!0})},b.t=function(a,c){if((1&c&&(a=b(a)),8&c)||4&c&&"object"==typeof a&&a&&a.__esModule)return a;var m=Object.create(null);if(b.r(m),Object.defineProperty(m,"default",{enumerable:!0,value:a}),2&c&&"string"!=typeof a)for(var q in a)b.d(m,q,function(b){return a[b]}.bind(null,q));return m},b.n=function(a){var c=
-a&&a.__esModule?function(){return a["default"]}:function(){return a};return b.d(c,"a",c),c},b.o=function(a,b){return Object.prototype.hasOwnProperty.call(a,b)},b.p="",b(b.s=10)}([function(a,b,c){Object.defineProperty(b,"__esModule",{value:!0});a=function(){function a(b){this.tracing=!1;this.mslogger_=void 0;this.tag=b;this.enabled=!0}return a.prototype.setMSLogger=function(a){this.mslogger_=a},a.prototype.log=function(){for(var a=[],b=0;b<arguments.length;b++)a[b]=arguments[b];this.enabled&&(null!=
-this.mslogger_?this.mslogger_.info(this.tag+" "+a):console.log(this.tag+" "+a))},a.prototype.trace=function(){for(var a=[],b=0;b<arguments.length;b++)a[b]=arguments[b];this.tracing&&this.log.apply(this,a)},a}();b.Logger=a;b.logger=new a("[HdxWebRTC.js]");b.logger.enabled=!0},function(a,b,c){Object.defineProperty(b,"__esModule",{value:!0});b.HDXMS_VERSION="1.6.0.0";a=function(d,a,b,r){this.major=d;this.minor=a;this.revision=b;this.build=r};b.VersionData=a;b.FeatureData=function(){};c=function(d,a){this.fature=
-d;this.version=a};b.OSInfo=function(d,a,b,r,g){this.family=d;this.version=a;this.architecture=b;this.distro=r;this.edition=g};b.FEATURE_ms_teams_redirection="ms_teams_redirection";b.FEATURE_ms_teams_desktop_sharing="ms_teams_desktop_sharing";b.FEATURE_ms_teams_speaking_indicator="ms_teams_speaking_indicator";b.FEATURE_ms_teams_common_media_constraints="ms_teams_common_media_constraints";b.FEATURE_ms_teams_1911="ms_teams_1911";b.FEATURE_ms_teams_pstn="ms_teams_pstn";b.FEATURE_ms_teams_1912="ms_teams_1912";
-b.FEATURE_ms_teams_mstrack_constraints="ms_teams_mstrack_constraints";b.FEATURE_ms_teams_osinfo="ms_teams_osinfo";var e,k,m,q,p,f,l,n,v,x,t,h,C,u,y,B,E,z,r,A;new c(b.FEATURE_ms_teams_redirection,new a(1,1,0,0));new c(b.FEATURE_ms_teams_desktop_sharing,new a(1,2,0,0));new c(b.FEATURE_ms_teams_speaking_indicator,new a(1,2,0,0));new c(b.FEATURE_ms_teams_common_media_constraints,new a(1,4,0,0));new c(b.FEATURE_ms_teams_1911,new a(1,4,0,0));new c(b.FEATURE_ms_teams_1912,new a(1,5,0,0));new c(b.FEATURE_ms_teams_mstrack_constraints,
-new a(1,6,0,0));new c(b.FEATURE_ms_teams_pstn,new a(1,6,0,0));new c(b.FEATURE_ms_teams_osinfo,new a(1,7,0,0));b.FEATURE_public_screenshare="screenshare";b.FEATURE_public_redirection="redirection";b.FEATURE_public_speaking_indicator="speaking_indicator";b.FEATURE_public_pstn="pstn";b.FEATURE_public_osinfo="osinfo";b.featureNameMap={};b.featureNameMap[b.FEATURE_public_screenshare]=[b.FEATURE_ms_teams_desktop_sharing];b.featureNameMap[b.FEATURE_public_redirection]=[b.FEATURE_ms_teams_redirection];b.featureNameMap[b.FEATURE_public_speaking_indicator]=
-[b.FEATURE_ms_teams_speaking_indicator];b.featureNameMap[b.FEATURE_public_pstn]=[b.FEATURE_ms_teams_pstn];b.featureNameMap[b.FEATURE_public_osinfo]=[b.FEATURE_ms_teams_osinfo];(function(d){d[d.EngineControl=0]="EngineControl";d[d.RTCPeerConnection=1]="RTCPeerConnection";d[d.RTCSessionDescription=2]="RTCSessionDescription";d[d.RTCIceCandidate=3]="RTCIceCandidate";d[d.RTCIceCandidateEvent=4]="RTCIceCandidateEvent";d[d.MediaDevices=5]="MediaDevices";d[d.MediaDeviceInfo=6]="MediaDeviceInfo";d[d.MediaStreamTrack=
-7]="MediaStreamTrack";d[d.MediaStreamEvent=8]="MediaStreamEvent";d[d.MediaStream=9]="MediaStream";d[d.NavigatorUserMedia=10]="NavigatorUserMedia";d[d.VideoElement=11]="VideoElement";d[d.AudioElement=12]="AudioElement";d[d.RTCRtpReceiver=13]="RTCRtpReceiver";d[d.RTCRtpSender=14]="RTCRtpSender";d[d.RTCDtlsTransport=15]="RTCDtlsTransport";d[d.RTCIceTransport=16]="RTCIceTransport";d[d.RTCDTMFSender=17]="RTCDTMFSender";d[d.RTCDTMFToneChangeEvent=18]="RTCDTMFToneChangeEvent";d[d.RTCIceCandidatePair=19]=
-"RTCIceCandidatePair";d[d.RTCRtpTransceiver=20]="RTCRtpTransceiver"})(a=b.class_id_t||(b.class_id_t={}));(function(d){d[d.ctor=0]="ctor";d[d.version=1]="version";d[d.feature_flags=2]="feature_flags";d[d.version_info=3]="version_info";d[d.osinfo=4]="osinfo"})(c=b.method_id_EngineControl_t||(b.method_id_EngineControl_t={}));(function(d){d[d.ctor=0]="ctor";d[d.localDescription=1]="localDescription";d[d.remoteDescription=2]="remoteDescription";d[d.readyState=3]="readyState";d[d.iceState=4]="iceState";
-d[d.localStreams=5]="localStreams";d[d.remoteStreams=6]="remoteStreams";d[d.createOffer=7]="createOffer";d[d.createAnswer=8]="createAnswer";d[d.setLocalDescription=9]="setLocalDescription";d[d.setRemoteDescription=10]="setRemoteDescription";d[d.updateIce=11]="updateIce";d[d.addIceCandidate=12]="addIceCandidate";d[d.addStream=13]="addStream";d[d.removeStream=14]="removeStream";d[d.close=15]="close";d[d.iceConnectionState=16]="iceConnectionState";d[d.iceGatheringState=17]="iceGatheringState";d[d.signalingState=
-18]="signalingState";d[d.onaddstream=19]="onaddstream";d[d.onicecandidate=20]="onicecandidate";d[d.oniceconnectionstatechange=21]="oniceconnectionstatechange";d[d.onicegatheringstatechange=22]="onicegatheringstatechange";d[d.onsignalingstatechange=23]="onsignalingstatechange";d[d.onnegotiationneeded=24]="onnegotiationneeded";d[d.onremovestream=25]="onremovestream";d[d.getStats=26]="getStats";d[d.getReceivers=27]="getReceivers";d[d.getSenders=28]="getSenders";d[d.addTrack=29]="addTrack";d[d.removeTrack=
-30]="removeTrack";d[d.ontrack=31]="ontrack"})(e=b.method_id_RTCPeerConnection_t||(b.method_id_RTCPeerConnection_t={}));(function(d){d[d.ctor=0]="ctor";d[d.enumerateDevices=1]="enumerateDevices";d[d.getDisplayMedia=2]="getDisplayMedia";d[d.ondevicechange=3]="ondevicechange"})(k=b.method_id_MediaDevices_t||(b.method_id_MediaDevices_t={}));(function(d){d[d.ctor=0]="ctor";d[d.deviceId=1]="deviceId";d[d.kind=2]="kind";d[d.label=3]="label";d[d.groupId=4]="groupId"})(m=b.method_id_MediaDeviceInfo_t||(b.method_id_MediaDeviceInfo_t=
-{}));(function(d){d[d.ctor=0]="ctor";d[d.type=1]="type";d[d.sdp=2]="sdp"})(q=b.method_id_RTCSessionDescription_t||(b.method_id_RTCSessionDescription_t={}));(function(d){d[d.ctor=0]="ctor";d[d.kind=1]="kind";d[d.id=2]="id";d[d.label=3]="label";d[d.enabled=4]="enabled";d[d.muted=5]="muted";d[d.readyState=6]="readyState";d[d.onended=7]="onended";d[d.onmute=8]="onmute";d[d.onunmute=9]="onunmute";d[d.clone=10]="clone";d[d.stop=11]="stop";d[d.getCapabilities=12]="getCapabilities";d[d.getSettings=13]="getSettings";
-d[d.applyConstraints=14]="applyConstraints";d[d.getConstraints=15]="getConstraints"})(p=b.method_id_MediaStreamTrack_t||(b.method_id_MediaStreamTrack_t={}));(function(d){d[d.ctor=0]="ctor";d[d.id=1]="id";d[d.getAudioTracks=2]="getAudioTracks";d[d.getVideoTracks=3]="getVideoTracks";d[d.getTracks=4]="getTracks";d[d.getTrackById=5]="getTrackById";d[d.addTrack=6]="addTrack";d[d.removeTrack=7]="removeTrack";d[d.clone=8]="clone";d[d.active=9]="active"})(f=b.method_id_MediaStream_t||(b.method_id_MediaStream_t=
-{}));(function(d){d[d.ctor=0]="ctor";d[d.getUserMedia=1]="getUserMedia"})(l=b.method_id_NavigatorUserMedia_t||(b.method_id_NavigatorUserMedia_t={}));(function(d){d[d.ctor=0]="ctor";d[d.candidate=1]="candidate";d[d.sdpMid=2]="sdpMid";d[d.sdpMLineIndex=3]="sdpMLineIndex"})(n=b.method_id_RTCIceCandidate_t||(b.method_id_RTCIceCandidate_t={}));(function(d){d[d.ctor=0]="ctor";d[d.candidate=1]="candidate"})(v=b.method_id_RTCIceCandidateEvent_t||(b.method_id_RTCIceCandidateEvent_t={}));(function(d){d[d.ctor=
-0]="ctor";d[d.stream=1]="stream"})(x=b.method_id_MediaStreamEvent_t||(b.method_id_MediaStreamEvent_t={}));(function(d){d[d.ctor=0]="ctor";d[d.sinkId=1]="sinkId";d[d.connectTo=2]="connectTo";d[d.disconnect=3]="disconnect";d[d.setFrame=4]="setFrame";d[d.addClipRect=5]="addClipRect";d[d.removeClipRect=6]="removeClipRect";d[d.onerror=7]="onerror";d[d.onvideoframechanged=8]="onvideoframechanged"})(t=b.method_id_VideoElement_t||(b.method_id_VideoElement_t={}));(function(d){d[d.ctor=0]="ctor";d[d.sinkId=
-1]="sinkId";d[d.srcObject=2]="srcObject";d[d.src=3]="src";d[d.play=4]="play";d[d.pause=5]="pause"})(h=b.method_id_AudioElement_t||(b.method_id_AudioElement_t={}));(function(d){d[d.ctor=0]="ctor";d[d.track=1]="track";d[d.getContributingSources=2]="getContributingSources";d[d.getSynchronizationSources=3]="getSynchronizationSources";d[d.transport=4]="transport";d[d.rtcpTransport=5]="rtcpTransport";d[d.getCapabilities=6]="getCapabilities";d[d.getParameters=7]="getParameters";d[d.getStats=8]="getStats"})(C=
-b.method_id_RTCRtpReceiver_t||(b.method_id_RTCRtpReceiver_t={}));(function(d){d[d.ctor=0]="ctor";d[d.track=1]="track";d[d.transport=2]="transport";d[d.rtcpTransport=3]="rtcpTransport";d[d.dtmf=4]="dtmf";d[d.getCapabilities=5]="getCapabilities";d[d.getParameters=6]="getParameters";d[d.setParameters=7]="setParameters";d[d.replaceTrack=8]="replaceTrack";d[d.getStats=9]="getStats";d[d.setStreams=10]="setStreams"})(u=b.method_id_RTCRtpSender_t||(b.method_id_RTCRtpSender_t={}));(function(d){d[d.ctor=0]=
-"ctor";d[d.transport=1]="transport";d[d.state=2]="state";d[d.getRemoteCertificates=3]="getRemoteCertificates";d[d.onstatechange=4]="onstatechange";d[d.onerror=5]="onerror"})(y=b.method_id_RTCDtlsTransport_t||(b.method_id_RTCDtlsTransport_t={}));(function(d){d[d.ctor=0]="ctor";d[d.role=1]="role";d[d.component=2]="component";d[d.state=3]="state";d[d.gatheringState=4]="gatheringState";d[d.localcandidates=5]="localcandidates";d[d.remotecandidates=6]="remotecandidates";d[d.onstatechange=7]="onstatechange";
-d[d.ongatheringstatechange=8]="ongatheringstatechange";d[d.onselectedcandidatepairchange=9]="onselectedcandidatepairchange"})(B=b.method_id_RTCIceTransport_t||(b.method_id_RTCIceTransport_t={}));(function(d){d[d.ctor=0]="ctor";d[d.insertDTMF=1]="insertDTMF";d[d.ontonechange=2]="ontonechange";d[d.canInsertDTMF=3]="canInsertDTMF";d[d.toneBuffer=4]="toneBuffer"})(E=b.method_id_RTCDTMFSender_t||(b.method_id_RTCDTMFSender_t={}));(function(d){d[d.ctor=0]="ctor";d[d.tone=1]="tone";d[d.tone_buffer=2]="tone_buffer"})(z=
-b.method_id_RTCDTMFToneChangeEvent_t||(b.method_id_RTCDTMFToneChangeEvent_t={}));(function(d){d[d.ctor=0]="ctor";d[d.local=1]="local";d[d.remote=2]="remote"})(r=b.method_id_RTCIceCandidatePair_t||(b.method_id_RTCIceCandidatePair_t={}));(function(d){d[d.ctor=0]="ctor";d[d.mid=1]="mid";d[d.sender=2]="sender";d[d.receiver=3]="receiver";d[d.direction=4]="direction";d[d.currentDirection=5]="currentDirection";d[d.stop=6]="stop";d[d.setCodecPreferences=7]="setCodecPreferences"})(A=b.method_id_RTCRtpTransceiver_t||
-(b.method_id_RTCRtpTransceiver_t={}));var g=function(d,a,r,g,A){void 0===A&&(A=b.FEATURE_ms_teams_redirection);this.iid=d;this.mid=a;this.name=r;this.isprop=g;this.feature=A};b.WebrpcMethodInfo=g;var D=function(d,a,b){this.id=d;this.name=a;this.methods=b};b.WebrpcClassInfo=D;var w=new function(d,a){this.name=d;this.classes=a}("msteams_class_library",[new D(a.EngineControl,"EngineControl",[new g(a.EngineControl,c.ctor,"ctor",!1),new g(a.EngineControl,c.version,"version",!0),new g(a.EngineControl,c.feature_flags,
-"feature_flags",!0),new g(a.EngineControl,c.version_info,"version_info",!0,b.FEATURE_ms_teams_desktop_sharing),new g(a.EngineControl,c.osinfo,"osinfo",!0,b.FEATURE_ms_teams_osinfo)]),new D(a.RTCPeerConnection,"RTCPeerConnection",[new g(a.RTCPeerConnection,e.ctor,"ctor",!1),new g(a.RTCPeerConnection,e.localDescription,"localDescription",!0),new g(a.RTCPeerConnection,e.remoteDescription,"remoteDescription",!0),new g(a.RTCPeerConnection,e.readyState,"readyState",!0),new g(a.RTCPeerConnection,e.iceState,
-"iceState",!0),new g(a.RTCPeerConnection,e.localStreams,"localStreams",!0),new g(a.RTCPeerConnection,e.remoteStreams,"remoteStreams",!0),new g(a.RTCPeerConnection,e.createOffer,"createOffer",!1),new g(a.RTCPeerConnection,e.createAnswer,"createAnswer",!1),new g(a.RTCPeerConnection,e.setLocalDescription,"setLocalDescription",!1),new g(a.RTCPeerConnection,e.setRemoteDescription,"setRemoteDescription",!1),new g(a.RTCPeerConnection,e.updateIce,"updateIce",!0),new g(a.RTCPeerConnection,e.addIceCandidate,
-"addIceCandidate",!0),new g(a.RTCPeerConnection,e.addStream,"addStream",!0),new g(a.RTCPeerConnection,e.removeStream,"removeStream",!0),new g(a.RTCPeerConnection,e.close,"close",!0),new g(a.RTCPeerConnection,e.iceConnectionState,"iceConnectionState",!0),new g(a.RTCPeerConnection,e.iceGatheringState,"iceGatheringState",!0),new g(a.RTCPeerConnection,e.signalingState,"signalingState",!0),new g(a.RTCPeerConnection,e.onaddstream,"onaddstream",!0),new g(a.RTCPeerConnection,e.onicecandidate,"onicecandidate",
-!0),new g(a.RTCPeerConnection,e.oniceconnectionstatechange,"oniceconnectionstatechange",!0),new g(a.RTCPeerConnection,e.onicegatheringstatechange,"onicegatheringstatechange",!0),new g(a.RTCPeerConnection,e.onsignalingstatechange,"onsignalingstatechange",!0),new g(a.RTCPeerConnection,e.onnegotiationneeded,"onnegotiationneeded",!0),new g(a.RTCPeerConnection,e.onremovestream,"onremovestream",!0),new g(a.RTCPeerConnection,e.getStats,"getStats",!1),new g(a.RTCPeerConnection,e.getReceivers,"getReceivers",
-!1,b.FEATURE_ms_teams_speaking_indicator),new g(a.RTCPeerConnection,e.getSenders,"getSenders",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCPeerConnection,e.addTrack,"addTrack",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCPeerConnection,e.removeTrack,"removeTrack",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCPeerConnection,e.ontrack,"ontrack",!0,b.FEATURE_ms_teams_pstn)]),new D(a.RTCSessionDescription,"RTCSessionDescription",[new g(a.RTCSessionDescription,q.ctor,"ctor",!1),new g(a.RTCSessionDescription,q.type,"type",
-!0),new g(a.RTCSessionDescription,q.sdp,"sdp",!0)]),new D(a.RTCIceCandidate,"RTCIceCandidate",[new g(a.RTCIceCandidate,n.ctor,"ctor",!1),new g(a.RTCIceCandidate,n.candidate,"candidate",!0),new g(a.RTCIceCandidate,n.sdpMid,"sdpMid",!0),new g(a.RTCIceCandidate,n.sdpMLineIndex,"sdpMLineIndex",!0)]),new D(a.RTCIceCandidateEvent,"RTCIceCandidateEvent",[new g(a.RTCIceCandidateEvent,v.ctor,"ctor",!1),new g(a.RTCIceCandidateEvent,v.candidate,"candidate",!0)]),new D(a.MediaDevices,"MediaDevices",[new g(a.MediaDevices,
-k.ctor,"ctor",!1),new g(a.MediaDevices,k.enumerateDevices,"enumerateDevices",!1),new g(a.MediaDevices,k.getDisplayMedia,"getDisplayMedia",!1,b.FEATURE_ms_teams_desktop_sharing),new g(a.MediaDevices,k.ondevicechange,"ondevicechange",!0,b.FEATURE_ms_teams_speaking_indicator)]),new D(a.MediaDeviceInfo,"MediaDeviceInfo",[new g(a.MediaDeviceInfo,m.ctor,"ctor",!1),new g(a.MediaDeviceInfo,m.deviceId,"deviceId",!0),new g(a.MediaDeviceInfo,m.kind,"kind",!0),new g(a.MediaDeviceInfo,m.label,"label",!0),new g(a.MediaDeviceInfo,
-m.groupId,"groupId",!0)]),new D(a.MediaStreamTrack,"MediaStreamTrack",[new g(a.MediaStreamTrack,p.ctor,"ctor",!1),new g(a.MediaStreamTrack,p.clone,"clone",!1),new g(a.MediaStreamTrack,p.stop,"stop",!1),new g(a.MediaStreamTrack,p.getCapabilities,"getCapabilities",!1),new g(a.MediaStreamTrack,p.getSettings,"getSettings",!1),new g(a.MediaStreamTrack,p.applyConstraints,"applyConstraints",!1,b.FEATURE_ms_teams_desktop_sharing),new g(a.MediaStreamTrack,p.kind,"kind",!0),new g(a.MediaStreamTrack,p.id,"id",
-!0),new g(a.MediaStreamTrack,p.label,"label",!0),new g(a.MediaStreamTrack,p.enabled,"enabled",!0),new g(a.MediaStreamTrack,p.muted,"muted",!0),new g(a.MediaStreamTrack,p.readyState,"readyState",!0),new g(a.MediaStreamTrack,p.onended,"onended",!0),new g(a.MediaStreamTrack,p.onmute,"onmute",!0),new g(a.MediaStreamTrack,p.onunmute,"onunmute",!0),new g(a.MediaStreamTrack,p.getConstraints,"getConstraints",!1,b.FEATURE_ms_teams_mstrack_constraints)]),new D(a.MediaStream,"MediaStream",[new g(a.MediaStream,
-f.ctor,"ctor",!1),new g(a.MediaStream,f.id,"id",!0),new g(a.MediaStream,f.getAudioTracks,"getAudioTracks",!1),new g(a.MediaStream,f.getVideoTracks,"getVideoTracks",!1),new g(a.MediaStream,f.getTracks,"getTracks",!1),new g(a.MediaStream,f.getTrackById,"getTrackById",!1),new g(a.MediaStream,f.addTrack,"addTrack",!1),new g(a.MediaStream,f.removeTrack,"removeTrack",!1),new g(a.MediaStream,f.clone,"clone",!0),new g(a.MediaStream,f.active,"active",!0)]),new D(a.NavigatorUserMedia,"NavigatorUserMedia",[new g(a.NavigatorUserMedia,
-l.ctor,"ctor",!1),new g(a.NavigatorUserMedia,l.getUserMedia,"getUserMedia",!1)]),new D(a.MediaStreamEvent,"MediaStreamEvent",[new g(a.MediaStreamEvent,x.ctor,"ctor",!1),new g(a.MediaStreamEvent,x.stream,"stream",!0)]),new D(a.VideoElement,"VideoElement",[new g(a.VideoElement,t.ctor,"ctor",!1),new g(a.VideoElement,t.sinkId,"sinkId",!0),new g(a.VideoElement,t.connectTo,"connectTo",!1),new g(a.VideoElement,t.disconnect,"disconnect",!1),new g(a.VideoElement,t.setFrame,"setFrame",!1),new g(a.VideoElement,
-t.addClipRect,"addClipRect",!1),new g(a.VideoElement,t.removeClipRect,"removeClipRect",!1),new g(a.VideoElement,t.onerror,"onerror",!0),new g(a.VideoElement,t.onvideoframechanged,"onvideoframechanged",!0)]),new D(a.AudioElement,"AudioElement",[new g(a.AudioElement,h.ctor,"ctor",!1),new g(a.AudioElement,h.sinkId,"sinkId",!0),new g(a.AudioElement,h.srcObject,"srcObject",!0),new g(a.AudioElement,h.src,"src",!0),new g(a.AudioElement,h.play,"play",!1),new g(a.AudioElement,h.pause,"pause",!1)]),new D(a.RTCRtpReceiver,
-"RTCRtpReceiver",[new g(a.RTCRtpReceiver,C.ctor,"ctor",!1,b.FEATURE_ms_teams_speaking_indicator),new g(a.RTCRtpReceiver,C.track,"track",!0,b.FEATURE_ms_teams_speaking_indicator),new g(a.RTCRtpReceiver,C.getContributingSources,"getContributingSources",!1,b.FEATURE_ms_teams_speaking_indicator),new g(a.RTCRtpReceiver,C.getSynchronizationSources,"getSynchronizationSources",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpReceiver,C.transport,"transport",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpReceiver,C.rtcpTransport,
-"rtcptransport",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpReceiver,C.getCapabilities,"getCapabilities",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpReceiver,C.getParameters,"getParameters",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpReceiver,C.getStats,"getStats",!1,b.FEATURE_ms_teams_pstn)]),new D(a.RTCRtpSender,"RTCRtpSender",[new g(a.RTCRtpSender,u.ctor,"ctor",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpSender,u.track,"track",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpSender,u.transport,"transport",!0,
-b.FEATURE_ms_teams_pstn),new g(a.RTCRtpSender,u.rtcpTransport,"rtcpTransport",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpSender,u.dtmf,"dtmf",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpSender,u.getCapabilities,"getCapabilities",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpSender,u.getParameters,"getParameters",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpSender,u.setParameters,"setParameters",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpSender,u.replaceTrack,"replaceTrack",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpSender,
-u.getStats,"getStats",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpSender,u.setStreams,"setStreams",!1,b.FEATURE_ms_teams_pstn)]),new D(a.RTCDtlsTransport,"RTCDtlsTransport",[new g(a.RTCDtlsTransport,y.ctor,"ctor",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCDtlsTransport,y.transport,"transport",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCDtlsTransport,y.state,"state",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCDtlsTransport,y.getRemoteCertificates,"getRemoteCertificates",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCDtlsTransport,
-y.onstatechange,"onstatechange",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCDtlsTransport,y.onerror,"onerror",!0,b.FEATURE_ms_teams_pstn)]),new D(a.RTCIceTransport,"RTCIceTransport",[new g(a.RTCIceTransport,B.ctor,"ctor",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCIceTransport,B.role,"role",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCIceTransport,B.component,"component",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCIceTransport,B.state,"state",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCIceTransport,B.gatheringState,"gatheringState",
-!0,b.FEATURE_ms_teams_pstn),new g(a.RTCIceTransport,B.localcandidates,"localcandidates",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCIceTransport,B.remotecandidates,"remotecandidates",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCIceTransport,B.onstatechange,"onstatechange",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCIceTransport,B.ongatheringstatechange,"ongatheringstatechange",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCIceTransport,B.onselectedcandidatepairchange,"onselectedcandidatepairchange",!0,b.FEATURE_ms_teams_pstn)]),
-new D(a.RTCDTMFSender,"RTCDTMFSender",[new g(a.RTCDTMFSender,E.ctor,"ctor",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCDTMFSender,E.insertDTMF,"insertDTMF",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCDTMFSender,E.ontonechange,"ontonechange",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCDTMFSender,E.canInsertDTMF,"canInsertDTMF",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCDTMFSender,E.toneBuffer,"toneBuffer",!0,b.FEATURE_ms_teams_pstn)]),new D(a.RTCDTMFToneChangeEvent,"RTCDTMFToneChangeEvent",[new g(a.RTCDTMFToneChangeEvent,
-z.ctor,"ctor",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCDTMFToneChangeEvent,z.tone,"tone",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCDTMFToneChangeEvent,z.tone_buffer,"tone_buffer",!0,b.FEATURE_ms_teams_pstn)]),new D(a.RTCIceCandidatePair,"RTCIceCandidatePair",[new g(a.RTCIceCandidatePair,r.ctor,"ctor",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCIceCandidatePair,r.local,"local",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCIceCandidatePair,r.remote,"remote",!0,b.FEATURE_ms_teams_pstn)]),new D(a.RTCRtpTransceiver,"RTCRtpTransceiver",
-[new g(a.RTCRtpTransceiver,A.ctor,"ctor",!1,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpTransceiver,A.mid,"mid",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpTransceiver,A.sender,"sender",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpTransceiver,A.receiver,"receiver",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpTransceiver,A.direction,"direction",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpTransceiver,A.currentDirection,"currentDirection",!0,b.FEATURE_ms_teams_pstn),new g(a.RTCRtpTransceiver,A.stop,"stop",!1,b.FEATURE_ms_teams_pstn),
-new g(a.RTCRtpTransceiver,A.setCodecPreferences,"setCodecPreferences",!1,b.FEATURE_ms_teams_pstn)])]);a=function(){function d(){}return d.getInterfaceByid=function(d){for(var a=0,b=w.classes;a<b.length;a++){var r=b[a];if(r.id==d)return r}return null},d.getMethodByid=function(d,a){var b=this.getInterfaceByid(d);if(null!=b)for(var r=0,b=b.methods;r<b.length;r++){var g=b[r];if(g.mid==a)return g}return null},d.getMethodFeatureByid=function(d,a){var b=this.getInterfaceByid(d);if(null!=b)for(var r=0,b=
-b.methods;r<b.length;r++){var g=b[r];if(g.mid==a)return g.feature}return null},d.composeClassInfoData=function(d){d=d.hdr;if(null==d)return"*** Invalid packet: Couldn't find hdr object ***";var a=d.proc;if(null==a)return"";d=a.iid;for(var a=a.methodid,b=0,r=w.classes;b<r.length;b++){var g=r[b];if(g.id==d)for(var A=0,t=g.methods;A<t.length;A++){var h=t[A];if(h.mid==a)return g.name+"::"+h.name}}return""},d}();b.WebrpcClassLibInfoUtil=a},function(a,b,c){Object.defineProperty(b,"__esModule",{value:!0});
-var e,k=c(3),m=c(0),q=c(1),p=c(6),f=c(4),l=function(a,b,t,h,f,c,l){this.resolve=a;this.reject=b;this.iid=t;this.oid=h;this.cbid=f;this.oneShot=c;this.mid=l};!function(a){a[a.NotRedirected=0]="NotRedirected";a[a.Connecting=1]="Connecting";a[a.Binding=2]="Binding";a[a.Redirected=3]="Redirected"}(e=b.RedirectionStatus||(b.RedirectionStatus={}));a=function(){function a(){this.pingactive=!1;this.status=e.NotRedirected;this.reqs=[];this.cbs=[];this.deferredActions=[];this.telemetry_=new f.Telemetry;this.stateChangeNotifcations=
-[]}return Object.defineProperty(a.prototype,"telemetry",{get:function(){return this.telemetry_},enumerable:!0,configurable:!0}),a.prototype.setRemoteSessionInfoCb=function(a){this.remoteSessionInfoCb=a},a.prototype.setFeatures=function(a){this.features=a},a.prototype.getFeatureValue=function(a){var b=this.features.find(function(b){return b.name===a});return void 0!==b&&b.value},a.prototype.onRedirectionComplete=function(){for(;this.deferredActions&&0<this.deferredActions.length;)this.deferredActions.shift().post(this.status==
-e.Redirected)},a.prototype.connectToService=function(){return m.logger.log("Redirection status: Connecting..."),this.status=e.Connecting,new Promise(function(a,b){var h=new WebSocket("wss://127.0.0.1:9002");h.onopen=function(){a(h)};h.onerror=function(a){m.logger.log("websocket connection error: "+a.type);b(a)}})},a.prototype.waitUntilRedirected=function(a){var b=this;return new Promise(function(h,f){b.status==e.Redirected?h():0>=a?f():setTimeout(function(){m.logger.log("waitUntilRedirected() timeout. count="+
-a);b.status!=e.Redirected?b.waitUntilRedirected(--a).then(function(){h()})["catch"](function(){f()}):h()},2E3)})},a.prototype.handleRemoteSessionInfo=function(){var a=this;m.logger.log("handleRemoteSessionInfo called.");var b=this;b.remoteSessionInfoCb?b.remoteSessionInfoCb().then(function(h){m.logger.log("remoteSessionInfo success! info:"+JSON.stringify(h));m.logger.log("Redirection status: Redirected");b.status=e.Redirected;b.pingConnectionEnd();(0,window.onVdiClientConnected)();a.telemetry.SendTelemetryInit();
-b.onRedirectionComplete()})["catch"](function(){m.logger.log("remoteSessionInfo failure!");b.suspendRedirection(!0);b.onRedirectionComplete()}):(m.logger.log("remoteSessionInfoCb is invalid!"),b.suspendRedirection(!0),b.onRedirectionComplete())},a.prototype.startRedirection=function(a,b){var h=this,f=window.onVdiClientDisconnected;return new Promise(function(c,l){h.status!=e.Redirected?(m.logger.log("Attempting to start redirection: "+b),!1===a?h.deferredActions.push(new k.deferred_action(c,l,b)):
-h.connectToService().then(function(a){m.logger.log("Redirection status: Binding...");h.status=e.Binding;h.websocket=a;h.websocket.onmessage=function(a){h.onWSMessage(a)};h.websocket.onclose=function(a){h.onWSClose(a)};c();h.handleRemoteSessionInfo()})["catch"](function(a){m.logger.log("Unable to connect to websocket service!");l();h.suspendRedirection(!0);h.onRedirectionComplete();f(!0)})):(m.logger.log("Redirection already started."),c())})},a.prototype.suspendRedirection=function(a){var b=this;
-m.logger.log("Suspending redirection.");(0,window.onVdiClientDisconnected)(!1);var h=!1;(0,window.getCitrixMSTeamsRedir)().then(function(a){m.logger.log("sucesss on disconnect"+a);1==a&&""!==a&&(h=!0,m.logger.log("Reg key exists while disconnecting"));b.status===e.Redirected&&1==h&&(m.logger.log("Calling ping not normal disconnect"),b.pingConnectionBegin(!1));m.logger.log("Redirection status: NotRedirected");b.status=e.NotRedirected});this.dispatchStateChangeNotifications()},a.prototype.onWSOpen=
-function(){},a.prototype.onWSClose=function(a){m.logger.log("disconnected from websocket service.");try{this.suspendRedirection(!0)}catch(b){m.logger.log("suspendRedirection(): exception closing WebSocket: "+b.message)}},a.prototype.onWSError=function(){try{this.suspendRedirection(!0)}catch(a){m.logger.log("suspendRedirection(): exception on WebSocket error: "+a.message)}},a.prototype.WSSendObjectWrapper=function(a,b,h,f){var c=!0;b!=q.class_id_t.EngineControl||h!=q.method_id_EngineControl_t.ctor&&
-h!=q.method_id_EngineControl_t.version&&h!=q.method_id_EngineControl_t.feature_flags||(c=!1);var l=!0;if(c&&(l=!1,null!=this.features))for(var c=0,e=this.features;c<e.length;c++){var p=e[c];if(!0===p.value&&p.name==a){l=!0;break}}return 1==l?this.WSSendObject(f):Promise.reject("Cannot invoke method that is not supported by webrpc: iid("+b+") mid("+h+")")},a.prototype.WSSendObject=function(a){var b=this;return new Promise(function(h,f){if("webrtc"==a.v){var c=a.hdr.proc.iid,e=a.hdr.proc.methodid,p=
-a.objref.oid;a.hdr.destroy||(c=new l(h,f,c,p,0,!0,e),b.reqs.push(c));c=JSON.stringify(a);m.logger.trace("WSSendObject: >>> "+q.WebrpcClassLibInfoUtil.composeClassInfoData(a)+" "+c);try{b.websocket.send(c)}catch(n){m.logger.log("WSSendObject(): exception: "+n.message),f(n.message)}}else"overlay"==a.v?(c=JSON.stringify(a),m.logger.log("HDXMS: SendOverlayData: >>> "+c+"'"),b.websocket.send(c)):"telemetry"==a.v?(c=JSON.stringify(a),m.logger.log("HDXMS: SendTelemetryData: >>> "+c+"'"),b.websocket.send(c)):
-m.logger.log("HDXMS: Unknown protocol: '"+JSON.stringify(a)+"'")})},a.prototype.onWSMessage=function(a){var b;a=a.data;try{b=JSON.parse(a)}catch(c){console.log("invalid JSON!!!"),console.log(c),console.log(a)}if("webrtc"==b.v){m.logger.trace("onWSMessage: <<< "+q.WebrpcClassLibInfoUtil.composeClassInfoData(b)+" "+a);var h=b.hdr.proc.iid,f=b.hdr.proc.methodid,l=b.objref.oid,e=b.status;if(b.hdr.msg_type==p.WsJsonUtil.getMsgType(p.ws_msg_type_t.reply))0<=(n=this.reqs.findIndex(function(a){return a.iid==
-h&&a.oid==l&&a.mid==f}))?0==e?this.reqs.splice(n,1).shift().resolve(b):this.reqs.splice(n,1).shift().reject():(m.logger.log("HDXMS didnt find this one. (reqs)"),m.logger.log(this.reqs));else if(b.hdr.msg_type==p.WsJsonUtil.getMsgType(p.ws_msg_type_t.event_req)){var n,k=b.func.id;0<=(n=this.cbs.findIndex(function(a){return a.iid==h&&a.oid==l&&a.cbid==k>>16}))?(0==(65535&k)?this.cbs[n].resolve(b):this.cbs[n].reject(b),1==this.cbs[n].oneShot&&this.cbs.splice(n,1)):(m.logger.log("HDXMS didnt find this one. (cbs)"),
-m.logger.log(this.cbs))}else m.logger.log("HDXMS Received bogus message: "+a+"'")}else"telemetry"==b.v?0==b.status&&2==(2147483647&b.hdr.command)&&(this.telemetry.onInitialized(b.hdr.id),m.logger.log("Telemetry init response received")):m.logger.log("HDXMS: Unknown protocol: "+a+"'")},a.prototype.registerHandler=function(a,b,h){a=new l(h.resolve.bind(h),h.reject.bind(h),a,b,h.id,h.oneShot,0);this.cbs.push(a)},a.prototype.unregisterHandler=function(a,b,h){var c=this.cbs.findIndex(function(c){return c.iid==
-a&&c.oid==b&&c.cbid==h});0<=c?this.cbs.splice(c,1):(m.logger.log("HDXMS Didnt find this callback in the list!"),console.log(this.cbs))},a.prototype.isRedirected=function(){return this.status===e.Redirected||this.status===e.Binding||this.status===e.Connecting},a.prototype.isPingActive=function(){return this.pingactive},a.prototype.pingConnectionBegin=function(a){m.logger.log("Started timer");this.pingactive=!0;var b=window.onVdiClientDisconnectedTimer;1==a?(m.logger.log("checking if we are connected..."),
-b()):this.conntimer=setTimeout(function(){m.logger.log("checking if we are connected...");b()},15E3)},a.prototype.pingConnectionEnd=function(){this.pingactive=!1;clearTimeout(this.conntimer)},a.prototype.SendTelemetryData_Speaker=function(a){this.telemetry.SendTelemetryData(f.tel_cmd.Data,f.tel_key_SpeakerDeviceUsed,a,0)},a.prototype.registerStateChangeNotification=function(a){this.stateChangeNotifcations.push(a)},a.prototype.unregisterStateChangeNotification=function(a){this.stateChangeNotifcations=
-this.stateChangeNotifcations.filter(function(b){return b!=a})},a.prototype.dispatchStateChangeNotifications=function(){this.stateChangeNotifcations.forEach(function(a){a()})},a}();b.HdxMediaStream=a;var n=new a;b.getRedirector=function(){return n}},function(a,b,c){Object.defineProperty(b,"__esModule",{value:!0});var e=c(2),k=c(0),m=c(6),q=c(7),p=c(1),f=function(){function a(b,c,f){this.resolve=b;this.reject=c;this.name=f}return a.prototype.post=function(a){1==a?(k.logger.log('deferred_action.post(): resolving "'+
-this.name+'"'),this.resolve()):(k.logger.log('deferred_action.post(): rejecting "'+this.name+'"'),this.reject())},a}();b.deferred_action=f;var l=function(a,b){this.id=a;this.is_null=b};b.rpc_callback=l;var n,v,x=function(){function a(b,c,f){this.success=new l(b<<16,c);this.fail=new l(b<<16|1,c);this.id=b;this.oneShot=f}return a.prototype.resolve=function(a){k.logger.trace("callback.resolve() called. [id="+this.id+"]");null!=this.handler&&this.handler(a)},a.prototype.reject=function(a){null!=this.err_handler&&
-this.err_handler(a)},a.prototype.then=function(a){this.handler=a},a.prototype.prom=function(){var a=this;return new Promise(function(b,c){a.handler=b;a.err_handler=c})},a}();b.callback=x;(function(a){a[a.NotConfigured=0]="NotConfigured";a[a.Configured=1]="Configured";a[a.Error=2]="Error";a[a.Destroyed=3]="Destroyed"})(n||(n={}));(function(a){a[a.Local=0]="Local";a[a.Remote=1]="Remote";a[a.Pseudo=2]="Pseudo"})(v=b.ProxyMode||(b.ProxyMode={}));a=function(){function a(b,c,f,l,x){void 0===x&&(x=null);
-for(var E=[],z=5;z<arguments.length;z++)E[z-5]=arguments[z];var r=this;(this.hdxms=e.getRedirector(),this.iid=c,this.oid=f,this.mode=l,this.state=n.NotConfigured,this.deferredActions=[],this.cbs=new Map,l===v.Local)?(z=!1,this.iid===p.class_id_t.EngineControl&&(z=!0),this.hdxms.startRedirection(z,this.user_friendly_id()).then(function(){r.oid=a.nextId++;k.logger.log(r.user_friendly_id()+" assigned local oid:"+r.oid);var b=p.WebrpcClassLibInfoUtil.getMethodFeatureByid(c,0);return r.hdxms.WSSendObjectWrapper(b,
-c,0,m.WsJsonUtil.createMessageByid.apply(m.WsJsonUtil,[!1,!1,m.ws_msg_type_t.req,c,0,r.oid].concat(E)))}).then(function(a){k.logger.trace("ProxyObject: setting state to configured. (iid: "+r.iid+" oid: "+r.oid+")");var g=r.oid;r.state=n.Configured;r.oid=r.param0(a);k.logger.log(r.user_friendly_id()+" assigned remote oid for local oid:"+g);r.onConnected();x&&x();q.gc.trackObject(r,b)})["catch"](function(){r.state=n.Error;r.onConnected()})):l===v.Remote&&(this.state=n.Configured,q.gc.trackObject(this,
-b))}return a.prototype.bind=function(a,b){if(k.logger.trace("ProxyObject: binding object. (iid: "+this.iid+" oid: "+b+" mode: "+this.mode+")"),this.mode===v.Pseudo){this.state=n.Configured;var c=this.oid;this.oid=b;k.logger.log(this.user_friendly_id()+" assigned remote oid for local oid:"+c);this.onConnected();q.gc.trackObject(this,a);this.mode=v.Remote}else k.logger.log("ProxyObject: binding failure. incorrect mode!")},a.prototype.reconstructor=function(a,b,c){for(var f=this,l=[],e=3;e<arguments.length;e++)l[e-
-3]=arguments[e];this.state=n.NotConfigured;this.deferredActions=[];e=p.WebrpcClassLibInfoUtil.getMethodFeatureByid(b,0);this.hdxms.WSSendObjectWrapper(e,b,0,m.WsJsonUtil.createMessageByid.apply(m.WsJsonUtil,[!1,!1,m.ws_msg_type_t.req,b,0,this.oid].concat(l))).then(function(b){k.logger.trace("ProxyObject: setting state to configured. (iid: "+f.iid+" oid: "+f.oid+")");var r=f.oid;f.state=n.Configured;f.oid=f.param0(b);k.logger.log(f.user_friendly_id()+" assigned remote oid for local oid:"+r);f.onConnected();
-q.gc.trackObject(f,a)})["catch"](function(){f.state=n.Error;f.onConnected()})},a.prototype.setParent=function(a){q.gc.setParent(this,a)},a.prototype.release=function(){k.logger.log(this.user_friendly_id()+".release() called.");q.gc.releaseObject(this)},a.prototype.destroy=function(){this.state=n.Destroyed;var a=p.WebrpcClassLibInfoUtil.getMethodFeatureByid(this.iid,0);this.hdxms.WSSendObjectWrapper(a,this.iid,0,m.WsJsonUtil.createMessageByid(!1,!0,m.ws_msg_type_t.req,this.iid,0,this.oid))},a.prototype.onConnected=
-function(){for(;this.deferredActions&&0<this.deferredActions.length;)this.deferredActions.shift().post(this.state==n.Configured)},a.prototype.checkState=function(a,b){var c=this;0>=a?(k.logger.log("ProxyObject.checkState() timeout waiting for connection response! failed. (iid: "+c.iid+" oid: "+c.oid+")"),c.onConnected()):setTimeout(function(){c.state==n.Configured||c.state==n.Error||c.state==n.Destroyed?c.onConnected():(k.logger.log('ProxyObject.checkState(): count= "'+a+'". (iid: '+c.iid+" oid: "+
-c.oid+")"),c.checkState(--a,b))},b)},a.prototype.waitUntilConnected=function(a){var b=this;return new Promise(function(c,l){k.logger.trace("ProxyObject.waitUntilConnected(): readyState="+b.state+". (iid: "+b.iid+" oid: "+b.oid+")");b.state==n.Destroyed&&(b.onConnected(),l("Object already destroyed :"+b.user_friendly_id()));b.state==n.Configured?(b.onConnected(),c()):b.state==n.Error?(k.logger.trace("ProxyObject.waitUntilConnected(): readyState="+b.state+". (iid: "+b.iid+" oid: "+b.oid+")"),b.onConnected(),
-l()):(k.logger.log('ProxyObject.waitUntilConnected(): deferring action "'+a+'". (iid: '+b.iid+" oid: "+b.oid+")"),b.deferredActions.push(new f(c,l,a)),b.checkState(15,1E3))})},a.prototype.remoteInvoke=function(a,b){for(var c=[],f=2;f<arguments.length;f++)c[f-2]=arguments[f];if(this.state==n.Destroyed)return Promise.reject("Cannot invoke destroyed object :"+this.user_friendly_id());if(this.state==n.Error)return Promise.reject("Cannot invoke object in Error state:"+this.user_friendly_id());f=p.WebrpcClassLibInfoUtil.getMethodFeatureByid(this.iid,
-b);return this.hdxms.WSSendObjectWrapper(f,this.iid,b,m.WsJsonUtil.createMessageByid.apply(m.WsJsonUtil,[a,!1,m.ws_msg_type_t.req,this.iid,b,this.oid].concat(c)))},a.prototype.registerCallbacks=function(b,c,f){this.unregisterCallbacks(f);var l=a.nextcbid++,e=new x(l,c,b);return c||(b||this.cbs.set(f,l),this.hdxms.registerHandler(this.iid,this.oid,e)),e},a.prototype.unregisterCallbacks=function(a){this.cbs.has(a)?(this.hdxms.unregisterHandler(this.iid,this.oid,this.cbs.get(a)),this.cbs["delete"](a)):
-k.logger.trace(this.cbs)},a.prototype.object_id=function(){return this.oid},a.prototype.param0=function(a){return a.params[0]},a.prototype.isNullCallback=function(a){return null==a||null==a},a.prototype.user_friendly_id=function(){return this.constructor.name+"["+this.oid+"]"},a.prototype.isRedirected=function(){return this.hdxms.isRedirected()},a.prototype.isValid=function(){return!(this.state===n.Error||this.state===n.Destroyed)},a.prototype.registerStateChangeNotification=function(a){this.hdxms.registerStateChangeNotification(a)},
-a.prototype.unregisterStateChangeNotification=function(a){this.hdxms.unregisterStateChangeNotification(a)},a.nextId=0,a.nextcbid=0,a}();b.ProxyObject=a},function(a,b,c){Object.defineProperty(b,"__esModule",{value:!0});var e,k=c(2),m=c(0);!function(a){a[a.unknown=0]="unknown";a[a.active=1]="active";a[a.idle=2]="idle"}(b.tel_CallState||(b.tel_CallState={}));(function(a){a[a.unknown=0]="unknown";a[a.incoming=1]="incoming";a[a.outgoing=2]="outgoing"})(b.tel_CallDirection||(b.tel_CallDirection={}));(function(a){a[a.unknown=
-0]="unknown";a[a.audio=1]="audio";a[a.video=2]="video";a[a.multi=3]="multi";a[a.dshare=4]="dshare"})(b.tel_CallType||(b.tel_CallType={}));(function(a){a[a.Unknown=0]="Unknown";a[a.Cap=1]="Cap";a[a.Init=2]="Init";a[a.Data=3]="Data"})(e=b.tel_cmd||(b.tel_cmd={}));b.tel_key_ConferenceCallDuration="ConferenceCallDuration";b.tel_key_AudioCallDuration="AudioCallDuration";b.tel_key_VideoCallDuration="VideoCallDuration";b.tel_key_ScreensharingCallDuration="ScreensharingCallDuration";b.tel_key_CallEstIncoming=
-"CallEstIncoming";b.tel_key_CallEstOutgoing="CallEstOutgoing";b.tel_key_AudioDeviceUsed="AudioDeviceUsed";b.tel_key_VideoDeviceUsed="VideoDeviceUsed";b.tel_key_SpeakerDeviceUsed="SpeakerDeviceUsed";b.tel_key_PerfCallDirection="PerfCallDirection";b.tel_key_PerfCallState="PerfCallState";b.tel_key_PerfCallType="PerfCallType";b.tel_key_VerWebrpc="VerWebrpc";b.tel_key_VerWebrtcCodecs="VerWebrtcCodecs";b.tel_key_VerReceiver="VerReceiver";b.tel_key_VerVda="VerVda";b.tel_key_VerEndpoint="VerEndpoint";b.tel_key_VerTypeScript=
-"VerTypeScript";b.tel_key_OSFamily="OSFamily";b.tel_key_OSVersion="OSVersion";b.tel_key_OSArchitecture="OSArchitecture";b.tel_key_OSDistro="OSDistro";b.tel_key_OSEdition="OSEdition";var q=function(){function a(b,c,e,m){this.cmd=b;this.key=c;this.value=e;this.flags=m}return a.prototype.SendTelemetryData=function(a){a.SendTelemetryData(this.cmd,this.key,this.value,this.flags)},a}();a=function(){function a(){this.id=0;this.deferredData=[]}return a.prototype.reset=function(){this.id=0;this.deferredData=
-[]},a.prototype.onInitialized=function(a){for(this.id=a;this.deferredData&&0<this.deferredData.length;)this.deferredData.shift().SendTelemetryData(this)},a.prototype.SendTelemetryInit=function(){0<this.id&&this.reset();try{k.getRedirector().WSSendObject({v:"telemetry",hdr:{command:e.Init,id:0},init:{domain:"HDX Domain Multimedia Teams",subdomain:"Teams",feature:"msteams",version:"1.1.1.1"}})}catch(a){m.logger.log(a)}},a.prototype.SendTelemetryData=function(a,b,c,p){if(a==e.Data)if(0==this.id)this.deferredData.push(new q(a,
-b,c,p));else try{k.getRedirector().WSSendObject({v:"telemetry",hdr:{command:a,id:this.id},data:{key:b,value:c,flags:p}})}catch(x){m.logger.log(x)}else m.logger.log("invalid telemetry command!")},a}();b.Telemetry=a},function(a,b,c){var e,k=this&&this.__extends||(e=function(a,b){return(e=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(a,b){a.__proto__=b}||function(a,b){for(var g in b)b.hasOwnProperty(g)&&(a[g]=b[g])})(a,b)},function(a,b){function r(){this.constructor=a}e(a,b);a.prototype=
-null===b?Object.create(b):(r.prototype=b.prototype,new r)}),m=this&&this.__awaiter||function(a,b,r,A){return new (r||(r=Promise))(function(g,c){function w(a){try{f(A.next(a))}catch(d){c(d)}}function d(a){try{f(A["throw"](a))}catch(d){c(d)}}function f(a){a.done?g(a.value):(new r(function(d){d(a.value)})).then(w,d)}f((A=A.apply(a,b||[])).next())})},q=this&&this.__generator||function(a,b){function r(r){return function(w){return function(r){if(A)throw new TypeError("Generator is already executing.");
-for(;d;)try{if(A=1,g&&(c=2&r[0]?g["return"]:r[0]?g["throw"]||((c=g["return"])&&c.call(g),0):g.next)&&!(c=c.call(g,r[1])).done)return c;switch(g=0,c&&(r=[2&r[0],c.value]),r[0]){case 0:case 1:c=r;break;case 4:return d.label++,{value:r[1],done:!1};case 5:d.label++;g=r[1];r=[0];continue;case 7:r=d.ops.pop();d.trys.pop();continue;default:if(!(c=d.trys,(c=0<c.length&&c[c.length-1])||6!==r[0]&&2!==r[0])){d=0;continue}if(3===r[0]&&(!c||r[1]>c[0]&&r[1]<c[3]))d.label=r[1];else if(6===r[0]&&d.label<c[1])d.label=
-c[1],c=r;else if(c&&d.label<c[2])d.label=c[2],d.ops.push(r);else{c[2]&&d.ops.pop();d.trys.pop();continue}}r=b.call(a,d)}catch(w){r=[6,w],g=0}finally{A=c=0}if(5&r[0])throw r[1];return{value:r[0]?r[1]:void 0,done:!0}}([r,w])}}var A,g,c,w,d={label:0,sent:function(){if(1&c[0])throw c[1];return c[1]},trys:[],ops:[]};$jscomp.initSymbol();$jscomp.initSymbol();$jscomp.initSymbolIterator();return w={next:r(0),"throw":r(1),"return":r(2)},"function"==typeof Symbol&&(w[Symbol.iterator]=function(){return this}),
-w};Object.defineProperty(b,"__esModule",{value:!0});var p,f=c(1),l=c(3),n=c(0),v=c(2),x=c(4);b.enumerateddecices=p;var t=function(a,b){this.type=a;this.target=b},h=function(){function a(){this.is_local_clone=!1;this.clone_id=this.clone_count=0}return a.prototype.clone=function(){this.clone_count++;var b=new a;return b.is_local_clone=!0,b.clone_id=this.clone_count,b},a.prototype.synchronize=function(a){return m(this,void 0,void 0,function(){return q(this,function(b){return this.is_local_clone?[2,a.asyncClone()]:
-[2,a]})})},a}(),C=function(a){function b(r,c){var g=a.call(this,r,f.class_id_t.MediaStreamTrack,c,l.ProxyMode.Remote)||this;return g.refCount_=0,g.refCount_++,g.clone_state=new h,g}return k(b,a),Object.defineProperty(b.prototype,"refcount",{get:function(){return this.refCount_},enumerable:!0,configurable:!0}),b.prototype.addRef=function(){this.refCount_++;n.logger.log(this.user_friendly_id()+".addRef() called. [id="+this.id+"] refcount="+this.refCount_)},Object.defineProperty(b.prototype,"onended",
-{get:function(){return n.logger.log(this.user_friendly_id()+".get_onended() called. [id="+this.id+"]"),this.onended_},set:function(a){var b=this;n.logger.log(this.user_friendly_id()+".set_onended() called. [id="+this.id+"]");this.onended_=a;this.waitUntilConnected("MediaStreamTrack.onended").then(function(){var g=b.registerCallbacks(!1,b.isNullCallback(a),f.method_id_MediaStreamTrack_t.onended);return g.then(function(a){n.logger.log(b.user_friendly_id()+"onended event received!!!");a=new t("ended",
-b);b.readyState_="ended";b.onended_(a)}),b.remoteInvoke(!0,f.method_id_MediaStreamTrack_t.onended,g.success)})["catch"](function(){n.logger.log(b.user_friendly_id()+".onended failed!!!")})},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"onmute",{get:function(){return n.logger.log(this.user_friendly_id()+".get_onmute() called. [id="+this.id+"]"),this.onmute_},set:function(a){var b=this;n.logger.log(this.user_friendly_id()+".set_onmute() called. [id="+this.id+"]");this.onmute_=a;
-this.waitUntilConnected("MediaStreamTrack.onmute").then(function(){var g=b.registerCallbacks(!1,b.isNullCallback(a),f.method_id_MediaStreamTrack_t.onmute);return g.then(function(a){n.logger.log(b.user_friendly_id()+"onmute event received!!!");a=new t("mute",b);b.muted=!0;b.onmute_(a)}),b.remoteInvoke(!0,f.method_id_MediaStreamTrack_t.onmute,g.success)})["catch"](function(){n.logger.log(b.user_friendly_id()+".onmute failed!!!")})},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"onunmute",
-{get:function(){return n.logger.log(this.user_friendly_id()+".get_onunmute() called. [id="+this.id+"]"),this.onunmute_},set:function(a){var b=this;n.logger.log(this.user_friendly_id()+".set_onunmute() called. [id="+this.id+"]");this.onunmute_=a;this.waitUntilConnected("MediaStreamTrack.onunmute").then(function(){var g=b.registerCallbacks(!1,b.isNullCallback(a),f.method_id_MediaStreamTrack_t.onunmute);return g.then(function(a){n.logger.log("onunmute event received!!!");a=new t("unmute",b);b.muted=
-!1;b.onunmute_(a)}),b.remoteInvoke(!0,f.method_id_MediaStreamTrack_t.onunmute,g.success)})["catch"](function(){n.logger.log(b.user_friendly_id()+".onunmute failed!!!")})},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"onstop",{set:function(a){this.onstop_=a},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"enabled",{get:function(){return n.logger.log(this.user_friendly_id()+".get_enabled() called. [id="+this.id+", value="+this.enabled_+"]"),this.enabled_},set:function(a){n.logger.log(this.user_friendly_id()+
-".set_enabled() called. [id="+this.id+", value="+a+"]");this.enabled_=a;this.remoteInvoke(!0,f.method_id_MediaStreamTrack_t.enabled,a)},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"readyState",{get:function(){return n.logger.log(this.user_friendly_id()+".get_readyState() called. [id="+this.id+"]"),this.readyState_},enumerable:!0,configurable:!0}),b.prototype.asyncClone=function(){return m(this,void 0,void 0,function(){var a,c;return q(this,function(g){switch(g.label){case 0:return[4,
-this.waitUntilConnected("RemoteMediaTrack.asyncClone")];case 1:return g.sent(),[4,this.remoteInvoke(!1,f.method_id_MediaStreamTrack_t.clone,[])];case 2:return a=g.sent(),c=this.param0(a),[2,(new b(this,c.oid)).syncBarrier()]}})})},b.prototype.clone=function(){n.logger.log(this.user_friendly_id()+".clone() called. [id="+this.id+"]");var a=this.clone_state.clone(),c=new b(this,this.object_id());return c.id=this.id+"."+a.clone_id.toString(),c.label=this.label,c.kind=this.kind,c.enabled_=this.enabled_,
-c.muted=this.muted,c.readyState_=this.readyState_,c.trackSettings_=this.trackSettings_,c.clone_state=a,c.constraints_=this.constraints_,c.capabilities_=this.capabilities_,c},b.prototype.stop=function(){var a=this;n.logger.log(this.user_friendly_id()+".stop() called. [id="+this.id+"] refcount="+this.refCount_);this.readyState_="ended";0<this.refCount_&&(this.refCount_--,0===this.refCount_&&(n.logger.log(this.user_friendly_id()+".stop() called. [id="+this.id+"] remote invoking..."),this.remoteInvoke(!1,
-f.method_id_MediaStreamTrack_t.stop)["catch"](function(b){n.logger.log(a.user_friendly_id()+".stop() failed with:"+b)}),null!==this.onstop_&&this.onstop_()))},b.prototype.getCapabilities=function(){return this.capabilities_},b.prototype.getConstraints=function(){return this.constraints_},b.prototype.getSettings=function(){var a;"audio"==this.kind?a={deviceId:(b=this.trackSettings_).deviceId,echoCancellation:b.echoCancellation}:(a=this.trackSettings_,a={aspectRatio:a.aspectRatio,deviceId:a.deviceId,
-frameRate:a.frameRate,height:a.height,width:a.width});return a;var b},b.prototype.applyConstraints=function(a){var b=this;return n.logger.log(this.user_friendly_id()+".applyConstraints() called."),new Promise(function(g,c){b.waitUntilConnected("MediaStreamTrack.applyConstraints").then(function(){return Promise.all([b.remoteInvoke(!1,f.method_id_MediaStreamTrack_t.applyConstraints,a),b.syncBarrier()])})["catch"](function(){c({name:"OverconstrainedError",message:"Failed to apply constraints."})}).then(function(){return b.constraints_=
-a,b.remoteInvoke(!1,f.method_id_MediaStreamTrack_t.getConstraints)}).then(function(a){b.constraints_=b.param0(a)})["catch"](function(){n.logger.log(b.user_friendly_id()+".syncBarrier() remote client doesn't support getConstraints method. Ignore it")}).then(function(){return g()})})},b.convertReadyState=function(a){return 0==a?"live":"ended"},b.prototype.syncBarrier=function(){var a=this;return n.logger.log(this.user_friendly_id()+".syncBarrier() called."),new Promise(function(c,g){a.waitUntilConnected("MediaStreamTrack.syncBarrier").then(function(){return Promise.all([a.remoteInvoke(!1,
-f.method_id_MediaStreamTrack_t.kind,""),a.remoteInvoke(!1,f.method_id_MediaStreamTrack_t.id,""),a.remoteInvoke(!1,f.method_id_MediaStreamTrack_t.label,""),a.remoteInvoke(!1,f.method_id_MediaStreamTrack_t.enabled,!1),a.remoteInvoke(!1,f.method_id_MediaStreamTrack_t.muted,!1),a.remoteInvoke(!1,f.method_id_MediaStreamTrack_t.readyState,0),a.remoteInvoke(!1,f.method_id_MediaStreamTrack_t.getSettings),a.remoteInvoke(!1,f.method_id_MediaStreamTrack_t.getCapabilities)])}).then(function(g){var w;g=g.map(function(b){return a.param0(b)});
-a.kind=g[0];a.id=g[1];a.label=g[2];a.enabled_=g[3];a.muted=g[4];w=g[5];a.trackSettings_=g[6];a.capabilities_=g[7];a.readyState_=b.convertReadyState(w);c(a)})["catch"](function(){g()})})},b}(l.ProxyObject);b.RemoteMediaTrack=C;var u=function(){},y=function(a){function b(r,c){var g=a.call(this,r,f.class_id_t.MediaStream,c,l.ProxyMode.Remote)||this;return g.clone_state=new h,g}return k(b,a),b.prototype.dumpTrackInfo=function(){n.logger.log(this.user_friendly_id()+".dumpTrackInfo() called. [id="+this.id+
-"]");for(var a=0,b=this.tracks_;a<b.length;a++){var g=b[a];n.logger.log(g.user_friendly_id()+" [id="+g.id+"] refcount="+g.refcount)}},b.prototype.toJSON=function(){var a=new u;return a.id=this.id,a.active=this.active,a.oid=this.object_id(),"RemoteStream:"+JSON.stringify(a)},b.prototype.getAudioTracks=function(){n.logger.log(this.user_friendly_id()+".getAudioTracks() called. [id="+this.id+"]");for(var a=[],b=0,g=this.tracks_;b<g.length;b++){var c=g[b];"audio"==c.kind&&a.push(c)}return a},b.prototype.getVideoTracks=
-function(){n.logger.log(this.user_friendly_id()+".getVideoTracks() called. [id="+this.id+"]");for(var a=[],b=0,g=this.tracks_;b<g.length;b++){var c=g[b];"video"==c.kind&&a.push(c)}return a},b.prototype.getTracks=function(){return n.logger.log(this.user_friendly_id()+".getTracks() called. [id="+this.id+"]"),this.tracks_},b.prototype.getTrackById=function(a){n.logger.log(this.user_friendly_id()+".getTrackById() called. [id="+this.id+"]");for(var b=0,g=this.tracks_;b<g.length;b++){var c=g[b];if(c.id==
-a)return c}},b.prototype.addTrack=function(a){n.logger.log(this.user_friendly_id()+".addTrack() called. [id="+this.id+"]");this.tracks_.push(a);this.remoteInvoke(!1,f.method_id_MediaStream_t.addTrack,{oid:a.object_id()})},b.prototype.removeTrack=function(a){n.logger.log(this.user_friendly_id()+".removeTrack() called. [id="+this.id+"]");var b=this.tracks_.indexOf(a);this.tracks_.splice(b,1);this.remoteInvoke(!1,f.method_id_MediaStream_t.removeTrack,{oid:a.object_id()})},b.prototype.asyncClone=function(){return m(this,
-void 0,void 0,function(){var a,c;return q(this,function(g){switch(g.label){case 0:return n.logger.log(this.user_friendly_id()+".asyncClone() called. [id="+this.id+"]"),[4,this.waitUntilConnected("asyncClone")];case 1:return g.sent(),[4,this.remoteInvoke(!1,f.method_id_MediaStream_t.clone,[])];case 2:return a=g.sent(),console.log(a),c=this.param0(a),[2,(new b(this,c.oid)).syncBarrier()]}})})},b.prototype.clone=function(){n.logger.log(this.user_friendly_id()+".clone() called. [id="+this.id+"]");var a=
-this.clone_state.clone(),c=new b(this,this.object_id());return c.id=this.id+"."+a.clone_id.toString(),this.tracks_.forEach(function(a){a.addRef()}),c.tracks_=this.tracks_,c.clone_state=a,c},b.prototype.syncBarrier=function(){var a=this;return n.logger.log(this.user_friendly_id()+".syncBarrier() called. [id="+this.id+"]"),new Promise(function(b,c){a.waitUntilConnected("MediaStream.syncBarrier").then(function(){return Promise.all([a.remoteInvoke(!1,f.method_id_MediaStream_t.id,""),a.remoteInvoke(!1,
-f.method_id_MediaStream_t.active,!1),a.remoteInvoke(!1,f.method_id_MediaStream_t.getTracks,[])])}).then(function(b){var c;c=b.map(function(b){return a.param0(b)});a.id=c[0];a.active=c[1];b=[];var d=0;for(c=c[2];d<c.length;d++){var g=new C(a,c[d].oid);b.push(g.syncBarrier())}return Promise.all(b)}).then(function(c){a.tracks_=[];c.forEach(function(b){b.onstop=function(){var b=!0;a.tracks_.forEach(function(a){"ended"!=a.readyState&&(b=!1)});b&&a.release()};a.tracks_.push(b)});b(a)})["catch"](function(){c()})})},
-b}(l.ProxyObject);b.RemoteStream=y;a=function(a){function b(c,h){return a.call(this,c,f.class_id_t.MediaStreamEvent,h,l.ProxyMode.Remote)||this}return k(b,a),b.prototype.syncBarrier=function(){var a=this;return n.logger.log(this.user_friendly_id()+".syncBarrier() called."),new Promise(function(b,c){a.waitUntilConnected("MediaStreamEvent.syncBarrier").then(function(){return a.remoteInvoke(!1,f.method_id_MediaStreamEvent_t.stream,{oid:0})}).then(function(b){return(new y(a,b.params[0].oid)).syncBarrier()}).then(function(c){a.stream=
-c;b(a)})["catch"](function(){c()})})},b}(l.ProxyObject);b.RemoteStreamEvent=a;var B=function(a){function b(c){return a.call(this,null,f.class_id_t.MediaDeviceInfo,c,l.ProxyMode.Remote)||this}return k(b,a),b.prototype.convertKind=function(a){return 0==a?"audioinput":1==a?"audiooutput":"videoinput"},b.prototype.syncBarrier=function(){var a=this;return n.logger.log(this.user_friendly_id()+".syncBarrier() called."),new Promise(function(b,c){a.waitUntilConnected("RemoteDeviceInfo.syncBarrier").then(function(){return Promise.all([a.remoteInvoke(!1,
-f.method_id_MediaDeviceInfo_t.deviceId,""),a.remoteInvoke(!1,f.method_id_MediaDeviceInfo_t.kind,0),a.remoteInvoke(!1,f.method_id_MediaDeviceInfo_t.label,""),a.remoteInvoke(!1,f.method_id_MediaDeviceInfo_t.groupId,"")])}).then(function(c){a.kind=a.convertKind(a.param0(c.splice(1,1)[0]));c=c.map(function(b){return a.param0(b)});a.deviceId=c[0];a.label=c[1];a.groupId=c[2];b(a)})["catch"](function(){n.logger.log(a.user_friendly_id()+".syncBarrier(): rejected.");c()})})},b}(l.ProxyObject);b.RemoteDeviceInfo=
-B;a=function(a){function c(){var b=a.call(this,null,f.class_id_t.MediaDevices,0,l.ProxyMode.Local,function(){b.setDeviceChangeCallback()})||this;return b.devices_=[],b}return k(c,a),c.prototype.enumerateDevices=function(){var a=this;return n.logger.log(this.user_friendly_id()+".enumerateDevices() called"),new Promise(function(c,g){a.waitUntilConnected("RemoteDevices.enumerateDevices").then(function(){return a.remoteInvoke(!1,f.method_id_MediaDevices_t.enumerateDevices,[])}).then(function(b){var c=
-[];return b.params[0].forEach(function(b){var g=a.devices_.find(function(a){return a.object_id()===b.oid});void 0===g?(g=new B(b.oid),c.push(g.syncBarrier())):c.push(g)}),Promise.all(c)}).then(function(g){n.logger.log(a.user_friendly_id()+".enumerateDevices: returning enumerated devices with ids ["+g.map(function(a){return a.object_id()})+"]");c(g);a.devices_.forEach(function(a){for(var b=!0,c=0;c<g.length;c++)if(a===g[c]){b=!1;break}b&&a.release()});a.devices_=g;b.enumerateddecices=p=g})["catch"](function(){n.logger.log(a.user_friendly_id()+
-".enumerateDevices() didnt get response.");a.devices_=[];g()})})},c.prototype.getDisplayMedia=function(a){var b=this;return new Promise(function(c,h){b.waitUntilConnected("RemoteDevices.getDisplayMedia").then(function(){var c=b.prepareDisplayConstraints(a);return b.remoteInvoke(!1,f.method_id_MediaDevices_t.getDisplayMedia,c)}).then(function(a){return(new y(null,a.params[0].oid)).syncBarrier()}).then(function(a){c(a)})["catch"](function(){n.logger.log(b.user_friendly_id()+".getDisplayMedia() returned an error.");
-h(new DOMException("Unable to get a display stream.","NotReadableError"))})})},c.prototype.setDeviceChangeCallback=function(){var a=this;n.logger.log(this.user_friendly_id()+".set_DeviceChangeCallback() called.");this.waitUntilConnected("MediaDevices.ondevicechange").then(function(){var b=a.registerCallbacks(!1,!1,f.method_id_MediaDevices_t.ondevicechange);return b.then(function(){n.logger.log(a.user_friendly_id()+".ondevicechange(): callback received!!!");navigator.mediaDevices.dispatchEvent(new CustomEvent("devicechange"))}),
-a.remoteInvoke(!0,f.method_id_MediaDevices_t.ondevicechange,b.success)})["catch"](function(){n.logger.log(a.user_friendly_id()+".set_ondevicechange(): failed.")})},c.prototype.prepareDisplayConstraints=function(a){if(v.getRedirector().getFeatureValue(f.FEATURE_ms_teams_common_media_constraints))return a;var b={frameRate:15,width:{max:1920},height:{max:1080}};void 0!==a.video&&null!==a.video&&(a=a.video,void 0!==a.frameRate&&void 0!==a.width&&void 0!==a.height&&(b.frameRate=a.frameRate,b.width.max=
-a.width.max||a.width,b.height.max=a.height.max||a.height));return{video:b}},c}(l.ProxyObject);b.RemoteDevices=a;a=function(a){function b(){return a.call(this,null,f.class_id_t.NavigatorUserMedia,0,l.ProxyMode.Local)||this}return k(b,a),b.prototype.webkitGetUserMedia=function(a,b,c){this.getUserMedia(a,b,c)},b.prototype.LogTelemetryDevice_=function(a){try{if(void 0!==a.audio){var b,c=a.audio.deviceId;p.forEach(function(a){c==a.deviceId&&(b=a.label)});n.logger.log(b);this.SendTelemetryData(x.tel_key_AudioDeviceUsed,
-b,0)}if(void 0!==a.video){var f,w=a.video.mandatory.sourceId;p.forEach(function(a){w==a.deviceId&&(f=a.label)});n.logger.log(f);this.SendTelemetryData(x.tel_key_VideoDeviceUsed,f,0)}}catch(d){n.logger.log(d)}},b.prototype.getUserMedia=function(a,b,c){var h=this;n.logger.log(this.user_friendly_id()+".getUserMedia() called: "+JSON.stringify(a));this.waitUntilConnected("NavigatorUserMedia.getUserMedia").then(function(){var b=h.registerCallbacks(!0,!1,f.method_id_NavigatorUserMedia_t.getUserMedia);if(void 0!==
-a.audio&&0==Object.keys(a.audio).length&&(a.audio={dummy:1}),void 0!==a.video){var d=a.video;null==d.mandatory.maxFrameRate&&(d.mandatory.maxFrameRate=30);null==d.mandatory.minWidth&&(d.mandatory.minWidth=360);null==d.mandatory.maxWidth&&(d.mandatory.maxWidth=1920);null==d.mandatory.minHeight&&(d.mandatory.minHeight=180);null==d.mandatory.maxHeight&&(d.mandatory.maxHeight=1080)}return h.remoteInvoke(!1,f.method_id_NavigatorUserMedia_t.getUserMedia,a,b.success,b.fail),b.prom()}).then(function(a){return n.logger.log(h.user_friendly_id()+
-".getUserMedia: received success callback!"),(new y(null,h.param0(a).oid)).syncBarrier()}).then(function(f){n.logger.log(h.user_friendly_id()+".getUserMedia: MediaStream ready to deliver",JSON.stringify(f));0==f.getTracks().length?(n.logger.log(h.user_friendly_id()+".getUserMedia: reporting no tracks as error."),c({constraintName:"",name:"OverconstrainedError",message:""})):(h.LogTelemetryDevice_(a),b(f))})["catch"](function(a){v.getRedirector().getFeatureValue(f.FEATURE_ms_teams_1912)?c(h.param0(a)):
-c({constraintName:"",name:"OverconstrainedError",message:""})})},b.prototype.SendTelemetryData=function(a,b,c){v.getRedirector().telemetry.SendTelemetryData(x.tel_cmd.Data,a,b,c)},b}(l.ProxyObject);b.NavigatorUserMedia=a},function(a,b,c){Object.defineProperty(b,"__esModule",{value:!0});var e,k=c(1);!function(a){a[a.req=0]="req";a[a.reply=1]="reply";a[a.event_req=2]="event_req";a[a.event_reply=3]="event_reply"}(e=b.ws_msg_type_t||(b.ws_msg_type_t={}));a=function(){function a(){}return a.createMessageByid=
-function(a,b,c,l,e,m){for(var x=[],t=6;t<arguments.length;t++)x[t-6]=arguments[t];t=k.WebrpcClassLibInfoUtil.getMethodByid(l,e);return t&&t.isprop||(a=!1),this.createMessage.apply(this,[c,a,b,l,e,m].concat(x))},a.createMessage=function(a,b,c,l,e,m){for(var k=[],t=6;t<arguments.length;t++)k[t-6]=arguments[t];return{v:"webrtc",hdr:{version:this._version,msg_type:this.getMsgType(a),modifier:b,destroy:c,proc:{iid:l,methodid:e}},objref:{oid:m},params:k.slice()}},a.getMsgType=function(a){var b="";switch(a){default:b=
-"req";break;case e.reply:b="reply";break;case e.event_req:b="event-req";break;case e.event_reply:b="event-reply"}return b},a._version=1,a}();b.WsJsonUtil=a},function(a,b,c){Object.defineProperty(b,"__esModule",{value:!0});var e=function(){function a(b){this.parent_=this.object_=null;this.children_=[];this.object_=b}return a.prototype.addChild=function(a){a.parent_!=this&&(a.parent_=this,this.children_.push(a))},a.prototype.removeChild=function(a){var b=this.children_.indexOf(a);this.children_.splice(b,
-1);a.parent_=null},a}();a=function(){function a(){this.root_=new e(null)}return a.prototype.trackObject=function(a,b){if(void 0===b&&(b=null),null===this.findNode(a,this.root_)){var c=this.findNode(b,this.root_),f=new e(a);c.addChild(f)}},a.prototype.releaseObject=function(a){a=this.findNode(a,this.root_);return null!==a&&a!==this.root_&&(this.destroyNodeObjectRecurse(a),a.parent_.removeChild(a),!0)},a.prototype.destroyNodeObjectRecurse=function(a){for(var b=0,c=a.children_;b<c.length;b++)this.destroyNodeObjectRecurse(c[b]);
-a.object_.destroy()},a.prototype.setParent=function(a,b){var c=this.findNode(a,this.root_);if(null===c)return!1;var f=this.findNode(b,this.root_);return null!==f&&(c.parent_===f||(c.parent_.removeChild(c),f.addChild(c)),!0)},a.prototype.reset=function(){this.root_.children_=[]},a.prototype.findNode=function(a,b){if(b.object_===a)return b;for(var c=null,f=0,e=b.children_;f<e.length&&null===(c=this.findNode(a,e[f]));f++);return c},a}();b.GC=a;b.gc=new a},function(a,b,c){var e,k=this&&this.__extends||
-(e=function(a,b){return(e=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(a,b){a.__proto__=b}||function(a,b){for(var c in b)b.hasOwnProperty(c)&&(a[c]=b[c])})(a,b)},function(a,b){function c(){this.constructor=a}e(a,b);a.prototype=null===b?Object.create(b):(c.prototype=b.prototype,new c)}),m=this&&this.__awaiter||function(a,b,c,f){return new (c||(c=Promise))(function(g,h){function w(a){try{e(f.next(a))}catch(b){h(b)}}function d(a){try{e(f["throw"](a))}catch(b){h(b)}}function e(a){a.done?
-g(a.value):(new c(function(b){b(a.value)})).then(w,d)}e((f=f.apply(a,b||[])).next())})},q=this&&this.__generator||function(a,b){function c(r){return function(c){return function(c){if(f)throw new TypeError("Generator is already executing.");for(;d;)try{if(f=1,g&&(h=2&c[0]?g["return"]:c[0]?g["throw"]||((h=g["return"])&&h.call(g),0):g.next)&&!(h=h.call(g,c[1])).done)return h;switch(g=0,h&&(c=[2&c[0],h.value]),c[0]){case 0:case 1:h=c;break;case 4:return d.label++,{value:c[1],done:!1};case 5:d.label++;
-g=c[1];c=[0];continue;case 7:c=d.ops.pop();d.trys.pop();continue;default:if(!(h=d.trys,(h=0<h.length&&h[h.length-1])||6!==c[0]&&2!==c[0])){d=0;continue}if(3===c[0]&&(!h||c[1]>h[0]&&c[1]<h[3]))d.label=c[1];else if(6===c[0]&&d.label<h[1])d.label=h[1],h=c;else if(h&&d.label<h[2])d.label=h[2],d.ops.push(c);else{h[2]&&d.ops.pop();d.trys.pop();continue}}c=b.call(a,d)}catch(r){c=[6,r],g=0}finally{f=h=0}if(5&c[0])throw c[1];return{value:c[0]?c[1]:void 0,done:!0}}([r,c])}}var f,g,h,w,d={label:0,sent:function(){if(1&
-h[0])throw h[1];return h[1]},trys:[],ops:[]};$jscomp.initSymbol();$jscomp.initSymbol();$jscomp.initSymbolIterator();return w={next:c(0),"throw":c(1),"return":c(2)},"function"==typeof Symbol&&(w[Symbol.iterator]=function(){return this}),w};Object.defineProperty(b,"__esModule",{value:!0});var p=c(3),f=c(1),l=c(0),n=c(5),v=c(9),x=function(a){function b(c,h){var g=a.call(this,c,f.class_id_t.RTCDTMFToneChangeEvent,h,p.ProxyMode.Remote)||this;return l.logger.log(g.user_friendly_id()+".constructor"),g}return k(b,
-a),b.prototype.syncBarrier=function(){return m(this,void 0,void 0,function(){var a,b,c=this;return q(this,function(h){switch(h.label){case 0:return l.logger.log(this.user_friendly_id()+".syncBarrier() called."),[4,this.waitUntilConnected("DTMFToneChangeEvent.syncBarrier")];case 1:return h.sent(),[4,Promise.all([this.remoteInvoke(!1,f.method_id_RTCDTMFToneChangeEvent_t.tone,""),this.remoteInvoke(!1,f.method_id_RTCDTMFToneChangeEvent_t.tone_buffer,"")])];case 2:return b=h.sent(),a=b.map(function(a){return c.param0(a)}),
-this.tone=a[0],this.tone_buffer_=a[1],[2,this]}})})},Object.defineProperty(b.prototype,"tone_buffer",{get:function(){return this.tone_buffer_},enumerable:!0,configurable:!0}),b}(p.ProxyObject);b.DTMFToneChangeEvent=x;var t=function(a){function b(c,h){var g=a.call(this,c,f.class_id_t.RTCDTMFSender,h,p.ProxyMode.Remote)||this;return l.logger.log(g.user_friendly_id()+".constructor"),g.canInsertDTMF=!0,g.toneBuffer_="",g}return k(b,a),b.prototype.insertDTMF=function(a,b,c){var h=this;void 0===b&&(b=100);
-void 0===c&&(c=70);l.logger.log(this.user_friendly_id()+".insertDTMF() called, tones: "+a);this.waitUntilConnected("DtmfSender.insertDTMF").then(function(){return h.remoteInvoke(!1,f.method_id_RTCDTMFSender_t.insertDTMF,a,b,c)}).then(function(){l.logger.log(h.user_friendly_id()+".insertDTMF() success, tones: "+a)})["catch"](function(){l.logger.log(h.user_friendly_id()+".insertDTMF() failed, tones: "+a)})},Object.defineProperty(b.prototype,"ontonechange",{get:function(){return this.ontonechange_},
-set:function(a){var b=this;l.logger.log(this.user_friendly_id()+".set_ontonechange() called.");this.ontonechange_=a;this.waitUntilConnected("DtmfSender.ontonechange").then(function(){var c=b.registerCallbacks(!1,b.isNullCallback(a),f.method_id_RTCDTMFSender_t.ontonechange);return c.then(function(a){l.logger.log(b.user_friendly_id()+".ontonechange callback received!");(new x(b,b.param0(a).oid)).syncBarrier().then(function(a){l.logger.log(b.user_friendly_id()+"tone: "+a.tone+" tone_buffer: "+a.tone_buffer);
-b.toneBuffer_=a.tone_buffer;b.ontonechange_(a)})["catch"](function(){l.logger.log(b.user_friendly_id()+"toneEvt.syncBarrier(): failed!")})}),b.remoteInvoke(!0,f.method_id_RTCDTMFSender_t.ontonechange,c.success)})["catch"](function(){l.logger.log(b.user_friendly_id()+".set_ontonechange(): failed!")})},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"toneBuffer",{get:function(){return l.logger.log(this.user_friendly_id()+".toneBuffer() called."),this.toneBuffer_},enumerable:!0,configurable:!0}),
-b}(p.ProxyObject);b.DtmfSender=t;var h,C=function(a){function b(c,h){var g=a.call(this,c,f.class_id_t.RTCIceTransport,h,p.ProxyMode.Remote)||this;return l.logger.log(g.user_friendly_id()+".constructor"),g.selectedPair=null,g.localCandidates_=[],g.remoteCandidates_=[],g}return k(b,a),b.prototype.syncBarrier=function(){return m(this,void 0,void 0,function(){var a,c,g,h,w=this;return q(this,function(d){switch(d.label){case 0:return l.logger.log(this.user_friendly_id()+".syncBarrier() called."),[4,this.waitUntilConnected("IceTransport.syncBarrier")];
-case 1:return d.sent(),[4,Promise.all([this.remoteInvoke(!1,f.method_id_RTCIceTransport_t.role,0),this.remoteInvoke(!1,f.method_id_RTCIceTransport_t.component,0),this.remoteInvoke(!1,f.method_id_RTCIceTransport_t.state,0),this.remoteInvoke(!1,f.method_id_RTCIceTransport_t.gatheringState,0)])];case 2:return c=d.sent(),0,0,a=c.map(function(a){return w.param0(a)}),this.role_=a[0],this.component_=a[1],g=a[2],h=a[3],this.state_=b.convertState(g),this.gatheringState_=b.convertGatheringState(h),this.syncCandidates().then(function(a){l.logger.log(w.user_friendly_id()+
-"received updated ice candidates!")}),[2,this]}})})},b.prototype.syncCandidates=function(){return m(this,void 0,void 0,function(){var a,b,c=this;return q(this,function(h){switch(h.label){case 0:return l.logger.log(this.user_friendly_id()+".syncCandidates() called."),[4,this.waitUntilConnected("IceTransport.syncCandidates")];case 1:return h.sent(),[4,Promise.all([this.remoteInvoke(!1,f.method_id_RTCIceTransport_t.localcandidates,[]),this.remoteInvoke(!1,f.method_id_RTCIceTransport_t.remotecandidates,
-[])])];case 2:return b=h.sent(),a=b.map(function(a){return c.param0(a)}),this.localCandidates_=a[0],this.remoteCandidates_=a[1],[2,this]}})})},Object.defineProperty(b.prototype,"role",{get:function(){return this.role_},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"component",{get:function(){return this.component_},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"State",{get:function(){return this.state_},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,
-"gatheringState",{get:function(){return this.gatheringState_},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"onstatechange",{get:function(){return this.onstatechange_},set:function(a){var c=this;l.logger.log(this.user_friendly_id()+".set_onstatechange() called.");this.onstatechange_=a;this.waitUntilConnected("IceTransport.onstatechange").then(function(){var g=c.registerCallbacks(!1,c.isNullCallback(a),f.method_id_RTCIceTransport_t.onstatechange);return g.then(function(a){l.logger.log(c.user_friendly_id()+
-".onstatechange callback received!");c.syncCandidates().then(function(a){l.logger.log(c.user_friendly_id()+"received updated ice candidates!")});c.state_=b.convertState(c.param0(a));l.logger.log(c.user_friendly_id()+"state: "+c.state_);c.onstatechange_()}),c.remoteInvoke(!0,f.method_id_RTCIceTransport_t.onstatechange,g.success)})["catch"](function(){l.logger.log(c.user_friendly_id()+".set_onstatechange failed!")})},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"ongatheringstatechange",
-{get:function(){return this.ongatheringstatechange_},set:function(a){var c=this;l.logger.log(this.user_friendly_id()+".set_ongatheringstatechange() called.");this.ongatheringstatechange_=a;this.waitUntilConnected("IceTransport.ongatheringstatechange").then(function(){var g=c.registerCallbacks(!1,c.isNullCallback(a),f.method_id_RTCIceTransport_t.ongatheringstatechange);return g.then(function(a){l.logger.log(c.user_friendly_id()+".ongatheringstatechange callback received!");c.syncCandidates().then(function(a){l.logger.log(c.user_friendly_id()+
-"received updated ice candidates!")});c.gatheringState_=b.convertGatheringState(c.param0(a));l.logger.log(c.user_friendly_id()+"gatheringState: "+c.gatheringState_);c.ongatheringstatechange_()}),c.remoteInvoke(!0,f.method_id_RTCIceTransport_t.ongatheringstatechange,g.success)})["catch"](function(){l.logger.log(c.user_friendly_id()+".set_ongatheringstatechange failed!")})},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"onselectedcandidatepairchange",{get:function(){return this.onselectedcandidatepairchange_},
-set:function(a){var b=this;l.logger.log(this.user_friendly_id()+".set_onselectedcandidatepairchange() called.");this.onselectedcandidatepairchange_=a;this.waitUntilConnected("IceTransport.onselectedcandidatepairchange").then(function(){var c=b.registerCallbacks(!1,b.isNullCallback(a),f.method_id_RTCIceTransport_t.onselectedcandidatepairchange);return c.then(function(a){l.logger.log(b.user_friendly_id()+".onselectedcandidatepairchange callback received!");b.syncCandidates().then(function(a){l.logger.log(b.user_friendly_id()+
-"received updated ice candidates!")});b.selectedPair=b.param0(a);l.logger.log(b.user_friendly_id()+"selectedPair: "+b.selectedPair);b.onselectedcandidatepairchange_()}),b.remoteInvoke(!0,f.method_id_RTCIceTransport_t.onselectedcandidatepairchange,c.success)})["catch"](function(){l.logger.log(b.user_friendly_id()+".set_onselectedcandidatepairchange failed!")})},enumerable:!0,configurable:!0}),b.prototype.getLocalCandidates=function(){return this.localCandidates_},b.prototype.getRemoteCandidates=function(){return this.remoteCandidates_},
-b.prototype.getLocalParameters=function(){return null},b.prototype.getRemoteParameters=function(){return null},b.prototype.getSelectedCandidatePair=function(){return this.selectedPair},b.convertState=function(a){return 0==a?"new":1==a?"checking":2==a?"connected":3==a?"completed":4==a?"failed":5==a?"disconnected":"closed"},b.convertGatheringState=function(a){return 0==a?"new":1==a?"gathering":"complete"},b}(p.ProxyObject);b.IceTransport=C;(function(a){a[a["new"]=0]="new";a[a.connecting=1]="connecting";
-a[a.connected=2]="connected";a[a.closed=3]="closed";a[a.failed=4]="failed";a[a.max=5]="max"})(h||(h={}));var u=function(a){function b(c,h){var g=a.call(this,c,f.class_id_t.RTCDtlsTransport,h,p.ProxyMode.Remote)||this;return l.logger.log(g.user_friendly_id()+".constructor"),g.state_="new",g.transport_=null,g.remoteCertificates_=[],g}return k(b,a),b.prototype.syncBarrier=function(){return m(this,void 0,void 0,function(){var a,b,c,h,w,d=this;return q(this,function(e){switch(e.label){case 0:return l.logger.log(this.user_friendly_id()+
-".syncBarrier() called."),[4,Promise.all([this.remoteInvoke(!1,f.method_id_RTCDtlsTransport_t.transport,{}),this.remoteInvoke(!1,f.method_id_RTCDtlsTransport_t.getRemoteCertificates,[])])];case 1:return b=e.sent(),a=b.map(function(a){return d.param0(a)}),c=a[0],this.remoteCertificates_=a[1],0!=c.is_null?[3,3]:(h=new C(this,c.oid),w=this,[4,h.syncBarrier()]);case 2:w.transport_=e.sent(),e.label=3;case 3:return[2,this]}})})},Object.defineProperty(b.prototype,"transport",{get:function(){return this.transport_},
-enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"State",{get:function(){return this.state_},enumerable:!0,configurable:!0}),b.prototype.getRemoteCertificates=function(){return this.remoteCertificates_},Object.defineProperty(b.prototype,"onstatechange",{get:function(){return this.onstatechange_},set:function(a){var c=this;l.logger.log(this.user_friendly_id()+".set_onstatechange() called.");this.onstatechange_=a;this.waitUntilConnected("DtlsTransport.onstatechange").then(function(){var g=
-c.registerCallbacks(!1,c.isNullCallback(a),f.method_id_RTCDtlsTransport_t.onstatechange);return g.then(function(a){l.logger.log(c.user_friendly_id()+".onstatechange callback received!");c.state_=b.convertState(c.param0(a));l.logger.log(c.user_friendly_id()+"state_: "+c.state_);c.onstatechange_()}),c.remoteInvoke(!0,f.method_id_RTCDtlsTransport_t.onstatechange,g.success)})["catch"](function(){})},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"onerror",{get:function(){return this.onerror_},
-set:function(a){var b=this;l.logger.log(this.user_friendly_id()+".set_onerror() called.");this.onerror_=a;this.waitUntilConnected("DtlsTransport.onerror").then(function(){var c=b.registerCallbacks(!1,b.isNullCallback(a),f.method_id_RTCDtlsTransport_t.onerror);return c.then(function(a){l.logger.log(b.user_friendly_id()+".onerror callback received!");a=b.param0(a);l.logger.log(b.user_friendly_id()+"error: "+a);b.onerror_(a)}),b.remoteInvoke(!0,f.method_id_RTCDtlsTransport_t.onerror,c.success)})["catch"](function(){})},
-enumerable:!0,configurable:!0}),b.convertState=function(a){return a==h["new"]?"new":a==h.connecting?"connecting":a==h.connected?"connected":a==h.closed?"closed":"failed"},b}(p.ProxyObject);b.DtlsTransport=u;a=function(a){function b(c,h,g,f){c=a.call(this,c,h,g,f)||this;return l.logger.log(c.user_friendly_id()+".constructor base"),c.track_=null,c.transport_=null,c.rtcpTransport_=null,c.capabilities_=null,c}return k(b,a),b.prototype.syncBarrierBase=function(){return m(this,void 0,void 0,function(){var a,
-b,c,h,w,d,e,t,k,p,m,x,v=this;return q(this,function(q){switch(q.label){case 0:return l.logger.log(this.user_friendly_id()+".syncBarrierBase() called."),[4,this.waitUntilConnected("RtpSenderReceiver.syncBarrierBase")];case 1:return q.sent(),this instanceof y?(b=f.method_id_RTCRtpSender_t.track,c=f.method_id_RTCRtpSender_t.transport,h=f.method_id_RTCRtpSender_t.rtcpTransport,w=f.method_id_RTCRtpSender_t.getCapabilities):this instanceof B&&(b=f.method_id_RTCRtpReceiver_t.track,c=f.method_id_RTCRtpReceiver_t.transport,
-h=f.method_id_RTCRtpReceiver_t.rtcpTransport,w=f.method_id_RTCRtpReceiver_t.getCapabilities),[4,Promise.all([this.remoteInvoke(!1,b,{oid:this.object_id()}),this.remoteInvoke(!1,c,{oid:this.object_id()}),this.remoteInvoke(!1,h,{oid:this.object_id()}),this.remoteInvoke(!1,w,{oid:this.object_id()})])];case 2:return d=q.sent(),a=d.map(function(a){return v.param0(a)}),e=a[0],t=a[1],k=a[2],this.capabilities_=a[3],p=this,[4,Promise.all(d.map(function(){return!1!==e.is_null||null!==v.track&&v.track_.object_id()==
-e.oid?new Promise(function(a,b){a(null)}):(new n.RemoteMediaTrack(v,e.oid)).syncBarrier()}))["catch"](function(){return l.logger.log(v.user_friendly_id()+"track.syncBarrier(): failed!"),null})];case 3:return p.track_=q.sent()[0],m=this,[4,Promise.all(d.map(function(){return!1!==t.is_null||null!==v.transport_&&v.transport_.object_id()==t.oid?new Promise(function(a,b){a(null)}):(new u(v,t.oid)).syncBarrier()}))["catch"](function(){return l.logger.log(v.user_friendly_id()+"transport.syncBarrier(): failed!"),
-null})];case 4:return m.transport_=q.sent()[0],x=this,[4,Promise.all(d.map(function(){return!1!==k.is_null||null!==v.rtcpTransport_&&v.rtcpTransport_.object_id()==k.oid?new Promise(function(a,b){a(null)}):(new u(v,k.oid)).syncBarrier()}))["catch"](function(){return l.logger.log(v.user_friendly_id()+"rtcpTransport.syncBarrier(): failed!"),null})];case 5:return x.rtcpTransport_=q.sent()[0],[2,new Promise(function(a){a(v)})]}})})},Object.defineProperty(b.prototype,"transport",{get:function(){return l.logger.log(this.user_friendly_id()+
-".get transport() called."),this.transport_},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"rtcpTransport",{get:function(){return l.logger.log(this.user_friendly_id()+".get rtcpTransport() called."),this.rtcpTransport_},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"track",{get:function(){return l.logger.log(this.user_friendly_id()+".get track() called.track_: "+this.track_),this.track_},enumerable:!0,configurable:!0}),b.prototype.reinitTrack=function(a){this.track_=
-a},b.prototype.getCapabilities=function(a){return l.logger.log(this.user_friendly_id()+".getCapabilities() called."),this.capabilities_},b.prototype.getStats=function(){l.logger.log(this.user_friendly_id()+".getStats() called.");var a=this;return new Promise(function(b,c){var h=this;a.isRedirected()?a.waitUntilConnected("RtpReceiver.getStats").then(function(){var c;h instanceof y?c=f.method_id_RTCRtpSender_t.getStats:h instanceof B&&(c=f.method_id_RTCRtpReceiver_t.getStats);var d=a.registerCallbacks(!0,
-!1,c);return d.then(function(a){void 0!==a.params&&0!==a.params.length&&b(v.StatsReport.fromJSON(JSON.parse(a.params[0])))}),a.remoteInvoke(!1,c,d.success)})["catch"](function(){l.logger.log(a.user_friendly_id()+".getStats(): failed!");c()}):(l.logger.log(a.user_friendly_id()+".getStats(): not in active redirection!"),b())})},b}(p.ProxyObject);b.RtpSenderReceiver=a;var y=function(a){function b(c,h,g){c=a.call(this,c,f.class_id_t.RTCRtpSender,h,g)||this;return l.logger.log(c.user_friendly_id()+".constructor"),
-c.dtmf_=null,c.params_=null,c}return k(b,a),b.prototype.syncBarrier=function(){return m(this,void 0,void 0,function(){var b,c,g,h=this;return q(this,function(e){switch(e.label){case 0:return l.logger.log(this.user_friendly_id()+".syncBarrier() called."),[4,a.prototype.syncBarrierBase.call(this)];case 1:return e.sent(),[4,this.waitUntilConnected("RtpSender.syncBarrier")];case 2:return e.sent(),[4,Promise.all([this.remoteInvoke(!1,f.method_id_RTCRtpSender_t.dtmf,{oid:this.object_id()}),this.remoteInvoke(!1,
-f.method_id_RTCRtpSender_t.getParameters,{oid:this.object_id()})])];case 3:return c=e.sent(),b=c.map(function(a){return h.param0(a)}),g=b[0],this.params_=b[1],!1!==g.is_null||null!==this.dtmf_&&this.dtmf_.object_id()==g.oid||(this.dtmf_=new t(this,g.oid)),[2,new Promise(function(a){a(h)})]}})})},Object.defineProperty(b.prototype,"dtmf",{get:function(){return l.logger.log(this.user_friendly_id()+".get dtmf() called."),this.dtmf_},enumerable:!0,configurable:!0}),b.prototype.setParameters=function(a){var b=
-this;return l.logger.log(this.user_friendly_id()+".setParameters() called."),new Promise(function(c,h){b.waitUntilConnected("RtpSender.setParameters").then(function(){return Promise.all([b.remoteInvoke(!1,f.method_id_RTCRtpSender_t.setParameters,a)])}).then(function(h){l.logger.log(b.user_friendly_id()+".setParameters(): success.");c();b.params_=a})["catch"](function(){l.logger.log(b.user_friendly_id()+".setParameters(): rejected.");h()})})},b.prototype.getParameters=function(){return l.logger.log(this.user_friendly_id()+
-".getParameters() called."),this.params_},b.prototype.replaceTrack=function(a){var b=this;return l.logger.log(this.user_friendly_id()+".replaceTrack() called."),new Promise(function(c,h){b.waitUntilConnected("RtpSender.replaceTrack").then(function(){return Promise.all([b.remoteInvoke(!1,f.method_id_RTCRtpSender_t.replaceTrack,{oid:a.object_id()})])}).then(function(h){l.logger.log(b.user_friendly_id()+".replaceTrack(): success.");c();b.reinitTrack(a)})["catch"](function(){l.logger.log(b.user_friendly_id()+
-".setParameters(): rejected.");h()})})},b}(a);b.RtpSender=y;var B=function(a){function b(c,h){var g=a.call(this,c,f.class_id_t.RTCRtpReceiver,h,p.ProxyMode.Remote)||this;return l.logger.log(g.user_friendly_id()+".constructor"),g.contribsources_=[],g.syncsources_=[],g.params_=null,g}return k(b,a),b.prototype.syncBarrier=function(){return m(this,void 0,void 0,function(){var b,c,g=this;return q(this,function(h){switch(h.label){case 0:return l.logger.log(this.user_friendly_id()+".syncBarrier() called."),
-[4,a.prototype.syncBarrierBase.call(this)];case 1:return h.sent(),[4,this.waitUntilConnected("RtpReceiver.syncBarrier")];case 2:return h.sent(),[4,Promise.all([this.remoteInvoke(!1,f.method_id_RTCRtpReceiver_t.getContributingSources,[]),this.remoteInvoke(!1,f.method_id_RTCRtpReceiver_t.getSynchronizationSources,[]),this.remoteInvoke(!1,f.method_id_RTCRtpReceiver_t.getParameters,{oid:this.object_id()})])];case 3:return c=h.sent(),b=c.map(function(a){return g.param0(a)}),this.contribsources_=b[0],this.syncsources_=
-b[1],this.params_=b[2],[2,new Promise(function(a){a(g)})]}})})},b.prototype.getContributingSources=function(){var a=this;return l.logger.log(this.user_friendly_id()+".getContributingSources() called. "+JSON.stringify(this.contribsources_)),this.waitUntilConnected("RtpReceiver.getContributingSources").then(function(){return Promise.all([a.remoteInvoke(!1,f.method_id_RTCRtpReceiver_t.getContributingSources,[])])}).then(function(b){a.contribsources_=b.map(function(b){return a.param0(b)})[0]})["catch"](function(){l.logger.log(a.user_friendly_id()+
-".getContributingSources() didnt get response.");a.contribsources_=[]}),this.contribsources_},b.prototype.getParameters=function(){return l.logger.log(this.user_friendly_id()+".getParameters() called."),this.params_},b.prototype.getSynchronizationSources=function(){return l.logger.log(this.user_friendly_id()+".getSynchronizationSources() called."),this.syncsources_},b}(a);b.RtpReceiver=B},function(a,b,c){Object.defineProperty(b,"__esModule",{value:!0});a=function(){function a(){this.items=[]}return a.fromJSON=
-function(b){for(var c=new a,p=0;p<b.length;p++){var f=e.fromJSON(b[p]);c.items.push(f)}return c},a.prototype.toJSON=function(){return JSON.stringify(this.items)},a.prototype.result=function(){return this.items},a}();b.StatsReport=a;var e=function(){function a(){this.names_=[];this.stat_=new Map;this.id="";this.timestamp=0;this.type=""}return a.fromJSON=function(b){var c=new a;return c.id=b.id||"",c.timestamp=b.timestamp||"",c.type=b.type||"",Object.keys(b).forEach(function(a){"id"!==a&&"timestamp"!==
-a&&"type"!==a&&(c.names_.push(a),c.stat_.set(a,b[a]))}),c},a.prototype.toJSON=function(){return JSON.stringify({id:this.id,timestamp:this.timestamp,type:this.type,stat:this.stat_})},a.prototype.names=function(){return this.names_},a.prototype.stat=function(a){return this.stat_.get(a)},a}();b.Stats=e},function(a,b,c){var e=c(11),k=c(5),m=c(14),q=c(15),p=c(16),f=c(0).logger,l=c(17),n=c(7).gc,v=c(2);("undefined"!=typeof self?self:this).CitrixWebRTC=function(){function a(){void 0!==window.getCitrixWebrtcRedir&&
-window.getCitrixWebrtcRedir().then(function(a){f.log("sucesss on connect"+a);1===a&&""!==a&&null===z&&(f.log("supported client"),z=new l.RemoteSession)})}function b(a){if(1===a&&""!==a&&(f.log("Supported client"),v.getRedirector().pingConnectionBegin(!0)),0===a&&""!==a){f.log("VDI Event: Unsupported client reported");try{B({event:"vdiClientDisconnected",reason:"endpointUnsupported",msg:"Unsupported endpoint connected"})}catch(c){f.log("onVMEvent(): exception: "+c.message)}}else f.log("Citrix Webrtc Redir Reg Key value is incorrect")}
-var c=e.PeerConnection,C=new k.NavigatorUserMedia,u=new k.RemoteDevices,y=null,B=void 0,E=!1;window.onVdiClientDisconnected=function(a){if(f.log("VDI Event: vdiClientDisconnected"),f.log("VDI : cleanup"),C=null,u=null,y=null,audioNotifications=[],z&&z.release(),z=null,n.reset(),f.log("VDI : cleanup done"),!0===a&&!1===E){f.log("VDI Event: vdiClientDisconnected with failure reported");E=!0;try{B({event:"vdiClientDisconnected",reason:"failure",msg:"Websocket Connection Failure"})}catch(b){f.log("onVMEvent(): exception: "+
-b.message)}}else{E=!1;try{B({event:"vdiClientDisconnected",reason:"endpointDisconnected"})}catch(b){f.log("onVMEvent(): exception: "+b.message)}}};var z=new l.RemoteSession;return window.onVdiClientDisconnectedTimer=function(){f.log("VDI Event: onVdiClientDisconnectedTimer");null===z&&(z=new l.RemoteSession)},window.onVdiClientConnected=function(){f.log("VDI Event: vdiClientConnected");p.FrameTracker.sendOverlayInfo();f.log("VDI: sendSessionInfo");z&&z.getSessionInfo().then(function(a){f.log("getSessionInfo success! info:"+
-JSON.stringify(a));try{B({event:"vdiClientConnected",version:a})}catch(b){f.log("onVMEvent(): exception: "+b.message)}})["catch"](function(){f.log("getSessionInfo failure! session is not fully connected yet...")});null!==u&&u.isValid()||(u=new k.RemoteDevices);navigator.mediaDevices.dispatchEvent(new CustomEvent("devicechange"))},{CitrixPeerConnection:c,getUserMedia:function(b,c,h){return a(),f.log("VDI Shim getUserMedia"),null!==C&&C.isValid()||(C=new k.NavigatorUserMedia),C.webkitGetUserMedia(b,
-c,h)},enumerateDevices:function(){return a(),f.log("VDI Shim enumerateDevices"),null!==u&&u.isValid()||(u=new k.RemoteDevices),u.enumerateDevices()},getDisplayMedia:function(b){return a(),f.log("VDI Shim getDisplayMedia"),null!==u&&u.isValid()||(u=new k.RemoteDevices),u.getDisplayMedia(b)},mapVideoElement:function(b){f.log("VDI New Video Element Created, Creating Mapping to VDA");null===y&&(y=new p.FrameTracker);void 0===b.VDAVideoElement?(a(),Object.defineProperty(b,"VDAVideoElement",{writable:!0,
-value:null}),b.VDAVideoElement=new m.VideoElement,b.VDAVideoElement.onloadedmetadata=function(){var a=new Event("loadedmetadata");b.dispatchEvent(a)},b.VDAVideoElement.ontimeupdate=function(){var a=new Event("timeupdate");b.dispatchEvent(a)},b.VDAVideoElement.onconnectionstatechange=function(){"connected"===b.VDAVideoElement.connectionState?y.track(b,function(a){b.VDAVideoElement.setFrame(a)}):y.untrack(b)},Object.defineProperty(b,"sinkId",{get:function(){return b.VDAVideoElement.sinkId},set:function(a){f.log("VDI Shim set video element SinkId value = "+
-a);b.VDAVideoElement.sinkId=a}}),Object.defineProperty(b,"srcObject",{get:function(){return b.VDAVideoElement.srcObject},set:function(a){f.log("VDI Shim set video element srcObject");b.VDAVideoElement.srcObject=a}}),Object.defineProperty(b,"videoWidth",{get:function(){return b.VDAVideoElement.videoWidth}}),Object.defineProperty(b,"videoHeight",{get:function(){return b.VDAVideoElement.videoHeight}})):f.log("Video element is already configured!")},mapAudioElement:function(b){f.log("VDI New Audio Element Created, Creating Mapping to VDA");
-void 0===b.VDAAudioElement?(a(),Object.defineProperty(b,"VDAAudioElement",{writable:!0,value:null}),b.VDAAudioElement=new q.AudioElement,Object.defineProperty(b,"sinkId",{get:function(){return b.VDAAudioElement.sinkId},set:function(a){f.log("VDI Shim set audio element SinkId value = "+a);b.setSinkId(a).then(function(){f.log("VDI Shim set audio element SinkId success")})["catch"](function(){f.log("VDI Shim set audio element SinkId failure")})}}),b.setSinkId=function(a){f.log("VDI Shim set audio element SinkId value = "+
-a);var c=b.VDAAudioElement.setSinkId(a),h;return k.enumerateddecices.forEach(function(b){a===b.deviceId&&(h=b.label)}),function(a){v.getRedirector().SendTelemetryData_Speaker(a)}(h),c},Object.defineProperty(b,"srcObject",{get:function(){return b.VDAAudioElement.srcObject},set:function(a){if(f.log("VDI Shim set audio element srcObject "+JSON.stringify(a)),null==a){if(null!==b.VDAAudioElement.srcObject){a=b.remoteAudioElement.srcObject.getTracks();var c=$jscomp.makeIterator(a);for(a=c.next();!a.done;a=
-c.next())a.value.enabled=!1}b.VDAAudioElement.release()}else for(b.VDAAudioElement.srcObject=a,a=a.getTracks(),c=$jscomp.makeIterator(a),a=c.next();!a.done;a=c.next())a.value.enabled=!0}})):f.log("Audio element is already configured!")},addClipRect:function(a){f.log("VDI Adding Occlusion "+JSON.stringify(a));null===y&&(y=new p.FrameTracker);y.addOcclusion(a)},removeClipRect:function(a){f.log("VDI Removing Occlusion "+JSON.stringify(a));null===y&&(y=new p.FrameTracker);y.removeOcclusion(a)},setVMEventCallback:function(a){B=
-a;f.log("VDI Event Callback Set")},isFeatureOn:function(a){return null!==z&&z.isFeatureSupported(a)},initLog:function(a){f.setMSLogger(a);f.log("VDI init logger")},onConnectionChange:function(a){f.log("VDI : onConnectionChange to "+a);!1===a?f.log("Disconnecting from the VDA"):(f.log("Connecting to the VDA"),window.getCitrixWebrtcRedir().then(function(a){f.log("Sucesss on connect with Reg value :"+a);""===a?(f.log("Citrix Webrtc Redir Reg key not updated - Start timer"),function D(a){if(0>=a){f.log("VDI Event: Reg Key not Updated after timer reported, Fallback");
-try{B({event:"vdiClientDisconnected",reason:"failure",msg:"Citrix Webrtc Redir Reg Key not Present"})}catch(d){f.log("onVMEvent(): exception: "+d.message)}}else window.getCitrixWebrtcRedir().then(function(d){""===d?setTimeout(function(){f.log("Timer waiting for registry to be updated count :"+a);D(--a)},1E3):b(d)})}(5)):b(a)})["catch"](function(){f.log("Failure to Read Citrix Webrtc Redir Reg Key")}))}}}()},function(a,b,c){var e,k=this&&this.__extends||(e=function(a,b){return(e=Object.setPrototypeOf||
-{__proto__:[]}instanceof Array&&function(a,b){a.__proto__=b}||function(a,b){for(var c in b)b.hasOwnProperty(c)&&(a[c]=b[c])})(a,b)},function(a,b){function c(){this.constructor=a}e(a,b);a.prototype=null===b?Object.create(b):(c.prototype=b.prototype,new c)}),m=this&&this.__awaiter||function(a,b,c,d){return new (c||(c=Promise))(function(h,f){function e(a){try{t(d.next(a))}catch(b){f(b)}}function l(a){try{t(d["throw"](a))}catch(b){f(b)}}function t(a){a.done?h(a.value):(new c(function(b){b(a.value)})).then(e,
-l)}t((d=d.apply(a,b||[])).next())})},q=this&&this.__generator||function(a,b){function c(e){return function(c){return function(c){if(d)throw new TypeError("Generator is already executing.");for(;l;)try{if(d=1,h&&(f=2&c[0]?h["return"]:c[0]?h["throw"]||((f=h["return"])&&f.call(h),0):h.next)&&!(f=f.call(h,c[1])).done)return f;switch(h=0,f&&(c=[2&c[0],f.value]),c[0]){case 0:case 1:f=c;break;case 4:return l.label++,{value:c[1],done:!1};case 5:l.label++;h=c[1];c=[0];continue;case 7:c=l.ops.pop();l.trys.pop();
-continue;default:if(!(f=l.trys,(f=0<f.length&&f[f.length-1])||6!==c[0]&&2!==c[0])){l=0;continue}if(3===c[0]&&(!f||c[1]>f[0]&&c[1]<f[3]))l.label=c[1];else if(6===c[0]&&l.label<f[1])l.label=f[1],f=c;else if(f&&l.label<f[2])l.label=f[2],l.ops.push(c);else{f[2]&&l.ops.pop();l.trys.pop();continue}}c=b.call(a,l)}catch(e){c=[6,e],h=0}finally{d=f=0}if(5&c[0])throw c[1];return{value:c[0]?c[1]:void 0,done:!0}}([e,c])}}var d,h,f,e,l={label:0,sent:function(){if(1&f[0])throw f[1];return f[1]},trys:[],ops:[]};
-$jscomp.initSymbol();$jscomp.initSymbol();$jscomp.initSymbolIterator();return e={next:c(0),"throw":c(1),"return":c(2)},"function"==typeof Symbol&&(e[Symbol.iterator]=function(){return this}),e};Object.defineProperty(b,"__esModule",{value:!0});var p=c(2),f=c(5),l=c(8),n=c(3),v=c(12),x=c(13),t=c(1),h=c(0),C=c(9),u=c(4),y=function(a){function b(c,d,h){c=a.call(this,c,t.class_id_t.RTCIceCandidateEvent,d,n.ProxyMode.Remote)||this;return c.target=h,c.type="icecandidate",c}return k(b,a),Object.defineProperty(b.prototype,
-"candidate",{get:function(){return this.candidate_},enumerable:!0,configurable:!0}),b.prototype.syncBarrier=function(){var a=this;return h.logger.log(this.user_friendly_id()+".syncBarrier() called."),new Promise(function(b,c){a.waitUntilConnected(a.user_friendly_id()+".syncBarrier").then(function(){return a.remoteInvoke(!1,t.method_id_RTCIceCandidateEvent_t.candidate,{oid:0})}).then(function(b){b=a.param0(b);return!1===b.is_null?(new v.IceCandidate(a,b.oid)).syncBarrier():Promise.resolve(null)}).then(function(c){h.logger.log(a.user_friendly_id()+
-".onicecandidate: icecandidate available!");a.candidate_=c;b(a)})["catch"](function(){h.logger.log(a.user_friendly_id()+".onicecandidate() failed.");c()})})},b}(n.ProxyObject);b.IceCandidateEvent=y;var B=function(){function a(b){this.state_="new";this.candidates_=[];this.pc_=b}return a.prototype.pushState=function(a){h.logger.log(this.pc_.user_friendly_id()+".onicegatheringstatechange: new state is "+a);this.state_=a;"gathering"==this.state_?(this.candidates_=[],this.postUpdate()):this.processRemaining()},
-a.prototype.addIceCandidate=function(a){var b=this;this.candidates_.push(a);a.syncBarrier().then(function(a){return h.logger.log(b.pc_.user_friendly_id()+".onicecandidate: icecandidate available!"),Promise.all([b.pc_.updateLocalDescription(),Promise.resolve(a)])}).then(function(a){b.postIceCandidate(a[1])})},a.prototype.postIceCandidate=function(a){h.logger.log(this.pc_.user_friendly_id()+".onicecandidate: posting ice candidate now!");null!=this.pc_.onicecandidate?this.pc_.onicecandidate(a):h.logger.log(this.pc_.user_friendly_id()+
-"onicecandidate is NULL!!!");this.candidates_.shift();this.processRemaining()},a.prototype.postUpdate=function(){h.logger.log(this.pc_.user_friendly_id()+".onicegatheringstatechange: posting event now!");var a=new z("onicegatheringstatechange",this.pc_);this.pc_.onicegatheringstatechange(a)},a.prototype.processRemaining=function(){0==this.candidates_.length&&"complete"==this.state_?(this.pc_.onicecandidate({candidate:null,target:this}),this.postUpdate()):h.logger.log(this.pc_.user_friendly_id()+".onicecandidate: candidates remaining=["+
-this.candidates_.map(function(a){return a.object_id()})+"], state="+this.state_)},a}(),E=function(a){function b(c,d,h){for(var f=[],e=3;e<arguments.length;e++)f[e-3]=arguments[e];return a.apply(this,[c,t.class_id_t.RTCSessionDescription,d,h,null].concat(f))||this}return k(b,a),b.prototype.toJSON=function(){return{type:this.type_,sdp:this.sdp_}},Object.defineProperty(b.prototype,"sdp",{get:function(){return this.sdp_},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"type",{get:function(){return this.type_},
-enumerable:!0,configurable:!0}),b.prototype.syncBarrier=function(){var a=this;return h.logger.log(this.user_friendly_id()+".syncBarrier() called."),new Promise(function(b,c){a.waitUntilConnected(a.user_friendly_id()+".syncBarrier").then(function(){return Promise.all([a.remoteInvoke(!1,t.method_id_RTCSessionDescription_t.type,0),a.remoteInvoke(!1,t.method_id_RTCSessionDescription_t.sdp,"")])}).then(function(c){a.type_=a.convertType(a.param0(c[0]));a.sdp_=a.param0(c[1]);b(a)})["catch"](function(){c()})})},
-b.prototype.convertType=function(a){return 0==a?"offer":1==a?"pranswer":"answer"},b.convertC2H=function(a){return"offer"==a?0:"pranswer"==a?1:2},b}(n.ProxyObject);b.SessionDescription=E;var z=function(a,b){this.type=a;this.target=b},r=function(){},A=function(){function a(b,c){this.local=b;this.remote=c}return Object.defineProperty(a.prototype,"active",{get:function(){var a=!1;return 1!=this.local&&1!=this.remote||(a=!0),a},enumerable:!0,configurable:!0}),a}();a=function(a){function b(c){c=a.call(this,
-null,t.class_id_t.RTCPeerConnection,0,n.ProxyMode.Local,null,null!=c?c:{},{})||this;return c.timeerstarted_=!1,c.firsttimeremoteoffer_=!1,c.firststable_=!1,c.firsttimelocaloffer_=!1,c.audiocall_=new A(!1,!1),c.videocall_=new A(!1,!1),c.screensharingcall_=new A(!1,!1),c.conferencecall_=!1,c.incomingcall_=!1,c.outgoingcall_=!1,h.logger.log(c.user_friendly_id()+".constructor"),c.localStreams=[],c.remoteStreams=[],c.onaddstream_=null,c.signalingState_="stable",c.iceConnectionState_="new",c.iceGatheringState_=
-"new",c.iceQ_=new B(c),c.receivers_=[],c.senders_=[],c.registerStateChangeNotification(c.onStateChange),c}return k(b,a),b.prototype.onStateChange=function(){var a=new z("iceconnectionstatechange",this);this.oniceconnectionstatechange_&&this.oniceconnectionstatechange_(a)},b.prototype.addIceCandidate=function(){h.logger.log(this.user_friendly_id()+".addIceCandidate");h.logger.log(arguments)},Object.defineProperty(b.prototype,"onicecandidate",{get:function(){return this.onicecandidate_},set:function(a){var b=
-this;h.logger.log(this.user_friendly_id()+".set_onicecandidate() called.");this.onicecandidate_=a;this.waitUntilConnected(this.user_friendly_id()+".onicecandidate").then(function(){var c=b.registerCallbacks(!1,b.isNullCallback(a),t.method_id_RTCPeerConnection_t.onicecandidate);return c.then(function(a){h.logger.log(b.user_friendly_id()+".onicecandidate callback received!!!");a=new y(b,b.param0(a).oid,b);null!=b.iceQ_&&b.iceQ_.addIceCandidate(a)}),b.remoteInvoke(!0,t.method_id_RTCPeerConnection_t.onicecandidate,
-c.success)})["catch"](function(){h.logger.log(b.user_friendly_id()+".set_onicecandidate() failed.")})},enumerable:!0,configurable:!0}),b.prototype.convertIceConnectionState=function(a){return 0==a?"new":1==a?"checking":2==a?"connected":3==a?"completed":4==a?"failed":5==a?"disconnected":"closed"},Object.defineProperty(b.prototype,"oniceconnectionstatechange",{get:function(){return this.oniceconnectionstatechange_},set:function(a){var b=this;h.logger.log(this.user_friendly_id()+".set_oniceconnectionstatechange() called.");
-this.oniceconnectionstatechange_=a;this.waitUntilConnected(this.user_friendly_id()+".oniceconnectionstatechange").then(function(){var c=b.registerCallbacks(!1,b.isNullCallback(a),t.method_id_RTCPeerConnection_t.oniceconnectionstatechange);return c.then(function(a){h.logger.log(b.user_friendly_id()+".oniceconnectionstatechange(): success callback received!!!");b.iceConnectionState_=b.convertIceConnectionState(b.param0(a));a=new z("iceconnectionstatechange",b);b.oniceconnectionstatechange_(a)}),b.remoteInvoke(!0,
-t.method_id_RTCPeerConnection_t.oniceconnectionstatechange,c.success)})["catch"](function(){h.logger.log(b.user_friendly_id()+".set_oniceconnectionstatechange() failed.")})},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"iceConnectionState",{get:function(){return h.logger.log(this.user_friendly_id()+".get_iceConnectionState() called, value = "+this.iceConnectionState_),this.isRedirected()?this.iceConnectionState_:"failed"},enumerable:!0,configurable:!0}),b.prototype.convertIceGatheringState=
-function(a){return 0==a?"new":1==a?"gathering":"complete"},Object.defineProperty(b.prototype,"onicegatheringstatechange",{get:function(){return this.onicegatheringstatechange_},set:function(a){var b=this;h.logger.log(this.user_friendly_id()+".set_onicegatheringstatechange() called.");this.onicegatheringstatechange_=a;this.waitUntilConnected(this.user_friendly_id()+".onicegatheringstatechange").then(function(){var c=b.registerCallbacks(!1,b.isNullCallback(a),t.method_id_RTCPeerConnection_t.onicegatheringstatechange);
-return c.then(function(a){h.logger.log(b.user_friendly_id()+".onicegatheringstatechange(): callback received!!!");b.iceGatheringState_=b.convertIceGatheringState(b.param0(a));null!=b.iceQ_&&b.iceQ_.pushState(b.iceGatheringState_)}),b.remoteInvoke(!0,t.method_id_RTCPeerConnection_t.onicegatheringstatechange,c.success)})["catch"](function(){h.logger.log(b.user_friendly_id()+".set_onicegatheringstatechange() failed.")})},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"iceGatheringState",
-{get:function(){return h.logger.log(this.user_friendly_id()+".get_iceGatheringState() called, value = "+this.iceGatheringState_),this.iceGatheringState_},enumerable:!0,configurable:!0}),b.prototype.convertSignalState=function(a){return 0==a?"stable":1==a?"have-local-offer":2==a?"have-local-pranswer":3==a?"have-remote-offer":4==a?"have-remote-pranswer":"closed"},b.prototype.TelemtryReadings_=function(){if("have-local-offer"==this.signalingState_&&0==this.firsttimelocaloffer_&&0==this.firsttimeremoteoffer_&&
-(this.outgoingcallstart_=(new Date).getTime(),0==this.outgoingcall_&&(this.SendTelemetryData(u.tel_key_PerfCallState,u.tel_CallState.active,1),this.SendTelemetryData(u.tel_key_PerfCallDirection,u.tel_CallDirection.outgoing,1),this.outgoingcall_=!0),this.firsttimelocaloffer_=!0),"have-remote-offer"==this.signalingState_&&0==this.firsttimeremoteoffer_&&0==this.firsttimelocaloffer_&&(this.incomingcallstart_=(new Date).getTime(),0==this.incomingcall_&&(this.SendTelemetryData(u.tel_key_PerfCallState,u.tel_CallState.active,
-1),this.SendTelemetryData(u.tel_key_PerfCallDirection,u.tel_CallDirection.incoming,1),this.incomingcall_=!0),this.firsttimeremoteoffer_=!0),"stable"==this.signalingState_&&0==this.firststable_&&(this.callstartTime_=(new Date).getTime(),this.timeerstarted_=!0,this.firststable_=!0),"stable"==this.signalingState_){for(var a=0,b=this.localStreams;a<b.length;a++){var c=b[a];1<=c.getAudioTracks().length&&0==this.audiocall_.local&&(this.SendTelemetryData(u.tel_key_PerfCallType,u.tel_CallType.audio,1),this.audiocall_.local=
-!0);var h=c.getVideoTracks();if(1<=h.length)for(c=0;c<h.length;c++)1==h[c].getSettings().deviceId.includes("display")?0==this.screensharingcall_.local&&(this.SendTelemetryData(u.tel_key_PerfCallType,u.tel_CallType.dshare,1),this.screensharingcall_.local=!0):0==this.videocall_.local&&(this.SendTelemetryData(u.tel_key_PerfCallType,u.tel_CallType.video,1),this.videocall_.local=!0)}a=0;for(b=this.remoteStreams;a<b.length;a++)if(1<=(c=b[a]).getAudioTracks().length&&0==this.audiocall_.remote&&(this.SendTelemetryData(u.tel_key_PerfCallType,
-u.tel_CallType.audio,1),this.audiocall_.remote=!0),h=c.getVideoTracks(),1<=h.length)for(c=0;c<h.length;c++)1==h[c].id.includes("applicationsharingVideo")?0==this.screensharingcall_.remote&&(this.SendTelemetryData(u.tel_key_PerfCallType,u.tel_CallType.dshare,1),this.screensharingcall_.remote=!0):0==this.videocall_.remote&&(this.SendTelemetryData(u.tel_key_PerfCallType,u.tel_CallType.video,1),this.videocall_.remote=!0);2<this.getReceivers().length&&0==this.conferencecall_&&(this.SendTelemetryData(u.tel_key_PerfCallType,
-u.tel_CallType.multi,1),this.conferencecall_=!0)}},Object.defineProperty(b.prototype,"onsignalingstatechange",{set:function(a){var b=this;h.logger.log(this.user_friendly_id()+".set_onsignalingstatechange() called.");this.onsignalingstatechange_=a;this.waitUntilConnected(this.user_friendly_id()+".onsignalingstatechanged").then(function(){var c=b.registerCallbacks(!1,b.isNullCallback(a),t.method_id_RTCPeerConnection_t.onsignalingstatechange);return c.then(function(a){h.logger.log(b.user_friendly_id()+
-".onsignalingstatechange(): callback received!!!");b.signalingState_=b.convertSignalState(b.param0(a));a=new z("onsignalingstatechange",b);b.onsignalingstatechange_(a);b.TelemtryReadings_()}),b.remoteInvoke(!0,t.method_id_RTCPeerConnection_t.onsignalingstatechange,c.success)})["catch"](function(){h.logger.log(b.user_friendly_id()+".set_onsignalingstatechange(): failed.")})},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"onsignalingstatechanged",{get:function(){return this.onsignalingstatechange_},
-enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"ontrack",{get:function(){return this.ontrack_},set:function(a){var b=this;h.logger.log(this.user_friendly_id()+".set_ontrack() called.");this.ontrack_=a;this.waitUntilConnected(this.user_friendly_id()+".ontrack").then(function(){var c=b.registerCallbacks(!1,b.isNullCallback(a),t.method_id_RTCPeerConnection_t.ontrack);return c.then(function(a){return m(b,void 0,void 0,function(){var b,c,d,g,e,t,n,k,p;return q(this,function(m){switch(m.label){case 0:return h.logger.log(this.user_friendly_id()+
-".ontrack(): callback received!!!"),b=this.param0(a),void 0!==(c=this.receivers_.find(function(a){return!1===b.receiver.is_null&&a.object_id()===b.receiver.oid}))?[3,2]:[4,(c=new l.RtpReceiver(this,b.receiver.oid)).syncBarrier()];case 1:m.sent(),this.receivers_.push(c),m.label=2;case 2:return!1!==b.transceiver.is_null||null!==this.transceiver_&&this.transceiver_.object_id()==b.transceiver.oid?[3,4]:(this.transceiver_=new x.RtpTransceiver(this,b.transceiver.oid),[4,this.transceiver_.syncBarrier()]);
-case 3:m.sent(),m.label=4;case 4:d=[],g=function(a){var b;return q(this,function(c){switch(c.label){case 0:return void 0!==(b=e.remoteStreams.find(function(b){return!1===a.is_null&&b.object_id()===a.oid}))?[3,2]:[4,(b=new f.RemoteStream(e,a.oid)).syncBarrier()];case 1:c.sent(),c.label=2;case 2:return d.push(b),[2]}})},e=this,t=0,n=b.streams,m.label=5;case 5:return t<n.length?(k=n[t],[5,g(k)]):[3,8];case 6:m.sent(),m.label=7;case 7:return t++,[3,5];case 8:return this.remoteStreams=d,(p=new r).receiver=
-c,p.streams=this.remoteStreams,p.transceiver=this.transceiver_,p.track=c.track,h.logger.log(this.user_friendly_id()+".ontrack(): notified!!!"),this.ontrack_(p),[2]}})})}),b.remoteInvoke(!0,t.method_id_RTCPeerConnection_t.ontrack,c.success)})["catch"](function(){h.logger.log(b.user_friendly_id()+".set_ontrack(): failed.")})},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"signalingState",{get:function(){return h.logger.log(this.user_friendly_id()+".get_signalingState() called, value = "+
-this.signalingState_),this.signalingState_},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"onnegotiationneeded",{get:function(){return this.onnegotiationneeded_},set:function(a){var b=this;h.logger.log(this.user_friendly_id()+".set_onnegotiationneeded() called.");this.onnegotiationneeded_=a;this.waitUntilConnected(this.user_friendly_id()+".onnegotiationneeded").then(function(){var c=b.registerCallbacks(!1,b.isNullCallback(a),t.method_id_RTCPeerConnection_t.onnegotiationneeded);
-return c.then(function(){h.logger.log(b.user_friendly_id()+".onnegotiationneeded(): callback received!!!");var a=new z("negotiationneeded",b);b.onnegotiationneeded_(a)}),b.remoteInvoke(!0,t.method_id_RTCPeerConnection_t.onnegotiationneeded,c.success)})["catch"](function(){h.logger.log(b.user_friendly_id()+".set_onnegotiationneeded(): failed.")})},enumerable:!0,configurable:!0}),b.prototype.fix_constraints=function(a){var b={audio:!0,video:!0};return a&&(b.video=a.offerToReceiveVideo,b.audio=a.offerToReceiveAudio),
-b},b.prototype.createOffer=function(a,b,c){var f=this;h.logger.log(this.user_friendly_id()+".createOffer() called.",JSON.stringify(c));this.waitUntilConnected(this.user_friendly_id()+".createOffer").then(function(){var a=f.registerCallbacks(!0,!1,t.method_id_RTCPeerConnection_t.createOffer);return f.remoteInvoke(!1,t.method_id_RTCPeerConnection_t.createOffer,a.success,a.fail,f.fix_constraints(c)),a.prom()}).then(function(a){return h.logger.log(f.user_friendly_id()+".createOffer(): success callback received!!!"),
-(new E(f,f.param0(a).oid,n.ProxyMode.Remote)).syncBarrier()}).then(function(b){a&&a(b)})["catch"](function(){h.logger.log(f.user_friendly_id()+".createOffer() failed.");b&&b(new DOMException("PeerConnection.createOffer() failed.","PeerConnection"))})},b.prototype.createAnswer=function(a,b,c){var f=this;h.logger.log(this.user_friendly_id()+".createAnswer() called.",JSON.stringify(c));this.waitUntilConnected(this.user_friendly_id()+".createAnswer").then(function(){var a=f.registerCallbacks(!0,!1,t.method_id_RTCPeerConnection_t.createAnswer);
-return f.remoteInvoke(!1,t.method_id_RTCPeerConnection_t.createAnswer,a.success,a.fail,f.fix_constraints(c),{}),a.prom()}).then(function(a){return h.logger.log(f.user_friendly_id()+".createAnswer(): success callback received!!!"),(new E(f,f.param0(a).oid,n.ProxyMode.Remote)).syncBarrier()}).then(function(b){a&&a(b)})["catch"](function(){h.logger.log(f.user_friendly_id()+".createAnswer() failed.");b&&b("PeerConnection::createAnswer() failed.")})},b.prototype.updateLocalDescription=function(){return m(this,
-void 0,void 0,function(){var a,b,c=this;return q(this,function(f){switch(f.label){case 0:return h.logger.log(this.user_friendly_id()+".updateLocalDescription() called."),[4,this.remoteInvoke(!1,t.method_id_RTCPeerConnection_t.localDescription,{oid:this.object_id()})];case 1:return a=f.sent(),[4,(new E(this,this.param0(a).oid,n.ProxyMode.Remote)).syncBarrier()["catch"](function(){return h.logger.log(c.user_friendly_id()+"sdp.syncBarrier(): failed!"),null})];case 2:return b=f.sent(),this.localDescription=
-b,[2]}})})},b.prototype.setLocalDescription=function(a,b,c){var f=this;h.logger.log(this.user_friendly_id()+".setLocalDescription() called.");this.waitUntilConnected(this.user_friendly_id()+".setLocalDescription").then(function(){return(new E(f,0,n.ProxyMode.Local,{type:E.convertC2H(a.type),sdp:a.sdp})).syncBarrier()}).then(function(a){var c=f.registerCallbacks(!0,!1,t.method_id_RTCPeerConnection_t.setLocalDescription);f.remoteInvoke(!1,t.method_id_RTCPeerConnection_t.setLocalDescription,{oid:a.object_id()},
-c.success,c.fail);c.prom().then(function(){h.logger.log(f.user_friendly_id()+".setLocalDescription(): success callback received!!!");f.localDescription=a;b&&b()})})["catch"](function(){h.logger.log(f.user_friendly_id()+".setLocalDescription() failed.");c&&c("PeerConnection::setLocalDescription() failed.")})},b.prototype.setRemoteDescription=function(a,b,c){var f=this;h.logger.log(this.user_friendly_id()+".setRemoteDescription() called.");this.waitUntilConnected(this.user_friendly_id()+".setRemoteDescription").then(function(){return(new E(f,
-0,n.ProxyMode.Local,{type:E.convertC2H(a.type),sdp:a.sdp})).syncBarrier()}).then(function(a){var c=f.registerCallbacks(!0,!1,t.method_id_RTCPeerConnection_t.setRemoteDescription);f.remoteInvoke(!1,t.method_id_RTCPeerConnection_t.setRemoteDescription,{oid:a.object_id()},c.success,c.fail);c.prom().then(function(){h.logger.log(f.user_friendly_id()+".setRemoteDescription(): success callback received!!!");f.remoteDescription=a;b&&b();f.getSenders()})})["catch"](function(){h.logger.log(f.user_friendly_id()+
-".setRemoteDescription() failed.");c&&c("PeerConnection::setRemoteDescription() failed.")})},b.prototype.getLocalStreams=function(){h.logger.log("PeerConnection.getLocalStreams() called. [oid="+this.object_id()+"]");for(var a=0,b=this.localStreams;a<b.length;a++)h.logger.log(JSON.stringify(b[a]));return this.localStreams},b.prototype.getRemoteStreams=function(){h.logger.log(this.user_friendly_id()+".getRemoteStreams() called.");for(var a=0,b=this.remoteStreams;a<b.length;a++)h.logger.log(JSON.stringify(b[a]));
-return this.remoteStreams},b.prototype.addTrack=function(a,b){var c=this;h.logger.log(this.user_friendly_id()+".addTrack() called: "+JSON.stringify(b));var g=[];if(b instanceof f.RemoteStream)g.push(b.id);else for(var e=0;e<b.length;e++)g.push(b[e].id);var k=new l.RtpSender(this,0,n.ProxyMode.Pseudo);return this.senders_.push(k),this.waitUntilConnected(this.user_friendly_id()+".addTrack").then(function(){return c.remoteInvoke(!1,t.method_id_RTCPeerConnection_t.addTrack,{oid:a.object_id()},g)}).then(function(a){h.logger.log(c.user_friendly_id()+
-".addTrack() success with oid: "+c.param0(a).oid);k.bind(c,c.param0(a).oid);k.syncBarrier()["catch"](function(){h.logger.log(c.user_friendly_id()+"sender.syncBarrier(): failed!")})})["catch"](function(a){a=c.param0(a);h.logger.log(c.user_friendly_id()+".addTrack() failed with error: "+a)}),h.logger.log(this.user_friendly_id()+".addTrack() returning: "+k),k},b.prototype.removeTrack=function(a){var b=this;h.logger.log(this.user_friendly_id()+".removeTrack() called.");for(var c=0;c<this.senders_.length;c++)this.senders_[c]==
-a&&this.senders_.splice(c,1);this.waitUntilConnected(this.user_friendly_id()+".removeTrack").then(function(){return b.remoteInvoke(!1,t.method_id_RTCPeerConnection_t.removeTrack,{oid:a.object_id()})}).then(function(){h.logger.log(b.user_friendly_id()+".removeTrack() success.")})["catch"](function(){h.logger.log(b.user_friendly_id()+".removeTrack() failed.")})},b.prototype.addStream=function(a){var b=this;h.logger.log(this.user_friendly_id()+".addStream() called: "+JSON.stringify(a));a.dumpTrackInfo();
-this.localStreams.push(a);this.waitUntilConnected(this.user_friendly_id()+".addStream").then(function(){return b.remoteInvoke(!1,t.method_id_RTCPeerConnection_t.addStream,{oid:a.object_id()},{})}).then(function(){h.logger.log(b.user_friendly_id()+".addStream() success.")})["catch"](function(){h.logger.log(b.user_friendly_id()+".addStream() failed.")})},b.prototype.removeStream=function(a){var b=this;h.logger.log(this.user_friendly_id()+".removeStream() called: "+JSON.stringify(a));for(var c=0;c<this.localStreams.length;c++)this.localStreams[c]==
-a&&this.localStreams.splice(c,1);this.waitUntilConnected(this.user_friendly_id()+".removeStream").then(function(){return b.remoteInvoke(!1,t.method_id_RTCPeerConnection_t.removeStream,{oid:a.object_id()})}).then(function(){h.logger.log(b.user_friendly_id()+".removeStream() success.")})["catch"](function(){h.logger.log(b.user_friendly_id()+".removeStream() failed.")})},Object.defineProperty(b.prototype,"onaddstream",{get:function(){return this.onaddstream_},set:function(a){var b=this;h.logger.log(this.user_friendly_id()+
-".set_onaddstream() called.");this.onaddstream_=a;this.waitUntilConnected(this.user_friendly_id()+".onaddstream").then(function(){var c=b.registerCallbacks(!1,b.isNullCallback(a),t.method_id_RTCPeerConnection_t.onaddstream);return c.then(function(a){(new f.RemoteStreamEvent(b,b.param0(a).oid)).syncBarrier().then(function(a){h.logger.log(b.user_friendly_id()+".onaddstream callback received!");void 0===b.remoteStreams.find(function(b){return null!=a.stream&&b.object_id()===a.stream.object_id()})&&b.remoteStreams.push(a.stream);
-null!=b.onaddstream_&&b.onaddstream_(a)})}),b.remoteInvoke(!0,t.method_id_RTCPeerConnection_t.onaddstream,c.success)})["catch"](function(){h.logger.log(b.user_friendly_id()+".set_onaddstream(): failed!")})},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"onremovestream",{get:function(){return this.onremovestream_},set:function(a){var b=this;h.logger.log(this.user_friendly_id()+".set_onremovestream() called.");this.onremovestream_=a;this.waitUntilConnected(this.user_friendly_id()+
-".onremovestream").then(function(){var c=b.registerCallbacks(!1,b.isNullCallback(a),t.method_id_RTCPeerConnection_t.onremovestream);return c.then(function(a){(new f.RemoteStreamEvent(b,b.param0(a).oid)).syncBarrier().then(function(a){h.logger.log(b.user_friendly_id()+".onremovestream callback received!");var c=b.remoteStreams.findIndex(function(b){return b.id==a.stream.id});0<=c&&b.remoteStreams.splice(c,1);b.onremovestream_(a)})}),b.remoteInvoke(!0,t.method_id_RTCPeerConnection_t.onremovestream,
-c.success)})["catch"](function(){h.logger.log(b.user_friendly_id()+".set_onremovestream(): failed!")})},enumerable:!0,configurable:!0}),b.prototype.getStats=function(a){var b=this;return new Promise(function(c,f){b.isRedirected()?b.waitUntilConnected(b.user_friendly_id()+".getStats").then(function(){var h=b.registerCallbacks(!0,!1,t.method_id_RTCPeerConnection_t.getStats);return h.then(function(b){void 0!==b.params&&0!==b.params.length&&(a(C.StatsReport.fromJSON(JSON.parse(b.params[0]))),c())}),b.remoteInvoke(!1,
-t.method_id_RTCPeerConnection_t.getStats,h.success)})["catch"](function(){h.logger.log(b.user_friendly_id()+".getStats(): failed!");f()}):(h.logger.log(b.user_friendly_id()+".getStats(): not in active redirection!"),a({}),c())})},b.prototype.SendTelemetryData=function(a,b,c){p.getRedirector().telemetry.SendTelemetryData(u.tel_cmd.Data,a,b,c)},b.prototype.MillisecondstoDisplayformat_=function(a){var b,c,f;f=Math.floor(a/1E3);c=Math.floor(f/60);b=Math.floor(c/60);a=Math.floor(b/24);h.logger.log(a+":"+
-b%24+":"+c%60+":"+f%60)},b.prototype.CalculateCallDurationandType_=function(){if(1==this.timeerstarted_){this.timeerstarted_=!1;this.callendTime_=(new Date).getTime();var a,b=this.callendTime_-this.callstartTime_;this.MillisecondstoDisplayformat_(b);b=Math.round(b/1E3);h.logger.log("Call Duration "+b);1==this.conferencecall_?this.SendTelemetryData(u.tel_key_ConferenceCallDuration,b,1):(1==this.audiocall_.active&&this.SendTelemetryData(u.tel_key_AudioCallDuration,b,1),1==this.videocall_.active&&this.SendTelemetryData(u.tel_key_VideoCallDuration,
-b,1),1==this.screensharingcall_.active&&this.SendTelemetryData(u.tel_key_ScreensharingCallDuration,b,1));1==this.firsttimelocaloffer_&&(a=this.callstartTime_-this.outgoingcallstart_);1==this.firsttimeremoteoffer_&&(a=this.callstartTime_-this.incomingcallstart_);this.MillisecondstoDisplayformat_(a);a=Math.round(a/1E3);h.logger.log("Call Establish Time "+a);1==this.incomingcall_?this.SendTelemetryData(u.tel_key_CallEstIncoming,a,1):1==this.outgoingcall_&&this.SendTelemetryData(u.tel_key_CallEstOutgoing,
-a,1);this.SendTelemetryData(u.tel_key_PerfCallState,u.tel_CallState.idle,1)}},b.prototype.close=function(){var a=this;h.logger.log(this.user_friendly_id()+".close() called.");this.CalculateCallDurationandType_();this.unregisterStateChangeNotification(this.onStateChange);this.onnegotiationneeded=this.onsignalingstatechange=this.onicegatheringstatechange=this.oniceconnectionstatechange=this.onicecandidate=this.onaddstream=null;this.waitUntilConnected(this.user_friendly_id()+".close").then(function(){return a.remoteInvoke(!1,
-t.method_id_RTCPeerConnection_t.close)}).then(function(){a.iceQ_=null;a.release();h.logger.log(a.user_friendly_id()+".close() success.")})["catch"](function(){a.iceQ_=null;a.release();h.logger.log(a.user_friendly_id()+".close() failed.")})},b.prototype.createDTMFSender=function(a){var b;h.logger.log(this.user_friendly_id()+".createDTMFSender() called.");var c=this.senders_;if(void 0!==c&&0!==c.length||(c=this.getSenders()),null!=c)c=c.find(function(b){return b.track.id===a.id}),null!=c&&(h.logger.log(this.user_friendly_id()+
-" returning RtpSender with oid:"+c.object_id()),b=c.dtmf);return b},b.prototype.getSenders=function(){var a=this;return h.logger.log(this.user_friendly_id()+".getSenders() called."),this.waitUntilConnected(this.user_friendly_id()+".getSenders").then(function(){return a.remoteInvoke(!1,t.method_id_RTCPeerConnection_t.getSenders,[])}).then(function(b){var c=[];return b.params[0].forEach(function(b){var d=a.senders_.find(function(a){return a.object_id()===b.oid});void 0===d?(h.logger.log(a.user_friendly_id()+
-" adding a RtpSender with oid:"+b.oid),d=new l.RtpSender(a,b.oid,n.ProxyMode.Remote),c.push(d.syncBarrier())):c.push(d)}),Promise.all(c)}).then(function(b){h.logger.log(a.user_friendly_id()+".getSenders: returning senders with ids ["+b.map(function(a){return a.object_id()})+"]");a.senders_=b})["catch"](function(){h.logger.log(a.user_friendly_id()+".getSenders() didnt get response.");a.senders_=[]}),this.senders_},b.prototype.getReceivers=function(){var a=this;return h.logger.log(this.user_friendly_id()+
-".getReceivers() called."),this.waitUntilConnected(this.user_friendly_id()+".getReceivers").then(function(){return a.remoteInvoke(!1,t.method_id_RTCPeerConnection_t.getReceivers,[])}).then(function(b){var c=[];return b.params[0].forEach(function(b){var d=a.receivers_.find(function(a){return a.object_id()===b.oid});void 0===d?(h.logger.log(a.user_friendly_id()+" adding a RtpReceiver with oid:"+b.oid),d=new l.RtpReceiver(a,b.oid),c.push(d.syncBarrier())):c.push(d)}),Promise.all(c)}).then(function(b){h.logger.log(a.user_friendly_id()+
-".getReceivers: returning receiver with ids ["+b.map(function(a){return a.object_id()})+"]");a.receivers_=b})["catch"](function(){h.logger.log(a.user_friendly_id()+".getReceivers() didnt get response.");a.receivers_=[]}),this.receivers_},b}(n.ProxyObject);b.PeerConnection=a},function(a,b,c){var e,k=this&&this.__extends||(e=function(a,b){return(e=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(a,b){a.__proto__=b}||function(a,b){for(var c in b)b.hasOwnProperty(c)&&(a[c]=b[c])})(a,b)},
-function(a,b){function c(){this.constructor=a}e(a,b);a.prototype=null===b?Object.create(b):(c.prototype=b.prototype,new c)});Object.defineProperty(b,"__esModule",{value:!0});var m=c(3),q=c(1),p=c(0);a=function(a){function b(c,e){return a.call(this,c,q.class_id_t.RTCIceCandidate,e,m.ProxyMode.Remote)||this}return k(b,a),Object.defineProperty(b.prototype,"candidate",{get:function(){return this.candidate_},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"sdpMid",{get:function(){return this.sdpMid_},
-enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"sdpMLineIndex",{get:function(){return this.sdpMLineIndex_},enumerable:!0,configurable:!0}),b.prototype.syncBarrier=function(){var a=this;return p.logger.log(this.user_friendly_id()+".syncBarrier() called."),new Promise(function(b,c){a.waitUntilConnected("IceCandidate.syncBarrier").then(function(){return Promise.all([a.remoteInvoke(!1,q.method_id_RTCIceCandidate_t.candidate,""),a.remoteInvoke(!1,q.method_id_RTCIceCandidate_t.sdpMid,
-""),a.remoteInvoke(!1,q.method_id_RTCIceCandidate_t.sdpMLineIndex,0)])}).then(function(c){c=c.map(function(b){return a.param0(b)});a.candidate_=c[0];a.sdpMid_=c[1];a.sdpMLineIndex_=c[2];b(a)})["catch"](function(){c()})})},b}(m.ProxyObject);b.IceCandidate=a;a=function(a){function b(c,e){return a.call(this,c,q.class_id_t.RTCIceCandidatePair,e,m.ProxyMode.Remote)||this}return k(b,a),Object.defineProperty(b.prototype,"local",{get:function(){return this.local_},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,
-"remote",{get:function(){return this.remote_},enumerable:!0,configurable:!0}),b.prototype.syncBarrier=function(){var a=this;return p.logger.log(this.user_friendly_id()+".syncBarrier() called."),new Promise(function(b,c){a.waitUntilConnected("IceCandidatePair.syncBarrier").then(function(){return Promise.all([a.remoteInvoke(!1,q.method_id_RTCIceCandidatePair_t.local,{}),a.remoteInvoke(!1,q.method_id_RTCIceCandidatePair_t.remote,{})])}).then(function(c){c=c.map(function(b){return a.param0(b)});a.local_=
-c[0];a.remote_=c[1];b(a)})["catch"](function(){c()})})},b}(m.ProxyObject);b.IceCandidatePair=a},function(a,b,c){var e,k=this&&this.__extends||(e=function(a,b){return(e=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(a,b){a.__proto__=b}||function(a,b){for(var c in b)b.hasOwnProperty(c)&&(a[c]=b[c])})(a,b)},function(a,b){function c(){this.constructor=a}e(a,b);a.prototype=null===b?Object.create(b):(c.prototype=b.prototype,new c)}),m=this&&this.__awaiter||function(a,b,c,h){return new (c||
-(c=Promise))(function(f,e){function l(a){try{p(h.next(a))}catch(b){e(b)}}function k(a){try{p(h["throw"](a))}catch(b){e(b)}}function p(a){a.done?f(a.value):(new c(function(b){b(a.value)})).then(l,k)}p((h=h.apply(a,b||[])).next())})},q=this&&this.__generator||function(a,b){function c(l){return function(c){return function(c){if(h)throw new TypeError("Generator is already executing.");for(;k;)try{if(h=1,f&&(e=2&c[0]?f["return"]:c[0]?f["throw"]||((e=f["return"])&&e.call(f),0):f.next)&&!(e=e.call(f,c[1])).done)return e;
-switch(f=0,e&&(c=[2&c[0],e.value]),c[0]){case 0:case 1:e=c;break;case 4:return k.label++,{value:c[1],done:!1};case 5:k.label++;f=c[1];c=[0];continue;case 7:c=k.ops.pop();k.trys.pop();continue;default:if(!(e=k.trys,(e=0<e.length&&e[e.length-1])||6!==c[0]&&2!==c[0])){k=0;continue}if(3===c[0]&&(!e||c[1]>e[0]&&c[1]<e[3]))k.label=c[1];else if(6===c[0]&&k.label<e[1])k.label=e[1],e=c;else if(e&&k.label<e[2])k.label=e[2],k.ops.push(c);else{e[2]&&k.ops.pop();k.trys.pop();continue}}c=b.call(a,k)}catch(l){c=
-[6,l],f=0}finally{h=e=0}if(5&c[0])throw c[1];return{value:c[0]?c[1]:void 0,done:!0}}([l,c])}}var h,f,e,l,k={label:0,sent:function(){if(1&e[0])throw e[1];return e[1]},trys:[],ops:[]};$jscomp.initSymbol();$jscomp.initSymbol();$jscomp.initSymbolIterator();return l={next:c(0),"throw":c(1),"return":c(2)},"function"==typeof Symbol&&(l[Symbol.iterator]=function(){return this}),l};Object.defineProperty(b,"__esModule",{value:!0});var p=c(3),f=c(1),l=c(0),n=c(8);a=function(a){function b(c,h){var e=a.call(this,
-c,f.class_id_t.RTCRtpTransceiver,h,p.ProxyMode.Remote)||this;return l.logger.log(e.user_friendly_id()+".constructor"),e.sender_=null,e.receiver_=null,e}return k(b,a),b.prototype.syncBarrier=function(){return m(this,void 0,void 0,function(){var a,b,c,e,k,m,v,x,r=this;return q(this,function(q){switch(q.label){case 0:return l.logger.log(this.user_friendly_id()+".syncBarrier() called."),[4,Promise.all([this.remoteInvoke(!1,f.method_id_RTCRtpTransceiver_t.sender,{}),this.remoteInvoke(!1,f.method_id_RTCRtpTransceiver_t.receiver,
-{})])];case 1:return b=q.sent(),a=b.map(function(a){return r.param0(a)}),c=a[0],e=a[1],!1!==c.is_null||null!==this.sender_&&this.sender_.object_id()==c.oid?[3,3]:(k=new n.RtpSender(this,c.oid,p.ProxyMode.Remote),m=this,[4,k.syncBarrier()["catch"](function(){return l.logger.log(r.user_friendly_id()+"sender.syncBarrier(): failed!"),null})]);case 2:m.sender_=q.sent(),q.label=3;case 3:return!1!==e.is_null||null!==this.receiver_&&this.receiver_.object_id()==e.oid?[3,5]:(v=new n.RtpReceiver(this,e.oid),
-x=this,[4,v.syncBarrier()["catch"](function(){return l.logger.log(r.user_friendly_id()+"receiver.syncBarrier(): failed!"),null})]);case 4:x.receiver_=q.sent(),q.label=5;case 5:return[2,this]}})})},Object.defineProperty(b.prototype,"mid",{get:function(){return this.mid_},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"sender",{get:function(){return this.sender_},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"receiver",{get:function(){return this.receiver_},enumerable:!0,
-configurable:!0}),Object.defineProperty(b.prototype,"direction",{get:function(){return this.direction_},set:function(a){var b=this;l.logger.log(this.user_friendly_id()+".se_direction() called.");this.waitUntilConnected("RtpTransceiver.set_direction").then(function(){return b.remoteInvoke(!0,f.method_id_RTCRtpTransceiver_t.direction,b.toRtpDirection(a))}).then(function(){b.direction_=a})["catch"](function(){l.logger.log(b.user_friendly_id()+".set_direction: failed.")})},enumerable:!0,configurable:!0}),
-b.prototype.stop=function(){var a=this;l.logger.log(this.user_friendly_id()+".stop() called.");this.waitUntilConnected("RtpTransceiver.stop").then(function(){return a.remoteInvoke(!0,f.method_id_RTCRtpTransceiver_t.stop)}).then(function(){l.logger.log(a.user_friendly_id()+".stop: success.")})["catch"](function(){l.logger.log(a.user_friendly_id()+".stop: failed.")})},b.prototype.setCodecPreferences=function(a){var b=this;l.logger.log(this.user_friendly_id()+".setCodecPreferences() called.");this.waitUntilConnected("RtpTransceiver.setCodecPreferences").then(function(){return b.remoteInvoke(!0,
-f.method_id_RTCRtpTransceiver_t.setCodecPreferences,a)}).then(function(){l.logger.log(b.user_friendly_id()+".setCodecPreferences: success.")})["catch"](function(){l.logger.log(b.user_friendly_id()+".setCodecPreferences: failed.")})},b.prototype.toRTCRtpDirection=function(a){var b="inactive";return 0==a?b="sendrecv":1==a?b="sendonly":2==a?b="recvonly":3==a&&(b="inactive"),b},b.prototype.toRtpDirection=function(a){var b=3;return"sendrecv"==a?b=0:"sendonly"==a?b=1:"recvonly"==a?b=2:"inactive"==a&&(b=
-3),b},b}(p.ProxyObject);b.RtpTransceiver=a},function(a,b,c){var e,k=this&&this.__extends||(e=function(a,b){return(e=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(a,b){a.__proto__=b}||function(a,b){for(var c in b)b.hasOwnProperty(c)&&(a[c]=b[c])})(a,b)},function(a,b){function c(){this.constructor=a}e(a,b);a.prototype=null===b?Object.create(b):(c.prototype=b.prototype,new c)});Object.defineProperty(b,"__esModule",{value:!0});var m=c(3),q=c(1),p=c(0),f=c(2),l=c(1),n=function(a){this.x=
-Math.round(a.x);this.y=Math.round(a.y);this.width=Math.round(a.width);this.height=Math.round(a.height)};b.VideoRect=n;a=function(a){function b(){var c=a.call(this,null,q.class_id_t.VideoElement,0,m.ProxyMode.Local)||this;return c.srcObject_=null,c.sinkId_="",c.videoWidth=0,c.videoHeight=0,c.isLoaded=!1,c.connectionState="disconnected",c.dispose_=!1,c.disposeTimer=null,c}return k(b,a),Object.defineProperty(b.prototype,"sinkId",{get:function(){return this.sinkId_},set:function(a){var b=this;this.waitUntilConnected("VideoElement.sinkId").then(function(){return b.remoteInvoke(!0,
-q.method_id_VideoElement_t.sinkId,a)}).then(function(){b.sinkId_=a})["catch"](function(){p.logger.log(b.user_friendly_id()+".sinkId setter: failed to connect!")})},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"srcObject",{get:function(){return this.srcObject_},set:function(a){if(p.logger.log(this.user_friendly_id()+".srcObject: set srcObject... this.srcObject:"+this.srcObject+" obj:"+a),this.srcObject_!==a){!0===this.dispose_&&null!==this.disposeTimer&&(clearTimeout(this.disposeTimer),
-this.disposeTimer=null,this.dispose_=!1);var b=f.getRedirector().getFeatureValue(l.FEATURE_ms_teams_1911);null!==this.srcObject_&&(null===a&&(this.dispose_=!0,b&&this.disconnect()),b||this.disconnect(),this.isLoaded=!1);this.srcObject_=a;null!==this.srcObject_&&this.connectTo(this.srcObject_)}},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"onconnectionstatechange",{get:function(){return this.onconnectionstatechange_},set:function(a){p.logger.log(this.user_friendly_id()+".set_onconnectionstatechange() called.");
-this.onconnectionstatechange_=a},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"onloadedmetadata",{set:function(a){p.logger.log(this.user_friendly_id()+".set_onloadedmetadata() called.");this.onloadedmetadata_=a},enumerable:!0,configurable:!0}),b.prototype.setupOnVideoFrameChanged=function(){var a=this,b=this.registerCallbacks(!1,!1,q.method_id_VideoElement_t.onvideoframechanged);b.then(function(b){p.logger.log(a.user_friendly_id()+".onvideoframechanged",b.params);a.videoWidth=
-b.params[0]||0;a.videoHeight=b.params[1]||0;a.isLoaded||(a.isLoaded=!0,a.onloadedmetadata_&&a.onloadedmetadata_())});this.remoteInvoke(!0,q.method_id_VideoElement_t.onvideoframechanged,b.success)},b.prototype.connectTo=function(a){var b=this;console.log(this.user_friendly_id()+".connectTo: connect media stream with id = "+a.object_id()+", clone_id = "+a.clone_state.clone_id);this.waitUntilConnected("VideoElement.connectTo").then(function(){return b.setupOnVideoFrameChanged(),a.clone_state.synchronize(a)}).then(function(a){var c=
-b.registerCallbacks(!0,!1,q.method_id_VideoElement_t.connectTo);return Promise.all([b.remoteInvoke(!1,q.method_id_VideoElement_t.connectTo,{oid:a.object_id()},c.success,c.fail),c.prom()])}).then(function(a){p.logger.log(b.user_friendly_id()+".connectTo: remote media stream is connected!");b.connectionState="connected";b.onconnectionstatechange_&&b.onconnectionstatechange_();b.updateTimer=setInterval(function(){b.ontimeupdate&&b.ontimeupdate()},250)})["catch"](function(a){p.logger.log(b.user_friendly_id()+
-".connectTo: failed to connect! msg = ",a)})},b.prototype.disconnect=function(){var a=this;p.logger.log(this.user_friendly_id()+".disconnect: disconnect from current media stream");!0===this.dispose_&&(this.disposeTimer=setTimeout(function(){a.release()},5E3));this.waitUntilConnected("VideoElement.disconnect").then(function(){a.updateTimer&&clearInterval(a.updateTimer);var b=a.registerCallbacks(!1,!0,q.method_id_VideoElement_t.onvideoframechanged);return a.remoteInvoke(!0,q.method_id_VideoElement_t.onvideoframechanged,
-b.success),a.remoteInvoke(!1,q.method_id_VideoElement_t.disconnect)}).then(function(){p.logger.log(a.user_friendly_id()+".disconnect: remote media stream is disconnected!");a.connectionState="disconnected";a.onconnectionstatechange_&&a.onconnectionstatechange_()})["catch"](function(){p.logger.log(a.user_friendly_id()+".disconnect: failed to connect!")})},b.prototype.setFrame=function(a){var b=this;p.logger.log(this.user_friendly_id()+".setFrame: set video frame to",a.x,a.y,a.width,a.height);this.waitUntilConnected("VideoElement.setFrame").then(function(){var c=
-new n(a);return b.remoteInvoke(!1,q.method_id_VideoElement_t.setFrame,c)}).then(function(){p.logger.log(b.user_friendly_id()+".setFrame: success!")})["catch"](function(){p.logger.log(b.user_friendly_id()+".setFrame: failed to connect!")})},b.prototype.addClipRect=function(a){var b=this;p.logger.log(this.user_friendly_id()+".addClipRect: ",JSON.stringify(a));this.waitUntilConnected("VideoElement.addClipRect").then(function(){var c=new n(a);return b.remoteInvoke(!1,q.method_id_VideoElement_t.addClipRect,
-c)})["catch"](function(){p.logger.log(b.user_friendly_id()+".addClipRect failed!")})},b.prototype.removeClipRect=function(a){var b=this;p.logger.log(this.user_friendly_id()+".removeClipRect: ",JSON.stringify(a));this.waitUntilConnected("VideoElement.removeClipRect").then(function(){var c=new n(a);return b.remoteInvoke(!1,q.method_id_VideoElement_t.removeClipRect,c)})["catch"](function(){p.logger.log(b.user_friendly_id()+".removeClipRect failed!")})},b}(m.ProxyObject);b.VideoElement=a},function(a,
-b,c){var e,k=this&&this.__extends||(e=function(a,b){return(e=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(a,b){a.__proto__=b}||function(a,b){for(var c in b)b.hasOwnProperty(c)&&(a[c]=b[c])})(a,b)},function(a,b){function c(){this.constructor=a}e(a,b);a.prototype=null===b?Object.create(b):(c.prototype=b.prototype,new c)});Object.defineProperty(b,"__esModule",{value:!0});var m=c(3),q=c(1),p=c(0),f=c(2);a=function(a){function b(){var c=a.call(this,null,q.class_id_t.AudioElement,0,m.ProxyMode.Local)||
-this;return c.sinkId_="",c.srcObject_=null,c}return k(b,a),b.prototype.setSinkId=function(a){var b=this;return p.logger.log(this.user_friendly_id()+".setSinkId: set sinkId to "+a),new Promise(function(c,e){b.waitUntilConnected("AudioElement.sinkId").then(function(){var e=b.remoteInvoke(!0,q.method_id_AudioElement_t.sinkId,a);return f.getRedirector().getFeatureValue(q.FEATURE_ms_teams_pstn)||(b.sinkId_=a,c()),e}).then(function(){b.sinkId_=a;c()})["catch"](function(){p.logger.log(b.user_friendly_id()+
-".sinkId setter: failed to connect!");e()})})},b.prototype.sinkId=function(){return this.sinkId_},Object.defineProperty(b.prototype,"srcObject",{get:function(){return this.srcObject_},set:function(a){var b=this;if(p.logger.log(this.user_friendly_id()+".srcObject: set srcObject to "+JSON.stringify(a)),a!==this.srcObject_){var c=null!=a?a.object_id():"null";this.waitUntilConnected("AudioElement.srcObject").then(function(){return b.remoteInvoke(!0,q.method_id_AudioElement_t.srcObject,c)}).then(function(){b.srcObject_=
-a;null===a&&b.release()})["catch"](function(){p.logger.log(b.user_friendly_id()+".srcObject setter: failed to connect!");null===a&&b.release()})}},enumerable:!0,configurable:!0}),Object.defineProperty(b.prototype,"src",{get:function(){return this.src_},set:function(a){var b=this;p.logger.log(this.user_friendly_id()+".src: set src to "+a);this.src_=a;this.waitUntilConnected("AudioElement.src").then(function(){b.remoteInvoke(!0,q.method_id_AudioElement_t.src,a)})["catch"](function(){p.logger.log(b.user_friendly_id()+
-".src setter: failed to connect!")})},enumerable:!0,configurable:!0}),b.prototype.play=function(){var a=this;p.logger.log(this.user_friendly_id()+".play() called.");this.waitUntilConnected("AudioElement.play").then(function(){a.remoteInvoke(!1,q.method_id_AudioElement_t.play,[])})["catch"](function(){p.logger.log(a.user_friendly_id()+".play: failed to connect!")})},b.prototype.pause=function(){var a=this;p.logger.log(this.user_friendly_id()+".pause() called.");this.waitUntilConnected("AudioElement.pause").then(function(){a.remoteInvoke(!1,
-q.method_id_AudioElement_t.pause,[])})["catch"](function(){p.logger.log(a.user_friendly_id()+".pause: failed to connect!")})},b}(m.ProxyObject);b.AudioElement=a},function(a,b,c){Object.defineProperty(b,"__esModule",{value:!0});var e=c(0),k=c(2);a=function(){function a(){var b=this;this.running_=!1;this.elements_=[];this.clipRects=new Set;this.wheelEventHandler=function(a){setTimeout(function(){b.updateAll()},10)};this.keyupEventHandler=function(a){"Tab"!=a.code&&"ArrowUp"!=a.code&&"ArrowDown"!=a.code&&
-"ArrowLeft"!=a.code&&"ArrowRight"!=a.code&&"PageUp"!=a.code&&"PageDown"!=a.code&&"Home"!=a.code&&"End"!=a.code||b.updateAll()};a.sendOverlayInfo();this.observer_=new MutationObserver(function(a){b.updateAll()})}return a.sendOverlayInfo=function(){var a=window.getWindowHandleAsHex;if(null!=a){var b=k.getRedirector();Promise.all([a(),b.startRedirection(!1,"sendOverlayInfo")]).then(function(a){e.logger.log("FrameTracker.sendOverlayInfo: set window handle: "+a[0]);b.WSSendObject({v:"overlay",command:"window",
-windowHandle:a[0]})})}else e.logger.log("FrameTracker.sendOverlayInfo: getWindowHandle method is undefined or null")},a.prototype.rectanglesIntersect=function(a,b){return a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y},a.prototype.intersectingRect=function(a,b){var c=Math.max(a.left,b.left),e=Math.max(a.top,b.top);return new DOMRect(c,e,Math.min(a.right,b.right)-c,Math.min(a.bottom,b.bottom)-e)},a.prototype.pedigreeCount=function(a,b){for(var c=0,e=a.parentElement;null!=e&&e!=
-b;)c++,e=e.parentElement;return{isAncestor:null!=e,pedigree:c}},a.prototype.selectTopmost=function(a,b){var c=a.getBoundingClientRect(),e=b.getBoundingClientRect(),c=this.intersectingRect(c,e),e=document.elementFromPoint(c.left+c.width/2,c.top+c.height/2);if(e==a)return a;if(e==b)return b;c=this.pedigreeCount(a,e);e=this.pedigreeCount(b,e);if(c.isAncestor&&e.isAncestor){if(c.pedigree<e.pedigree)return a;if(e.pedigree<c.pedigree)return b}else{if(c.isAncestor)return a;if(e.isAncestor)return b}},a.prototype.checkOverlappingVideos=
-function(a){var b=this,c=a.target.getBoundingClientRect();a.overlaps.forEach(function(b){a.target.remoteVideoElement.removeClipRect(b.rect)});a.overlaps=[];this.elements_.forEach(function(e){if(e!=a){var k=e.overlaps.map(function(a){return a.element}).indexOf(a.target);-1!=k&&(k=e.overlaps.splice(k,1)[0],e.target.remoteVideoElement.removeClipRect(k.rect));k=e.target.getBoundingClientRect();if(b.rectanglesIntersect(c,k)){var m=b.selectTopmost(a.target,e.target);m==a.target?(e.overlaps.push({element:a.target,
-rect:c}),e.target.remoteVideoElement.addClipRect(c)):m==e.target&&(a.overlaps.push({element:e.target,rect:k}),a.target.remoteVideoElement.addClipRect(k))}}})},a.prototype.updateAll=function(){var a=this;this.elements_.forEach(function(b){var c=b.target.getBoundingClientRect();if(void 0!==c){var e=b.clientRect;void 0!==e&&e.x===c.x&&e.y===c.y&&e.width===c.width&&e.height===c.height||(b.clientRect=c,b.callback(c),a.checkOverlappingVideos(b))}})},a.prototype.track=function(a,b){var c=this,l=a.getBoundingClientRect();
-e.logger.log("Track element frame",a,JSON.stringify(l));console.log(a);this.elements_.push({target:a,clientRect:void 0,callback:b,overlaps:[]});try{e.logger.log("[HdxWebRTC.js] Initializing occlusion for new videoElement"),this.clipRects.forEach(function(b){c.applyOcclusion(a,JSON.parse(b))})}catch(k){e.logger.log("[HdxWebRTC.js] addOcclusionInit failed! "+k)}this.running_||(e.logger.log("Start FrameTracker observer..."),this.observer_.observe(document.body,{attributes:!0,childList:!0,subtree:!0}),
-window.addEventListener("wheel",this.wheelEventHandler),window.addEventListener("keyup",this.keyupEventHandler),this.running_=!0);this.updateAll()},a.prototype.untrack=function(a){e.logger.log("Untrack element frame",a);var b=-1;this.elements_.forEach(function(c,e){c.target!==a||(b=e)});0<=b&&(this.elements_.splice(b,1),0===this.elements_.length&&(e.logger.log("Stop FrameTracker observer..."),this.observer_.disconnect(),window.removeEventListener("wheel",this.wheelEventHandler),window.removeEventListener("keyup",
-this.keyupEventHandler),this.running_=!1))},a.prototype.applyOcclusion=function(a,b){var c=a.getBoundingClientRect();this.rectanglesIntersect(b,c)&&void 0!==a.remoteVideoElement&&a.remoteVideoElement.addClipRect(b)},a.prototype.addOcclusion=function(a){var b=this;e.logger.log("[HdxWebRTC.js] Adding occlusion "+JSON.stringify(a));e.logger.log("[HdxWebRTC.js] Tracking '"+this.elements_.length+"' elements.");this.clipRects.add(JSON.stringify(a));this.elements_.forEach(function(c){b.applyOcclusion(c.target,
-a)})},a.prototype.removeOcclusion=function(a){e.logger.log("[HdxWebRTC.js] Removing occlusion "+JSON.stringify(a));e.logger.log("[HdxWebRTC.js] Tracking '"+this.elements_.length+"' elements.");this.clipRects["delete"](JSON.stringify(a));this.elements_.forEach(function(b){void 0!==b.target.remoteVideoElement&&b.target.remoteVideoElement.removeClipRect(a)})},a}();b.FrameTracker=a},function(a,b,c){Object.defineProperty(b,"__esModule",{value:!0});var e,k=c(2),m=c(1),q=c(18),p=c(0),f=c(1),l=c(4);!function(a){a[a.Unknown=
-0]="Unknown";a[a.Windows=1]="Windows";a[a.Linux=2]="Linux"}(e=b.RemoteType||(b.RemoteType={}));var n=function(){};b.SessionInfo=n;a=function(){function a(){var b=this;this.isremote_=!1;this.isremote_=!0;this.type_=e.Windows;this.address_="0.0.0.0";this.sessioninfo_=null;k.getRedirector().setRemoteSessionInfoCb(function(){return b.remoteSessionInfo()});this.enginecontrol_=new q.EngineControl}return a.prototype.release=function(){k.getRedirector().setRemoteSessionInfoCb(null)},a.prototype.user_friendly_id=
-function(){return"[RemoteSession]"},a.prototype.getFeatureFlags=function(){var a={};return null!==this.enginecontrol_&&null!==this.enginecontrol_.features_&&void 0!==this.enginecontrol_.features_&&this.enginecontrol_.features_.forEach(function(b){a[b.name]=b.value}),a},a.prototype.isFeatureSupported=function(a){if("video"===a)return!0;if(!(a in f.featureNameMap))return!1;a=f.featureNameMap[a];for(var b=this.getFeatureFlags(),c=0;c<a.length;c++)if(!(a[c]in b)||!0!==b[a[c]])return!1;return!0},a.prototype.isFeaturePstnSupported=
-function(){return this.isFeatureSupported(m.FEATURE_public_pstn)},a.prototype.getSessionInfo=function(){return p.logger.log(this.user_friendly_id()+".getSessionInfo() called."),null!=this.sessioninfo_?Promise.resolve(this.sessioninfo_):Promise.reject()},a.prototype.remoteSessionInfo=function(){var a=this;return p.logger.log(a.user_friendly_id()+".remoteSessionInfo() called."),new Promise(function(b,c){a.enginecontrol_.syncBarrier().then(function(c){p.logger.log(a.user_friendly_id()+"enginecontrol info received!");
-a.sessioninfo_=new n;a.sessioninfo_.type_script=m.HDXMS_VERSION;if(a.sessioninfo_.webrpc=c.version_.major.toString()+"."+c.version_.minor.toString()+"."+c.version_.revision.toString()+"."+c.version_.build.toString(),null!=c.versions_&&null!=c.versions_){a.SendTelemetryData(l.tel_key_VerTypeScript,m.HDXMS_VERSION,1);for(var e=0,f=0,h=c.versions_;f<h.length;f++){var k=h[f],k=k.major.toString()+"."+k.minor.toString()+"."+k.revision.toString()+"."+k.build.toString();switch(e){case q.VersionType.Webrpc:a.sessioninfo_.webrpc=
-k;a.SendTelemetryData(l.tel_key_VerWebrpc,k,1);break;case q.VersionType.WebrtcCodecs:a.sessioninfo_.webrtc_codecs=k;a.SendTelemetryData(l.tel_key_VerWebrtcCodecs,k,1);break;case q.VersionType.Receiver:a.sessioninfo_.receiver=k;a.SendTelemetryData(l.tel_key_VerReceiver,k,1);break;case q.VersionType.Vda:a.sessioninfo_.vda=k;a.SendTelemetryData(l.tel_key_VerVda,k,1);break;case q.VersionType.Endpoint:a.sessioninfo_.endpoint=k;a.SendTelemetryData(l.tel_key_VerEndpoint,k,1);break;default:p.logger.log(a.user_friendly_id()+
-"Unknown version type!")}e++}}null!=c.osinfo_&&null!=c.osinfo_&&(a.sessioninfo_.osinfo=c.osinfo_,a.SendTelemetryData(l.tel_key_OSFamily,c.osinfo_.family,1),a.SendTelemetryData(l.tel_key_OSVersion,c.osinfo_.version,1),a.SendTelemetryData(l.tel_key_OSArchitecture,c.osinfo_.architecture,1),a.SendTelemetryData(l.tel_key_OSDistro,c.osinfo_.distro,1),a.SendTelemetryData(l.tel_key_OSEdition,c.osinfo_.edition,1));b(a.sessioninfo_);a.enginecontrol_.release()})["catch"](function(){k.getRedirector().isPingActive()?
-a.retrySessionInfo():(c(),a.enginecontrol_.release(),a.enginecontrol_=null)})})},a.prototype.retrySessionInfo=function(){var a=this;setTimeout(function(){p.logger.log("checking if we are connected...");a.enginecontrol_.bind();k.getRedirector().handleRemoteSessionInfo()},15E3)},a.prototype.SendTelemetryData=function(a,b,c){k.getRedirector().telemetry.SendTelemetryData(l.tel_cmd.Data,a,b,c)},a}();b.RemoteSession=a},function(a,b,c){var e,k=this&&this.__extends||(e=function(a,b){return(e=Object.setPrototypeOf||
-{__proto__:[]}instanceof Array&&function(a,b){a.__proto__=b}||function(a,b){for(var c in b)b.hasOwnProperty(c)&&(a[c]=b[c])})(a,b)},function(a,b){function c(){this.constructor=a}e(a,b);a.prototype=null===b?Object.create(b):(c.prototype=b.prototype,new c)});Object.defineProperty(b,"__esModule",{value:!0});var m=c(1),q=c(2),p=c(3),f=c(0);!function(a){a[a.Webrpc=0]="Webrpc";a[a.WebrtcCodecs=1]="WebrtcCodecs";a[a.Receiver=2]="Receiver";a[a.Vda=3]="Vda";a[a.Endpoint=4]="Endpoint";a[a.TypeScript=5]="TypeScript";
-a[a.Max=6]="Max"}(b.VersionType||(b.VersionType={}));a=function(a){function b(){return a.call(this,null,m.class_id_t.EngineControl,0,p.ProxyMode.Local)||this}return k(b,a),b.prototype.bind=function(){f.logger.log(this.user_friendly_id()+".bind() called.");this.reconstructor(null,m.class_id_t.EngineControl,0)},b.prototype.syncBarrier=function(){var a=this;return f.logger.log(this.user_friendly_id()+".syncBarrier() called."),new Promise(function(b,c){a.waitUntilConnected("EngineControl.syncBarrier").then(function(){return Promise.all([a.remoteInvoke(!1,
-m.method_id_EngineControl_t.version,{major:0,minor:0,revision:0,build:0}),a.remoteInvoke(!1,m.method_id_EngineControl_t.feature_flags,[])])}).then(function(b){f.logger.log(a.user_friendly_id()+"received webrpc version and supported feature list.");b=b.map(function(b){return a.param0(b)});a.version_=b[0];a.features_=b[1];q.getRedirector().setFeatures(a.features_);for(var c=b=!1,e=0,k=a.features_;e<k.length;e++){var l=k[e];"ms_teams_desktop_sharing"===l.name&&!0===l.value?b=!0:"ms_teams_osinfo"===l.name&&
-!0===l.value&&(c=!0)}return c&&b?Promise.all([a.remoteInvoke(!1,m.method_id_EngineControl_t.version_info,[]),a.remoteInvoke(!1,m.method_id_EngineControl_t.osinfo,{family:"",version:"",architecture:"",distro:"",edition:""})]):b?Promise.all([a.remoteInvoke(!1,m.method_id_EngineControl_t.version_info,[])]):void 0}).then(function(c){var e;void 0===c?f.logger.log(a.user_friendly_id()+"release-1905 client."):1<c.length?(e=c.map(function(b){return a.param0(b)}),a.versions_=e[0],a.osinfo_=e[1]):(f.logger.log(a.user_friendly_id()+
-"release-1906 or later client: received detailed client version list."),a.versions_=c.map(function(b){return a.param0(b)})[0]);b(a)})["catch"](function(){f.logger.log(a.user_friendly_id()+"failure to retrieve version/feature related client info.");c()})})},b}(p.ProxyObject);b.EngineControl=a}])});
+Object.defineProperty(exports,"__esModule",{value:!0});
+var Logger=function(){function c(a){this.tracing=!1;this.mslogger_=void 0;this.tag=a;this.enabled=!0}c.prototype.setMSLogger=function(a){this.mslogger_=a};c.prototype.log=function(){for(var a=[],b=0;b<arguments.length;b++)a[b]=arguments[b];this.enabled&&(void 0!=this.mslogger_?this.mslogger_.info(this.tag+" "+a):console.log(this.tag+" "+a))};c.prototype.trace=function(){for(var a=[],b=0;b<arguments.length;b++)a[b]=arguments[b];this.tracing&&this.log.apply(this,a)};return c}();exports.Logger=Logger;
+exports.logger=new Logger("[HdxWebRTC.js]");exports.logger.enabled=!0;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(1)))
 
 /***/ }),
 /* 1 */
+/***/ (function(module, exports) {
+
+Object.defineProperty(exports, "__esModule", {value: !0});
+exports.HDXMS_VERSION = "1.2.0.2";
+var VersionData = function () {
+    return function (a, e, c, b) {
+        this.major = a;
+        this.minor = e;
+        this.revision = c;
+        this.build = b
+    }
+}();
+exports.VersionData = VersionData;
+var FeatureData = function () {
+    return function () {
+    }
+}();
+exports.FeatureData = FeatureData;
+var WebrpcFeatureInfo = function () {
+        return function (a, e) {
+            this.fature = a;
+            this.version = e
+        }
+    }(), FEATURE_ms_teams_redirection = "ms_teams_redirection",
+    FEATURE_ms_teams_desktop_sharing = "ms_teams_desktop_sharing",
+    FEATURE_ms_teams_speaking_indicator = "ms_teams_speaking_indicator",
+    feature_map = [new WebrpcFeatureInfo(FEATURE_ms_teams_redirection, new VersionData(1, 1, 0, 0)), new WebrpcFeatureInfo(FEATURE_ms_teams_desktop_sharing, new VersionData(1, 2, 0, 0)), new WebrpcFeatureInfo(FEATURE_ms_teams_speaking_indicator, new VersionData(1,
+        2, 0, 0))], class_id_t;
+(function (a) {
+    a[a.EngineControl = 0] = "EngineControl";
+    a[a.RTCPeerConnection = 1] = "RTCPeerConnection";
+    a[a.RTCSessionDescription = 2] = "RTCSessionDescription";
+    a[a.RTCIceCandidate = 3] = "RTCIceCandidate";
+    a[a.RTCIceCandidateEvent = 4] = "RTCIceCandidateEvent";
+    a[a.MediaDevices = 5] = "MediaDevices";
+    a[a.MediaDeviceInfo = 6] = "MediaDeviceInfo";
+    a[a.MediaStreamTrack = 7] = "MediaStreamTrack";
+    a[a.MediaStreamEvent = 8] = "MediaStreamEvent";
+    a[a.MediaStream = 9] = "MediaStream";
+    a[a.NavigatorUserMedia = 10] = "NavigatorUserMedia";
+    a[a.VideoElement = 11] =
+        "VideoElement";
+    a[a.AudioElement = 12] = "AudioElement";
+    a[a.RTCRtpReceiver = 13] = "RTCRtpReceiver"
+})(class_id_t = exports.class_id_t || (exports.class_id_t = {}));
+var method_id_EngineControl_t;
+(function (a) {
+    a[a.ctor = 0] = "ctor";
+    a[a.version = 1] = "version";
+    a[a.feature_flags = 2] = "feature_flags";
+    a[a.version_info = 3] = "version_info"
+})(method_id_EngineControl_t = exports.method_id_EngineControl_t || (exports.method_id_EngineControl_t = {}));
+var method_id_RTCPeerConnection_t;
+(function (a) {
+    a[a.ctor = 0] = "ctor";
+    a[a.localDescription = 1] = "localDescription";
+    a[a.remoteDescription = 2] = "remoteDescription";
+    a[a.readyState = 3] = "readyState";
+    a[a.iceState = 4] = "iceState";
+    a[a.localStreams = 5] = "localStreams";
+    a[a.remoteStreams = 6] = "remoteStreams";
+    a[a.createOffer = 7] = "createOffer";
+    a[a.createAnswer = 8] = "createAnswer";
+    a[a.setLocalDescription = 9] = "setLocalDescription";
+    a[a.setRemoteDescription = 10] = "setRemoteDescription";
+    a[a.updateIce = 11] = "updateIce";
+    a[a.addIceCandidate = 12] = "addIceCandidate";
+    a[a.addStream =
+        13] = "addStream";
+    a[a.removeStream = 14] = "removeStream";
+    a[a.close = 15] = "close";
+    a[a.iceConnectionState = 16] = "iceConnectionState";
+    a[a.iceGatheringState = 17] = "iceGatheringState";
+    a[a.signalingState = 18] = "signalingState";
+    a[a.onaddstream = 19] = "onaddstream";
+    a[a.onicecandidate = 20] = "onicecandidate";
+    a[a.oniceconnectionstatechange = 21] = "oniceconnectionstatechange";
+    a[a.onicegatheringstatechange = 22] = "onicegatheringstatechange";
+    a[a.onsignalingstatechange = 23] = "onsignalingstatechange";
+    a[a.onnegotiationneeded = 24] = "onnegotiationneeded";
+    a[a.onremovestream = 25] = "onremovestream";
+    a[a.getStats = 26] = "getStats";
+    a[a.getReceivers = 27] = "getReceivers"
+})(method_id_RTCPeerConnection_t = exports.method_id_RTCPeerConnection_t || (exports.method_id_RTCPeerConnection_t = {}));
+var method_id_MediaDevices_t;
+(function (a) {
+    a[a.ctor = 0] = "ctor";
+    a[a.enumerateDevices = 1] = "enumerateDevices";
+    a[a.getDisplayMedia = 2] = "getDisplayMedia";
+    a[a.ondevicechange = 3] = "ondevicechange"
+})(method_id_MediaDevices_t = exports.method_id_MediaDevices_t || (exports.method_id_MediaDevices_t = {}));
+var method_id_MediaDeviceInfo_t;
+(function (a) {
+    a[a.ctor = 0] = "ctor";
+    a[a.deviceId = 1] = "deviceId";
+    a[a.kind = 2] = "kind";
+    a[a.label = 3] = "label";
+    a[a.groupId = 4] = "groupId"
+})(method_id_MediaDeviceInfo_t = exports.method_id_MediaDeviceInfo_t || (exports.method_id_MediaDeviceInfo_t = {}));
+var method_id_RTCSessionDescription_t;
+(function (a) {
+    a[a.ctor = 0] = "ctor";
+    a[a.type = 1] = "type";
+    a[a.sdp = 2] = "sdp"
+})(method_id_RTCSessionDescription_t = exports.method_id_RTCSessionDescription_t || (exports.method_id_RTCSessionDescription_t = {}));
+var method_id_MediaStreamTrack_t;
+(function (a) {
+    a[a.ctor = 0] = "ctor";
+    a[a.kind = 1] = "kind";
+    a[a.id = 2] = "id";
+    a[a.label = 3] = "label";
+    a[a.enabled = 4] = "enabled";
+    a[a.muted = 5] = "muted";
+    a[a.readyState = 6] = "readyState";
+    a[a.onended = 7] = "onended";
+    a[a.onmute = 8] = "onmute";
+    a[a.onunmute = 9] = "onunmute";
+    a[a.clone = 10] = "clone";
+    a[a.stop = 11] = "stop";
+    a[a.getCapabilities = 12] = "getCapabilities";
+    a[a.getSettings = 13] = "getSettings";
+    a[a.applyConstraints = 14] = "applyConstraints"
+})(method_id_MediaStreamTrack_t = exports.method_id_MediaStreamTrack_t || (exports.method_id_MediaStreamTrack_t =
+    {}));
+var method_id_MediaStream_t;
+(function (a) {
+    a[a.ctor = 0] = "ctor";
+    a[a.id = 1] = "id";
+    a[a.getAudioTracks = 2] = "getAudioTracks";
+    a[a.getVideoTracks = 3] = "getVideoTracks";
+    a[a.getTracks = 4] = "getTracks";
+    a[a.getTrackById = 5] = "getTrackById";
+    a[a.addTrack = 6] = "addTrack";
+    a[a.removeTrack = 7] = "removeTrack";
+    a[a.clone = 8] = "clone";
+    a[a.active = 9] = "active"
+})(method_id_MediaStream_t = exports.method_id_MediaStream_t || (exports.method_id_MediaStream_t = {}));
+var method_id_NavigatorUserMedia_t;
+(function (a) {
+    a[a.ctor = 0] = "ctor";
+    a[a.getUserMedia = 1] = "getUserMedia"
+})(method_id_NavigatorUserMedia_t = exports.method_id_NavigatorUserMedia_t || (exports.method_id_NavigatorUserMedia_t = {}));
+var method_id_RTCIceCandidate_t;
+(function (a) {
+    a[a.ctor = 0] = "ctor";
+    a[a.candidate = 1] = "candidate";
+    a[a.sdpMid = 2] = "sdpMid";
+    a[a.sdpMLineIndex = 3] = "sdpMLineIndex"
+})(method_id_RTCIceCandidate_t = exports.method_id_RTCIceCandidate_t || (exports.method_id_RTCIceCandidate_t = {}));
+var method_id_RTCIceCandidateEvent_t;
+(function (a) {
+    a[a.ctor = 0] = "ctor";
+    a[a.candidate = 1] = "candidate"
+})(method_id_RTCIceCandidateEvent_t = exports.method_id_RTCIceCandidateEvent_t || (exports.method_id_RTCIceCandidateEvent_t = {}));
+var method_id_MediaStreamEvent_t;
+(function (a) {
+    a[a.ctor = 0] = "ctor";
+    a[a.stream = 1] = "stream"
+})(method_id_MediaStreamEvent_t = exports.method_id_MediaStreamEvent_t || (exports.method_id_MediaStreamEvent_t = {}));
+var method_id_VideoElement_t;
+(function (a) {
+    a[a.ctor = 0] = "ctor";
+    a[a.sinkId = 1] = "sinkId";
+    a[a.connectTo = 2] = "connectTo";
+    a[a.disconnect = 3] = "disconnect";
+    a[a.setFrame = 4] = "setFrame";
+    a[a.addClipRect = 5] = "addClipRect";
+    a[a.removeClipRect = 6] = "removeClipRect";
+    a[a.onerror = 7] = "onerror";
+    a[a.onvideoframechanged = 8] = "onvideoframechanged"
+})(method_id_VideoElement_t = exports.method_id_VideoElement_t || (exports.method_id_VideoElement_t = {}));
+var method_id_AudioElement_t;
+(function (a) {
+    a[a.ctor = 0] = "ctor";
+    a[a.sinkId = 1] = "sinkId";
+    a[a.srcObject = 2] = "srcObject";
+    a[a.src = 3] = "src";
+    a[a.play = 4] = "play";
+    a[a.pause = 5] = "pause"
+})(method_id_AudioElement_t = exports.method_id_AudioElement_t || (exports.method_id_AudioElement_t = {}));
+var method_id_RTCRtpReceiver_t;
+(function (a) {
+    a[a.ctor = 0] = "ctor";
+    a[a.track = 1] = "track";
+    a[a.getContributingSources = 2] = "getContributingSources"
+})(method_id_RTCRtpReceiver_t = exports.method_id_RTCRtpReceiver_t || (exports.method_id_RTCRtpReceiver_t = {}));
+var WebrpcMethodInfo = function () {
+    return function (a, e, c, b, d) {
+        void 0 === d && (d = FEATURE_ms_teams_redirection);
+        this.iid = a;
+        this.mid = e;
+        this.name = c;
+        this.isprop = b;
+        this.feature = d
+    }
+}();
+exports.WebrpcMethodInfo = WebrpcMethodInfo;
+var WebrpcClassInfo = function () {
+    return function (a, e, c) {
+        this.id = a;
+        this.name = e;
+        this.methods = c
+    }
+}();
+exports.WebrpcClassInfo = WebrpcClassInfo;
+var WebrpcClassLibInfo = function () {
+        return function (a, e) {
+            this.name = a;
+            this.classes = e
+        }
+    }(),
+    class_lib_info = new WebrpcClassLibInfo("msteams_class_library", [new WebrpcClassInfo(class_id_t.EngineControl, "EngineControl", [new WebrpcMethodInfo(class_id_t.EngineControl, method_id_EngineControl_t.ctor, "ctor", !1), new WebrpcMethodInfo(class_id_t.EngineControl, method_id_EngineControl_t.version, "version", !0), new WebrpcMethodInfo(class_id_t.EngineControl, method_id_EngineControl_t.feature_flags, "feature_flags", !0), new WebrpcMethodInfo(class_id_t.EngineControl,
+        method_id_EngineControl_t.version_info, "version_info", !0, FEATURE_ms_teams_desktop_sharing)]), new WebrpcClassInfo(class_id_t.RTCPeerConnection, "RTCPeerConnection", [new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.ctor, "ctor", !1), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.localDescription, "localDescription", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.remoteDescription, "remoteDescription", !0),
+        new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.readyState, "readyState", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.iceState, "iceState", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.localStreams, "localStreams", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.remoteStreams, "remoteStreams", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.createOffer,
+            "createOffer", !1), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.createAnswer, "createAnswer", !1), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.setLocalDescription, "setLocalDescription", !1), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.setRemoteDescription, "setRemoteDescription", !1), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.updateIce, "updateIce", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection,
+            method_id_RTCPeerConnection_t.addIceCandidate, "addIceCandidate", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.addStream, "addStream", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.removeStream, "removeStream", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.close, "close", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.iceConnectionState, "iceConnectionState",
+            !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.iceGatheringState, "iceGatheringState", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.signalingState, "signalingState", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.onaddstream, "onaddstream", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.onicecandidate, "onicecandidate", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection,
+            method_id_RTCPeerConnection_t.oniceconnectionstatechange, "oniceconnectionstatechange", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.onicegatheringstatechange, "onicegatheringstatechange", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.onsignalingstatechange, "onsignalingstatechange", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.onnegotiationneeded, "onnegotiationneeded", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection,
+            method_id_RTCPeerConnection_t.onremovestream, "onremovestream", !0), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.getStats, "getStats", !1), new WebrpcMethodInfo(class_id_t.RTCPeerConnection, method_id_RTCPeerConnection_t.getReceivers, "getReceivers", !1, FEATURE_ms_teams_speaking_indicator)]), new WebrpcClassInfo(class_id_t.RTCSessionDescription, "RTCSessionDescription", [new WebrpcMethodInfo(class_id_t.RTCSessionDescription, method_id_RTCSessionDescription_t.ctor, "ctor", !1),
+        new WebrpcMethodInfo(class_id_t.RTCSessionDescription, method_id_RTCSessionDescription_t.type, "type", !0), new WebrpcMethodInfo(class_id_t.RTCSessionDescription, method_id_RTCSessionDescription_t.sdp, "sdp", !0)]), new WebrpcClassInfo(class_id_t.RTCIceCandidate, "RTCIceCandidate", [new WebrpcMethodInfo(class_id_t.RTCIceCandidate, method_id_RTCIceCandidate_t.ctor, "ctor", !1), new WebrpcMethodInfo(class_id_t.RTCIceCandidate, method_id_RTCIceCandidate_t.candidate, "candidate", !0), new WebrpcMethodInfo(class_id_t.RTCIceCandidate,
+        method_id_RTCIceCandidate_t.sdpMid, "sdpMid", !0), new WebrpcMethodInfo(class_id_t.RTCIceCandidate, method_id_RTCIceCandidate_t.sdpMLineIndex, "sdpMLineIndex", !0)]), new WebrpcClassInfo(class_id_t.RTCIceCandidateEvent, "RTCIceCandidateEvent", [new WebrpcMethodInfo(class_id_t.RTCIceCandidateEvent, method_id_RTCIceCandidateEvent_t.ctor, "ctor", !1), new WebrpcMethodInfo(class_id_t.RTCIceCandidateEvent, method_id_RTCIceCandidateEvent_t.candidate, "candidate", !0)]), new WebrpcClassInfo(class_id_t.MediaDevices, "MediaDevices",
+        [new WebrpcMethodInfo(class_id_t.MediaDevices, method_id_MediaDevices_t.ctor, "ctor", !1), new WebrpcMethodInfo(class_id_t.MediaDevices, method_id_MediaDevices_t.enumerateDevices, "enumerateDevices", !1), new WebrpcMethodInfo(class_id_t.MediaDevices, method_id_MediaDevices_t.getDisplayMedia, "getDisplayMedia", !1, FEATURE_ms_teams_desktop_sharing), new WebrpcMethodInfo(class_id_t.MediaDevices, method_id_MediaDevices_t.ondevicechange, "ondevicechange", !0, FEATURE_ms_teams_speaking_indicator)]), new WebrpcClassInfo(class_id_t.MediaDeviceInfo,
+        "MediaDeviceInfo", [new WebrpcMethodInfo(class_id_t.MediaDeviceInfo, method_id_MediaDeviceInfo_t.ctor, "ctor", !1), new WebrpcMethodInfo(class_id_t.MediaDeviceInfo, method_id_MediaDeviceInfo_t.deviceId, "deviceId", !0), new WebrpcMethodInfo(class_id_t.MediaDeviceInfo, method_id_MediaDeviceInfo_t.kind, "kind", !0), new WebrpcMethodInfo(class_id_t.MediaDeviceInfo, method_id_MediaDeviceInfo_t.label, "label", !0), new WebrpcMethodInfo(class_id_t.MediaDeviceInfo, method_id_MediaDeviceInfo_t.groupId, "groupId", !0)]), new WebrpcClassInfo(class_id_t.MediaStreamTrack,
+        "MediaStreamTrack", [new WebrpcMethodInfo(class_id_t.MediaStreamTrack, method_id_MediaStreamTrack_t.ctor, "ctor", !1), new WebrpcMethodInfo(class_id_t.MediaStreamTrack, method_id_MediaStreamTrack_t.clone, "clone", !1), new WebrpcMethodInfo(class_id_t.MediaStreamTrack, method_id_MediaStreamTrack_t.stop, "stop", !1), new WebrpcMethodInfo(class_id_t.MediaStreamTrack, method_id_MediaStreamTrack_t.getCapabilities, "getCapabilities", !1), new WebrpcMethodInfo(class_id_t.MediaStreamTrack, method_id_MediaStreamTrack_t.getSettings,
+            "getSettings", !1), new WebrpcMethodInfo(class_id_t.MediaStreamTrack, method_id_MediaStreamTrack_t.applyConstraints, "applyConstraints", !1, FEATURE_ms_teams_desktop_sharing), new WebrpcMethodInfo(class_id_t.MediaStreamTrack, method_id_MediaStreamTrack_t.kind, "kind", !0), new WebrpcMethodInfo(class_id_t.MediaStreamTrack, method_id_MediaStreamTrack_t.id, "id", !0), new WebrpcMethodInfo(class_id_t.MediaStreamTrack, method_id_MediaStreamTrack_t.label, "label", !0), new WebrpcMethodInfo(class_id_t.MediaStreamTrack, method_id_MediaStreamTrack_t.enabled,
+            "enabled", !0), new WebrpcMethodInfo(class_id_t.MediaStreamTrack, method_id_MediaStreamTrack_t.muted, "muted", !0), new WebrpcMethodInfo(class_id_t.MediaStreamTrack, method_id_MediaStreamTrack_t.readyState, "readyState", !0), new WebrpcMethodInfo(class_id_t.MediaStreamTrack, method_id_MediaStreamTrack_t.onended, "onended", !0), new WebrpcMethodInfo(class_id_t.MediaStreamTrack, method_id_MediaStreamTrack_t.onmute, "onmute", !0), new WebrpcMethodInfo(class_id_t.MediaStreamTrack, method_id_MediaStreamTrack_t.onunmute,
+            "onunmute", !0)]), new WebrpcClassInfo(class_id_t.MediaStream, "MediaStream", [new WebrpcMethodInfo(class_id_t.MediaStream, method_id_MediaStream_t.ctor, "ctor", !1), new WebrpcMethodInfo(class_id_t.MediaStream, method_id_MediaStream_t.id, "id", !0), new WebrpcMethodInfo(class_id_t.MediaStream, method_id_MediaStream_t.getAudioTracks, "getAudioTracks", !1), new WebrpcMethodInfo(class_id_t.MediaStream, method_id_MediaStream_t.getVideoTracks, "getVideoTracks", !1), new WebrpcMethodInfo(class_id_t.MediaStream, method_id_MediaStream_t.getTracks,
+        "getTracks", !1), new WebrpcMethodInfo(class_id_t.MediaStream, method_id_MediaStream_t.getTrackById, "getTrackById", !1), new WebrpcMethodInfo(class_id_t.MediaStream, method_id_MediaStream_t.addTrack, "addTrack", !1), new WebrpcMethodInfo(class_id_t.MediaStream, method_id_MediaStream_t.removeTrack, "removeTrack", !1), new WebrpcMethodInfo(class_id_t.MediaStream, method_id_MediaStream_t.clone, "clone", !0), new WebrpcMethodInfo(class_id_t.MediaStream, method_id_MediaStream_t.active, "active", !0)]), new WebrpcClassInfo(class_id_t.NavigatorUserMedia,
+        "NavigatorUserMedia", [new WebrpcMethodInfo(class_id_t.NavigatorUserMedia, method_id_NavigatorUserMedia_t.ctor, "ctor", !1), new WebrpcMethodInfo(class_id_t.NavigatorUserMedia, method_id_NavigatorUserMedia_t.getUserMedia, "getUserMedia", !1)]), new WebrpcClassInfo(class_id_t.MediaStreamEvent, "MediaStreamEvent", [new WebrpcMethodInfo(class_id_t.MediaStreamEvent, method_id_MediaStreamEvent_t.ctor, "ctor", !1), new WebrpcMethodInfo(class_id_t.MediaStreamEvent, method_id_MediaStreamEvent_t.stream, "stream", !0)]), new WebrpcClassInfo(class_id_t.VideoElement,
+        "VideoElement", [new WebrpcMethodInfo(class_id_t.VideoElement, method_id_VideoElement_t.ctor, "ctor", !1), new WebrpcMethodInfo(class_id_t.VideoElement, method_id_VideoElement_t.sinkId, "sinkId", !0), new WebrpcMethodInfo(class_id_t.VideoElement, method_id_VideoElement_t.connectTo, "connectTo", !1), new WebrpcMethodInfo(class_id_t.VideoElement, method_id_VideoElement_t.disconnect, "disconnect", !1), new WebrpcMethodInfo(class_id_t.VideoElement, method_id_VideoElement_t.setFrame, "setFrame", !1), new WebrpcMethodInfo(class_id_t.VideoElement,
+            method_id_VideoElement_t.addClipRect, "addClipRect", !1), new WebrpcMethodInfo(class_id_t.VideoElement, method_id_VideoElement_t.removeClipRect, "removeClipRect", !1), new WebrpcMethodInfo(class_id_t.VideoElement, method_id_VideoElement_t.onerror, "onerror", !0), new WebrpcMethodInfo(class_id_t.VideoElement, method_id_VideoElement_t.onvideoframechanged, "onvideoframechanged", !0)]), new WebrpcClassInfo(class_id_t.AudioElement, "AudioElement", [new WebrpcMethodInfo(class_id_t.AudioElement, method_id_AudioElement_t.ctor,
+        "ctor", !1), new WebrpcMethodInfo(class_id_t.AudioElement, method_id_AudioElement_t.sinkId, "sinkId", !0), new WebrpcMethodInfo(class_id_t.AudioElement, method_id_AudioElement_t.srcObject, "srcObject", !0), new WebrpcMethodInfo(class_id_t.AudioElement, method_id_AudioElement_t.src, "src", !0), new WebrpcMethodInfo(class_id_t.AudioElement, method_id_AudioElement_t.play, "play", !1), new WebrpcMethodInfo(class_id_t.AudioElement, method_id_AudioElement_t.pause, "pause", !1)]), new WebrpcClassInfo(class_id_t.RTCRtpReceiver,
+        "RTCRtpReceiver", [new WebrpcMethodInfo(class_id_t.RTCRtpReceiver, method_id_RTCRtpReceiver_t.ctor, "ctor", !1, FEATURE_ms_teams_speaking_indicator), new WebrpcMethodInfo(class_id_t.RTCRtpReceiver, method_id_RTCRtpReceiver_t.track, "track", !0, FEATURE_ms_teams_speaking_indicator), new WebrpcMethodInfo(class_id_t.RTCRtpReceiver, method_id_RTCRtpReceiver_t.getContributingSources, "getContributingSources", !1, FEATURE_ms_teams_speaking_indicator)])]),
+    WebrpcClassLibInfoUtil = function () {
+        function a() {
+        }
+
+        a.getInterfaceByid =
+            function (a) {
+                for (var c = 0, b = class_lib_info.classes; c < b.length; c++) {
+                    var d = b[c];
+                    if (d.id == a) return d
+                }
+                return null
+            };
+        a.getMethodByid = function (a, c) {
+            var b = this.getInterfaceByid(a);
+            if (null != b) for (var d = 0, b = b.methods; d < b.length; d++) {
+                var f = b[d];
+                if (f.mid == c) return f
+            }
+            return null
+        };
+        a.getMethodFeatureByid = function (a, c) {
+            var b = this.getInterfaceByid(a);
+            if (null != b) for (var d = 0, b = b.methods; d < b.length; d++) {
+                var f = b[d];
+                if (f.mid == c) return f.feature
+            }
+            return null
+        };
+        a.composeClassInfoData = function (a) {
+            a = a.hdr;
+            if (void 0 == a) return "*** Invalid packet: Couldn't find hdr object ***";
+            var c = a.proc;
+            if (void 0 == c) return "";
+            a = c.iid;
+            for (var c = c.methodid, b = 0, d = class_lib_info.classes; b < d.length; b++) {
+                var f = d[b];
+                if (f.id == a) for (var g = 0, h = f.methods; g < h.length; g++) {
+                    var k = h[g];
+                    if (k.mid == c) return f.name + "::" + k.name
+                }
+            }
+            return ""
+        };
+        return a
+    }();
+exports.WebrpcClassLibInfoUtil = WebrpcClassLibInfoUtil;
+
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+Object.defineProperty(exports,"__esModule",{value:!0});
+var hdxms_1=__webpack_require__(3),logger_1=__webpack_require__(0),wsjsonutil_1=__webpack_require__(6),garbagecollector_1=__webpack_require__(7),webrpcclassinfo_1=__webpack_require__(1),deferred_action=function(){function a(c, b, a){this.resolve=c;this.reject=b;this.name=a}a.prototype.post=function(c){1==c?(logger_1.logger.log('deferred_action.post(): resolving "'+this.name+'"'),this.resolve()):(logger_1.logger.log('deferred_action.post(): rejecting "'+this.name+'"'),this.reject())};return a}();
+exports.deferred_action=deferred_action;var rpc_callback=function(){return function(a,c){this.id=a;this.is_null=c}}();exports.rpc_callback=rpc_callback;
+var callback=function(){function a(c,b,a){this.success=new rpc_callback(c<<16,b);this.fail=new rpc_callback(c<<16|1,b);this.id=c;this.oneShot=a}a.prototype.resolve=function(c){logger_1.logger.trace("callback.resolve() called. [id="+this.id+"]");null!=this.handler&&this.handler(c)};a.prototype.reject=function(){null!=this.err_handler&&this.err_handler()};a.prototype.then=function(c){this.handler=c};a.prototype.prom=function(){var c=this;return new Promise(function(a,d){c.handler=a;c.err_handler=d})};
+return a}();exports.callback=callback;var ProxyReadyState;(function(a){a[a.NotConfigured=0]="NotConfigured";a[a.Configured=1]="Configured";a[a.Error=2]="Error";a[a.Destroyed=3]="Destroyed"})(ProxyReadyState||(ProxyReadyState={}));
+var ProxyObject=function(){function a(c,b,d,e){for(var h=[],f=4;f<arguments.length;f++)h[f-4]=arguments[f];var g=this;this.hdxms=hdxms_1.getRedirector();this.iid=b;this.oid=d;this.state=ProxyReadyState.NotConfigured;this.deferredActions=[];this.cbs=new Map;0==e?(f=!1,this.iid===webrpcclassinfo_1.class_id_t.EngineControl&&(f=!0),this.hdxms.startRedirection(f,this.user_friendly_id()).then(function(){g.oid=a.nextId++;var c=webrpcclassinfo_1.WebrpcClassLibInfoUtil.getMethodFeatureByid(b,0);return g.hdxms.WSSendObjectWrapper(c,
+b,0,wsjsonutil_1.WsJsonUtil.createMessageByid.apply(wsjsonutil_1.WsJsonUtil,[!1,!1,wsjsonutil_1.ws_msg_type_t.req,b,0,g.oid].concat(h)))}).then(function(a){logger_1.logger.trace("ProxyObject: setting state to configured. (iid: "+g.iid+" oid: "+g.oid+")");g.state=ProxyReadyState.Configured;g.oid=g.param0(a);g.onConnected();garbagecollector_1.gc.trackObject(g,c)})["catch"](function(){g.state=ProxyReadyState.Error;g.onConnected()})):(this.state=ProxyReadyState.Configured,garbagecollector_1.gc.trackObject(this,
+c))}a.prototype.reconstructor=function(c,a,d){for(var e=this,h=[],f=3;f<arguments.length;f++)h[f-3]=arguments[f];this.state=ProxyReadyState.NotConfigured;this.deferredActions=[];f=webrpcclassinfo_1.WebrpcClassLibInfoUtil.getMethodFeatureByid(a,0);this.hdxms.WSSendObjectWrapper(f,a,0,wsjsonutil_1.WsJsonUtil.createMessageByid.apply(wsjsonutil_1.WsJsonUtil,[!1,!1,wsjsonutil_1.ws_msg_type_t.req,a,0,this.oid].concat(h))).then(function(a){logger_1.logger.trace("ProxyObject: setting state to configured. (iid: "+
+e.iid+" oid: "+e.oid+")");e.state=ProxyReadyState.Configured;e.oid=e.param0(a);e.onConnected();garbagecollector_1.gc.trackObject(e,c)})["catch"](function(){e.state=ProxyReadyState.Error;e.onConnected()})};a.prototype.setParent=function(a){garbagecollector_1.gc.setParent(this,a)};a.prototype.release=function(){logger_1.logger.log(this.user_friendly_id()+".release() called.");garbagecollector_1.gc.releaseObject(this)};a.prototype.destroy=function(){this.state=ProxyReadyState.Destroyed;var a=webrpcclassinfo_1.WebrpcClassLibInfoUtil.getMethodFeatureByid(this.iid,
+0);this.hdxms.WSSendObjectWrapper(a,this.iid,0,wsjsonutil_1.WsJsonUtil.createMessageByid(!1,!0,wsjsonutil_1.ws_msg_type_t.req,this.iid,0,this.oid))};a.prototype.onConnected=function(){for(;this.deferredActions&&0<this.deferredActions.length;)this.deferredActions.shift().post(this.state==ProxyReadyState.Configured)};a.prototype.checkState=function(a,b){var d=this;0>=a?(logger_1.logger.log("ProxyObject.checkState() timeout waiting for connection response! failed. (iid: "+d.iid+" oid: "+d.oid+")"),d.onConnected()):
+setTimeout(function(){if(d.state==ProxyReadyState.Configured)d.onConnected();else if(d.state==ProxyReadyState.Error)d.onConnected();else if(d.state==ProxyReadyState.Destroyed)d.onConnected();else logger_1.logger.log('ProxyObject.checkState(): count= "'+a+'". (iid: '+d.iid+" oid: "+d.oid+")"),d.checkState(--a,b)},b)};a.prototype.waitUntilConnected=function(a){var b=this;return new Promise(function(d,e){logger_1.logger.trace("ProxyObject.waitUntilConnected(): readyState="+b.state+". (iid: "+b.iid+" oid: "+
+b.oid+")");b.state==ProxyReadyState.Destroyed&&(b.onConnected(),e("Object already destroyed :"+b.user_friendly_id()));b.state==ProxyReadyState.Configured?(b.onConnected(),d()):b.state==ProxyReadyState.Error?(logger_1.logger.trace("ProxyObject.waitUntilConnected(): readyState="+b.state+". (iid: "+b.iid+" oid: "+b.oid+")"),b.onConnected(),e()):(logger_1.logger.log('ProxyObject.waitUntilConnected(): deferring action "'+a+'". (iid: '+b.iid+" oid: "+b.oid+")"),b.deferredActions.push(new deferred_action(d,
+e,a)),b.checkState(20,1E3))})};a.prototype.remoteInvoke=function(a,b){for(var d=[],e=2;e<arguments.length;e++)d[e-2]=arguments[e];if(this.state==ProxyReadyState.Destroyed)return Promise.reject("Cannot invoke destroyed object :"+this.user_friendly_id());e=webrpcclassinfo_1.WebrpcClassLibInfoUtil.getMethodFeatureByid(this.iid,b);return this.hdxms.WSSendObjectWrapper(e,this.iid,b,wsjsonutil_1.WsJsonUtil.createMessageByid.apply(wsjsonutil_1.WsJsonUtil,[a,!1,wsjsonutil_1.ws_msg_type_t.req,this.iid,b,this.oid].concat(d)))};
+a.prototype.registerCallbacks=function(c,b,d){this.unregisterCallbacks(d);var e=a.nextcbid++,h=new callback(e,b,c);b||(c||this.cbs.set(d,e),this.hdxms.registerHandler(this.iid,this.oid,h));return h};a.prototype.unregisterCallbacks=function(a){this.cbs.has(a)?(this.hdxms.unregisterHandler(this.iid,this.oid,this.cbs.get(a)),this.cbs["delete"](a)):(logger_1.logger.log("ProxyObject: Cant find callback handler registration for mid: "+a),logger_1.logger.trace(this.cbs))};a.prototype.object_id=function(){return this.oid};
+a.prototype.param0=function(a){return a.params[0]};a.prototype.isNullCallback=function(a){return void 0==a||null==a};a.prototype.user_friendly_id=function(){return this.constructor.name+"["+this.oid+"]"};a.prototype.isRedirected=function(){return this.hdxms.isRedirected()};a.nextId=0;a.nextcbid=0;return a}();exports.ProxyObject=ProxyObject;
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+Object.defineProperty(exports,"__esModule",{value:!0});var proxyobject_1=__webpack_require__(2),logger_1=__webpack_require__(0),webrpcclassinfo_1=__webpack_require__(1),wsjsonutil_1=__webpack_require__(6),completion=function(){return function(a, c, e, b, g, d, f){this.resolve=a;this.reject=c;this.iid=e;this.oid=b;this.cbid=g;this.oneShot=d;this.mid=f}}(),RedirectionStatus;
+(function(a){a[a.NotRedirected=0]="NotRedirected";a[a.Connecting=1]="Connecting";a[a.Binding=2]="Binding";a[a.Redirected=3]="Redirected"})(RedirectionStatus=exports.RedirectionStatus||(exports.RedirectionStatus={}));
+var HdxMediaStream=function(){function a(){this.pingactive=!1;this.status=RedirectionStatus.NotRedirected;this.reqs=[];this.cbs=[];this.deferredActions=[]}a.prototype.setRemoteSessionInfoCb=function(c){this.remoteSessionInfoCb=c};a.prototype.setFeatures=function(c){this.features=c};a.prototype.onRedirectionComplete=function(){for(;this.deferredActions&&0<this.deferredActions.length;)this.deferredActions.shift().post(this.status==RedirectionStatus.Redirected)};a.prototype.connectToService=function(){logger_1.logger.log("Redirection status: Connecting...");
+this.status=RedirectionStatus.Connecting;return new Promise(function(c,e){var b=new WebSocket("wss://127.0.0.1:9002");b.onopen=function(){c(b)};b.onerror=function(b){logger_1.logger.log("websocket connection error: "+b.type);e(b)}})};a.prototype.waitUntilRedirected=function(c){var e=this;return new Promise(function(b,a){e.status==RedirectionStatus.Redirected?b():0>=c?a():setTimeout(function(){logger_1.logger.log("waitUntilRedirected() timeout. count="+c);e.status!=RedirectionStatus.Redirected?e.waitUntilRedirected(--c).then(function(){b()})["catch"](function(){a()}):
+b()},2E3)})};a.prototype.handleRemoteSessionInfo=function(){logger_1.logger.log("handleRemoteSessionInfo called.");var c=this;c.remoteSessionInfoCb?c.remoteSessionInfoCb().then(function(e){logger_1.logger.log("remoteSessionInfo success! info:"+JSON.stringify(e));logger_1.logger.log("Redirection status: Redirected");c.status=RedirectionStatus.Redirected;c.pingConnectionEnd();(0,window.onVdiClientConnected)();c.onRedirectionComplete()})["catch"](function(){logger_1.logger.log("remoteSessionInfo failure!");
+c.suspendRedirection(!0);c.onRedirectionComplete()}):(logger_1.logger.log("remoteSessionInfoCb is invalid!"),c.suspendRedirection(!0),c.onRedirectionComplete())};a.prototype.startRedirection=function(c,e){var b=this,a=window.onVdiUnableToRemote;return new Promise(function(d,f){b.status==RedirectionStatus.NotRedirected?(logger_1.logger.log("Attempting to start redirection: "+e),0==c?b.deferredActions.push(new proxyobject_1.deferred_action(d,f,e)):b.connectToService().then(function(c){logger_1.logger.log("Redirection status: Binding...");
+b.status=RedirectionStatus.Binding;b.websocket=c;b.websocket.onmessage=function(c){b.onWSMessage(c)};b.websocket.onclose=function(c){b.onWSClose(c)};d();b.handleRemoteSessionInfo()})["catch"](function(c){logger_1.logger.log("Unable to connect to websocket service!");f();b.suspendRedirection(!0);b.onRedirectionComplete();a()})):b.status==RedirectionStatus.Connecting||b.status==RedirectionStatus.Binding?(logger_1.logger.log("Waiting for start redirection to finish"),b.waitUntilRedirected(15).then(function(){logger_1.logger.log("Waiting for start redirection: success");
+d()})["catch"](function(){logger_1.logger.log("Waiting for start redirection: failed");f();a()})):(logger_1.logger.log("Redirection already started."),d())})};a.prototype.suspendRedirection=function(c){logger_1.logger.log("Suspending redirection.");(0,window.onVdiClientDisconnected)();this.status===RedirectionStatus.Redirected&&this.pingConnectionBegin();logger_1.logger.log("Redirection status: NotRedirected");this.status=RedirectionStatus.NotRedirected};a.prototype.onWSOpen=function(){};a.prototype.onWSClose=
+function(c){logger_1.logger.log("disconnected from websocket service.");try{this.suspendRedirection(!0)}catch(e){logger_1.logger.log("suspendRedirection(): exception closing WebSocket: "+e.message)}};a.prototype.onWSError=function(){try{this.suspendRedirection(!0)}catch(c){logger_1.logger.log("suspendRedirection(): exception on WebSocket error: "+c.message)}};a.prototype.WSSendObjectWrapper=function(c,e,b,a){var d=!0;e!=webrpcclassinfo_1.class_id_t.EngineControl||b!=webrpcclassinfo_1.method_id_EngineControl_t.ctor&&
+b!=webrpcclassinfo_1.method_id_EngineControl_t.version&&b!=webrpcclassinfo_1.method_id_EngineControl_t.feature_flags||(d=!1);var f=!0;if(d&&(f=!1,void 0!=this.features))for(var d=0,h=this.features;d<h.length;d++){var k=h[d];if(!0===k.value&&k.name==c){f=!0;break}}return 1==f?this.WSSendObject(a):Promise.reject("Cannot invoke method that is not supported by webrpc: iid("+e+") mid("+b+")")};a.prototype.WSSendObject=function(c){var e=this;return new Promise(function(b,a){if("webrtc"==c.v){var d=c.hdr.proc.iid,
+f=c.hdr.proc.methodid,h=c.objref.oid,k=c.hdr.destroy;c.hdr.modifier||k||(d=new completion(b,a,d,h,0,!0,f),e.reqs.push(d));d=JSON.stringify(c);logger_1.logger.trace("WSSendObject: >>> "+webrpcclassinfo_1.WebrpcClassLibInfoUtil.composeClassInfoData(c)+" "+d);try{e.websocket.send(d)}catch(l){logger_1.logger.log("WSSendObject(): exception: "+l.message),a(l.message)}}else"overlay"==c.v?(d=JSON.stringify(c),logger_1.logger.log("HDXMS: SendOverlayData: >>> "+d+"'"),e.websocket.send(d)):logger_1.logger.log("HDXMS: Unknown protocol: '"+
+JSON.stringify(c)+"'")})};a.prototype.onWSMessage=function(c){var a=c.data,b;try{b=JSON.parse(a)}catch(k){console.log("invalid JSON!!!"),console.log(k),console.log(a)}if("webrtc"==b.v){logger_1.logger.trace("onWSMessage: <<< "+webrpcclassinfo_1.WebrpcClassLibInfoUtil.composeClassInfoData(b)+" "+a);var g=b.hdr.proc.iid,d=b.hdr.proc.methodid,f=b.objref.oid;c=b.status;if(b.hdr.msg_type==wsjsonutil_1.WsJsonUtil.getMsgType(wsjsonutil_1.ws_msg_type_t.reply))a=this.reqs.findIndex(function(a){return a.iid==
+g&&a.oid==f&&a.mid==d}),0<=a?0==c?this.reqs.splice(a,1).shift().resolve(b):this.reqs.splice(a,1).shift().reject():(logger_1.logger.log("HDXMS didnt find this one. (reqs)"),logger_1.logger.log(this.reqs));else if(b.hdr.msg_type==wsjsonutil_1.WsJsonUtil.getMsgType(wsjsonutil_1.ws_msg_type_t.event_req)){var h=b.func.id,a=this.cbs.findIndex(function(a){return a.iid==g&&a.oid==f&&a.cbid==h>>16});0<=a?(0==(h&65535)?this.cbs[a].resolve(b):this.cbs[a].reject(),1==this.cbs[a].oneShot&&this.cbs.splice(a,1)):
+(logger_1.logger.log("HDXMS didnt find this one. (cbs)"),logger_1.logger.log(this.cbs))}else logger_1.logger.log("HDXMS Received bogus message: "+a+"'")}else logger_1.logger.log("HDXMS: Unknown protocol: "+a+"'")};a.prototype.registerHandler=function(a,e,b){a=new completion(b.resolve.bind(b),b.reject.bind(b),a,e,b.id,b.oneShot,0);this.cbs.push(a)};a.prototype.unregisterHandler=function(a,e,b){var g=this.cbs.findIndex(function(d){return d.iid==a&&d.oid==e&&d.cbid==b});0<=g?this.cbs.splice(g,1):(logger_1.logger.log("HDXMS Didnt find this callback in the list!"),
+console.log(this.cbs))};a.prototype.isRedirected=function(){return this.status===RedirectionStatus.Redirected||this.status===RedirectionStatus.Binding||this.status===RedirectionStatus.Connecting};a.prototype.isPingActive=function(){return this.pingactive};a.prototype.pingConnectionBegin=function(){this.pingactive=!0;this.conntimer=setTimeout(function(){logger_1.logger.log("checking if we are connected...");(0,window.onVdiClientDisconnectedTimer)()},15E3)};a.prototype.pingConnectionEnd=function(){this.pingactive=
+!1;clearTimeout(this.conntimer)};return a}();exports.HdxMediaStream=HdxMediaStream;var hdxMediaStream=new HdxMediaStream;function getRedirector(){return hdxMediaStream}exports.getRedirector=getRedirector;
+
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports) {
 
 var g;
@@ -448,6 +453,2930 @@ try {
 // easier to handle this case. if(!global) { ...}
 
 module.exports = g;
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {var $jscomp = {
+    scope: {}, getGlobal: function (a) {
+        return "undefined" != typeof window && window === a ? a : "undefined" != typeof global ? global : a
+    }
+};
+$jscomp.global = $jscomp.getGlobal(this);
+$jscomp.initSymbol = function () {
+    $jscomp.global.Symbol || ($jscomp.global.Symbol = $jscomp.Symbol);
+    $jscomp.initSymbol = function () {
+    }
+};
+$jscomp.symbolCounter_ = 0;
+$jscomp.Symbol = function (a) {
+    return "jscomp_symbol_" + a + $jscomp.symbolCounter_++
+};
+$jscomp.initSymbolIterator = function () {
+    $jscomp.initSymbol();
+    $jscomp.global.Symbol.iterator || ($jscomp.global.Symbol.iterator = $jscomp.global.Symbol("iterator"));
+    $jscomp.initSymbolIterator = function () {
+    }
+};
+$jscomp.makeIterator = function (a) {
+    $jscomp.initSymbolIterator();
+    if (a[$jscomp.global.Symbol.iterator]) return a[$jscomp.global.Symbol.iterator]();
+    var b = 0;
+    return {
+        next: function () {
+            return b == a.length ? {done: !0} : {done: !1, value: a[b++]}
+        }
+    }
+};
+$jscomp.arrayFromIterator = function (a) {
+    for (var b, c = []; !(b = a.next()).done;) c.push(b.value);
+    return c
+};
+$jscomp.arrayFromIterable = function (a) {
+    return a instanceof Array ? a : $jscomp.arrayFromIterator($jscomp.makeIterator(a))
+};
+$jscomp.inherits = function (a, b) {
+    function c() {
+    }
+
+    c.prototype = b.prototype;
+    a.prototype = new c;
+    a.prototype.constructor = a;
+    for (var e in b) if ($jscomp.global.Object.defineProperties) {
+        var d = $jscomp.global.Object.getOwnPropertyDescriptor(b, e);
+        d && $jscomp.global.Object.defineProperty(a, e, d)
+    } else a[e] = b[e]
+};
+$jscomp.array = $jscomp.array || {};
+$jscomp.array.done_ = function () {
+    return {done: !0, value: void 0}
+};
+$jscomp.array.arrayIterator_ = function (a, b) {
+    a instanceof String && (a = String(a));
+    var c = 0;
+    $jscomp.initSymbol();
+    $jscomp.initSymbolIterator();
+    var e = {}, d = (e.next = function () {
+        if (c < a.length) {
+            var e = c++;
+            return {value: b(e, a[e]), done: !1}
+        }
+        d.next = $jscomp.array.done_;
+        return $jscomp.array.done_()
+    }, e[Symbol.iterator] = function () {
+        return d
+    }, e);
+    return d
+};
+$jscomp.array.findInternal_ = function (a, b, c) {
+    a instanceof String && (a = String(a));
+    for (var e = a.length, d = 0; d < e; d++) {
+        var f = a[d];
+        if (b.call(c, f, d, a)) return {i: d, v: f}
+    }
+    return {i: -1, v: void 0}
+};
+$jscomp.array.from = function (a, b, c) {
+    b = void 0 === b ? function (a) {
+        return a
+    } : b;
+    var e = [];
+    $jscomp.initSymbol();
+    $jscomp.initSymbolIterator();
+    if (a[Symbol.iterator]) {
+        $jscomp.initSymbol();
+        $jscomp.initSymbolIterator();
+        a = a[Symbol.iterator]();
+        for (var d; !(d = a.next()).done;) e.push(b.call(c, d.value))
+    } else {
+        d = a.length;
+        for (var f = 0; f < d; f++) e.push(b.call(c, a[f]))
+    }
+    return e
+};
+$jscomp.array.of = function (a) {
+    for (var b = [], c = 0; c < arguments.length; ++c) b[c - 0] = arguments[c];
+    return $jscomp.array.from(b)
+};
+$jscomp.array.entries = function () {
+    return $jscomp.array.arrayIterator_(this, function (a, b) {
+        return [a, b]
+    })
+};
+$jscomp.array.entries$install = function () {
+    Array.prototype.entries || (Array.prototype.entries = $jscomp.array.entries)
+};
+$jscomp.array.keys = function () {
+    return $jscomp.array.arrayIterator_(this, function (a) {
+        return a
+    })
+};
+$jscomp.array.keys$install = function () {
+    Array.prototype.keys || (Array.prototype.keys = $jscomp.array.keys)
+};
+$jscomp.array.values = function () {
+    return $jscomp.array.arrayIterator_(this, function (a, b) {
+        return b
+    })
+};
+$jscomp.array.values$install = function () {
+    Array.prototype.values || (Array.prototype.values = $jscomp.array.values)
+};
+$jscomp.array.copyWithin = function (a, b, c) {
+    var e = this.length;
+    a = Number(a);
+    b = Number(b);
+    c = Number(null != c ? c : e);
+    if (a < b) for (c = Math.min(c, e); b < c;) b in this ? this[a++] = this[b++] : (delete this[a++], b++); else for (c = Math.min(c, e + b - a), a += c - b; c > b;) --c in this ? this[--a] = this[c] : delete this[a];
+    return this
+};
+$jscomp.array.copyWithin$install = function () {
+    Array.prototype.copyWithin || (Array.prototype.copyWithin = $jscomp.array.copyWithin)
+};
+$jscomp.array.fill = function (a, b, c) {
+    null != c && a.length || (c = this.length || 0);
+    c = Number(c);
+    for (b = Number((void 0 === b ? 0 : b) || 0); b < c; b++) this[b] = a;
+    return this
+};
+$jscomp.array.fill$install = function () {
+    Array.prototype.fill || (Array.prototype.fill = $jscomp.array.fill)
+};
+$jscomp.array.find = function (a, b) {
+    return $jscomp.array.findInternal_(this, a, b).v
+};
+$jscomp.array.find$install = function () {
+    Array.prototype.find || (Array.prototype.find = $jscomp.array.find)
+};
+$jscomp.array.findIndex = function (a, b) {
+    return $jscomp.array.findInternal_(this, a, b).i
+};
+$jscomp.array.findIndex$install = function () {
+    Array.prototype.findIndex || (Array.prototype.findIndex = $jscomp.array.findIndex)
+};
+$jscomp.Map = function (a) {
+    a = void 0 === a ? [] : a;
+    this.data_ = {};
+    this.head_ = $jscomp.Map.createHead_();
+    this.size = 0;
+    if (a) {
+        a = $jscomp.makeIterator(a);
+        for (var b = a.next(); !b.done; b = a.next()) b = b.value, this.set(b[0], b[1])
+    }
+};
+$jscomp.Map.checkBrowserConformance_ = function () {
+    var a = $jscomp.global.Map;
+    if (!a || !a.prototype.entries || !Object.seal) return !1;
+    try {
+        var b = Object.seal({x: 4}), c = new a($jscomp.makeIterator([[b, "s"]]));
+        if ("s" != c.get(b) || 1 != c.size || c.get({x: 4}) || c.set({x: 4}, "t") != c || 2 != c.size) return !1;
+        var e = c.entries(), d = e.next();
+        if (d.done || d.value[0] != b || "s" != d.value[1]) return !1;
+        d = e.next();
+        return d.done || 4 != d.value[0].x || "t" != d.value[1] || !e.next().done ? !1 : !0
+    } catch (f) {
+        return !1
+    }
+};
+$jscomp.Map.createHead_ = function () {
+    var a = {};
+    return a.previous = a.next = a.head = a
+};
+$jscomp.Map.getId_ = function (a) {
+    if (!(a instanceof Object)) return String(a);
+    $jscomp.Map.key_ in a || a instanceof Object && Object.isExtensible && Object.isExtensible(a) && $jscomp.Map.defineProperty_(a, $jscomp.Map.key_, ++$jscomp.Map.index_);
+    return $jscomp.Map.key_ in a ? a[$jscomp.Map.key_] : " " + a
+};
+$jscomp.Map.prototype.set = function (a, b) {
+    var c = this.maybeGetEntry_(a), e = c.id, d = c.list, c = c.entry;
+    d || (d = this.data_[e] = []);
+    c ? c.value = b : (c = {
+        next: this.head_,
+        previous: this.head_.previous,
+        head: this.head_,
+        key: a,
+        value: b
+    }, d.push(c), this.head_.previous.next = c, this.head_.previous = c, this.size++);
+    return this
+};
+$jscomp.Map.prototype["delete"] = function (a) {
+    var b = this.maybeGetEntry_(a);
+    a = b.id;
+    var c = b.list, e = b.index;
+    return (b = b.entry) && c ? (c.splice(e, 1), c.length || delete this.data_[a], b.previous.next = b.next, b.next.previous = b.previous, b.head = null, this.size--, !0) : !1
+};
+$jscomp.Map.prototype.clear = function () {
+    this.data_ = {};
+    this.head_ = this.head_.previous = $jscomp.Map.createHead_();
+    this.size = 0
+};
+$jscomp.Map.prototype.has = function (a) {
+    return !!this.maybeGetEntry_(a).entry
+};
+$jscomp.Map.prototype.get = function (a) {
+    return (a = this.maybeGetEntry_(a).entry) && a.value
+};
+$jscomp.Map.prototype.maybeGetEntry_ = function (a) {
+    var b = $jscomp.Map.getId_(a), c = this.data_[b];
+    if (c) for (var e = 0; e < c.length; e++) {
+        var d = c[e];
+        if (a !== a && d.key !== d.key || a === d.key) return {id: b, list: c, index: e, entry: d}
+    }
+    return {id: b, list: c, index: -1, entry: void 0}
+};
+$jscomp.Map.prototype.entries = function () {
+    return this.iter_(function (a) {
+        return [a.key, a.value]
+    })
+};
+$jscomp.Map.prototype.keys = function () {
+    return this.iter_(function (a) {
+        return a.key
+    })
+};
+$jscomp.Map.prototype.values = function () {
+    return this.iter_(function (a) {
+        return a.value
+    })
+};
+$jscomp.Map.prototype.forEach = function (a, b) {
+    for (var c = $jscomp.makeIterator(this.entries()), e = c.next(); !e.done; e = c.next()) e = e.value, a.call(b, e[1], e[0], this)
+};
+$jscomp.Map.prototype.iter_ = function (a) {
+    var b = this, c = this.head_;
+    $jscomp.initSymbol();
+    $jscomp.initSymbolIterator();
+    var e = {};
+    return e.next = function () {
+        if (c) {
+            for (; c.head != b.head_;) c = c.previous;
+            for (; c.next != c.head;) return c = c.next, {done: !1, value: a(c)};
+            c = null
+        }
+        return {done: !0, value: void 0}
+    }, e[Symbol.iterator] = function () {
+        return this
+    }, e
+};
+$jscomp.Map.index_ = 0;
+$jscomp.Map.defineProperty_ = Object.defineProperty ? function (a, b, c) {
+    Object.defineProperty(a, b, {value: String(c)})
+} : function (a, b, c) {
+    a[b] = String(c)
+};
+$jscomp.Map.Entry_ = function () {
+};
+$jscomp.Map.ASSUME_NO_NATIVE = !1;
+$jscomp.Map$install = function () {
+    $jscomp.initSymbol();
+    $jscomp.initSymbolIterator();
+    !$jscomp.Map.ASSUME_NO_NATIVE && $jscomp.Map.checkBrowserConformance_() ? $jscomp.Map = $jscomp.global.Map : ($jscomp.initSymbol(), $jscomp.initSymbolIterator(), $jscomp.Map.prototype[Symbol.iterator] = $jscomp.Map.prototype.entries, $jscomp.initSymbol(), $jscomp.Map.key_ = Symbol("map-id-key"));
+    $jscomp.Map$install = function () {
+    }
+};
+$jscomp.math = $jscomp.math || {};
+$jscomp.math.clz32 = function (a) {
+    a = Number(a) >>> 0;
+    if (0 === a) return 32;
+    var b = 0;
+    0 === (a & 4294901760) && (a <<= 16, b += 16);
+    0 === (a & 4278190080) && (a <<= 8, b += 8);
+    0 === (a & 4026531840) && (a <<= 4, b += 4);
+    0 === (a & 3221225472) && (a <<= 2, b += 2);
+    0 === (a & 2147483648) && b++;
+    return b
+};
+$jscomp.math.imul = function (a, b) {
+    a = Number(a);
+    b = Number(b);
+    var c = a & 65535, e = b & 65535;
+    return c * e + ((a >>> 16 & 65535) * e + c * (b >>> 16 & 65535) << 16 >>> 0) | 0
+};
+$jscomp.math.sign = function (a) {
+    a = Number(a);
+    return 0 === a || isNaN(a) ? a : 0 < a ? 1 : -1
+};
+$jscomp.math.log10 = function (a) {
+    return Math.log(a) / Math.LN10
+};
+$jscomp.math.log2 = function (a) {
+    return Math.log(a) / Math.LN2
+};
+$jscomp.math.log1p = function (a) {
+    a = Number(a);
+    if (.25 > a && -.25 < a) {
+        for (var b = a, c = 1, e = a, d = 0, f = 1; d != e;) b *= a, f *= -1, e = (d = e) + f * b / ++c;
+        return e
+    }
+    return Math.log(1 + a)
+};
+$jscomp.math.expm1 = function (a) {
+    a = Number(a);
+    if (.25 > a && -.25 < a) {
+        for (var b = a, c = 1, e = a, d = 0; d != e;) b *= a / ++c, e = (d = e) + b;
+        return e
+    }
+    return Math.exp(a) - 1
+};
+$jscomp.math.cosh = function (a) {
+    a = Number(a);
+    return (Math.exp(a) + Math.exp(-a)) / 2
+};
+$jscomp.math.sinh = function (a) {
+    a = Number(a);
+    return 0 === a ? a : (Math.exp(a) - Math.exp(-a)) / 2
+};
+$jscomp.math.tanh = function (a) {
+    a = Number(a);
+    if (0 === a) return a;
+    var b = Math.exp(2 * -Math.abs(a)), b = (1 - b) / (1 + b);
+    return 0 > a ? -b : b
+};
+$jscomp.math.acosh = function (a) {
+    a = Number(a);
+    return Math.log(a + Math.sqrt(a * a - 1))
+};
+$jscomp.math.asinh = function (a) {
+    a = Number(a);
+    if (0 === a) return a;
+    var b = Math.log(Math.abs(a) + Math.sqrt(a * a + 1));
+    return 0 > a ? -b : b
+};
+$jscomp.math.atanh = function (a) {
+    a = Number(a);
+    return ($jscomp.math.log1p(a) - $jscomp.math.log1p(-a)) / 2
+};
+$jscomp.math.hypot = function (a, b, c) {
+    for (var e = [], d = 2; d < arguments.length; ++d) e[d - 2] = arguments[d];
+    a = Number(a);
+    b = Number(b);
+    for (var f = Math.max(Math.abs(a), Math.abs(b)), h = $jscomp.makeIterator(e), d = h.next(); !d.done; d = h.next()) f = Math.max(f, Math.abs(d.value));
+    if (1E100 < f || 1E-100 > f) {
+        a /= f;
+        b /= f;
+        h = a * a + b * b;
+        e = $jscomp.makeIterator(e);
+        for (d = e.next(); !d.done; d = e.next()) d = d.value, d = Number(d) / f, h += d * d;
+        return Math.sqrt(h) * f
+    }
+    f = a * a + b * b;
+    e = $jscomp.makeIterator(e);
+    for (d = e.next(); !d.done; d = e.next()) d = d.value, d = Number(d), f +=
+        d * d;
+    return Math.sqrt(f)
+};
+$jscomp.math.trunc = function (a) {
+    a = Number(a);
+    if (isNaN(a) || Infinity === a || -Infinity === a || 0 === a) return a;
+    var b = Math.floor(Math.abs(a));
+    return 0 > a ? -b : b
+};
+$jscomp.math.cbrt = function (a) {
+    if (0 === a) return a;
+    a = Number(a);
+    var b = Math.pow(Math.abs(a), 1 / 3);
+    return 0 > a ? -b : b
+};
+$jscomp.number = $jscomp.number || {};
+$jscomp.number.isFinite = function (a) {
+    return "number" !== typeof a ? !1 : !isNaN(a) && Infinity !== a && -Infinity !== a
+};
+$jscomp.number.isInteger = function (a) {
+    return $jscomp.number.isFinite(a) ? a === Math.floor(a) : !1
+};
+$jscomp.number.isNaN = function (a) {
+    return "number" === typeof a && isNaN(a)
+};
+$jscomp.number.isSafeInteger = function (a) {
+    return $jscomp.number.isInteger(a) && Math.abs(a) <= $jscomp.number.MAX_SAFE_INTEGER
+};
+$jscomp.number.EPSILON = Math.pow(2, -52);
+$jscomp.number.MAX_SAFE_INTEGER = 9007199254740991;
+$jscomp.number.MIN_SAFE_INTEGER = -9007199254740991;
+$jscomp.object = $jscomp.object || {};
+$jscomp.object.assign = function (a, b) {
+    for (var c = [], e = 1; e < arguments.length; ++e) c[e - 1] = arguments[e];
+    c = $jscomp.makeIterator(c);
+    for (e = c.next(); !e.done; e = c.next()) if (e = e.value) for (var d in e) Object.prototype.hasOwnProperty.call(e, d) && (a[d] = e[d]);
+    return a
+};
+$jscomp.object.is = function (a, b) {
+    return a === b ? 0 !== a || 1 / a === 1 / b : a !== a && b !== b
+};
+$jscomp.Set = function (a) {
+    a = void 0 === a ? [] : a;
+    this.map_ = new $jscomp.Map;
+    if (a) {
+        a = $jscomp.makeIterator(a);
+        for (var b = a.next(); !b.done; b = a.next()) this.add(b.value)
+    }
+    this.size = this.map_.size
+};
+$jscomp.Set.checkBrowserConformance_ = function () {
+    var a = $jscomp.global.Set;
+    if (!a || !a.prototype.entries || !Object.seal) return !1;
+    var b = Object.seal({x: 4}), a = new a($jscomp.makeIterator([b]));
+    if (a.has(b) || 1 != a.size || a.add(b) != a || 1 != a.size || a.add({x: 4}) != a || 2 != a.size) return !1;
+    var a = a.entries(), c = a.next();
+    if (c.done || c.value[0] != b || c.value[1] != b) return !1;
+    c = a.next();
+    return c.done || c.value[0] == b || 4 != c.value[0].x || c.value[1] != c.value[0] ? !1 : a.next().done
+};
+$jscomp.Set.prototype.add = function (a) {
+    this.map_.set(a, a);
+    this.size = this.map_.size;
+    return this
+};
+$jscomp.Set.prototype["delete"] = function (a) {
+    a = this.map_["delete"](a);
+    this.size = this.map_.size;
+    return a
+};
+$jscomp.Set.prototype.clear = function () {
+    this.map_.clear();
+    this.size = 0
+};
+$jscomp.Set.prototype.has = function (a) {
+    return this.map_.has(a)
+};
+$jscomp.Set.prototype.entries = function () {
+    return this.map_.entries()
+};
+$jscomp.Set.prototype.values = function () {
+    return this.map_.values()
+};
+$jscomp.Set.prototype.forEach = function (a, b) {
+    var c = this;
+    this.map_.forEach(function (e) {
+        return a.call(b, e, e, c)
+    })
+};
+$jscomp.Set.ASSUME_NO_NATIVE = !1;
+$jscomp.Set$install = function () {
+    !$jscomp.Set.ASSUME_NO_NATIVE && $jscomp.Set.checkBrowserConformance_() ? $jscomp.Set = $jscomp.global.Set : ($jscomp.Map$install(), $jscomp.initSymbol(), $jscomp.initSymbolIterator(), $jscomp.Set.prototype[Symbol.iterator] = $jscomp.Set.prototype.values);
+    $jscomp.Set$install = function () {
+    }
+};
+$jscomp.string = $jscomp.string || {};
+$jscomp.string.noRegExp_ = function (a, b) {
+    if (a instanceof RegExp) throw new TypeError("First argument to String.prototype." + b + " must not be a regular expression");
+};
+$jscomp.string.fromCodePoint = function (a) {
+    for (var b = [], c = 0; c < arguments.length; ++c) b[c - 0] = arguments[c];
+    for (var c = "", b = $jscomp.makeIterator(b), e = b.next(); !e.done; e = b.next()) {
+        e = e.value;
+        e = +e;
+        if (0 > e || 1114111 < e || e !== Math.floor(e)) throw new RangeError("invalid_code_point " + e);
+        65535 >= e ? c += String.fromCharCode(e) : (e -= 65536, c += String.fromCharCode(e >>> 10 & 1023 | 55296), c += String.fromCharCode(e & 1023 | 56320))
+    }
+    return c
+};
+$jscomp.string.repeat = function (a) {
+    var b = this.toString();
+    if (0 > a || 1342177279 < a) throw new RangeError("Invalid count value");
+    a |= 0;
+    for (var c = ""; a;) if (a & 1 && (c += b), a >>>= 1) b += b;
+    return c
+};
+$jscomp.string.repeat$install = function () {
+    String.prototype.repeat || (String.prototype.repeat = $jscomp.string.repeat)
+};
+$jscomp.string.codePointAt = function (a) {
+    var b = this.toString(), c = b.length;
+    a = Number(a) || 0;
+    if (0 <= a && a < c) {
+        a |= 0;
+        var e = b.charCodeAt(a);
+        if (55296 > e || 56319 < e || a + 1 === c) return e;
+        a = b.charCodeAt(a + 1);
+        return 56320 > a || 57343 < a ? e : 1024 * (e - 55296) + a + 9216
+    }
+};
+$jscomp.string.codePointAt$install = function () {
+    String.prototype.codePointAt || (String.prototype.codePointAt = $jscomp.string.codePointAt)
+};
+$jscomp.string.includes = function (a, b) {
+    b = void 0 === b ? 0 : b;
+    $jscomp.string.noRegExp_(a, "includes");
+    return -1 !== this.toString().indexOf(a, b)
+};
+$jscomp.string.includes$install = function () {
+    String.prototype.includes || (String.prototype.includes = $jscomp.string.includes)
+};
+$jscomp.string.startsWith = function (a, b) {
+    b = void 0 === b ? 0 : b;
+    $jscomp.string.noRegExp_(a, "startsWith");
+    var c = this.toString();
+    a += "";
+    for (var e = c.length, d = a.length, f = Math.max(0, Math.min(b | 0, c.length)), h = 0; h < d && f < e;) if (c[f++] != a[h++]) return !1;
+    return h >= d
+};
+$jscomp.string.startsWith$install = function () {
+    String.prototype.startsWith || (String.prototype.startsWith = $jscomp.string.startsWith)
+};
+$jscomp.string.endsWith = function (a, b) {
+    $jscomp.string.noRegExp_(a, "endsWith");
+    var c = this.toString();
+    a += "";
+    void 0 === b && (b = c.length);
+    for (var e = Math.max(0, Math.min(b | 0, c.length)), d = a.length; 0 < d && 0 < e;) if (c[--e] != a[--d]) return !1;
+    return 0 >= d
+};
+$jscomp.string.endsWith$install = function () {
+    String.prototype.endsWith || (String.prototype.endsWith = $jscomp.string.endsWith)
+};
+var __extends = this && this.__extends || function () {
+    var a = function (b, c) {
+        a = Object.setPrototypeOf || {__proto__: []} instanceof Array && function (a, c) {
+            a.__proto__ = c
+        } || function (a, c) {
+            for (var b in c) c.hasOwnProperty(b) && (a[b] = c[b])
+        };
+        return a(b, c)
+    };
+    return function (b, c) {
+        function e() {
+            this.constructor = b
+        }
+
+        a(b, c);
+        b.prototype = null === c ? Object.create(c) : (e.prototype = c.prototype, new e)
+    }
+}(), __awaiter = this && this.__awaiter || function (a, b, c, e) {
+    return new (c || (c = Promise))(function (d, f) {
+        function h(a) {
+            try {
+                k(e.next(a))
+            } catch (c) {
+                f(c)
+            }
+        }
+
+        function g(a) {
+            try {
+                k(e["throw"](a))
+            } catch (c) {
+                f(c)
+            }
+        }
+
+        function k(a) {
+            a.done ? d(a.value) : (new c(function (c) {
+                c(a.value)
+            })).then(h, g)
+        }
+
+        k((e = e.apply(a, b || [])).next())
+    })
+}, __generator = this && this.__generator || function (a, b) {
+    function c(a) {
+        return function (c) {
+            return e([a, c])
+        }
+    }
+
+    function e(c) {
+        if (f) throw new TypeError("Generator is already executing.");
+        for (; d;) try {
+            if (f = 1, h && (g = c[0] & 2 ? h["return"] : c[0] ? h["throw"] || ((g = h["return"]) && g.call(h), 0) : h.next) && !(g = g.call(h, c[1])).done) return g;
+            if (h = 0, g) c = [c[0] & 2, g.value];
+            switch (c[0]) {
+                case 0:
+                case 1:
+                    g =
+                        c;
+                    break;
+                case 4:
+                    return d.label++, {value: c[1], done: !1};
+                case 5:
+                    d.label++;
+                    h = c[1];
+                    c = [0];
+                    continue;
+                case 7:
+                    c = d.ops.pop();
+                    d.trys.pop();
+                    continue;
+                default:
+                    if (!(g = d.trys, g = 0 < g.length && g[g.length - 1]) && (6 === c[0] || 2 === c[0])) {
+                        d = 0;
+                        continue
+                    }
+                    if (3 === c[0] && (!g || c[1] > g[0] && c[1] < g[3])) d.label = c[1]; else if (6 === c[0] && d.label < g[1]) d.label = g[1], g = c; else if (g && d.label < g[2]) d.label = g[2], d.ops.push(c); else {
+                        g[2] && d.ops.pop();
+                        d.trys.pop();
+                        continue
+                    }
+            }
+            c = b.call(a, d)
+        } catch (e) {
+            c = [6, e], h = 0
+        } finally {
+            f = g = 0
+        }
+        if (c[0] & 5) throw c[1];
+        return {
+            value: c[0] ?
+                c[1] : void 0, done: !0
+        }
+    }
+
+    var d = {
+        label: 0, sent: function () {
+            if (g[0] & 1) throw g[1];
+            return g[1]
+        }, trys: [], ops: []
+    }, f, h, g, k;
+    $jscomp.initSymbol();
+    $jscomp.initSymbol();
+    $jscomp.initSymbolIterator();
+    return k = {
+        next: c(0),
+        "throw": c(1),
+        "return": c(2)
+    }, "function" === typeof Symbol && (k[Symbol.iterator] = function () {
+        return this
+    }), k
+};
+Object.defineProperty(exports, "__esModule", {value: !0});
+var webrpcclassinfo_1 = __webpack_require__(1), proxyobject_1 = __webpack_require__(2),
+    logger_1 = __webpack_require__(0), SimpleEvent = function () {
+        return function (a, b) {
+            this.type = a;
+            this.target = b
+        }
+    }(), CloneState = function () {
+        function a() {
+            this.is_local_clone = !1;
+            this.clone_id = this.clone_count = 0
+        }
+
+        a.prototype.clone = function () {
+            this.clone_count++;
+            var b = new a;
+            b.is_local_clone = !0;
+            b.clone_id = this.clone_count;
+            return b
+        };
+        a.prototype.synchronize = function (a) {
+            return __awaiter(this, void 0, void 0, function () {
+                return __generator(this,
+                    function (c) {
+                        return this.is_local_clone ? [2, a.asyncClone()] : [2, a]
+                    })
+            })
+        };
+        return a
+    }(), RemoteMediaTrack = function (a) {
+        function b(c, b) {
+            var d = a.call(this, c, webrpcclassinfo_1.class_id_t.MediaStreamTrack, b, !0) || this;
+            d.refCount_ = 0;
+            d.refCount_++;
+            d.clone_state = new CloneState;
+            return d
+        }
+
+        __extends(b, a);
+        Object.defineProperty(b.prototype, "refcount", {
+            get: function () {
+                return this.refCount_
+            }, enumerable: !0, configurable: !0
+        });
+        b.prototype.addRef = function () {
+            this.refCount_++;
+            logger_1.logger.log(this.user_friendly_id() + ".addRef() called. [id=" +
+                this.id + "] refcount=" + this.refCount_)
+        };
+        Object.defineProperty(b.prototype, "onended", {
+            get: function () {
+                logger_1.logger.log(this.user_friendly_id() + ".get_onended() called. [id=" + this.id + "]");
+                return this.onended_
+            }, set: function (a) {
+                var b = this;
+                logger_1.logger.log(this.user_friendly_id() + ".set_onended() called. [id=" + this.id + "]");
+                this.onended_ = a;
+                this.waitUntilConnected("MediaStreamTrack.onended").then(function () {
+                    var d = b.registerCallbacks(!1, b.isNullCallback(a), webrpcclassinfo_1.method_id_MediaStreamTrack_t.onended);
+                    d.then(function (a) {
+                        logger_1.logger.log(b.user_friendly_id() + "onended event received!!!");
+                        a = new SimpleEvent("ended", b);
+                        b.readyState_ = "ended";
+                        b.onended_(a)
+                    });
+                    return b.remoteInvoke(!0, webrpcclassinfo_1.method_id_MediaStreamTrack_t.onended, d.success)
+                })["catch"](function () {
+                    logger_1.logger.log(b.user_friendly_id() + ".onended failed!!!")
+                })
+            }, enumerable: !0, configurable: !0
+        });
+        Object.defineProperty(b.prototype, "onmute", {
+            get: function () {
+                logger_1.logger.log(this.user_friendly_id() + ".get_onmute() called. [id=" + this.id +
+                    "]");
+                return this.onmute_
+            }, set: function (a) {
+                var b = this;
+                logger_1.logger.log(this.user_friendly_id() + ".set_onmute() called. [id=" + this.id + "]");
+                this.onmute_ = a;
+                this.waitUntilConnected("MediaStreamTrack.onmute").then(function () {
+                    var d = b.registerCallbacks(!1, b.isNullCallback(a), webrpcclassinfo_1.method_id_MediaStreamTrack_t.onmute);
+                    d.then(function (a) {
+                        logger_1.logger.log(b.user_friendly_id() + "onmute event received!!!");
+                        a = new SimpleEvent("mute", b);
+                        b.muted = !0;
+                        b.onmute_(a)
+                    });
+                    return b.remoteInvoke(!0, webrpcclassinfo_1.method_id_MediaStreamTrack_t.onmute,
+                        d.success)
+                })["catch"](function () {
+                    logger_1.logger.log(b.user_friendly_id() + ".onmute failed!!!")
+                })
+            }, enumerable: !0, configurable: !0
+        });
+        Object.defineProperty(b.prototype, "onunmute", {
+            get: function () {
+                logger_1.logger.log(this.user_friendly_id() + ".get_onunmute() called. [id=" + this.id + "]");
+                return this.onunmute_
+            }, set: function (a) {
+                var b = this;
+                logger_1.logger.log(this.user_friendly_id() + ".set_onunmute() called. [id=" + this.id + "]");
+                this.onunmute_ = a;
+                this.waitUntilConnected("MediaStreamTrack.onunmute").then(function () {
+                    var d =
+                        b.registerCallbacks(!1, b.isNullCallback(a), webrpcclassinfo_1.method_id_MediaStreamTrack_t.onunmute);
+                    d.then(function (a) {
+                        logger_1.logger.log("onunmute event received!!!");
+                        a = new SimpleEvent("unmute", b);
+                        b.muted = !1;
+                        b.onunmute_(a)
+                    });
+                    return b.remoteInvoke(!0, webrpcclassinfo_1.method_id_MediaStreamTrack_t.onunmute, d.success)
+                })["catch"](function () {
+                    logger_1.logger.log(b.user_friendly_id() + ".onunmute failed!!!")
+                })
+            }, enumerable: !0, configurable: !0
+        });
+        Object.defineProperty(b.prototype, "onstop", {
+            set: function (a) {
+                this.onstop_ =
+                    a
+            }, enumerable: !0, configurable: !0
+        });
+        Object.defineProperty(b.prototype, "enabled", {
+            get: function () {
+                logger_1.logger.log(this.user_friendly_id() + ".get_enabled() called. [id=" + this.id + ", value=" + this.enabled_ + "]");
+                return this.enabled_
+            }, set: function (a) {
+                logger_1.logger.log(this.user_friendly_id() + ".set_enabled() called. [id=" + this.id + ", value=" + a + "]");
+                this.enabled_ = a;
+                this.remoteInvoke(!0, webrpcclassinfo_1.method_id_MediaStreamTrack_t.enabled, a)
+            }, enumerable: !0, configurable: !0
+        });
+        Object.defineProperty(b.prototype,
+            "readyState", {
+                get: function () {
+                    logger_1.logger.log(this.user_friendly_id() + ".get_readyState() called. [id=" + this.id + "]");
+                    return this.readyState_
+                }, enumerable: !0, configurable: !0
+            });
+        b.prototype.asyncClone = function () {
+            return __awaiter(this, void 0, void 0, function () {
+                var a, e, d;
+                return __generator(this, function (f) {
+                    switch (f.label) {
+                        case 0:
+                            return [4, this.waitUntilConnected("RemoteMediaTrack.asyncClone")];
+                        case 1:
+                            return f.sent(), [4, this.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStreamTrack_t.clone, [])];
+                        case 2:
+                            return a =
+                                f.sent(), e = this.param0(a), d = new b(this, e.oid), [2, d.syncBarrier()]
+                    }
+                })
+            })
+        };
+        b.prototype.clone = function () {
+            logger_1.logger.log(this.user_friendly_id() + ".clone() called. [id=" + this.id + "]");
+            var a = this.clone_state.clone(), e = new b(this, this.object_id());
+            e.id = this.id + "." + a.clone_id.toString();
+            e.label = this.label;
+            e.kind = this.kind;
+            e.enabled_ = this.enabled_;
+            e.muted = this.muted;
+            e.readyState_ = this.readyState_;
+            e.trackSettings_ = this.trackSettings_;
+            e.clone_state = a;
+            return e
+        };
+        b.prototype.stop = function () {
+            var a = this;
+            logger_1.logger.log(this.user_friendly_id() +
+                ".stop() called. [id=" + this.id + "] refcount=" + this.refCount_);
+            this.readyState_ = "ended";
+            if (0 < this.refCount_ && (this.refCount_--, 0 === this.refCount_ && (logger_1.logger.log(this.user_friendly_id() + ".stop() called. [id=" + this.id + "] remote invoking..."), this.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStreamTrack_t.stop)["catch"](function (b) {
+                logger_1.logger.log(a.user_friendly_id() + ".stop() failed with:" + b)
+            }), null !== this.onstop_))) this.onstop_()
+        };
+        b.prototype.getCapabilities = function () {
+            logger_1.logger.log(this.user_friendly_id() +
+                ".getCapabilities() called. [id=" + this.id + "]")
+        };
+        b.prototype.getConstrains = function () {
+            logger_1.logger.log(this.user_friendly_id() + ".getConstrains() called. [id=" + this.id + "]")
+        };
+        b.prototype.getSettings = function () {
+            return "audio" == this.kind ? function (a) {
+                return {deviceId: a.deviceId, echoCancellation: a.echoCancellation}
+            }(this.trackSettings_) : function (a) {
+                return {
+                    aspectRatio: a.aspectRatio,
+                    deviceId: a.deviceId,
+                    frameRate: a.frameRate,
+                    height: a.height,
+                    width: a.width
+                }
+            }(this.trackSettings_)
+        };
+        b.prototype.applyConstraints =
+            function (a) {
+                var b = this;
+                logger_1.logger.log("MediaStreamTrack.applyConstraints() called.");
+                return new Promise(function (d, f) {
+                    b.waitUntilConnected("MediaStreamTrack.applyConstraints").then(function () {
+                        return b.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStreamTrack_t.applyConstraints, a)
+                    }).then(function () {
+                        d()
+                    })["catch"](function () {
+                        f({name: "OverconstrainedError", message: "Failed to apply constraints."})
+                    })
+                })
+            };
+        b.convertReadyState = function (a) {
+            return 0 == a ? "live" : "ended"
+        };
+        b.prototype.syncBarrier = function () {
+            var a =
+                this;
+            logger_1.logger.log(this.user_friendly_id() + ".syncBarrier() called.");
+            return new Promise(function (e, d) {
+                a.waitUntilConnected("MediaStreamTrack.syncBarrier").then(function () {
+                    return Promise.all([a.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStreamTrack_t.kind, ""), a.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStreamTrack_t.id, ""), a.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStreamTrack_t.label, ""), a.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStreamTrack_t.enabled, !1), a.remoteInvoke(!1,
+                        webrpcclassinfo_1.method_id_MediaStreamTrack_t.muted, !1), a.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStreamTrack_t.readyState, 0), a.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStreamTrack_t.getSettings)])
+                }).then(function (d) {
+                    var h = 0;
+                    d = d.map(function (b) {
+                        return a.param0(b)
+                    });
+                    a.kind = d[0];
+                    a.id = d[1];
+                    a.label = d[2];
+                    a.enabled_ = d[3];
+                    a.muted = d[4];
+                    h = d[5];
+                    a.trackSettings_ = d[6];
+                    a.readyState_ = b.convertReadyState(h);
+                    e(a)
+                })["catch"](function () {
+                    d()
+                })
+            })
+        };
+        return b
+    }(proxyobject_1.ProxyObject);
+exports.RemoteMediaTrack = RemoteMediaTrack;
+var StreamInfo = function () {
+    return function () {
+    }
+}(), RemoteStream = function (a) {
+    function b(c, b) {
+        var d = a.call(this, c, webrpcclassinfo_1.class_id_t.MediaStream, b, !0) || this;
+        d.clone_state = new CloneState;
+        return d
+    }
+
+    __extends(b, a);
+    b.prototype.dumpTrackInfo = function () {
+        logger_1.logger.log(this.user_friendly_id() + ".dumpTrackInfo() called. [id=" + this.id + "]");
+        for (var a = 0, b = this.tracks_; a < b.length; a++) {
+            var d = b[a];
+            logger_1.logger.log(d.user_friendly_id() + " [id=" + d.id + "] refcount=" + d.refcount)
+        }
+    };
+    b.prototype.toJSON = function () {
+        var a =
+            new StreamInfo;
+        a.id = this.id;
+        a.active = this.active;
+        a.oid = this.object_id();
+        return "RemoteStream:" + JSON.stringify(a)
+    };
+    b.prototype.getAudioTracks = function () {
+        logger_1.logger.log(this.user_friendly_id() + ".getAudioTracks() called. [id=" + this.id + "]");
+        for (var a = [], b = 0, d = this.tracks_; b < d.length; b++) {
+            var f = d[b];
+            "audio" == f.kind && a.push(f)
+        }
+        return a
+    };
+    b.prototype.getVideoTracks = function () {
+        logger_1.logger.log(this.user_friendly_id() + ".getVideoTracks() called. [id=" + this.id + "]");
+        for (var a = [], b = 0, d = this.tracks_; b < d.length; b++) {
+            var f =
+                d[b];
+            "video" == f.kind && a.push(f)
+        }
+        return a
+    };
+    b.prototype.getTracks = function () {
+        logger_1.logger.log(this.user_friendly_id() + ".getTracks() called. [id=" + this.id + "]");
+        return this.tracks_
+    };
+    b.prototype.getTrackById = function (a) {
+        logger_1.logger.log(this.user_friendly_id() + ".getTrackById() called. [id=" + this.id + "]");
+        for (var b = 0, d = this.tracks_; b < d.length; b++) {
+            var f = d[b];
+            if (f.id == a) return f
+        }
+    };
+    b.prototype.addTrack = function (a) {
+        logger_1.logger.log(this.user_friendly_id() + ".addTrack() called. [id=" + this.id + "]");
+        this.tracks_.push(a);
+        this.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStream_t.addTrack, {oid: a.object_id()})
+    };
+    b.prototype.removeTrack = function (a) {
+        logger_1.logger.log(this.user_friendly_id() + ".removeTrack() called. [id=" + this.id + "]");
+        var b = this.tracks_.indexOf(a);
+        this.tracks_.splice(b, 1);
+        this.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStream_t.removeTrack, {oid: a.object_id()})
+    };
+    b.prototype.asyncClone = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var a, e, d;
+            return __generator(this, function (f) {
+                switch (f.label) {
+                    case 0:
+                        return logger_1.logger.log(this.user_friendly_id() +
+                            ".asyncClone() called. [id=" + this.id + "]"), [4, this.waitUntilConnected("asyncClone")];
+                    case 1:
+                        return f.sent(), [4, this.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStream_t.clone, [])];
+                    case 2:
+                        return a = f.sent(), console.log(a), e = this.param0(a), d = new b(this, e.oid), [2, d.syncBarrier()]
+                }
+            })
+        })
+    };
+    b.prototype.clone = function () {
+        logger_1.logger.log(this.user_friendly_id() + ".clone() called. [id=" + this.id + "]");
+        var a = this.clone_state.clone(), e = new b(this, this.object_id());
+        e.id = this.id + "." + a.clone_id.toString();
+        this.tracks_.forEach(function (a) {
+            a.addRef()
+        });
+        e.tracks_ = this.tracks_;
+        e.clone_state = a;
+        return e
+    };
+    b.prototype.syncBarrier = function () {
+        var a = this;
+        logger_1.logger.log(this.user_friendly_id() + ".syncBarrier() called. [id=" + this.id + "]");
+        return new Promise(function (b, d) {
+            a.waitUntilConnected("MediaStream.syncBarrier").then(function () {
+                return Promise.all([a.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStream_t.id, ""), a.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStream_t.active, !1), a.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStream_t.getTracks,
+                    [])])
+            }).then(function (b) {
+                b = b.map(function (b) {
+                    return a.param0(b)
+                });
+                a.id = b[0];
+                a.active = b[1];
+                b = b[2];
+                for (var e = [], d = 0; d < b.length; d++) {
+                    var k = new RemoteMediaTrack(a, b[d].oid);
+                    e.push(k.syncBarrier())
+                }
+                return Promise.all(e)
+            }).then(function (d) {
+                a.tracks_ = [];
+                d.forEach(function (b) {
+                    b.onstop = function () {
+                        var b = !0;
+                        a.tracks_.forEach(function (a) {
+                            "ended" != a.readyState && (b = !1)
+                        });
+                        b && a.release()
+                    };
+                    a.tracks_.push(b)
+                });
+                b(a)
+            })["catch"](function () {
+                d()
+            })
+        })
+    };
+    return b
+}(proxyobject_1.ProxyObject);
+exports.RemoteStream = RemoteStream;
+var RemoteStreamEvent = function (a) {
+    function b(b, e) {
+        return a.call(this, b, webrpcclassinfo_1.class_id_t.MediaStreamEvent, e, !0) || this
+    }
+
+    __extends(b, a);
+    b.prototype.syncBarrier = function () {
+        var a = this;
+        logger_1.logger.log(this.user_friendly_id() + ".syncBarrier() called.");
+        return new Promise(function (b, d) {
+            a.waitUntilConnected("MediaStreamEvent.syncBarrier").then(function () {
+                return a.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaStreamEvent_t.stream, {oid: 0})
+            }).then(function (b) {
+                return (new RemoteStream(a, b.params[0].oid)).syncBarrier()
+            }).then(function (d) {
+                a.stream =
+                    d;
+                b(a)
+            })["catch"](function () {
+                d()
+            })
+        })
+    };
+    return b
+}(proxyobject_1.ProxyObject);
+exports.RemoteStreamEvent = RemoteStreamEvent;
+var RemoteDeviceInfo = function (a) {
+    function b(b) {
+        return a.call(this, null, webrpcclassinfo_1.class_id_t.MediaDeviceInfo, b, !0) || this
+    }
+
+    __extends(b, a);
+    b.prototype.convertKind = function (a) {
+        return 0 == a ? "audioinput" : 1 == a ? "audiooutput" : "videoinput"
+    };
+    b.prototype.syncBarrier = function () {
+        var a = this;
+        logger_1.logger.log(this.user_friendly_id() + ".syncBarrier() called.");
+        return new Promise(function (b, d) {
+            a.waitUntilConnected("RemoteDeviceInfo.syncBarrier").then(function () {
+                return Promise.all([a.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaDeviceInfo_t.deviceId,
+                    ""), a.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaDeviceInfo_t.kind, 0), a.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaDeviceInfo_t.label, ""), a.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaDeviceInfo_t.groupId, "")])
+            }).then(function (d) {
+                a.kind = a.convertKind(a.param0(d.splice(1, 1)[0]));
+                d = d.map(function (b) {
+                    return a.param0(b)
+                });
+                a.deviceId = d[0];
+                a.label = d[1];
+                a.groupId = d[2];
+                b(a)
+            })["catch"](function () {
+                logger_1.logger.log(a.user_friendly_id() + ".syncBarrier(): rejected.");
+                d()
+            })
+        })
+    };
+    return b
+}(proxyobject_1.ProxyObject);
+exports.RemoteDeviceInfo = RemoteDeviceInfo;
+var RemoteDevices = function (a) {
+    function b() {
+        var b = a.call(this, null, webrpcclassinfo_1.class_id_t.MediaDevices, 0, !1) || this;
+        b.devices_ = [];
+        b.setDeviceChangeCallback();
+        return b
+    }
+
+    __extends(b, a);
+    b.prototype.enumerateDevices = function () {
+        var a = this;
+        logger_1.logger.log(this.user_friendly_id() + ".enumerateDevices() called");
+        return new Promise(function (b, d) {
+            a.waitUntilConnected("RemoteDevices.enumerateDevices").then(function () {
+                return a.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaDevices_t.enumerateDevices, [])
+            }).then(function (b) {
+                var d =
+                    [];
+                b.params[0].forEach(function (b) {
+                    var e = a.devices_.find(function (a) {
+                        return a.object_id() === b.oid
+                    });
+                    void 0 === e ? (e = new RemoteDeviceInfo(b.oid), d.push(e.syncBarrier())) : d.push(e)
+                });
+                return Promise.all(d)
+            }).then(function (d) {
+                logger_1.logger.log(a.user_friendly_id() + ".enumerateDevices: returning enumerated devices with ids [" + d.map(function (a) {
+                    return a.object_id()
+                }) + "]");
+                b(d);
+                a.devices_.forEach(function (a) {
+                    for (var b = !0, c = 0; c < d.length; c++) if (a === d[c]) {
+                        b = !1;
+                        break
+                    }
+                    b && a.release()
+                });
+                a.devices_ = d
+            })["catch"](function () {
+                logger_1.logger.log(a.user_friendly_id() +
+                    ".enumerateDevices() didnt get response.");
+                a.devices_ = [];
+                d()
+            })
+        })
+    };
+    b.prototype.getDisplayMedia = function (a) {
+        var b = this;
+        return new Promise(function (d, f) {
+            b.waitUntilConnected("RemoteDevices.getDisplayMedia").then(function () {
+                return b.remoteInvoke(!1, webrpcclassinfo_1.method_id_MediaDevices_t.getDisplayMedia, a)
+            }).then(function (a) {
+                return (new RemoteStream(null, a.params[0].oid)).syncBarrier()
+            }).then(function (a) {
+                d(a)
+            })["catch"](function () {
+                logger_1.logger.log(b.user_friendly_id() + ".getDisplayMedia() returned an error.");
+                f(new DOMException("Unable to get a display stream.", "NotReadableError"))
+            })
+        })
+    };
+    b.prototype.setDeviceChangeCallback = function () {
+        var a = this;
+        logger_1.logger.log(this.user_friendly_id() + ".set_DeviceChangeCallback() called.");
+        this.waitUntilConnected("MediaDevices.ondevicechange").then(function () {
+            var b = a.registerCallbacks(!1, !1, webrpcclassinfo_1.method_id_MediaDevices_t.ondevicechange);
+            b.then(function () {
+                logger_1.logger.log(a.user_friendly_id() + ".ondevicechange(): callback received!!!");
+                navigator.mediaDevices.dispatchEvent(new CustomEvent("devicechange"))
+            });
+            return a.remoteInvoke(!0, webrpcclassinfo_1.method_id_MediaDevices_t.ondevicechange, b.success)
+        })["catch"](function () {
+            logger_1.logger.log(a.user_friendly_id() + ".set_ondevicechange(): failed.")
+        })
+    };
+    return b
+}(proxyobject_1.ProxyObject);
+exports.RemoteDevices = RemoteDevices;
+var NavigatorUserMedia = function (a) {
+    function b() {
+        return a.call(this, null, webrpcclassinfo_1.class_id_t.NavigatorUserMedia, 0, !1) || this
+    }
+
+    __extends(b, a);
+    b.prototype.webkitGetUserMedia = function (a, b, d) {
+        this.getUserMedia(a, b, d)
+    };
+    b.prototype.getUserMedia = function (a, b, d) {
+        var f = this;
+        logger_1.logger.log(this.user_friendly_id() + ".getUserMedia() called: " + JSON.stringify(a));
+        this.waitUntilConnected("NavigatorUserMedia.getUserMedia").then(function () {
+            var b = f.registerCallbacks(!0, !1, webrpcclassinfo_1.method_id_NavigatorUserMedia_t.getUserMedia);
+            "undefined" !== typeof a.audio && 0 == Object.keys(a.audio).length && (a.audio = {dummy: 1});
+            if ("undefined" !== typeof a.video) {
+                var d = a.video;
+                void 0 == d.mandatory.maxFrameRate && (d.mandatory.maxFrameRate = 30);
+                void 0 == d.mandatory.minWidth && (d.mandatory.minWidth = 360);
+                void 0 == d.mandatory.maxWidth && (d.mandatory.maxWidth = 1920);
+                void 0 == d.mandatory.minHeight && (d.mandatory.minHeight = 180);
+                void 0 == d.mandatory.maxHeight && (d.mandatory.maxHeight = 1080)
+            }
+            f.remoteInvoke(!1, webrpcclassinfo_1.method_id_NavigatorUserMedia_t.getUserMedia,
+                a, b.success, b.fail);
+            return b.prom()
+        }).then(function (a) {
+            logger_1.logger.log(f.user_friendly_id() + ".getUserMedia: received success callback!");
+            return (new RemoteStream(null, f.param0(a).oid)).syncBarrier()
+        }).then(function (a) {
+            logger_1.logger.log(f.user_friendly_id() + ".getUserMedia: MediaStream ready to deliver", JSON.stringify(a));
+            0 == a.getTracks().length ? (logger_1.logger.log(f.user_friendly_id() + ".getUserMedia: reporting no tracks as error."), d({
+                    constraintName: "",
+                    name: "ConstraintNotSatisfiedError",
+                    message: ""
+                })) :
+                b(a)
+        })["catch"](function (a) {
+            logger_1.logger.log(a);
+            d({constraintName: "", name: "ConstraintNotSatisfiedError", message: ""})
+        })
+    };
+    return b
+}(proxyobject_1.ProxyObject);
+exports.NavigatorUserMedia = NavigatorUserMedia;
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+Object.defineProperty(exports,"__esModule",{value:!0});var webrpcclassinfo_1=__webpack_require__(1),ws_msg_type_t;(function(a){a[a.req=0]="req";a[a.reply=1]="reply";a[a.event_req=2]="event_req";a[a.event_reply=3]="event_reply"})(ws_msg_type_t=exports.ws_msg_type_t||(exports.ws_msg_type_t={}));
+var WsJsonUtil=function(){function a(){}a.createMessageByid=function(a,c,g,e,f,h){for(var d=[],b=6;b<arguments.length;b++)d[b-6]=arguments[b];(b=webrpcclassinfo_1.WebrpcClassLibInfoUtil.getMethodByid(e,f))&&b.isprop||(a=!1);return this.createMessage.apply(this,[g,a,c,e,f,h].concat(d))};a.createMessage=function(a,c,g,e,f,h){for(var d=[],b=6;b<arguments.length;b++)d[b-6]=arguments[b];return{v:"webrtc",hdr:{version:this._version,msg_type:this.getMsgType(a),modifier:c,destroy:g,proc:{iid:e,methodid:f}},
+objref:{oid:h},params:d.slice()}};a.getMsgType=function(a){var c="";switch(a){default:c="req";break;case ws_msg_type_t.reply:c="reply";break;case ws_msg_type_t.event_req:c="event-req";break;case ws_msg_type_t.event_reply:c="event-reply"}return c};a._version=1;return a}();exports.WsJsonUtil=WsJsonUtil;
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+Object.defineProperty(exports,"__esModule",{value:!0});
+var Node=function(){function b(a){this.parent_=this.object_=null;this.children_=[];this.object_=a}b.prototype.addChild=function(a){a.parent_!=this&&(a.parent_=this,this.children_.push(a))};b.prototype.removeChild=function(a){var d=this.children_.indexOf(a);this.children_.splice(d,1);a.parent_=null};return b}(),GC=function(){function b(){this.root_=new Node(null)}b.prototype.trackObject=function(a,d){void 0===d&&(d=null);if(null===this.findNode(a,this.root_)){var c=this.findNode(d,this.root_),b=new Node(a);
+c.addChild(b)}};b.prototype.releaseObject=function(a){a=this.findNode(a,this.root_);if(null===a||a===this.root_)return!1;this.destroyNodeObjectRecurse(a);a.parent_.removeChild(a);return!0};b.prototype.destroyNodeObjectRecurse=function(a){for(var d=0,c=a.children_;d<c.length;d++)this.destroyNodeObjectRecurse(c[d]);a.object_.destroy()};b.prototype.setParent=function(a,d){var c=this.findNode(a,this.root_);if(null===c)return!1;var b=this.findNode(d,this.root_);if(null===b)return!1;if(c.parent_===b)return!0;
+c.parent_.removeChild(c);b.addChild(c);return!0};b.prototype.reset=function(){this.root_.children_=[]};b.prototype.findNode=function(a,b){if(b.object_===a)return b;for(var c=null,e=0,f=b.children_;e<f.length&&(c=this.findNode(a,f[e]),null===c);e++);return c};return b}();exports.GC=GC;exports.gc=new GC;
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var vdishim = __webpack_require__(9), rmshim = __webpack_require__(5), videoelem = __webpack_require__(11),
+    audioelem = __webpack_require__(12), frametracker = __webpack_require__(13),
+    logger = __webpack_require__(0).logger, remotesession = __webpack_require__(14),
+    garbagecollector = __webpack_require__(7).gc, remoteDevices = new rmshim.RemoteDevices;
+module.exports.CitrixPeerConnection = vdishim.PeerConnection;
+module.exports.getUserMedia = function (a, c, b) {
+    return (new rmshim.NavigatorUserMedia).webkitGetUserMedia(a, c, b)
+};
+module.exports.enumerateDevices = function () {
+    return remoteDevices.enumerateDevices()
+};
+module.exports.mapVideoElement = function (a) {
+    var c = new frametracker.FrameTracker;
+    logger.log("VDI New Video Element Created, Creating Mapping to VDA");
+    void 0 !== a.VDAVideoElement ? logger.log("Video element is already configured!") : (Object.defineProperty(a, "VDAVideoElement", {
+        writable: !0,
+        value: null
+    }), a.VDAVideoElement = new videoelem.VideoElement, a.VDAVideoElement.onloadedmetadata = function () {
+        var b = new Event("loadedmetadata");
+        a.dispatchEvent(b)
+    }, a.VDAVideoElement.ontimeupdate = function () {
+        var b = new Event("timeupdate");
+        a.dispatchEvent(b)
+    }, a.VDAVideoElement.onconnectionstatechange = function () {
+        "connected" == a.VDAVideoElement.connectionState ? c.track(a, function (b) {
+            a.VDAVideoElement.setFrame(b)
+        }) : c.untrack(a)
+    }, Object.defineProperty(a, "sinkId", {
+        get: function () {
+            return a.VDAVideoElement.sinkId
+        }, set: function (b) {
+            logger.log("VDI Shim set video element SinkId value = " + b);
+            a.VDAVideoElement.sinkId = b
+        }
+    }), Object.defineProperty(a, "srcObject", {
+        get: function () {
+            return a.VDAVideoElement.srcObject
+        }, set: function (b) {
+            logger.log("VDI Shim set video element srcObject");
+            a.VDAVideoElement.srcObject = b
+        }
+    }), Object.defineProperty(a, "videoWidth", {
+        get: function () {
+            return a.VDAVideoElement.videoWidth
+        }
+    }), Object.defineProperty(a, "videoHeight", {
+        get: function () {
+            return a.VDAVideoElement.videoHeight
+        }
+    }))
+};
+module.exports.mapAudioElement = function (curAudioElem) {
+	logger.log("VDI New Audio Element Created, Creating Mapping to VDA");
+	if (curAudioElem['VDAAudioElement'] !== undefined) {
+		logger.log('Audio element is already configured!');
+		return;
+	}
+
+	Object.defineProperty(curAudioElem, 'VDAAudioElement', {
+		writable: true,
+		value: null
+	});
+	curAudioElem.VDAAudioElement = new audioelem.AudioElement();
+
+	Object.defineProperty(curAudioElem, 'sinkId', {
+		get: function () {
+			return curAudioElem.VDAAudioElement.sinkId;
+		},
+		set: function (v) {
+			logger.log("VDI Shim set audio element SinkId value = " + v);
+			curAudioElem.VDAAudioElement.sinkId = v;
+		}
+	});
+
+	Object.defineProperty(curAudioElem, 'srcObject', {
+		get: function () {
+			return curAudioElem.VDAAudioElement.srcObject;
+		},
+		set: function (v) {
+			logger.log('VDI Shim set video element srcObject');
+			curAudioElem.VDAAudioElement.srcObject = v;
+			if (v === null || v === undefined) {
+				//TODO - delete if actually setting srcObject on AudioElement
+				if (curAudioElem.VDAAudioElement.srcObject !== null) {
+					let audio_tr = teamsAudioElem.remoteAudioElement.srcObject.getTracks();
+					for (let next of audio_tr) {
+						next.enabled = false;
+					}
+				}
+				curAudioElem.VDAAudioElement.release();
+			}
+			else {
+				curAudioElem.VDAAudioElement.srcObject = v;
+				console.log(v);
+				let audio_tr = v.getTracks();
+				for (let next of audio_tr) {
+					next.enabled = true;
+				}
+			}
+		},
+	});
+}
+module.exports.addClipRect = function (a) {
+    logger.log("VDI Adding Occlusion " + JSON.stringify(a));
+    null === videoElementFrameTracker && (videoElementFrameTracker = new frametracker.FrameTracker);
+    videoElementFrameTracker.addOcclusion(a)
+};
+module.exports.removeClipRect = function (a) {
+    logger.log("VDI Removing Occlusion " + JSON.stringify(a));
+    null === videoElementFrameTracker && (videoElementFrameTracker = new frametracker.FrameTracker);
+    videoElementFrameTracker.removeOcclusion(a)
+};
+onVMEvent = void 0;
+module.exports.setVMEventCallback = function (a) {
+    onVMEvent = a;
+    logger.log("VDI Event Callback Set")
+};
+window.onVdiClientDisconnected = function () {
+    logger.log("VDI Event: vdiClientDisconnected");
+    cleanup();
+    remotefailure_notified = !1;
+    try {
+        onVMEvent({event: "vdiClientDisconnected", request: "endCalls"})
+    } catch (a) {
+        logger.log("onVMEvent(): exception: " + a.message)
+    }
+};
+var remoteSession = new remotesession.RemoteSession;
+window.onVdiClientDisconnectedTimer = function () {
+    logger.log("VDI Event: onVdiClientDisconnectedTimer");
+    null === remoteSession && (remoteSession = new remotesession.RemoteSession)
+};
+window.onVdiClientConnected = function () {
+    logger.log("VDI Event: vdiClientConnected");
+    sendSessionInfo();
+    null === remoteDevices && (remoteDevices = new rmshim.RemoteDevices, originalEnumerateDevices = remoteDevices.enumerateDevices, originalGetDisplayMedia = remoteDevices.getDisplayMedia, navigator.mediaDevices.dispatchEvent(new CustomEvent("devicechange")))
+};
+var remotefailure_notified = !1;
+window.onVdiUnableToRemote = function () {
+    logger.log("VDI Event: vdiUnableToRemote");
+    cleanup();
+    if (!1 === remotefailure_notified) {
+        logger.log("VDI Event: vdiUnableToRemote reported");
+        remotefailure_notified = !0;
+        try {
+            onVMEvent({event: "vdiUnableToRemote"})
+        } catch (a) {
+            logger.log("onVMEvent(): exception: " + a.message)
+        }
+    }
+};
+
+function sendSessionInfo() {
+    logger.log("VDI: sendSessionInfo");
+    remoteSession && remoteSession.getSessionInfo().then(function (a) {
+        a.event = "vdiClientConnected";
+        logger.log("getSessionInfo success! info:" + JSON.stringify(a));
+        try {
+            onVMEvent(a)
+        } catch (c) {
+            logger.log("onVMEvent(): exceptionvar vdishim = require(\"./peerconnection\"), rmshim = require(\"./remotemedia\"), videoelem = require(\"./videoelement\"),\n" +
+                "    audioelem = require(\"./audioelement\"), frametracker = require(\"./frametracker\"),\n" +
+                "    logger = require(\"./logger\").logger, remotesession = require(\"./remotesession\"),\n" +
+                "    garbagecollector = require(\"./garbagecollector\").gc, remoteDevices = new rmshim.RemoteDevices;\n" +
+                "module.exports.CitrixPeerConnection = vdishim.PeerConnection;\n" +
+                "module.exports.getUserMedia = function (a, c, b) {\n" +
+                "    return (new rmshim.NavigatorUserMedia).webkitGetUserMedia(a, c, b)\n" +
+                "};\n" +
+                "module.exports.enumerateDevices = function () {\n" +
+                "    return remoteDevices.enumerateDevices()\n" +
+                "};\n" +
+                "module.exports.mapVideoElement = function (a) {\n" +
+                "    var c = new frametracker.FrameTracker;\n" +
+                "    logger.log(\"VDI New Video Element Created, Creating Mapping to VDA\");\n" +
+                "    void 0 !== a.VDAVideoElement ? logger.log(\"Video element is already configured!\") : (Object.defineProperty(a, \"VDAVideoElement\", {\n" +
+                "        writable: !0,\n" +
+                "        value: null\n" +
+                "    }), a.VDAVideoElement = new videoelem.VideoElement, a.VDAVideoElement.onloadedmetadata = function () {\n" +
+                "        var b = new Event(\"loadedmetadata\");\n" +
+                "        a.dispatchEvent(b)\n" +
+                "    }, a.VDAVideoElement.ontimeupdate = function () {\n" +
+                "        var b = new Event(\"timeupdate\");\n" +
+                "        a.dispatchEvent(b)\n" +
+                "    }, a.VDAVideoElement.onconnectionstatechange = function () {\n" +
+                "        \"connected\" == a.VDAVideoElement.connectionState ? c.track(a, function (b) {\n" +
+                "            a.VDAVideoElement.setFrame(b)\n" +
+                "        }) : c.untrack(a)\n" +
+                "    }, Object.defineProperty(a, \"sinkId\", {\n" +
+                "        get: function () {\n" +
+                "            return a.VDAVideoElement.sinkId\n" +
+                "        }, set: function (b) {\n" +
+                "            logger.log(\"VDI Shim set video element SinkId value = \" + b);\n" +
+                "            a.VDAVideoElement.sinkId = b\n" +
+                "        }\n" +
+                "    }), Object.defineProperty(a, \"srcObject\", {\n" +
+                "        get: function () {\n" +
+                "            return a.VDAVideoElement.srcObject\n" +
+                "        }, set: function (b) {\n" +
+                "            logger.log(\"VDI Shim set video element srcObject\");\n" +
+                "            a.VDAVideoElement.srcObject = b\n" +
+                "        }\n" +
+                "    }), Object.defineProperty(a, \"videoWidth\", {\n" +
+                "        get: function () {\n" +
+                "            return a.VDAVideoElement.videoWidth\n" +
+                "        }\n" +
+                "    }), Object.defineProperty(a, \"videoHeight\", {\n" +
+                "        get: function () {\n" +
+                "            return a.VDAVideoElement.videoHeight\n" +
+                "        }\n" +
+                "    }))\n" +
+                "};\n" +
+                "module.exports.addClipRect = function (a) {\n" +
+                "    logger.log(\"VDI Adding Occlusion \" + JSON.stringify(a));\n" +
+                "    null === videoElementFrameTracker && (videoElementFrameTracker = new frametracker.FrameTracker);\n" +
+                "    videoElementFrameTracker.addOcclusion(a)\n" +
+                "};\n" +
+                "module.exports.removeClipRect = function (a) {\n" +
+                "    logger.log(\"VDI Removing Occlusion \" + JSON.stringify(a));\n" +
+                "    null === videoElementFrameTracker && (videoElementFrameTracker = new frametracker.FrameTracker);\n" +
+                "    videoElementFrameTracker.removeOcclusion(a)\n" +
+                "};\n" +
+                "onVMEvent = void 0;\n" +
+                "module.exports.setVMEventCallback = function (a) {\n" +
+                "    onVMEvent = a;\n" +
+                "    logger.log(\"VDI Event Callback Set\")\n" +
+                "};\n" +
+                "window.onVdiClientDisconnected = function () {\n" +
+                "    logger.log(\"VDI Event: vdiClientDisconnected\");\n" +
+                "    cleanup();\n" +
+                "    remotefailure_notified = !1;\n" +
+                "    try {\n" +
+                "        onVMEvent({event: \"vdiClientDisconnected\", request: \"endCalls\"})\n" +
+                "    } catch (a) {\n" +
+                "        logger.log(\"onVMEvent(): exception: \" + a.message)\n" +
+                "    }\n" +
+                "};\n" +
+                "var remoteSession = new remotesession.RemoteSession;\n" +
+                "window.onVdiClientDisconnectedTimer = function () {\n" +
+                "    logger.log(\"VDI Event: onVdiClientDisconnectedTimer\");\n" +
+                "    null === remoteSession && (remoteSession = new remotesession.RemoteSession)\n" +
+                "};\n" +
+                "window.onVdiClientConnected = function () {\n" +
+                "    logger.log(\"VDI Event: vdiClientConnected\");\n" +
+                "    sendSessionInfo();\n" +
+                "    null === remoteDevices && (remoteDevices = new rmshim.RemoteDevices, originalEnumerateDevices = remoteDevices.enumerateDevices, originalGetDisplayMedia = remoteDevices.getDisplayMedia, navigator.mediaDevices.dispatchEvent(new CustomEvent(\"devicechange\")))\n" +
+                "};\n" +
+                "var remotefailure_notified = !1;\n" +
+                "window.onVdiUnableToRemote = function () {\n" +
+                "    logger.log(\"VDI Event: vdiUnableToRemote\");\n" +
+                "    cleanup();\n" +
+                "    if (!1 === remotefailure_notified) {\n" +
+                "        logger.log(\"VDI Event: vdiUnableToRemote reported\");\n" +
+                "        remotefailure_notified = !0;\n" +
+                "        try {\n" +
+                "            onVMEvent({event: \"vdiUnableToRemote\"})\n" +
+                "        } catch (a) {\n" +
+                "            logger.log(\"onVMEvent(): exception: \" + a.message)\n" +
+                "        }\n" +
+                "    }\n" +
+                "};\n" +
+                "\n" +
+                "function sendSessionInfo() {\n" +
+                "    logger.log(\"VDI: sendSessionInfo\");\n" +
+                "    remoteSession && remoteSession.getSessionInfo().then(function (a) {\n" +
+                "        a.event = \"vdiClientConnected\";\n" +
+                "        logger.log(\"getSessionInfo success! info:\" + JSON.stringify(a));\n" +
+                "        try {\n" +
+                "            onVMEvent(a)\n" +
+                "        } catch (c) {\n" +
+                "            logger.log(\"onVMEvent(): exception: \" + c.message)\n" +
+                "        }\n" +
+                "    })[\"catch\"](function () {\n" +
+                "        logger.log(\"getSessionInfo failure! session is not fully connected yet...\")\n" +
+                "    })\n" +
+                "}\n" +
+                "\n" +
+                "function cleanup() {\n" +
+                "    logger.log(\"VDI : cleanup\");\n" +
+                "    videoElementFrameTracker = remoteDevices = remoteUserMedia = null;\n" +
+                "    audioNotifications = [];\n" +
+                "    remoteSession && remoteSession.release();\n" +
+                "    remoteSession = null;\n" +
+                "    garbagecollector.reset();\n" +
+                "    logger.log(\"VDI : cleanup done\")\n" +
+                "};\n: " + c.message)
+        }
+    })["catch"](function () {
+        logger.log("getSessionInfo failure! session is not fully connected yet...")
+    })
+}
+
+function cleanup() {
+    logger.log("VDI : cleanup");
+    videoElementFrameTracker = remoteDevices = remoteUserMedia = null;
+    audioNotifications = [];
+    remoteSession && remoteSession.release();
+    remoteSession = null;
+    garbagecollector.reset();
+    logger.log("VDI : cleanup done")
+};
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global) {var $jscomp = {
+    scope: {}, getGlobal: function (a) {
+        return "undefined" != typeof window && window === a ? a : "undefined" != typeof global ? global : a
+    }
+};
+$jscomp.global = $jscomp.getGlobal(this);
+$jscomp.initSymbol = function () {
+    $jscomp.global.Symbol || ($jscomp.global.Symbol = $jscomp.Symbol);
+    $jscomp.initSymbol = function () {
+    }
+};
+$jscomp.symbolCounter_ = 0;
+$jscomp.Symbol = function (a) {
+    return "jscomp_symbol_" + a + $jscomp.symbolCounter_++
+};
+$jscomp.initSymbolIterator = function () {
+    $jscomp.initSymbol();
+    $jscomp.global.Symbol.iterator || ($jscomp.global.Symbol.iterator = $jscomp.global.Symbol("iterator"));
+    $jscomp.initSymbolIterator = function () {
+    }
+};
+$jscomp.makeIterator = function (a) {
+    $jscomp.initSymbolIterator();
+    if (a[$jscomp.global.Symbol.iterator]) return a[$jscomp.global.Symbol.iterator]();
+    var b = 0;
+    return {
+        next: function () {
+            return b == a.length ? {done: !0} : {done: !1, value: a[b++]}
+        }
+    }
+};
+$jscomp.arrayFromIterator = function (a) {
+    for (var b, c = []; !(b = a.next()).done;) c.push(b.value);
+    return c
+};
+$jscomp.arrayFromIterable = function (a) {
+    return a instanceof Array ? a : $jscomp.arrayFromIterator($jscomp.makeIterator(a))
+};
+$jscomp.inherits = function (a, b) {
+    function c() {
+    }
+
+    c.prototype = b.prototype;
+    a.prototype = new c;
+    a.prototype.constructor = a;
+    for (var e in b) if ($jscomp.global.Object.defineProperties) {
+        var d = $jscomp.global.Object.getOwnPropertyDescriptor(b, e);
+        d && $jscomp.global.Object.defineProperty(a, e, d)
+    } else a[e] = b[e]
+};
+$jscomp.array = $jscomp.array || {};
+$jscomp.array.done_ = function () {
+    return {done: !0, value: void 0}
+};
+$jscomp.array.arrayIterator_ = function (a, b) {
+    a instanceof String && (a = String(a));
+    var c = 0;
+    $jscomp.initSymbol();
+    $jscomp.initSymbolIterator();
+    var e = {}, d = (e.next = function () {
+        if (c < a.length) {
+            var e = c++;
+            return {value: b(e, a[e]), done: !1}
+        }
+        d.next = $jscomp.array.done_;
+        return $jscomp.array.done_()
+    }, e[Symbol.iterator] = function () {
+        return d
+    }, e);
+    return d
+};
+$jscomp.array.findInternal_ = function (a, b, c) {
+    a instanceof String && (a = String(a));
+    for (var e = a.length, d = 0; d < e; d++) {
+        var f = a[d];
+        if (b.call(c, f, d, a)) return {i: d, v: f}
+    }
+    return {i: -1, v: void 0}
+};
+$jscomp.array.from = function (a, b, c) {
+    b = void 0 === b ? function (a) {
+        return a
+    } : b;
+    var e = [];
+    $jscomp.initSymbol();
+    $jscomp.initSymbolIterator();
+    if (a[Symbol.iterator]) {
+        $jscomp.initSymbol();
+        $jscomp.initSymbolIterator();
+        a = a[Symbol.iterator]();
+        for (var d; !(d = a.next()).done;) e.push(b.call(c, d.value))
+    } else {
+        d = a.length;
+        for (var f = 0; f < d; f++) e.push(b.call(c, a[f]))
+    }
+    return e
+};
+$jscomp.array.of = function (a) {
+    for (var b = [], c = 0; c < arguments.length; ++c) b[c - 0] = arguments[c];
+    return $jscomp.array.from(b)
+};
+$jscomp.array.entries = function () {
+    return $jscomp.array.arrayIterator_(this, function (a, b) {
+        return [a, b]
+    })
+};
+$jscomp.array.entries$install = function () {
+    Array.prototype.entries || (Array.prototype.entries = $jscomp.array.entries)
+};
+$jscomp.array.keys = function () {
+    return $jscomp.array.arrayIterator_(this, function (a) {
+        return a
+    })
+};
+$jscomp.array.keys$install = function () {
+    Array.prototype.keys || (Array.prototype.keys = $jscomp.array.keys)
+};
+$jscomp.array.values = function () {
+    return $jscomp.array.arrayIterator_(this, function (a, b) {
+        return b
+    })
+};
+$jscomp.array.values$install = function () {
+    Array.prototype.values || (Array.prototype.values = $jscomp.array.values)
+};
+$jscomp.array.copyWithin = function (a, b, c) {
+    var e = this.length;
+    a = Number(a);
+    b = Number(b);
+    c = Number(null != c ? c : e);
+    if (a < b) for (c = Math.min(c, e); b < c;) b in this ? this[a++] = this[b++] : (delete this[a++], b++); else for (c = Math.min(c, e + b - a), a += c - b; c > b;) --c in this ? this[--a] = this[c] : delete this[a];
+    return this
+};
+$jscomp.array.copyWithin$install = function () {
+    Array.prototype.copyWithin || (Array.prototype.copyWithin = $jscomp.array.copyWithin)
+};
+$jscomp.array.fill = function (a, b, c) {
+    null != c && a.length || (c = this.length || 0);
+    c = Number(c);
+    for (b = Number((void 0 === b ? 0 : b) || 0); b < c; b++) this[b] = a;
+    return this
+};
+$jscomp.array.fill$install = function () {
+    Array.prototype.fill || (Array.prototype.fill = $jscomp.array.fill)
+};
+$jscomp.array.find = function (a, b) {
+    return $jscomp.array.findInternal_(this, a, b).v
+};
+$jscomp.array.find$install = function () {
+    Array.prototype.find || (Array.prototype.find = $jscomp.array.find)
+};
+$jscomp.array.findIndex = function (a, b) {
+    return $jscomp.array.findInternal_(this, a, b).i
+};
+$jscomp.array.findIndex$install = function () {
+    Array.prototype.findIndex || (Array.prototype.findIndex = $jscomp.array.findIndex)
+};
+$jscomp.Map = function (a) {
+    a = void 0 === a ? [] : a;
+    this.data_ = {};
+    this.head_ = $jscomp.Map.createHead_();
+    this.size = 0;
+    if (a) {
+        a = $jscomp.makeIterator(a);
+        for (var b = a.next(); !b.done; b = a.next()) b = b.value, this.set(b[0], b[1])
+    }
+};
+$jscomp.Map.checkBrowserConformance_ = function () {
+    var a = $jscomp.global.Map;
+    if (!a || !a.prototype.entries || !Object.seal) return !1;
+    try {
+        var b = Object.seal({x: 4}), c = new a($jscomp.makeIterator([[b, "s"]]));
+        if ("s" != c.get(b) || 1 != c.size || c.get({x: 4}) || c.set({x: 4}, "t") != c || 2 != c.size) return !1;
+        var e = c.entries(), d = e.next();
+        if (d.done || d.value[0] != b || "s" != d.value[1]) return !1;
+        d = e.next();
+        return d.done || 4 != d.value[0].x || "t" != d.value[1] || !e.next().done ? !1 : !0
+    } catch (f) {
+        return !1
+    }
+};
+$jscomp.Map.createHead_ = function () {
+    var a = {};
+    return a.previous = a.next = a.head = a
+};
+$jscomp.Map.getId_ = function (a) {
+    if (!(a instanceof Object)) return String(a);
+    $jscomp.Map.key_ in a || a instanceof Object && Object.isExtensible && Object.isExtensible(a) && $jscomp.Map.defineProperty_(a, $jscomp.Map.key_, ++$jscomp.Map.index_);
+    return $jscomp.Map.key_ in a ? a[$jscomp.Map.key_] : " " + a
+};
+$jscomp.Map.prototype.set = function (a, b) {
+    var c = this.maybeGetEntry_(a), e = c.id, d = c.list, c = c.entry;
+    d || (d = this.data_[e] = []);
+    c ? c.value = b : (c = {
+        next: this.head_,
+        previous: this.head_.previous,
+        head: this.head_,
+        key: a,
+        value: b
+    }, d.push(c), this.head_.previous.next = c, this.head_.previous = c, this.size++);
+    return this
+};
+$jscomp.Map.prototype["delete"] = function (a) {
+    var b = this.maybeGetEntry_(a);
+    a = b.id;
+    var c = b.list, e = b.index;
+    return (b = b.entry) && c ? (c.splice(e, 1), c.length || delete this.data_[a], b.previous.next = b.next, b.next.previous = b.previous, b.head = null, this.size--, !0) : !1
+};
+$jscomp.Map.prototype.clear = function () {
+    this.data_ = {};
+    this.head_ = this.head_.previous = $jscomp.Map.createHead_();
+    this.size = 0
+};
+$jscomp.Map.prototype.has = function (a) {
+    return !!this.maybeGetEntry_(a).entry
+};
+$jscomp.Map.prototype.get = function (a) {
+    return (a = this.maybeGetEntry_(a).entry) && a.value
+};
+$jscomp.Map.prototype.maybeGetEntry_ = function (a) {
+    var b = $jscomp.Map.getId_(a), c = this.data_[b];
+    if (c) for (var e = 0; e < c.length; e++) {
+        var d = c[e];
+        if (a !== a && d.key !== d.key || a === d.key) return {id: b, list: c, index: e, entry: d}
+    }
+    return {id: b, list: c, index: -1, entry: void 0}
+};
+$jscomp.Map.prototype.entries = function () {
+    return this.iter_(function (a) {
+        return [a.key, a.value]
+    })
+};
+$jscomp.Map.prototype.keys = function () {
+    return this.iter_(function (a) {
+        return a.key
+    })
+};
+$jscomp.Map.prototype.values = function () {
+    return this.iter_(function (a) {
+        return a.value
+    })
+};
+$jscomp.Map.prototype.forEach = function (a, b) {
+    for (var c = $jscomp.makeIterator(this.entries()), e = c.next(); !e.done; e = c.next()) e = e.value, a.call(b, e[1], e[0], this)
+};
+$jscomp.Map.prototype.iter_ = function (a) {
+    var b = this, c = this.head_;
+    $jscomp.initSymbol();
+    $jscomp.initSymbolIterator();
+    var e = {};
+    return e.next = function () {
+        if (c) {
+            for (; c.head != b.head_;) c = c.previous;
+            for (; c.next != c.head;) return c = c.next, {done: !1, value: a(c)};
+            c = null
+        }
+        return {done: !0, value: void 0}
+    }, e[Symbol.iterator] = function () {
+        return this
+    }, e
+};
+$jscomp.Map.index_ = 0;
+$jscomp.Map.defineProperty_ = Object.defineProperty ? function (a, b, c) {
+    Object.defineProperty(a, b, {value: String(c)})
+} : function (a, b, c) {
+    a[b] = String(c)
+};
+$jscomp.Map.Entry_ = function () {
+};
+$jscomp.Map.ASSUME_NO_NATIVE = !1;
+$jscomp.Map$install = function () {
+    $jscomp.initSymbol();
+    $jscomp.initSymbolIterator();
+    !$jscomp.Map.ASSUME_NO_NATIVE && $jscomp.Map.checkBrowserConformance_() ? $jscomp.Map = $jscomp.global.Map : ($jscomp.initSymbol(), $jscomp.initSymbolIterator(), $jscomp.Map.prototype[Symbol.iterator] = $jscomp.Map.prototype.entries, $jscomp.initSymbol(), $jscomp.Map.key_ = Symbol("map-id-key"));
+    $jscomp.Map$install = function () {
+    }
+};
+$jscomp.math = $jscomp.math || {};
+$jscomp.math.clz32 = function (a) {
+    a = Number(a) >>> 0;
+    if (0 === a) return 32;
+    var b = 0;
+    0 === (a & 4294901760) && (a <<= 16, b += 16);
+    0 === (a & 4278190080) && (a <<= 8, b += 8);
+    0 === (a & 4026531840) && (a <<= 4, b += 4);
+    0 === (a & 3221225472) && (a <<= 2, b += 2);
+    0 === (a & 2147483648) && b++;
+    return b
+};
+$jscomp.math.imul = function (a, b) {
+    a = Number(a);
+    b = Number(b);
+    var c = a & 65535, e = b & 65535;
+    return c * e + ((a >>> 16 & 65535) * e + c * (b >>> 16 & 65535) << 16 >>> 0) | 0
+};
+$jscomp.math.sign = function (a) {
+    a = Number(a);
+    return 0 === a || isNaN(a) ? a : 0 < a ? 1 : -1
+};
+$jscomp.math.log10 = function (a) {
+    return Math.log(a) / Math.LN10
+};
+$jscomp.math.log2 = function (a) {
+    return Math.log(a) / Math.LN2
+};
+$jscomp.math.log1p = function (a) {
+    a = Number(a);
+    if (.25 > a && -.25 < a) {
+        for (var b = a, c = 1, e = a, d = 0, f = 1; d != e;) b *= a, f *= -1, e = (d = e) + f * b / ++c;
+        return e
+    }
+    return Math.log(1 + a)
+};
+$jscomp.math.expm1 = function (a) {
+    a = Number(a);
+    if (.25 > a && -.25 < a) {
+        for (var b = a, c = 1, e = a, d = 0; d != e;) b *= a / ++c, e = (d = e) + b;
+        return e
+    }
+    return Math.exp(a) - 1
+};
+$jscomp.math.cosh = function (a) {
+    a = Number(a);
+    return (Math.exp(a) + Math.exp(-a)) / 2
+};
+$jscomp.math.sinh = function (a) {
+    a = Number(a);
+    return 0 === a ? a : (Math.exp(a) - Math.exp(-a)) / 2
+};
+$jscomp.math.tanh = function (a) {
+    a = Number(a);
+    if (0 === a) return a;
+    var b = Math.exp(2 * -Math.abs(a)), b = (1 - b) / (1 + b);
+    return 0 > a ? -b : b
+};
+$jscomp.math.acosh = function (a) {
+    a = Number(a);
+    return Math.log(a + Math.sqrt(a * a - 1))
+};
+$jscomp.math.asinh = function (a) {
+    a = Number(a);
+    if (0 === a) return a;
+    var b = Math.log(Math.abs(a) + Math.sqrt(a * a + 1));
+    return 0 > a ? -b : b
+};
+$jscomp.math.atanh = function (a) {
+    a = Number(a);
+    return ($jscomp.math.log1p(a) - $jscomp.math.log1p(-a)) / 2
+};
+$jscomp.math.hypot = function (a, b, c) {
+    for (var e = [], d = 2; d < arguments.length; ++d) e[d - 2] = arguments[d];
+    a = Number(a);
+    b = Number(b);
+    for (var f = Math.max(Math.abs(a), Math.abs(b)), h = $jscomp.makeIterator(e), d = h.next(); !d.done; d = h.next()) f = Math.max(f, Math.abs(d.value));
+    if (1E100 < f || 1E-100 > f) {
+        a /= f;
+        b /= f;
+        h = a * a + b * b;
+        e = $jscomp.makeIterator(e);
+        for (d = e.next(); !d.done; d = e.next()) d = d.value, d = Number(d) / f, h += d * d;
+        return Math.sqrt(h) * f
+    }
+    f = a * a + b * b;
+    e = $jscomp.makeIterator(e);
+    for (d = e.next(); !d.done; d = e.next()) d = d.value, d = Number(d), f +=
+        d * d;
+    return Math.sqrt(f)
+};
+$jscomp.math.trunc = function (a) {
+    a = Number(a);
+    if (isNaN(a) || Infinity === a || -Infinity === a || 0 === a) return a;
+    var b = Math.floor(Math.abs(a));
+    return 0 > a ? -b : b
+};
+$jscomp.math.cbrt = function (a) {
+    if (0 === a) return a;
+    a = Number(a);
+    var b = Math.pow(Math.abs(a), 1 / 3);
+    return 0 > a ? -b : b
+};
+$jscomp.number = $jscomp.number || {};
+$jscomp.number.isFinite = function (a) {
+    return "number" !== typeof a ? !1 : !isNaN(a) && Infinity !== a && -Infinity !== a
+};
+$jscomp.number.isInteger = function (a) {
+    return $jscomp.number.isFinite(a) ? a === Math.floor(a) : !1
+};
+$jscomp.number.isNaN = function (a) {
+    return "number" === typeof a && isNaN(a)
+};
+$jscomp.number.isSafeInteger = function (a) {
+    return $jscomp.number.isInteger(a) && Math.abs(a) <= $jscomp.number.MAX_SAFE_INTEGER
+};
+$jscomp.number.EPSILON = Math.pow(2, -52);
+$jscomp.number.MAX_SAFE_INTEGER = 9007199254740991;
+$jscomp.number.MIN_SAFE_INTEGER = -9007199254740991;
+$jscomp.object = $jscomp.object || {};
+$jscomp.object.assign = function (a, b) {
+    for (var c = [], e = 1; e < arguments.length; ++e) c[e - 1] = arguments[e];
+    c = $jscomp.makeIterator(c);
+    for (e = c.next(); !e.done; e = c.next()) if (e = e.value) for (var d in e) Object.prototype.hasOwnProperty.call(e, d) && (a[d] = e[d]);
+    return a
+};
+$jscomp.object.is = function (a, b) {
+    return a === b ? 0 !== a || 1 / a === 1 / b : a !== a && b !== b
+};
+$jscomp.Set = function (a) {
+    a = void 0 === a ? [] : a;
+    this.map_ = new $jscomp.Map;
+    if (a) {
+        a = $jscomp.makeIterator(a);
+        for (var b = a.next(); !b.done; b = a.next()) this.add(b.value)
+    }
+    this.size = this.map_.size
+};
+$jscomp.Set.checkBrowserConformance_ = function () {
+    var a = $jscomp.global.Set;
+    if (!a || !a.prototype.entries || !Object.seal) return !1;
+    var b = Object.seal({x: 4}), a = new a($jscomp.makeIterator([b]));
+    if (a.has(b) || 1 != a.size || a.add(b) != a || 1 != a.size || a.add({x: 4}) != a || 2 != a.size) return !1;
+    var a = a.entries(), c = a.next();
+    if (c.done || c.value[0] != b || c.value[1] != b) return !1;
+    c = a.next();
+    return c.done || c.value[0] == b || 4 != c.value[0].x || c.value[1] != c.value[0] ? !1 : a.next().done
+};
+$jscomp.Set.prototype.add = function (a) {
+    this.map_.set(a, a);
+    this.size = this.map_.size;
+    return this
+};
+$jscomp.Set.prototype["delete"] = function (a) {
+    a = this.map_["delete"](a);
+    this.size = this.map_.size;
+    return a
+};
+$jscomp.Set.prototype.clear = function () {
+    this.map_.clear();
+    this.size = 0
+};
+$jscomp.Set.prototype.has = function (a) {
+    return this.map_.has(a)
+};
+$jscomp.Set.prototype.entries = function () {
+    return this.map_.entries()
+};
+$jscomp.Set.prototype.values = function () {
+    return this.map_.values()
+};
+$jscomp.Set.prototype.forEach = function (a, b) {
+    var c = this;
+    this.map_.forEach(function (e) {
+        return a.call(b, e, e, c)
+    })
+};
+$jscomp.Set.ASSUME_NO_NATIVE = !1;
+$jscomp.Set$install = function () {
+    !$jscomp.Set.ASSUME_NO_NATIVE && $jscomp.Set.checkBrowserConformance_() ? $jscomp.Set = $jscomp.global.Set : ($jscomp.Map$install(), $jscomp.initSymbol(), $jscomp.initSymbolIterator(), $jscomp.Set.prototype[Symbol.iterator] = $jscomp.Set.prototype.values);
+    $jscomp.Set$install = function () {
+    }
+};
+$jscomp.string = $jscomp.string || {};
+$jscomp.string.noRegExp_ = function (a, b) {
+    if (a instanceof RegExp) throw new TypeError("First argument to String.prototype." + b + " must not be a regular expression");
+};
+$jscomp.string.fromCodePoint = function (a) {
+    for (var b = [], c = 0; c < arguments.length; ++c) b[c - 0] = arguments[c];
+    for (var c = "", b = $jscomp.makeIterator(b), e = b.next(); !e.done; e = b.next()) {
+        e = e.value;
+        e = +e;
+        if (0 > e || 1114111 < e || e !== Math.floor(e)) throw new RangeError("invalid_code_point " + e);
+        65535 >= e ? c += String.fromCharCode(e) : (e -= 65536, c += String.fromCharCode(e >>> 10 & 1023 | 55296), c += String.fromCharCode(e & 1023 | 56320))
+    }
+    return c
+};
+$jscomp.string.repeat = function (a) {
+    var b = this.toString();
+    if (0 > a || 1342177279 < a) throw new RangeError("Invalid count value");
+    a |= 0;
+    for (var c = ""; a;) if (a & 1 && (c += b), a >>>= 1) b += b;
+    return c
+};
+$jscomp.string.repeat$install = function () {
+    String.prototype.repeat || (String.prototype.repeat = $jscomp.string.repeat)
+};
+$jscomp.string.codePointAt = function (a) {
+    var b = this.toString(), c = b.length;
+    a = Number(a) || 0;
+    if (0 <= a && a < c) {
+        a |= 0;
+        var e = b.charCodeAt(a);
+        if (55296 > e || 56319 < e || a + 1 === c) return e;
+        a = b.charCodeAt(a + 1);
+        return 56320 > a || 57343 < a ? e : 1024 * (e - 55296) + a + 9216
+    }
+};
+$jscomp.string.codePointAt$install = function () {
+    String.prototype.codePointAt || (String.prototype.codePointAt = $jscomp.string.codePointAt)
+};
+$jscomp.string.includes = function (a, b) {
+    b = void 0 === b ? 0 : b;
+    $jscomp.string.noRegExp_(a, "includes");
+    return -1 !== this.toString().indexOf(a, b)
+};
+$jscomp.string.includes$install = function () {
+    String.prototype.includes || (String.prototype.includes = $jscomp.string.includes)
+};
+$jscomp.string.startsWith = function (a, b) {
+    b = void 0 === b ? 0 : b;
+    $jscomp.string.noRegExp_(a, "startsWith");
+    var c = this.toString();
+    a += "";
+    for (var e = c.length, d = a.length, f = Math.max(0, Math.min(b | 0, c.length)), h = 0; h < d && f < e;) if (c[f++] != a[h++]) return !1;
+    return h >= d
+};
+$jscomp.string.startsWith$install = function () {
+    String.prototype.startsWith || (String.prototype.startsWith = $jscomp.string.startsWith)
+};
+$jscomp.string.endsWith = function (a, b) {
+    $jscomp.string.noRegExp_(a, "endsWith");
+    var c = this.toString();
+    a += "";
+    void 0 === b && (b = c.length);
+    for (var e = Math.max(0, Math.min(b | 0, c.length)), d = a.length; 0 < d && 0 < e;) if (c[--e] != a[--d]) return !1;
+    return 0 >= d
+};
+$jscomp.string.endsWith$install = function () {
+    String.prototype.endsWith || (String.prototype.endsWith = $jscomp.string.endsWith)
+};
+var __extends = this && this.__extends || function () {
+    var a = function (b, c) {
+        a = Object.setPrototypeOf || {__proto__: []} instanceof Array && function (a, c) {
+            a.__proto__ = c
+        } || function (a, c) {
+            for (var b in c) c.hasOwnProperty(b) && (a[b] = c[b])
+        };
+        return a(b, c)
+    };
+    return function (b, c) {
+        function e() {
+            this.constructor = b
+        }
+
+        a(b, c);
+        b.prototype = null === c ? Object.create(c) : (e.prototype = c.prototype, new e)
+    }
+}(), __awaiter = this && this.__awaiter || function (a, b, c, e) {
+    return new (c || (c = Promise))(function (d, f) {
+        function h(a) {
+            try {
+                k(e.next(a))
+            } catch (c) {
+                f(c)
+            }
+        }
+
+        function g(a) {
+            try {
+                k(e["throw"](a))
+            } catch (c) {
+                f(c)
+            }
+        }
+
+        function k(a) {
+            a.done ? d(a.value) : (new c(function (c) {
+                c(a.value)
+            })).then(h, g)
+        }
+
+        k((e = e.apply(a, b || [])).next())
+    })
+}, __generator = this && this.__generator || function (a, b) {
+    function c(a) {
+        return function (c) {
+            return e([a, c])
+        }
+    }
+
+    function e(c) {
+        if (f) throw new TypeError("Generator is already executing.");
+        for (; d;) try {
+            if (f = 1, h && (g = c[0] & 2 ? h["return"] : c[0] ? h["throw"] || ((g = h["return"]) && g.call(h), 0) : h.next) && !(g = g.call(h, c[1])).done) return g;
+            if (h = 0, g) c = [c[0] & 2, g.value];
+            switch (c[0]) {
+                case 0:
+                case 1:
+                    g =
+                        c;
+                    break;
+                case 4:
+                    return d.label++, {value: c[1], done: !1};
+                case 5:
+                    d.label++;
+                    h = c[1];
+                    c = [0];
+                    continue;
+                case 7:
+                    c = d.ops.pop();
+                    d.trys.pop();
+                    continue;
+                default:
+                    if (!(g = d.trys, g = 0 < g.length && g[g.length - 1]) && (6 === c[0] || 2 === c[0])) {
+                        d = 0;
+                        continue
+                    }
+                    if (3 === c[0] && (!g || c[1] > g[0] && c[1] < g[3])) d.label = c[1]; else if (6 === c[0] && d.label < g[1]) d.label = g[1], g = c; else if (g && d.label < g[2]) d.label = g[2], d.ops.push(c); else {
+                        g[2] && d.ops.pop();
+                        d.trys.pop();
+                        continue
+                    }
+            }
+            c = b.call(a, d)
+        } catch (e) {
+            c = [6, e], h = 0
+        } finally {
+            f = g = 0
+        }
+        if (c[0] & 5) throw c[1];
+        return {
+            value: c[0] ?
+                c[1] : void 0, done: !0
+        }
+    }
+
+    var d = {
+        label: 0, sent: function () {
+            if (g[0] & 1) throw g[1];
+            return g[1]
+        }, trys: [], ops: []
+    }, f, h, g, k;
+    $jscomp.initSymbol();
+    $jscomp.initSymbol();
+    $jscomp.initSymbolIterator();
+    return k = {
+        next: c(0),
+        "throw": c(1),
+        "return": c(2)
+    }, "function" === typeof Symbol && (k[Symbol.iterator] = function () {
+        return this
+    }), k
+};
+Object.defineProperty(exports, "__esModule", {value: !0});
+var remotemedia_1 = __webpack_require__(5), proxyobject_1 = __webpack_require__(2),
+    webrpcclassinfo_1 = __webpack_require__(1), logger_1 = __webpack_require__(0), stats_1 = __webpack_require__(10);
+
+function ensure_config_defined(a) {
+    return void 0 != a ? a : {}
+}
+
+var IceCandidateEvent = function (a) {
+    function b(c, b, d) {
+        c = a.call(this, c, webrpcclassinfo_1.class_id_t.RTCIceCandidateEvent, b, !0) || this;
+        c.target = d;
+        c.type = "icecandidate";
+        return c
+    }
+
+    __extends(b, a);
+    Object.defineProperty(b.prototype, "candidate", {
+        get: function () {
+            return this.candidate_
+        }, enumerable: !0, configurable: !0
+    });
+    b.prototype.syncBarrier = function () {
+        var a = this;
+        logger_1.logger.log(this.user_friendly_id() + ".syncBarrier() called.");
+        return new Promise(function (b, d) {
+            a.waitUntilConnected("IceCandidateEvent.syncBarrier").then(function () {
+                return a.remoteInvoke(!1,
+                    webrpcclassinfo_1.method_id_RTCIceCandidateEvent_t.candidate, {oid: 0})
+            }).then(function (b) {
+                b = a.param0(b);
+                return !1 === b.is_null ? (new IceCandidate(a, b.oid)).syncBarrier() : Promise.resolve(null)
+            }).then(function (d) {
+                logger_1.logger.log(a.user_friendly_id() + ".onicecandidate: icecandidate available!");
+                a.candidate_ = d;
+                b(a)
+            })["catch"](function () {
+                logger_1.logger.log(a.user_friendly_id() + ".onicecandidate() failed.");
+                d()
+            })
+        })
+    };
+    return b
+}(proxyobject_1.ProxyObject);
+exports.IceCandidateEvent = IceCandidateEvent;
+var IceCandidate = function (a) {
+    function b(c, b) {
+        return a.call(this, c, webrpcclassinfo_1.class_id_t.RTCIceCandidate, b, !0) || this
+    }
+
+    __extends(b, a);
+    Object.defineProperty(b.prototype, "candidate", {
+        get: function () {
+            return this.candidate_
+        }, enumerable: !0, configurable: !0
+    });
+    Object.defineProperty(b.prototype, "sdpMid", {
+        get: function () {
+            return this.sdpMid_
+        }, enumerable: !0, configurable: !0
+    });
+    Object.defineProperty(b.prototype, "sdpMLineIndex", {
+        get: function () {
+            return this.sdpMLineIndex_
+        }, enumerable: !0, configurable: !0
+    });
+    b.prototype.syncBarrier =
+        function () {
+            var a = this;
+            logger_1.logger.log(this.user_friendly_id() + ".syncBarrier() called.");
+            return new Promise(function (b, d) {
+                a.waitUntilConnected("IceCandidate.syncBarrier").then(function () {
+                    return Promise.all([a.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCIceCandidate_t.candidate, ""), a.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCIceCandidate_t.sdpMid, ""), a.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCIceCandidate_t.sdpMLineIndex, 0)])
+                }).then(function (d) {
+                    d = d.map(function (b) {
+                        return a.param0(b)
+                    });
+                    a.candidate_ = d[0];
+                    a.sdpMid_ = d[1];
+                    a.sdpMLineIndex_ = d[2];
+                    b(a)
+                })["catch"](function () {
+                    d()
+                })
+            })
+        };
+    return b
+}(proxyobject_1.ProxyObject);
+exports.IceCandidate = IceCandidate;
+var IceGatherer = function () {
+        function a(a) {
+            this.state_ = "new";
+            this.candidates_ = [];
+            this.pc_ = a
+        }
+
+        a.prototype.pushState = function (a) {
+            logger_1.logger.log(this.pc_.user_friendly_id() + ".onicegatheringstatechange: new state is " + a);
+            this.state_ = a;
+            "gathering" == this.state_ ? (this.candidates_ = [], this.postUpdate()) : this.processRemaining()
+        };
+        a.prototype.addIceCandidate = function (a) {
+            var c = this;
+            this.candidates_.push(a);
+            a.syncBarrier().then(function (a) {
+                logger_1.logger.log(c.pc_.user_friendly_id() + ".onicecandidate: icecandidate available!");
+                return Promise.all([c.pc_.updateLocalDescription(), Promise.resolve(a)])
+            }).then(function (a) {
+                c.postIceCandidate(a[1])
+            })
+        };
+        a.prototype.postIceCandidate = function (a) {
+            logger_1.logger.log(this.pc_.user_friendly_id() + ".onicecandidate: posting ice candidate now!");
+            if (null != this.pc_.onicecandidate) this.pc_.onicecandidate(a); else logger_1.logger.log(this.pc_.user_friendly_id() + "onicecandidate is NULL!!!");
+            this.candidates_.shift();
+            this.processRemaining()
+        };
+        a.prototype.postUpdate = function () {
+            logger_1.logger.log(this.pc_.user_friendly_id() +
+                ".onicegatheringstatechange: posting event now!");
+            var a = new PeerConnectionEvent("onicegatheringstatechange", this.pc_);
+            this.pc_.onicegatheringstatechange(a)
+        };
+        a.prototype.processRemaining = function () {
+            0 == this.candidates_.length && "complete" == this.state_ ? (this.pc_.onicecandidate({
+                candidate: null,
+                target: this
+            }), this.postUpdate()) : logger_1.logger.log(this.pc_.user_friendly_id() + ".onicecandidate: candidates remaining=[" + this.candidates_.map(function (a) {
+                return a.object_id()
+            }) + "], state=" + this.state_)
+        };
+        return a
+    }(),
+    SessionDescription = function (a) {
+        function b(c, b, d) {
+            for (var f = [], h = 3; h < arguments.length; h++) f[h - 3] = arguments[h];
+            return a.apply(this, [c, webrpcclassinfo_1.class_id_t.RTCSessionDescription, b, d].concat(f)) || this
+        }
+
+        __extends(b, a);
+        b.prototype.toJSON = function () {
+            return {type: this.type_, sdp: this.sdp_}
+        };
+        Object.defineProperty(b.prototype, "sdp", {
+            get: function () {
+                return this.sdp_
+            }, enumerable: !0, configurable: !0
+        });
+        Object.defineProperty(b.prototype, "type", {
+            get: function () {
+                return this.type_
+            }, enumerable: !0, configurable: !0
+        });
+        b.prototype.syncBarrier = function () {
+            var a = this;
+            logger_1.logger.log(this.user_friendly_id() + ".syncBarrier() called.");
+            return new Promise(function (b, d) {
+                a.waitUntilConnected("SessionDescription.syncBarrier").then(function () {
+                    return Promise.all([a.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCSessionDescription_t.type, 0), a.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCSessionDescription_t.sdp, "")])
+                }).then(function (d) {
+                    a.type_ = a.convertType(a.param0(d[0]));
+                    a.sdp_ = a.param0(d[1]);
+                    b(a)
+                })["catch"](function () {
+                    d()
+                })
+            })
+        };
+        b.prototype.convertType = function (a) {
+            return 0 == a ? "offer" : 1 == a ? "pranswer" : "answer"
+        };
+        b.convertC2H = function (a) {
+            return "offer" == a ? 0 : "pranswer" == a ? 1 : 2
+        };
+        return b
+    }(proxyobject_1.ProxyObject);
+exports.SessionDescription = SessionDescription;
+var PeerConnectionEvent = function () {
+    return function (a, b) {
+        this.type = a;
+        this.target = b
+    }
+}(), RtpReceiver = function (a) {
+    function b(c, b) {
+        var d = a.call(this, c, webrpcclassinfo_1.class_id_t.RTCRtpReceiver, b, !0) || this;
+        logger_1.logger.log(d.user_friendly_id() + ".constructor");
+        return d
+    }
+
+    __extends(b, a);
+    b.prototype.syncBarrier = function () {
+        var a = this;
+        logger_1.logger.log(this.user_friendly_id() + ".syncBarrier() called.");
+        return new Promise(function (b, d) {
+            a.waitUntilConnected("RtpReceiver.syncBarrier").then(function () {
+                return Promise.all([a.remoteInvoke(!1,
+                    webrpcclassinfo_1.method_id_RTCRtpReceiver_t.track, {oid: a.object_id()}), a.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCRtpReceiver_t.getContributingSources, [])])
+            }).then(function (b) {
+                var e;
+                b = b.map(function (b) {
+                    return a.param0(b)
+                });
+                e = b[0];
+                a.contribsources = b[1];
+                return void 0 == a.track_ || a.track_.object_id() != e.oid ? (new remotemedia_1.RemoteMediaTrack(a, e.oid)).syncBarrier() : Promise.resolve(a.track_)
+            }).then(function (d) {
+                a.track_ = d;
+                b(a)
+            })["catch"](function () {
+                logger_1.logger.log(a.user_friendly_id() + ".syncBarrier(): rejected.");
+                d()
+            })
+        })
+    };
+    Object.defineProperty(b.prototype, "track", {
+        get: function () {
+            logger_1.logger.log(this.user_friendly_id() + ".get track() called.");
+            return this.track_
+        }, enumerable: !0, configurable: !0
+    });
+    b.prototype.getCapabilities = function (a) {
+        logger_1.logger.log(this.user_friendly_id() + ".getCapabilities() called.");
+        return this.capabilities
+    };
+    b.prototype.getContributingSources = function () {
+        var a = this;
+        logger_1.logger.log(this.user_friendly_id() + ".getContributingSources() called. " + JSON.stringify(this.contribsources));
+        this.waitUntilConnected("PeerConnection.getReceivers").then(function () {
+            return Promise.all([a.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCRtpReceiver_t.getContributingSources, [])])
+        }).then(function (b) {
+            a.contribsources = b.map(function (b) {
+                return a.param0(b)
+            })[0]
+        })["catch"](function () {
+            logger_1.logger.log(a.user_friendly_id() + ".getContributingSources() didnt get response.");
+            a.contribsources = []
+        });
+        return this.contribsources
+    };
+    b.prototype.getParameters = function () {
+        logger_1.logger.log(this.user_friendly_id() +
+            ".getParameters() called.");
+        return null
+    };
+    b.prototype.getStats = function () {
+        logger_1.logger.log(this.user_friendly_id() + ".getStats() called.");
+        return null
+    };
+    b.prototype.getSynchronizationSources = function () {
+        logger_1.logger.log(this.user_friendly_id() + ".getSynchronizationSources() called.");
+        return this.syncsources
+    };
+    return b
+}(proxyobject_1.ProxyObject), PeerConnection = function (a) {
+    function b(c) {
+        var b = a.call(this, null, webrpcclassinfo_1.class_id_t.RTCPeerConnection, 0, !1, ensure_config_defined(c), {}) || this;
+        logger_1.logger.log("peerconnection.constructor");
+        logger_1.logger.log(JSON.stringify(c));
+        b.localStreams = [];
+        b.remoteStreams = [];
+        b.onaddstream_ = null;
+        b.signalingState_ = "stable";
+        b.iceConnectionState_ = "new";
+        b.iceGatheringState_ = "new";
+        b.iceQ_ = new IceGatherer(b);
+        b.receivers_ = [];
+        return b
+    }
+
+    __extends(b, a);
+    b.prototype.addIceCandidate = function () {
+        logger_1.logger.log(this.user_friendly_id() + ".addIceCandidate");
+        logger_1.logger.log(arguments)
+    };
+    Object.defineProperty(b.prototype, "onicecandidate", {
+        get: function () {
+            return this.onicecandidate_
+        }, set: function (a) {
+            var b = this;
+            logger_1.logger.log(this.user_friendly_id() + ".set_onicecandidate() called.");
+            this.onicecandidate_ = a;
+            this.waitUntilConnected("PeerConnection.onicecandidate").then(function () {
+                var d = b.registerCallbacks(!1, b.isNullCallback(a), webrpcclassinfo_1.method_id_RTCPeerConnection_t.onicecandidate);
+                d.then(function (a) {
+                    logger_1.logger.log(b.user_friendly_id() + ".onicecandidate callback received!!!");
+                    a = new IceCandidateEvent(b, b.param0(a).oid, b);
+                    null != b.iceQ_ && b.iceQ_.addIceCandidate(a)
+                });
+                return b.remoteInvoke(!0, webrpcclassinfo_1.method_id_RTCPeerConnection_t.onicecandidate,
+                    d.success)
+            })["catch"](function () {
+                logger_1.logger.log(b.user_friendly_id() + ".set_onicecandidate() failed.")
+            })
+        }, enumerable: !0, configurable: !0
+    });
+    b.prototype.convertIceConnectionState = function (a) {
+        return 0 == a ? "new" : 1 == a ? "checking" : 2 == a ? "connected" : 3 == a ? "completed" : 4 == a ? "failed" : 5 == a ? "disconnected" : "closed"
+    };
+    Object.defineProperty(b.prototype, "oniceconnectionstatechange", {
+        get: function () {
+            return this.oniceconnectionstatechange_
+        }, set: function (a) {
+            var b = this;
+            logger_1.logger.log(this.user_friendly_id() + ".set_oniceconnectionstatechange() called.");
+            this.oniceconnectionstatechange_ = a;
+            this.waitUntilConnected("PeerConnection.oniceconnectionstatechange").then(function () {
+                var d = b.registerCallbacks(!1, b.isNullCallback(a), webrpcclassinfo_1.method_id_RTCPeerConnection_t.oniceconnectionstatechange);
+                d.then(function (a) {
+                    logger_1.logger.log(b.user_friendly_id() + ".oniceconnectionstatechange(): success callback received!!!");
+                    b.iceConnectionState_ = b.convertIceConnectionState(b.param0(a));
+                    a = new PeerConnectionEvent("iceconnectionstatechange", b);
+                    b.oniceconnectionstatechange_(a)
+                });
+                return b.remoteInvoke(!0, webrpcclassinfo_1.method_id_RTCPeerConnection_t.oniceconnectionstatechange, d.success)
+            })["catch"](function () {
+                logger_1.logger.log(b.user_friendly_id() + ".set_oniceconnectionstatechange() failed.")
+            })
+        }, enumerable: !0, configurable: !0
+    });
+    Object.defineProperty(b.prototype, "iceConnectionState", {
+        get: function () {
+            logger_1.logger.log(this.user_friendly_id() + ".get_iceConnectionState() called, value = " + this.iceConnectionState_);
+            return this.iceConnectionState_
+        }, enumerable: !0, configurable: !0
+    });
+    b.prototype.convertIceGatheringState = function (a) {
+        return 0 == a ? "new" : 1 == a ? "gathering" : "complete"
+    };
+    Object.defineProperty(b.prototype, "onicegatheringstatechange", {
+        get: function () {
+            return this.onicegatheringstatechange_
+        }, set: function (a) {
+            var b = this;
+            logger_1.logger.log(this.user_friendly_id() + ".set_onicegatheringstatechange() called.");
+            this.onicegatheringstatechange_ = a;
+            this.waitUntilConnected("PeerConnection.onicegatheringstatechange").then(function () {
+                var d = b.registerCallbacks(!1, b.isNullCallback(a), webrpcclassinfo_1.method_id_RTCPeerConnection_t.onicegatheringstatechange);
+                d.then(function (a) {
+                    logger_1.logger.log(b.user_friendly_id() + ".onicegatheringstatechange(): callback received!!!");
+                    b.iceGatheringState_ = b.convertIceGatheringState(b.param0(a));
+                    null != b.iceQ_ && b.iceQ_.pushState(b.iceGatheringState_)
+                });
+                return b.remoteInvoke(!0, webrpcclassinfo_1.method_id_RTCPeerConnection_t.onicegatheringstatechange, d.success)
+            })["catch"](function () {
+                logger_1.logger.log(b.user_friendly_id() + ".set_onicegatheringstatechange() failed.")
+            })
+        }, enumerable: !0, configurable: !0
+    });
+    Object.defineProperty(b.prototype,
+        "iceGatheringState", {
+            get: function () {
+                logger_1.logger.log(this.user_friendly_id() + ".get_iceGatheringState() called, value = " + this.iceGatheringState_);
+                return this.iceGatheringState_
+            }, enumerable: !0, configurable: !0
+        });
+    b.prototype.convertSignalState = function (a) {
+        return 0 == a ? "stable" : 1 == a ? "have-local-offer" : 2 == a ? "have-local-pranswer" : 3 == a ? "have-remote-offer" : 4 == a ? "have-remote-pranswer" : "closed"
+    };
+    Object.defineProperty(b.prototype, "onsignalingstatechange", {
+        set: function (a) {
+            var b = this;
+            logger_1.logger.log(this.user_friendly_id() +
+                ".set_onsignalingstatechange() called.");
+            this.onsignalingstatechange_ = a;
+            this.waitUntilConnected("PeerConnection.onsignalingstatechanged").then(function () {
+                var d = b.registerCallbacks(!1, b.isNullCallback(a), webrpcclassinfo_1.method_id_RTCPeerConnection_t.onsignalingstatechange);
+                d.then(function (a) {
+                    logger_1.logger.log(b.user_friendly_id() + ".onsignalingstatechange(): callback received!!!");
+                    b.signalingState_ = b.convertSignalState(b.param0(a));
+                    a = new PeerConnectionEvent("onsignalingstatechange", b);
+                    b.onsignalingstatechange_(a)
+                });
+                return b.remoteInvoke(!0, webrpcclassinfo_1.method_id_RTCPeerConnection_t.onsignalingstatechange, d.success)
+            })["catch"](function () {
+                logger_1.logger.log(b.user_friendly_id() + ".set_onsignalingstatechange(): failed.")
+            })
+        }, enumerable: !0, configurable: !0
+    });
+    Object.defineProperty(b.prototype, "onsignalingstatechanged", {
+        get: function () {
+            return this.onsignalingstatechange_
+        }, enumerable: !0, configurable: !0
+    });
+    Object.defineProperty(b.prototype, "signalingState", {
+        get: function () {
+            logger_1.logger.log(this.user_friendly_id() +
+                ".get_signalingState() called, value = " + this.signalingState_);
+            return this.signalingState_
+        }, enumerable: !0, configurable: !0
+    });
+    Object.defineProperty(b.prototype, "onnegotiationneeded", {
+        get: function () {
+            return this.onnegotiationneeded_
+        }, set: function (a) {
+            var b = this;
+            logger_1.logger.log(this.user_friendly_id() + ".set_onnegotiationneeded() called.");
+            this.onnegotiationneeded_ = a;
+            this.waitUntilConnected("PeerConnection.onnegotiationneeded").then(function () {
+                var d = b.registerCallbacks(!1, b.isNullCallback(a), webrpcclassinfo_1.method_id_RTCPeerConnection_t.onnegotiationneeded);
+                d.then(function () {
+                    logger_1.logger.log(b.user_friendly_id() + ".onnegotiationneeded(): callback received!!!");
+                    var a = new PeerConnectionEvent("negotiationneeded", b);
+                    b.onnegotiationneeded_(a)
+                });
+                return b.remoteInvoke(!0, webrpcclassinfo_1.method_id_RTCPeerConnection_t.onnegotiationneeded, d.success)
+            })["catch"](function () {
+                logger_1.logger.log(b.user_friendly_id() + ".set_onnegotiationneeded(): failed.")
+            })
+        }, enumerable: !0, configurable: !0
+    });
+    b.prototype.createOffer = function (a, b, d) {
+        var f = this;
+        logger_1.logger.log(this.user_friendly_id() +
+            ".createOffer() called.", JSON.stringify(d));
+        this.waitUntilConnected("PeerConnection.createOffer").then(function () {
+            var a = f.registerCallbacks(!0, !1, webrpcclassinfo_1.method_id_RTCPeerConnection_t.createOffer);
+            f.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCPeerConnection_t.createOffer, a.success, a.fail, {});
+            return a.prom()
+        }).then(function (a) {
+            logger_1.logger.log(f.user_friendly_id() + ".createOffer(): success callback received!!!");
+            return (new SessionDescription(f, f.param0(a).oid, !0)).syncBarrier()
+        }).then(function (b) {
+            a &&
+            a(b)
+        })["catch"](function () {
+            logger_1.logger.log(f.user_friendly_id() + ".createOffer() failed.");
+            b && b(new DOMException("PeerConnection.createOffer() failed.", "PeerConnection"))
+        })
+    };
+    b.prototype.createAnswer = function (a, b, d) {
+        var f = this;
+        logger_1.logger.log(this.user_friendly_id() + ".createAnswer() called.", JSON.stringify(d));
+        this.waitUntilConnected("PeerConnection.createAnswer").then(function () {
+            var a = f.registerCallbacks(!0, !1, webrpcclassinfo_1.method_id_RTCPeerConnection_t.createAnswer);
+            f.remoteInvoke(!1,
+                webrpcclassinfo_1.method_id_RTCPeerConnection_t.createAnswer, a.success, a.fail, {}, {});
+            return a.prom()
+        }).then(function (a) {
+            logger_1.logger.log(f.user_friendly_id() + ".createAnswer(): success callback received!!!");
+            return (new SessionDescription(f, f.param0(a).oid, !0)).syncBarrier()
+        }).then(function (b) {
+            a && a(b)
+        })["catch"](function () {
+            logger_1.logger.log(f.user_friendly_id() + ".createAnswer() failed.");
+            b && b("PeerConnection::createAnswer() failed.")
+        })
+    };
+    b.prototype.updateLocalDescription = function () {
+        return __awaiter(this,
+            void 0, void 0, function () {
+                var a, b, d;
+                return __generator(this, function (f) {
+                    switch (f.label) {
+                        case 0:
+                            return logger_1.logger.log(this.user_friendly_id() + ".updateLocalDescription() called."), [4, this.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCPeerConnection_t.localDescription, {oid: this.object_id()})];
+                        case 1:
+                            return a = f.sent(), b = new SessionDescription(this, this.param0(a).oid, !0), [4, b.syncBarrier()];
+                        case 2:
+                            return this.localDescription = d = f.sent(), [2]
+                    }
+                })
+            })
+    };
+    b.prototype.setLocalDescription = function (a, b, d) {
+        var f =
+            this;
+        logger_1.logger.log(this.user_friendly_id() + ".setLocalDescription() called.");
+        this.waitUntilConnected("PeerConnection.setLocalDescription").then(function () {
+            return (new SessionDescription(f, 0, !1, {
+                type: SessionDescription.convertC2H(a.type),
+                sdp: a.sdp
+            })).syncBarrier()
+        }).then(function (a) {
+            var c = f.registerCallbacks(!0, !1, webrpcclassinfo_1.method_id_RTCPeerConnection_t.setLocalDescription);
+            f.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCPeerConnection_t.setLocalDescription, {oid: a.object_id()}, c.success,
+                c.fail);
+            c.prom().then(function () {
+                logger_1.logger.log(f.user_friendly_id() + ".setLocalDescription(): success callback received!!!");
+                f.localDescription = a;
+                b && b()
+            })
+        })["catch"](function () {
+            logger_1.logger.log(f.user_friendly_id() + ".setLocalDescription() failed.");
+            d && d("PeerConnection::setLocalDescription() failed.")
+        })
+    };
+    b.prototype.setRemoteDescription = function (a, b, d) {
+        var f = this;
+        logger_1.logger.log(this.user_friendly_id() + ".setRemoteDescription() called.");
+        this.waitUntilConnected("PeerConnection.setRemoteDescription").then(function () {
+            return (new SessionDescription(f,
+                0, !1, {type: SessionDescription.convertC2H(a.type), sdp: a.sdp})).syncBarrier()
+        }).then(function (a) {
+            var c = f.registerCallbacks(!0, !1, webrpcclassinfo_1.method_id_RTCPeerConnection_t.setRemoteDescription);
+            f.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCPeerConnection_t.setRemoteDescription, {oid: a.object_id()}, c.success, c.fail);
+            c.prom().then(function () {
+                logger_1.logger.log(f.user_friendly_id() + ".setRemoteDescription(): success callback received!!!");
+                f.remoteDescription = a;
+                b && b()
+            })
+        })["catch"](function () {
+            logger_1.logger.log(f.user_friendly_id() +
+                ".setRemoteDescription() failed.");
+            d && d("PeerConnection::setRemoteDescription() failed.")
+        })
+    };
+    b.prototype.getLocalStreams = function () {
+        logger_1.logger.log("PeerConnection.getLocalStreams() called. [oid=" + this.object_id() + "]");
+        for (var a = 0, b = this.localStreams; a < b.length; a++) logger_1.logger.log(JSON.stringify(b[a]));
+        return this.localStreams
+    };
+    b.prototype.getRemoteStreams = function () {
+        logger_1.logger.log(this.user_friendly_id() + ".getRemoteStreams() called.");
+        for (var a = 0, b = this.remoteStreams; a < b.length; a++) logger_1.logger.log(JSON.stringify(b[a]));
+        return this.remoteStreams
+    };
+    b.prototype.addStream = function (a) {
+        var b = this;
+        logger_1.logger.log(this.user_friendly_id() + ".addStream() called: " + JSON.stringify(a));
+       a.dumpTrackInfo();
+        this.localStreams.push(a);
+        this.waitUntilConnected("PeerConnection.addStream").then(function () {
+            return b.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCPeerConnection_t.addStream, {oid: a.object_id()}, {})
+        }).then(function () {
+            logger_1.logger.log(b.user_friendly_id() + ".addStream() success.")
+        })["catch"](function () {
+            logger_1.logger.log(b.user_friendly_id() +
+                ".addStream() failed.")
+        })
+    };
+    b.prototype.removeStream = function (a) {
+        var b = this;
+        logger_1.logger.log(this.user_friendly_id() + ".removeStream() called: " + JSON.stringify(a));
+        for (var d = 0; d < this.localStreams.length; d++) this.localStreams[d] == a && this.localStreams.splice(d, 1);
+        this.waitUntilConnected("PeerConnection.removeStream").then(function () {
+            return b.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCPeerConnection_t.removeStream, {oid: a.object_id()})
+        }).then(function () {
+            logger_1.logger.log(b.user_friendly_id() + ".removeStream() success.")
+        })["catch"](function () {
+            logger_1.logger.log(b.user_friendly_id() +
+                ".removeStream() failed.")
+        })
+    };
+    Object.defineProperty(b.prototype, "onaddstream", {
+        get: function () {
+            return this.onaddstream_
+        }, set: function (a) {
+            var b = this;
+            logger_1.logger.log(this.user_friendly_id() + ".set_onaddstream() called.");
+            this.onaddstream_ = a;
+            this.waitUntilConnected("PeerConnection.onaddstream").then(function () {
+                var d = b.registerCallbacks(!1, b.isNullCallback(a), webrpcclassinfo_1.method_id_RTCPeerConnection_t.onaddstream);
+                d.then(function (a) {
+                    (new remotemedia_1.RemoteStreamEvent(b, b.param0(a).oid)).syncBarrier().then(function (a) {
+                        for (var c =
+                            0, d = a.stream.getAudioTracks(); c < d.length; c++) d[c].enabled = !1;
+                        logger_1.logger.log(b.user_friendly_id() + ".onaddstream callback received!");
+                        b.remoteStreams.push(a.stream);
+                        b.onaddstream_(a)
+                    })
+                });
+                return b.remoteInvoke(!0, webrpcclassinfo_1.method_id_RTCPeerConnection_t.onaddstream, d.success)
+            })["catch"](function () {
+                logger_1.logger.log(b.user_friendly_id() + ".set_onaddstream(): failed!")
+            })
+        }, enumerable: !0, configurable: !0
+    });
+    Object.defineProperty(b.prototype, "onremovestream", {
+        get: function () {
+            return this.onremovestream_
+        },
+        set: function (a) {
+            var b = this;
+            logger_1.logger.log(this.user_friendly_id() + ".set_onremovestream() called.");
+            this.onremovestream_ = a;
+            this.waitUntilConnected("PeerConnection.onremovestream").then(function () {
+                var d = b.registerCallbacks(!1, b.isNullCallback(a), webrpcclassinfo_1.method_id_RTCPeerConnection_t.onremovestream);
+                d.then(function (a) {
+                    (new remotemedia_1.RemoteStreamEvent(b, b.param0(a).oid)).syncBarrier().then(function (a) {
+                        logger_1.logger.log(b.user_friendly_id() + ".onremovestream callback received!");
+                        var c =
+                            b.remoteStreams.findIndex(function (b) {
+                                return b.id == a.stream.id
+                            });
+                        0 <= c && b.remoteStreams.splice(c, 1);
+                        b.onremovestream_(a)
+                    })
+                });
+                return b.remoteInvoke(!0, webrpcclassinfo_1.method_id_RTCPeerConnection_t.onremovestream, d.success)
+            })["catch"](function () {
+                logger_1.logger.log(b.user_friendly_id() + ".set_onremovestream(): failed!")
+            })
+        }, enumerable: !0, configurable: !0
+    });
+    b.prototype.getStats = function (a) {
+        logger_1.logger.log(this.user_friendly_id() + ".getStats");
+        var b = this;
+        return new Promise(function (d, f) {
+            b.isRedirected() ?
+                b.waitUntilConnected("PeerConnection.getStats").then(function () {
+                    var f = b.registerCallbacks(!0, !1, webrpcclassinfo_1.method_id_RTCPeerConnection_t.getStats);
+                    f.then(function (b) {
+                        void 0 !== b.params && 0 !== b.params.length && (a(stats_1.StatsReport.fromJSON(JSON.parse(b.params[0]))), d())
+                    });
+                    return b.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCPeerConnection_t.getStats, f.success)
+                })["catch"](function () {
+                    logger_1.logger.log(b.user_friendly_id() + ".getStats(): failed!");
+                    f()
+                }) : (logger_1.logger.log(b.user_friendly_id() +
+                ".getStats(): not in active redirection!"), a({}), d())
+        })
+    };
+    b.prototype.close = function () {
+        var a = this;
+        logger_1.logger.log(this.user_friendly_id() + ".close() called.");
+        this.onnegotiationneeded = this.onsignalingstatechange = this.onicegatheringstatechange = this.oniceconnectionstatechange = this.onicecandidate = this.onaddstream = null;
+        this.waitUntilConnected("PeerConnection.close").then(function () {
+            return a.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCPeerConnection_t.close)
+        }).then(function () {
+            a.iceQ_ = null;
+            a.release();
+            logger_1.logger.log(a.user_friendly_id() + ".close() success.")
+        })["catch"](function () {
+            a.iceQ_ = null;
+            a.release();
+            logger_1.logger.log(a.user_friendly_id() + ".close() failed.")
+        })
+    };
+    b.prototype.getSenders = function () {
+        logger_1.logger.log(this.user_friendly_id() + ".getSenders() called.")
+    };
+    b.prototype.getReceivers = function () {
+        var a = this;
+        logger_1.logger.log(this.user_friendly_id() + ".getReceivers() called.");
+        this.waitUntilConnected("PeerConnection.getReceivers").then(function () {
+            return a.remoteInvoke(!1, webrpcclassinfo_1.method_id_RTCPeerConnection_t.getReceivers,
+                [])
+        }).then(function (b) {
+            var d = [];
+            b.params[0].forEach(function (b) {
+                var e = a.receivers_.find(function (a) {
+                    return a.object_id() === b.oid
+                });
+                void 0 === e ? (e = new RtpReceiver(a, b.oid), d.push(e.syncBarrier())) : d.push(e)
+            });
+            return Promise.all(d)
+        }).then(function (b) {
+            logger_1.logger.log(a.user_friendly_id() + ".getReceivers: returning receiver with ids [" + b.map(function (a) {
+                return a.object_id()
+            }) + "]");
+            a.receivers_ = b
+        })["catch"](function () {
+            logger_1.logger.log(a.user_friendly_id() + ".getReceivers() didnt get response.");
+            a.receivers_ =
+                []
+        });
+        return this.receivers_
+    };
+    return b
+}(proxyobject_1.ProxyObject);
+exports.PeerConnection = PeerConnection;
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(4)))
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
+Object.defineProperty(exports,"__esModule",{value:!0});var StatsReport=function(){function a(){this.items=[]}a.fromJSON=function(c){for(var b=new a,d=0;d<c.length;d++){var e=Stats.fromJSON(c[d]);b.items.push(e)}return b};a.prototype.toJSON=function(){return JSON.stringify(this.items)};a.prototype.result=function(){return this.items};return a}();exports.StatsReport=StatsReport;
+var Stats=function(){function a(){this.names_=[];this.stat_=new Map;this.id="";this.timestamp=0;this.type=""}a.fromJSON=function(c){var b=new a;b.id=c.id||"";b.timestamp=c.timestamp||"";b.type=c.type||"";Object.keys(c).forEach(function(a){"id"!==a&&"timestamp"!==a&&"type"!==a&&(b.names_.push(a),b.stat_.set(a,c[a]))});return b};a.prototype.toJSON=function(){return JSON.stringify({id:this.id,timestamp:this.timestamp,type:this.type,stat:this.stat_})};a.prototype.names=function(){return this.names_};
+a.prototype.stat=function(a){return this.stat_.get(a)};return a}();exports.Stats=Stats;
+
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __extends=this&&this.__extends||function(){var d=function(c,a){d=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(a,e){a.__proto__=e}||function(a,e){for(var c in e)e.hasOwnProperty(c)&&(a[c]=e[c])};return d(c,a)};return function(c,a){function b(){this.constructor=c}d(c,a);c.prototype=null===a?Object.create(a):(b.prototype=a.prototype,new b)}}();Object.defineProperty(exports,"__esModule",{value:!0});
+var proxyobject_1=__webpack_require__(2),lib=__webpack_require__(1),logger_1=__webpack_require__(0),VideoRect=function(){return function(d){this.x=Math.round(d.x);this.y=Math.round(d.y);this.width=Math.round(d.width);this.height=Math.round(d.height)}}();exports.VideoRect=VideoRect;
+var VideoElement=function(d){function c(){var a=d.call(this,null,lib.class_id_t.VideoElement,0,!1)||this;a.srcObject_=null;a.sinkId_="";a.videoWidth=0;a.videoHeight=0;a.isLoaded=!1;a.connectionState="disconnected";a.dispose_=!1;a.disposeTimer=null;return a}__extends(c,d);Object.defineProperty(c.prototype,"sinkId",{get:function(){return this.sinkId_},set:function(a){var b=this;this.waitUntilConnected("VideoElement.sinkId").then(function(){return b.remoteInvoke(!0,lib.method_id_VideoElement_t.sinkId,
+a)}).then(function(){b.sinkId_=a})["catch"](function(){logger_1.logger.log(b.user_friendly_id()+".sinkId setter: failed to connect!")})},enumerable:!0,configurable:!0});Object.defineProperty(c.prototype,"srcObject",{get:function(){return this.srcObject_},set:function(a){logger_1.logger.log(this.user_friendly_id()+".srcObject: set srcObject...");this.srcObject_!==a&&(!0===this.dispose_&&null!==this.disposeTimer&&(clearTimeout(this.disposeTimer),this.disposeTimer=null,this.dispose_=!1),null!==this.srcObject_&&
+(null===a&&(this.dispose_=!0),this.disconnect(),this.isLoaded=!1),this.srcObject_=a,null!==this.srcObject_&&this.connectTo(this.srcObject_))},enumerable:!0,configurable:!0});Object.defineProperty(c.prototype,"onconnectionstatechange",{get:function(){return this.onconnectionstatechange_},set:function(a){logger_1.logger.log(this.user_friendly_id()+".set_onconnectionstatechange() called.");this.onconnectionstatechange_=a},enumerable:!0,configurable:!0});Object.defineProperty(c.prototype,"onloadedmetadata",
+{set:function(a){logger_1.logger.log(this.user_friendly_id()+".set_onloadedmetadata() called.");this.onloadedmetadata_=a},enumerable:!0,configurable:!0});c.prototype.setupOnVideoFrameChanged=function(){var a=this,b=this.registerCallbacks(!1,!1,lib.method_id_VideoElement_t.onvideoframechanged);b.then(function(b){logger_1.logger.log(a.user_friendly_id()+".onvideoframechanged",b.params);a.videoWidth=b.params[0]||0;a.videoHeight=b.params[1]||0;a.isLoaded||(a.isLoaded=!0,a.onloadedmetadata_&&a.onloadedmetadata_())});
+this.remoteInvoke(!0,lib.method_id_VideoElement_t.onvideoframechanged,b.success)};c.prototype.connectTo=function(a){var b=this;console.log(this.user_friendly_id()+".connectTo: connect media stream with id = "+a.object_id()+", clone_id = "+a.clone_state.clone_id);this.waitUntilConnected("VideoElement.connectTo").then(function(){b.setupOnVideoFrameChanged();return a.clone_state.synchronize(a)}).then(function(a){var c=b.registerCallbacks(!0,!1,lib.method_id_VideoElement_t.connectTo);return Promise.all([b.remoteInvoke(!1,
+lib.method_id_VideoElement_t.connectTo,{oid:a.object_id()},c.success,c.fail),c.prom()])}).then(function(a){logger_1.logger.log(b.user_friendly_id()+".connectTo: remote media stream is connected!");b.onconnectionstatechange_&&(b.connectionState="connected",b.onconnectionstatechange_());b.updateTimer=setInterval(function(){b.ontimeupdate&&b.ontimeupdate()},250)})["catch"](function(a){logger_1.logger.log(b.user_friendly_id()+".connectTo: failed to connect! msg = ",a)})};c.prototype.disconnect=function(){var a=
+this;logger_1.logger.log(this.user_friendly_id()+".disconnect: disconnect from current media stream");!0===this.dispose_&&(this.disposeTimer=setTimeout(function(){a.release()},5E3));this.waitUntilConnected("VideoElement.disconnect").then(function(){a.updateTimer&&clearInterval(a.updateTimer);a.onconnectionstatechange_&&(a.connectionState="disconnected",a.onconnectionstatechange_());var b=a.registerCallbacks(!1,!0,lib.method_id_VideoElement_t.onvideoframechanged);a.remoteInvoke(!0,lib.method_id_VideoElement_t.onvideoframechanged,
+b.success);return a.remoteInvoke(!1,lib.method_id_VideoElement_t.disconnect)}).then(function(){logger_1.logger.log(a.user_friendly_id()+".disconnect: remote media stream is disconnected!")})["catch"](function(){logger_1.logger.log(a.user_friendly_id()+".disconnect: failed to connect!")})};c.prototype.setFrame=function(a){var b=this;logger_1.logger.log(this.user_friendly_id()+".setFrame: set video frame to",a.x,a.y,a.width,a.height);this.waitUntilConnected("VideoElement.setFrame").then(function(){var c=
+new VideoRect(a);return b.remoteInvoke(!1,lib.method_id_VideoElement_t.setFrame,c)}).then(function(){logger_1.logger.log(b.user_friendly_id()+".setFrame: success!")})["catch"](function(){logger_1.logger.log(b.user_friendly_id()+".setFrame: failed to connect!")})};c.prototype.addClipRect=function(a){var b=this;logger_1.logger.log(this.user_friendly_id()+".addClipRect: ",JSON.stringify(a));this.waitUntilConnected("VideoElement.addClipRect").then(function(){var c=new VideoRect(a);return b.remoteInvoke(!1,
+lib.method_id_VideoElement_t.addClipRect,c)})["catch"](function(){logger_1.logger.log(b.user_friendly_id()+".addClipRect failed!")})};c.prototype.removeClipRect=function(a){var b=this;logger_1.logger.log(this.user_friendly_id()+".removeClipRect: ",JSON.stringify(a));this.waitUntilConnected("VideoElement.removeClipRect").then(function(){var c=new VideoRect(a);return b.remoteInvoke(!1,lib.method_id_VideoElement_t.removeClipRect,c)})["catch"](function(){logger_1.logger.log(b.user_friendly_id()+".removeClipRect failed!")})};
+return c}(proxyobject_1.ProxyObject);exports.VideoElement=VideoElement;
+
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __extends=this&&this.__extends||function(){var c=function(b,a){c=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(a,b){a.__proto__=b}||function(a,b){for(var c in b)b.hasOwnProperty(c)&&(a[c]=b[c])};return c(b,a)};return function(b,a){function d(){this.constructor=b}c(b,a);b.prototype=null===a?Object.create(a):(d.prototype=a.prototype,new d)}}();Object.defineProperty(exports,"__esModule",{value:!0});
+var proxyobject_1=__webpack_require__(2),lib=__webpack_require__(1),logger_1=__webpack_require__(0),AudioElement=function(c){function b(){var a=c.call(this,null,lib.class_id_t.AudioElement,0,!1)||this;a.sinkId_="";a.srcObject_=null;return a}__extends(b,c);Object.defineProperty(b.prototype,"sinkId",{get:function(){return this.sinkId_},set:function(a){var b=this;logger_1.logger.log(this.user_friendly_id()+".sinkId: set sinkId to "+a);this.waitUntilConnected("AudioElement.sinkId").then(function(){return b.remoteInvoke(!0,
+lib.method_id_AudioElement_t.sinkId,a)}).then(function(){b.sinkId_=a})["catch"](function(){logger_1.logger.log(b.user_friendly_id()+".sinkId setter: failed to connect!")})},enumerable:!0,configurable:!0});Object.defineProperty(b.prototype,"srcObject",{get:function(){return this.srcObject_},set:function(a){var b=this;logger_1.logger.log(this.user_friendly_id()+".srcObject: set srcObject to "+JSON.stringify(a));if(a!==this.srcObject_){var c=null!==a?a.object_id():"null";this.waitUntilConnected("AudioElement.srcObject").then(function(){return b.remoteInvoke(!0,
+lib.method_id_AudioElement_t.srcObject,c)}).then(function(){b.srcObject_=a;null===a&&b.release()})["catch"](function(){logger_1.logger.log(b.user_friendly_id()+".srcObject setter: failed to connect!");null===a&&b.release()})}},enumerable:!0,configurable:!0});Object.defineProperty(b.prototype,"src",{get:function(){return this.src_},set:function(a){var b=this;logger_1.logger.log(this.user_friendly_id()+".src: set src to "+a);this.src_=a;this.waitUntilConnected("AudioElement.src").then(function(){b.remoteInvoke(!0,
+lib.method_id_AudioElement_t.src,a)})["catch"](function(){logger_1.logger.log(b.user_friendly_id()+".src setter: failed to connect!")})},enumerable:!0,configurable:!0});b.prototype.play=function(){var a=this;logger_1.logger.log(this.user_friendly_id()+".play() called.");this.waitUntilConnected("AudioElement.play").then(function(){a.remoteInvoke(!1,lib.method_id_AudioElement_t.play,[])})["catch"](function(){logger_1.logger.log(a.user_friendly_id()+".play: failed to connect!")})};b.prototype.pause=
+function(){var a=this;logger_1.logger.log(this.user_friendly_id()+".pause() called.");this.waitUntilConnected("AudioElement.pause").then(function(){a.remoteInvoke(!1,lib.method_id_AudioElement_t.pause,[])})["catch"](function(){logger_1.logger.log(a.user_friendly_id()+".pause: failed to connect!")})};return b}(proxyobject_1.ProxyObject);exports.AudioElement=AudioElement;
+
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+Object.defineProperty(exports,"__esModule",{value:!0});
+var logger_1=__webpack_require__(0),hdxms_1=__webpack_require__(3),FrameTracker=function(){function e(){var a=this;this.running_=!1;this.elements_=[];this.clipRects=new Set;var b=hdxms_1.getRedirector();Promise.all([(0,window.getWindowHandleAsHex)(),b.startRedirection(!1,"FrameTracker.ctor")]).then(function(a){logger_1.logger.log("FrameTracker: set window handle: "+a[0]);b.WSSendObject({v:"overlay",command:"window",windowHandle:a[0]})});this.observer_=new MutationObserver(function(b){a.updateAll()})}e.prototype.rectanglesIntersect=
+function(a,b){return a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y?!0:!1};e.prototype.intersectingRect=function(a,b){var d=Math.max(a.left,b.left),c=Math.max(a.top,b.top);return new DOMRect(d,c,Math.min(a.right,b.right)-d,Math.min(a.bottom,b.bottom)-c)};e.prototype.pedigreeCount=function(a,b){for(var d=0,c=a.parentElement;null!=c&&c!=b;)d++,c=c.parentElement;return{isAncestor:null!=c,pedigree:d}};e.prototype.selectTopmost=function(a,b){var d=a.getBoundingClientRect(),c=b.getBoundingClientRect(),
+d=this.intersectingRect(d,c),c=document.elementFromPoint(d.left+d.width/2,d.top+d.height/2);if(c==a)return a;if(c==b)return b;d=this.pedigreeCount(a,c);c=this.pedigreeCount(b,c);if(d.isAncestor&&c.isAncestor){if(d.pedigree<c.pedigree)return a;if(c.pedigree<d.pedigree)return b}else{if(d.isAncestor)return a;if(c.isAncestor)return b}};e.prototype.checkOverlappingVideos=function(a){var b=this,d=a.target.getBoundingClientRect();a.overlaps.forEach(function(b){a.target.remoteVideoElement.removeClipRect(b.rect)});
+a.overlaps=[];this.elements_.forEach(function(c){if(c!=a){var e=c.overlaps.map(function(a){return a.element}).indexOf(a.target);-1!=e&&(e=c.overlaps.splice(e,1)[0],c.target.remoteVideoElement.removeClipRect(e.rect));e=c.target.getBoundingClientRect();if(b.rectanglesIntersect(d,e)){var f=b.selectTopmost(a.target,c.target);f==a.target?(c.overlaps.push({element:a.target,rect:d}),c.target.remoteVideoElement.addClipRect(d)):f==c.target&&(a.overlaps.push({element:c.target,rect:e}),a.target.remoteVideoElement.addClipRect(e))}}})};
+e.prototype.updateAll=function(){var a=this;this.elements_.forEach(function(b){var d=b.target.getBoundingClientRect();if(void 0!==d){var c=b.clientRect;if(void 0===c||c.x!==d.x||c.y!==d.y||c.width!==d.width||c.height!==d.height)b.clientRect=d,b.callback(d),a.checkOverlappingVideos(b)}})};e.prototype.track=function(a,b){var d=this,c=a.getBoundingClientRect();logger_1.logger.log("Track element frame",a,JSON.stringify(c));console.log(a);this.elements_.push({target:a,clientRect:void 0,callback:b,overlaps:[]});
+try{logger_1.logger.log("[HdxWebRTC.js] Initializing occlusion for new videoElement"),this.clipRects.forEach(function(b){d.applyOcclusion(a,JSON.parse(b))})}catch(e){logger_1.logger.log("[HdxWebRTC.js] addOcclusionInit failed! "+e)}this.running_||(logger_1.logger.log("Start FrameTracker observer..."),this.observer_.observe(document.body,{attributes:!0,childList:!0,subtree:!0}),this.running_=!0),this.updateAll()};e.prototype.untrack=function(a){logger_1.logger.log("Untrack element frame",a);var b=
+-1;this.elements_.forEach(function(d,c){d.target===a&&(b=c)});0<=b&&(this.elements_.splice(b,1),0===this.elements_.length&&(logger_1.logger.log("Stop FrameTracker observer..."),this.observer_.disconnect(),this.running_=!1))};e.prototype.applyOcclusion=function(a,b){var d=a.getBoundingClientRect();this.rectanglesIntersect(b,d)&&void 0!==a.remoteVideoElement&&a.remoteVideoElement.addClipRect(b)};e.prototype.addOcclusion=function(a){var b=this;logger_1.logger.log("[HdxWebRTC.js] Adding occlusion "+JSON.stringify(a));
+logger_1.logger.log("[HdxWebRTC.js] Tracking '"+this.elements_.length+"' elements.");this.clipRects.add(JSON.stringify(a));this.elements_.forEach(function(d){b.applyOcclusion(d.target,a)})};e.prototype.removeOcclusion=function(a){var b=this;logger_1.logger.log("[HdxWebRTC.js] Removing occlusion "+JSON.stringify(a));logger_1.logger.log("[HdxWebRTC.js] Tracking '"+this.elements_.length+"' elements.");this.clipRects["delete"](JSON.stringify(a));this.elements_.forEach(function(d){var c=d.target.getBoundingClientRect();
+b.rectanglesIntersect(a,c)&&void 0!==d.target.remoteVideoElement&&d.target.remoteVideoElement.removeClipRect(a)})};return e}();exports.FrameTracker=FrameTracker;
+
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+Object.defineProperty(exports,"__esModule",{value:!0});var hdxms_1=__webpack_require__(3),webrpcclassinfo_1=__webpack_require__(1),enginecontrol_1=__webpack_require__(15),logger_1=__webpack_require__(0),RemoteType;(function(b){b[b.Unknown=0]="Unknown";b[b.Windows=1]="Windows";b[b.Linux=2]="Linux"})(RemoteType=exports.RemoteType||(exports.RemoteType={}));var SessionInfo=function(){return function(){}}();exports.SessionInfo=SessionInfo;
+var VersionInfo=function(){return function(b,a){this.type=b;this.version=a}}();exports.VersionInfo=VersionInfo;
+var RemoteSession=function(){function b(){var a=this;this.isremote_=!1;this.isremote_=!0;this.type_=RemoteType.Windows;this.address_="0.0.0.0";this.sessioninfo_=null;this.enginecontrol_=new enginecontrol_1.EngineControl;hdxms_1.getRedirector().setRemoteSessionInfoCb(function(){return a.remoteSessionInfo()})}b.prototype.release=function(){hdxms_1.getRedirector().setRemoteSessionInfoCb(null)};b.prototype.user_friendly_id=function(){return"[RemoteSession]"};b.prototype.getSessionInfo=function(){logger_1.logger.log(this.user_friendly_id()+
+".getSessionInfo() called.");return null!=this.sessioninfo_?Promise.resolve(this.sessioninfo_):Promise.reject()};b.prototype.remoteSessionInfo=function(){var a=this;logger_1.logger.log(a.user_friendly_id()+".remoteSessionInfo() called.");return new Promise(function(b,g){a.enginecontrol_.syncBarrier().then(function(c){logger_1.logger.log(a.user_friendly_id()+"enginecontrol info received!");a.sessioninfo_=new SessionInfo;a.sessioninfo_.type_script=new VersionInfo(enginecontrol_1.VersionType.TypeScript,
+webrpcclassinfo_1.HDXMS_VERSION);a.sessioninfo_.webrpc=new VersionInfo(enginecontrol_1.VersionType.Webrpc,c.version_.major.toString()+"."+c.version_.minor.toString()+"."+c.version_.revision.toString()+"."+c.version_.build.toString());if(void 0!=c.versions_&&null!=c.versions_){var e=0,f=0;for(c=c.versions_;f<c.length;f++){var d=c[f],d=d.major.toString()+"."+d.minor.toString()+"."+d.revision.toString()+"."+d.build.toString();switch(e){case enginecontrol_1.VersionType.Webrpc:a.sessioninfo_.webrpc=new VersionInfo(e,
+d);break;case enginecontrol_1.VersionType.WebrtcCodecs:a.sessioninfo_.webrtc_codecs=new VersionInfo(e,d);break;case enginecontrol_1.VersionType.Receiver:a.sessioninfo_.receiver=new VersionInfo(e,d);break;case enginecontrol_1.VersionType.Vda:a.sessioninfo_.vda=new VersionInfo(e,d);break;case enginecontrol_1.VersionType.Endpoint:a.sessioninfo_.endpoint=new VersionInfo(e,d);break;default:logger_1.logger.log(a.user_friendly_id()+"Unknown version type!")}e++}}b(a.sessioninfo_);a.enginecontrol_.release()})["catch"](function(){hdxms_1.getRedirector().isPingActive()?
+a.retrySessionInfo():(g(),a.enginecontrol_.release(),a.enginecontrol_=null)})})};b.prototype.retrySessionInfo=function(){var a=this;setTimeout(function(){logger_1.logger.log("checking if we are connected...");a.enginecontrol_.bind();hdxms_1.getRedirector().handleRemoteSessionInfo()},15E3)};return b}();exports.RemoteSession=RemoteSession;
+
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __extends=this&&this.__extends||function(){var a=function(b,d){a=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(d,a){d.__proto__=a}||function(d,a){for(var c in a)a.hasOwnProperty(c)&&(d[c]=a[c])};return a(b,d)};return function(b,d){function e(){this.constructor=b}a(b,d);b.prototype=null===d?Object.create(d):(e.prototype=d.prototype,new e)}}();Object.defineProperty(exports,"__esModule",{value:!0});
+var webrpcclassinfo_1=__webpack_require__(1),hdxms_1=__webpack_require__(3),proxyobject_1=__webpack_require__(2),logger_1=__webpack_require__(0),VersionType;(function(a){a[a.Webrpc=0]="Webrpc";a[a.WebrtcCodecs=1]="WebrtcCodecs";a[a.Receiver=2]="Receiver";a[a.Vda=3]="Vda";a[a.Endpoint=4]="Endpoint";a[a.TypeScript=5]="TypeScript";a[a.Max=6]="Max"})(VersionType=exports.VersionType||(exports.VersionType={}));
+var EngineControl=function(a){function b(){return a.call(this,null,webrpcclassinfo_1.class_id_t.EngineControl,0,!1)||this}__extends(b,a);b.prototype.bind=function(){logger_1.logger.log(this.user_friendly_id()+".bind() called.");this.reconstructor(null,webrpcclassinfo_1.class_id_t.EngineControl,0)};b.prototype.syncBarrier=function(){var a=this;logger_1.logger.log(this.user_friendly_id()+".syncBarrier() called.");return new Promise(function(b,f){a.waitUntilConnected("EngineControl.syncBarrier").then(function(){return Promise.all([a.remoteInvoke(!1,
+webrpcclassinfo_1.method_id_EngineControl_t.version,{major:0,minor:0,revision:0,build:0}),a.remoteInvoke(!1,webrpcclassinfo_1.method_id_EngineControl_t.feature_flags,[])])}).then(function(c){logger_1.logger.log(a.user_friendly_id()+"received webrpc version and supported feature list.");c=c.map(function(b){return a.param0(b)});a.version_=c[0];a.features_=c[1];hdxms_1.getRedirector().setFeatures(a.features_);c=0;for(var b=a.features_;c<b.length;c++){var e=b[c];if("ms_teams_desktop_sharing"===e.name&&
+!0===e.value)return Promise.all([a.remoteInvoke(!1,webrpcclassinfo_1.method_id_EngineControl_t.version_info,[])])}}).then(function(c){void 0===c?logger_1.logger.log(a.user_friendly_id()+"release-1905 client."):(logger_1.logger.log(a.user_friendly_id()+"release-1906 or later client: received detailed client version list."),a.versions_=c.map(function(b){return a.param0(b)})[0]);b(a)})["catch"](function(){logger_1.logger.log(a.user_friendly_id()+"failure to retrieve version/feature related client info.");
+f()})})};return b}(proxyobject_1.ProxyObject);exports.EngineControl=EngineControl;
 
 
 /***/ })
