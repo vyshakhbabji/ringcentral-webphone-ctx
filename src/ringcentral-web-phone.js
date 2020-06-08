@@ -1130,12 +1130,12 @@
 
             this.userAgent.media = {};
 
-            // if (options.media !== undefined && options.media.remote && options.media.local) {
-            //     this.userAgent.media.remote = options.media.remote;
-            //     this.userAgent.media.local = options.media.local;
-            // }
-            // else
-            //     throw new Error('HTML Media Element not Defined');
+            if (options.media !== undefined && options.media.remote && options.media.local) {
+                this.userAgent.media.remote = options.media.remote;
+                this.userAgent.media.local = options.media.local;
+            }
+            else
+                throw new Error('HTML Media Element not Defined');
 
             this.userAgent.sipInfo = this.sipInfo;
 
@@ -1976,7 +1976,7 @@
         var session = this;
         var pc = session.sessionDescriptionHandler.peerConnection;
 
-        // Gets remote tracks
+        // Gets remote trackscd ..
         var remoteAudio = session.media.remote;
         var remoteStream = new MediaStream();
 
