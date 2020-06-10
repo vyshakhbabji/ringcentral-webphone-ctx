@@ -27,25 +27,6 @@ $(function () {
 
     var citrixEnv =  false;
 
-    if(citrixEnv) {
-        window.getWindowHandleAsHex = function () {
-            const remote = window.electron_remote;
-            let win = remote.getCurrentWindow();
-            return new Promise((resolve, reject) => {
-                var uint8String = "";
-                var uint8 = win.getNativeWindowHandle();
-                uint8.forEach(function (element) {
-                    if (element < 16) {
-                        uint8String = uint8String.concat("0")
-                    }
-                    uint8String = uint8String.concat(element.toString(16));
-                });
-                console.log(uint8String);
-                resolve(uint8String);
-            })
-        };
-    }
-
     navigator.mediaDevices.addEventListener('devicechange', (event) => {
         console.error('Device Changed / updated',event);
     })
@@ -273,6 +254,7 @@ $(function () {
             .then(function (res) {
                 return res.json();
             })
+            .then(setMediaRedirectionSystem)
             .then(register)
             .then(makeCallForm)
             .catch(function (e) {
@@ -281,7 +263,60 @@ $(function () {
             });
     }
 
+    function setMediaRedirectionSystem(data) {
+
+        console.log('setMediaRedirectionSystem');
+        return new Promise((resolve, reject) => {
+            var MediaRedirectionService = new mars.MediaRedirectionService();
+
+            var citrix_available = function() {
+                console.log('[webphone] enter.Citrix.Redirection.Available');
+
+                var eventHandlers = {
+                    // event: {
+                    //   event: "",
+                    //   reason: "",
+                    //   msg: ""
+                    // }
+                    // sendSessionInfo
+                    vdiClientConnected: (event) => {
+                        MediaRedirectionService.fsm.transition('citrix-connected');
+                    },
+                    // onVdiClientDisconnected
+                    vdiClientDisconnected: (event) => {
+                        MediaRedirectionService.fsm.transition('citrix-disconnected');
+                    },
+                };
+                CitrixWebRTC.setVMEventCallback((event) => {
+                    eventHandlers[event.event](event);
+                });
+            };
+            var citrix_connected = function() {
+                console.log('[webphone] enter.Citrix.Redirection.Connected');
+                // @TODO: webPhone should be an instance of RingCentral.WebPhone
+                // @TODO: replace this CitrixSessionDescriptionHandler with a real one
+                // webPhone.setSessionDescriptionHandler(CitrixSessionDescriptionHandler);
+                citrixEnv = true;
+                resolve(data);
+            };
+            var citrix_disconnected = function() {
+                console.log('[webphone] enter.Citrix.Redirection.Disconnected');
+                // @TODO: webPhone should be an instance of RingCentral.WebPhone
+                // @TODO: replace this CitrixSessionDescriptionHandler with a real one
+                // webPhone.setSessionDescriptionHandler(undefined);
+                citrixEnv = false;
+                resolve(data);
+            };
+            MediaRedirectionService.on('enter.Citrix.Redirection.Available', citrix_available);
+            MediaRedirectionService.on('enter.Citrix.Redirection.Connected', citrix_connected);
+            MediaRedirectionService.on('enter.Citrix.Redirection.Disconnected', citrix_disconnected);
+
+            MediaRedirectionService.init();
+        });
+    }
+
     function register(data) {
+        console.log('Register');
 
         sipInfo = data.sipInfo[0] || data.sipInfo;
         webPhone = new RingCentral.WebPhone(data, {
