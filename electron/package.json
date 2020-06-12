@@ -9,6 +9,6 @@
     "electron": "^4.0.8"
   },
   "dependencies": {
-    "mars-desktop": "git+ssh://git@git.ringcentral.com:Glip/mars-desktop.git"
+    "web-adapter-desktop": "git+ssh://git@git.ringcentral.com:Glip/webAdapter-desktop.git"
   }
 }

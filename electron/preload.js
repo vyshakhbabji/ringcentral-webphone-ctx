@@ -1,7 +1,7 @@
 const {
   MediaRedirectionDetector,
   getWindowHandleAsHex
-} = require('mars-desktop');
+} = require('web-adapter-desktop');
 
 process.once('loaded', () => {
   global.MediaRedirectionDetector = MediaRedirectionDetector;

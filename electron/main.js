@@ -1,6 +1,6 @@
 const path = require('path');
 const { app, BrowserWindow } = require('electron');
-const { VirtualMachineDetector } = require('mars-desktop');
+const { VirtualMachineDetector } = require('web-adapter-desktop');
 console.log('Chrome:', process.versions.chrome);
 
 let win

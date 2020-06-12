@@ -11,8 +11,8 @@
     "build": "^0.1.4",
     "clientside-require": "^4.7.2",
     "file-system": "^2.2.2",
+    "web-adapter": "git+ssh://git@git.ringcentral.com:Glip/webAdapter.git",
     "npm": "^6.14.4",
-    "mars": "git+ssh://git@git.ringcentral.com:Glip/mars.git",
     "requirejs": "^2.3.6",
     "sip.js": "^0.10.0"
   },
